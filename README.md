@@ -47,6 +47,6 @@ Font files are included in [`assets/fonts`](./assets/fonts) along with [`font.cs
 
 ## Acknowlegdements
 
-Design System CSS is based on a customized version of Pico.css
+Design System CSS is heavily inspired by Pico.css
 
 [Pico.css documentation here -> https://picocss.com/docs/](https://picocss.com/docs/)
