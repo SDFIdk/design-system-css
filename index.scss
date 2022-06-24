@@ -141,12 +141,12 @@ $viewports: (
 
 // Imports 
 
-@import "base";
-@import "typography";
-@import "buttons";
-@import "container";
-@import "forms";
-@import "tables";
+@import "./src/scss/base";
+@import "./src/scss/typography";
+@import "./src/scss/buttons";
+@import "./src/scss/container";
+@import "./src/scss/forms";
+@import "./src/scss/tables";
 
 // Custom style
 

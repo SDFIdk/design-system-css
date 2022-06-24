@@ -2,9 +2,9 @@
   "name": "design-system-css",
   "version": "0.1.0",
   "description": "Cascading style sheets (CSS) implementation of SDFI designguide.",
-  "main": "index.css",
+  "main": "index.scss",
   "scripts": {
-    "build": "sass src/scss/index.scss index.css --style compressed",
+    "build": "sass index.scss assets/designsystem.css --style compressed",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
