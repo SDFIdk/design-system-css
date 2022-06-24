@@ -22,28 +22,19 @@ Presently, you can install DSCSS via NPM and bundle it with with your other fron
 
 Link to `designssytem.css` CSS directly into your HTML's `<head>`.
 
+1. Download [designsystem.css](https://github.com/SDFIdk/design-system-css/blob/main/assets/designsystem.css)
+2. Add a `link` element in your HTML `head` that refers to the CSS file:
 
 ```
 <!doctype html>
 <html lang="da">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,user-scalable=yes">
+    ...
 
-    <!-- Maybe include some fonts -->
-    <link rel="stylesheet" href="/assets/fonts/font.css">
-
-    <!-- CSS -->
     <link rel="stylesheet" href="/assets/designsystem.css">
 
-    <title>Example</title>
+    ...
   </head>
-  <body>
-
-      <!-- Content goes here -->
-
-  </body>
-</html>
 ```
 
 ## Typography
