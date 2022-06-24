@@ -1,0 +1,159 @@
+/* Custom styles for Design System CSS */
+
+
+// Define colors 
+
+// Greys
+$grey-50: hsl(186, 25%, 96%); // Lys steel
+$grey-100: hsl(186, 25%, 94%);
+$grey-200: hsl(186, 25%, 91%); // Medium steel
+$grey-300: hsl(186, 25%, 80%); 
+$grey-400: hsl(186, 25%, 64%); // Dark steel
+$grey-500: hsl(186, 25%, 50%); 
+$grey-600: hsla(186, 20%, 36%, .95);
+$grey-700: hsla(186, 15%, 22%, .85);
+$grey-800: hsla(186, 10%, 8%, .75);
+$grey-900: hsla(0, 0%, 0%, .65); // 65% sort
+
+// Primary colors
+$primary-50: hsl(186,40%,84%,0.7); // Vibrant steel
+$primary-100: hsl(186,60%,80%);
+$primary-200: hsl(186,70%,70%);
+$primary-300: hsl(186,80%,50%);
+$primary-400: hsl(186,90%,40%);
+$primary-500: hsl(186,100%,34%); 
+$primary-600: hsl(186,100%,33%); // Tyrkis
+$primary-700: hsl(186,100%,26%);
+$primary-800: hsl(186,100%,19%);
+$primary-900: hsl(186,100%,12%); // Mørk tyrkis
+
+// Black & White
+$black: #000;
+$white: #fff;
+
+// Amber
+$amber-50: hsl(26,80%,98%);
+$amber-100: hsl(26,80%,94%);
+$amber-200: hsl(26,80%,90%);
+$amber-300: hsl(26,80%,80%);
+$amber-400: hsl(26,80%,56%); // Highlight
+$amber-500: hsl(26,80%,50%);
+$amber-600: hsl(26,80%,40%);
+$amber-700: hsl(26,80%,30%);
+$amber-800: hsl(26,80%,20%);
+$amber-900: hsl(26,80%,10%);
+
+// Green
+$green-50: hsl(171,70%,98%);
+$green-100: hsl(171,70%,94%);
+$green-200: hsl(171,70%,90%);
+$green-300: hsl(171,70%,80%);
+$green-400: hsl(171,70%,55%); // Aktion
+$green-500: hsl(171,70%,50%); 
+$green-600: hsl(171,70%,40%);
+$green-700: hsl(171,70%,30%);
+$green-800: hsl(171,70%,20%);
+$green-900: hsl(171,70%,10%);
+
+// Red
+$red-50: hsl(0,100%,98%);
+$red-100: hsl(0,100%,94%);
+$red-200: hsl(0,100%,90%);
+$red-300: hsl(0,100%,80%);
+$red-400: hsl(0,100%,66%); // Advarsel
+$red-500: hsl(0,100%,50%);
+$red-600: hsl(0,100%,40%);
+$red-700: hsl(0,100%,30%);
+$red-800: hsl(0,100%,20%);
+$red-900: hsl(0,100%,10%);
+
+
+// Define breakpoints and viewports
+
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+) !default;
+
+// Viewports
+$viewports: (
+  // 'null' disable the viewport on a breakpoint
+  sm: 510px,
+  md: 700px,
+  lg: 920px,
+  xl: 1130px
+) !default;
+
+
+// Declare variables
+
+:root {
+  
+  // Use 'Roboto' font 
+  // (refer to /assets/fonts/font.css for font-face implmentation)
+  --font-family: 'Roboto', sans-serif;
+
+  --color: #{$black};
+  --background-color: #{$white};
+
+  --tyrkis: hsl(186,100%,33%);
+  --mork-tyrkis: hsl(186,100%,12%);
+  --vibrant-steel: hsla(186,40%,82%,0.7);
+  --dark-steel: hsla(186,25%,64%,0.6);
+  --medium-steel: hsl(186,25%,91%);
+  --lys-steel: hsl(186,25%,96%);
+  --sort: #000;
+  --65-sort: hsla(0,0%,0%,0.65);
+  --hvid: #fff;
+  --aktion: hsl(171,70%,55%);
+  --highlight: hsl(26,80%,56%);
+  --advarsel: hsl(0,100%,66%);
+
+  --line-height: 1.2rem;
+  --font-weight: 300;
+  --font-size: 100%; 
+
+  --primary: var(--tyrkis);
+  --primary-inverse: var(--hvid);
+  --primary-hover: #{$primary-700};
+  --primary-focus: #{$primary-700};
+
+  --contrast: var(--mork-tyrkis);
+  --contrast-inverse: #{$white};
+  --contrast-hover: #{$primary-800};
+  --contrast-focus: #{$primary-800};
+
+  --secondary: var(--mork-tyrkis);
+  --secondary-inverse: #{$white};
+  --secondary-hover: #{$primary-800};
+  --secondary-focus: #{$primary-800};
+
+  --border-color: var(--dark-steel);
+
+  --spacing: 1rem;
+  --border-width: 1px;
+  
+}
+
+
+// Imports 
+
+@import "base";
+@import "typography";
+@import "buttons";
+@import "container";
+@import "forms";
+@import "tables";
+
+// Custom style
+
+
+// Theme colors
+[data-theme="dark"] {
+  --background-color: #{$primary-900};
+  --color: #{$white};
+  --font-weight: 400;
+}

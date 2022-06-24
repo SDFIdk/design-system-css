@@ -1,0 +1,73 @@
+/*
+  CSS rules for loading fonts.
+  Loading fonts impacts performance. These examples load ALL the fonts specified in the design guide.
+  We advise you only load the fonts and font weights that are needed.
+*/
+
+/*
+  Option 1:
+  Import Google hosted fonts
+  !! Beware of Google using font files to track your users !!
+
+  More info at https://fonts.google.com/specimen/Roboto
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Source+Code+Pro&display=swap');
+
+
+/* ... OR ... */
+
+/*
+  Option 2:
+  Self hosted fonts
+
+  Make sure font files are available at the specified paths.
+*/
+
+/* Light */
+@font-face {
+  font-family: "Roboto";
+  src: url("Roboto-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Regular */
+@font-face {
+  font-family: "Roboto";
+  src: url("Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Regular Italic */
+@font-face {
+  font-family: "Roboto";
+  src: url("Roboto-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Medium */
+@font-face {
+  font-family: "Roboto";
+  src: url("Roboto-Medium.ttf") format("truetype");
+  font-weight: 500, 600;
+  font-style: normal;
+}
+
+/* Bold */
+@font-face {
+  font-family: "Roboto";
+  src: url("Roboto-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Monospaced */
+@font-face {
+  font-family: "Source Code Pro";
+  src: url("SourceCodePro-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}

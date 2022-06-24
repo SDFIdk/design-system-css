@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en" data-theme="light"> <!-- Remember correct lang attribute -->    
+  <head>
+
+    <!-- You always need this -->    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,user-scalable=yes">
+    <title>Design system example</title>
+
+    <!-- 
+      Optional: Maybe include some fonts 
+      Loading fonts impacts performance. This bit of code loads ALL the fonts specified in the design guide.
+      We advise you only load the fonts and font weights that are needed.
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Source+Code+Pro&display=swap" rel="stylesheet"> 
+
+    <!-- Design system CSS -->
+    <link rel="stylesheet" href="minimal.css">
+
+    <style>
+      /* Custom CSS for this page*/
+      .colorswatch {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        gap: 1rem;
+      }
+      .colorswatch span {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        display: inline-block;
+      }
+      .light-dark-wrapper {
+        display: flex; 
+        flex-flow: row nowrap; 
+        gap: 2rem;
+      }
+      .light-wrapper {
+        padding: 2rem 3rem; 
+        border: solid 1px var(--dark-steel);
+      }
+      .dark-wrapper {
+        padding: 2rem 3rem;
+      }
+    </style>
+
+  </head>
+  <body>
+
+    <header class="container">
+
+      <h1>Designguide eksempler</h1>
+      <p>Dette er reference-implmentationer af SDFI designguide med HTML/CSS</p>
+
+      <!-- A nav is used to wrap around navigation menus and links and such  -->
+      <nav style="display: flex; flex-flow: column nowrap;">
+        <h2>Indholdsfortegnelse</h2>
+        <a href="#typografi">Typografi</a>
+        <a href="#formular">Formularer og inputfelter</a>
+        <a href="#knapper">Knapper</a>
+        <a href="#tabeller">Tabeller</a>
+        <a href="#farver">Farver</a>
+      </nav>
+
+    </header>
+
+    <!-- Content goes here -->
+    <main class="container">
+
+      <h2 id="typografi">Typografi</h2>
+
+      <section class="light-dark-wrapper">
+        <!-- A sction contains several things that are alike in some way -->
+        <article data-theme="light" class="light-wrapper">
+          <!-- An article is a single unit of content -->
+          <h1>H1. This is a heading</h1>
+          <h2>H2. This is a heading level 2</h2>
+          <h3>H3. This is a heading level 3</h3>
+          <h4>H4. This is a heading level 4</h4>
+          <h5>H5. This is a heading level 5</h5>
+          <blockquote>Manchet/blockquote.This is a paragraph in an article.</blockquote>
+          <p>Alm. brødtekst. <a href="#typografi">Here is a link.</a> This is a paragraph in an article. It has many words in it but still does not convey any information of interest.</p>
+          <p>
+            <small>Lille brødtekst. <a href="#typografi">Here is a link.</a> It has many words in it but still does not convey any information of interest.</small><br>
+            <small><em>Lille kursiv brødtekst. This is a paragraph in an article.</em></small>
+          </p>
+        </article>
+        <article data-theme="dark" class="dark-wrapper">
+          <h1>H1. This is a heading</h1>
+          <h2>H2. This is a heading level 2</h2>
+          <h3>H3. This is a heading level 3</h3>
+          <h4>H4. This is a heading level 4</h4>
+          <h5>H5. This is a heading level 5</h5>
+          <blockquote>Manchet/blockquote.This is a paragraph in an article.</blockquote>
+          <p>Alm. brødtekst. This is a paragraph in an article. <a href="#typografi">Here is a link.</a> It has many words in it but still does not convey any information of interest.</p>
+          <p>
+            <small>Lille brødtekst. It has many words in it but still does not convey any information of interest. <a href="#typografi">Here is a link.</a></small><br>
+            <small><em>Lille kursiv brødtekst. This is a paragraph in an article.</em></small>
+          </p>
+        </article>
+      </section>
+
+      <h2 id="formular">Formularer og inputfelter</h2>
+
+      <section class="light-dark-wrapper">
+
+        <form class="light-wrapper">
+          
+          <fieldset>
+            <label for="myinput">A text input</label>
+            <input type="text" placeholder="Insert some text" id="myinput">
+          </fieldset>
+
+          <fieldset>
+            <label for="mydateinput">A date input</label>
+            <input type="date" id="mydateinput">
+          </fieldset>
+
+          <fieldset>
+            <label for="myrageinput">A range input</label>
+            <input type="range" id="myrangeinput">
+          </fieldset>
+
+          <fieldset>
+            <label for="myfileinput">A file input</label>
+            <input type="file" id="myfileinput">
+          </fieldset>
+
+          <fieldset>
+            <legend>Some choices</legend> <!-- A title for the contents of a fieldset -->
+
+            <input type="radio" name="myradio" id="myradio1">
+            <label for="myradio1">This option</label>
+            <br>
+            <input type="radio" name="myradio" id="myradio2">
+            <label for="myradio2">The other option</label>
+          </fieldset>
+
+          <fieldset>
+            <input type="checkbox" id="mycheckbox">
+            <label for="mycheckbox">Check this box</label>
+          </fieldset>
+
+          <fieldset>
+            <label for="myselect">A select box</label>
+            <select id="myselect">
+              <option>Something to select</option>
+              <optgroup>
+                <option>Something else</option>
+                <option>Something else entirely</option>
+              </optgroup>
+            </select>
+          </fieldset>
+
+          <fieldset>
+            <label for="mytext">A textarea</label>
+            <textarea placeholder="Some text in a textarea"></textarea>
+          </fieldset>
+
+          <input type="submit" value="Go!">
+          <input type="button" class="secondary" value="Don't go">
+
+        </form>
+
+        <form data-theme="dark" class="dark-wrapper">
+          
+          <fieldset>
+            <label for="myinput">A text input</label>
+            <input type="text" placeholder="Insert some text" id="myinput">
+          </fieldset>
+
+          <fieldset>
+            <label for="mydateinput">A date input</label>
+            <input type="date" id="mydateinput">
+          </fieldset>
+
+          <fieldset>
+            <label for="myrageinput">A range input</label>
+            <input type="range" id="myrangeinput">
+          </fieldset>
+
+          <fieldset>
+            <label for="myfileinput">A file input</label>
+            <input type="file" id="myfileinput">
+          </fieldset>
+
+          <fieldset>
+            <legend>Some choices</legend> <!-- A title for the contents of a fieldset -->
+
+            <input type="radio" name="myradiox" id="myradio1x">
+            <label for="myradio1x">This option</label>
+            <br>
+            <input type="radio" name="myradiox" id="myradio2x">
+            <label for="myradio2x">The other option</label>
+          </fieldset>
+
+          <fieldset>
+            <input type="checkbox" id="mycheckboxx">
+            <label for="mycheckboxx">Check this box</label>
+          </fieldset>
+
+          <fieldset>
+            <label for="myselect">A select box</label>
+            <select id="myselect">
+              <option>Something to select</option>
+              <optgroup>
+                <option>Something else</option>
+                <option>Something else entirely</option>
+              </optgroup>
+            </select>
+          </fieldset>
+
+          <fieldset>
+            <label for="mytext">A textarea</label>
+            <textarea placeholder="Some text in a textarea"></textarea>
+          </fieldset>
+
+          <input type="submit" value="Go!">
+          <input type="button" class="secondary" value="Don't go">
+        </form>
+
+      </section>
+
+      <h2 id="knapper">Knapper</h2>
+
+      <p>
+        <button class="contrast">Kontrast knap</button>
+      </p>
+      <p>
+        <button>Standard knap</button>
+      </p>
+      <p>
+        <button class="outline">Outline knap</button>
+      </p>
+      <p>
+        <button class="secondary">Sekundær knap</button>
+      </p>
+      <p>
+        <button disabled>Knap disabled</button>
+      </p>
+
+      <h2 id="tabeller">Tabeller</h2>
+
+      <!-- This is a preview of a table and how to set it up -->
+      <table>
+        <caption>
+          User Details
+        </caption>
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>Name</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>John Carter</td>
+            <td>johncarter@mail.com</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Peter Parker</td>
+            <td>peterparker@mail.com</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>John Rambo</td>
+            <td>johnrambo@mail.com</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 id="farver">Farver</h2>
+
+      <section style="display: grid; grid-template-columns: auto auto; gap: 1rem;">
+        <p class="colorswatch">
+          <span style="background-color: #0097A7;"></span>
+          Tyrkis 
+          <code>#0097A7</code>
+          <code>hsl(186,100%,33%)</code>
+        </p>
+        <p class="colorswatch">
+          <span style="background-color: #00393F;"></span>
+          Mørk tyrkis 
+          <code>#00393F</code>
+          <code>hsl(186,100%,12%)</code>
+        </p>
+        <p class="colorswatch">
+          <span style="background-color: hsla(186,40%,82%,0.7);"></span>
+          Vibrant steel 
+          <code>hsla(186,40%,82%,0.7)</code>
+        </p>
+        <p class="colorswatch">
+          <span style="background-color: hsla(186,25%,64%,0.6);"></span>
+          Dark steel
+          <code>hsla(186,25%,64%,0.6)</code>
+        </p>
+        <p class="colorswatch">
+          <span style="background-color: #E1ECED;"></span>
+          Medium steel
+          <code>#E1ECED</code>
+          <code>hsl(186,25%,91%)</code>
+        </p>
+        <p class="colorswatch">
+          <span style="background-color: #F2F7F7;"></span>
+          Lys steel
+          <code>#F2F7F7</code>
+          <code>hsl(186,25%,96%)</code>
+        </p>
+        <p class="colorswatch">
+          <span style="background-color: #000;"></span>
+          Sort
+          <code>#000000</code>
+          <code>hsl(0,0%,0%)</code>
+        </p>
+        <p class="colorswatch">
+          <span style="background-color: hsla(0,0%,0%,0.65);"></span>
+          65% sort
+          <code>hsla(0,0%,0%,0.65)</code>
+        </p>
+        <p class="colorswatch">
+          <span style="background-color: #fff; border: solid 1px #E1ECED;"></span>
+          Hvid
+          <code>#FFFFFF</code>
+          <code>hsl(0,0%,100%)</code>
+        </p>
+        <p class="colorswatch">
+          <span style="background-color: #3EDDC6;"></span>
+          Aktion
+          <code>#3EDDC6</code>
+          <code>hsl(171,70%,55%)</code>
+        </p>
+        <p class="colorswatch">
+          <span style="background-color: #E98436;"></span>
+          Highlight
+          <code>#E98436</code>
+          <code>hsl(26,80%,56%)</code>
+        </p>
+        <p class="colorswatch">
+          <span style="background-color: #FF5252;"></span>
+          Advarsel
+          <code>#FF5252</code>
+          <code>hsl(0,100%,66%)</code>
+        </p>
+      </section>
+    </main>
+
+    <footer data-theme="dark">
+
+      <p class="container">This is a footer</p>
+      
+    </footer>
+
+  </body>
+</html>

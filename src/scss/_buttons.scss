@@ -1,0 +1,89 @@
+button,
+button[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+[role="button"] {
+
+  border-color: var(--aktion);
+  background-color: var(--aktion);
+  color: var(--primary-inverse);
+  border-width: 1px;
+  border-style: solid;
+  margin: 0;
+  overflow: visible;
+  font-family: inherit;
+  text-transform: none;
+  -webkit-appearance: button;
+  display: inline-block;
+  width: auto;
+  text-decoration: none;
+  outline: none;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: var(--line-height);
+  text-align: center;
+  cursor: pointer;
+  padding: .5rem 1.5rem;
+  border-radius: 2.25rem;
+  margin: 0 0.5rem 0 0;
+
+  &:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+  }
+  &:focus {
+    border-color: var(--primary-focus);
+  }
+
+
+  &.contrast {
+    background-color: var(--contrast);
+    border-color: var(--contrast);
+    color: var(--contrast-inverse);
+
+    &:hover {
+      background-color: var(--contrast-hover);
+      border-color: var(--contrast-hover);
+    }
+    &:focus {
+      border-color: var(--contrast-focus);
+    }
+  }
+
+  &.secondary {
+    background-color: transparent;
+    color: var(--color);
+    border-color: var(--dark-steel);
+
+    &:hover {
+      background-color: var(--vibrant-steel);
+      border-color: var(--vibrant-steel);
+    }
+    &:focus {
+      border-color: var(--contrast-focus);
+    }
+  }
+
+  &.outline {
+    background-color: transparent;
+    color: var(--color);
+    border-color: var(--aktion);
+
+    &:hover {
+      background-color: var(--aktion);
+      color: var(--primary-inverse);
+    }
+    &:focus {
+      border-color: var(--contrast);
+    }
+  }
+}
+
+// Button [disabled]
+[disabled] {
+  pointer-events: none;
+  background-color: transparent;
+  border-color: var(--dark-steel);
+  color: var(--dark-steel);
+}
