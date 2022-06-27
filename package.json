@@ -19,7 +19,6 @@
   },
   "homepage": "https://github.com/SDFIdk/design-system-css#readme",
   "devDependencies": {
-    "@picocss/pico": "^1.5.3",
     "sass": "^1.53.0"
   }
 }

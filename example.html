@@ -12,10 +12,7 @@
       Loading fonts impacts performance. This bit of code loads ALL the fonts specified in the design guide.
       We advise you only load the fonts and font weights that are needed.
     -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Source+Code+Pro&display=swap" rel="stylesheet"> 
-
+    
     <!-- Design system CSS -->
     <link rel="stylesheet" href="assets/designsystem.css">
 
@@ -226,21 +223,44 @@
 
       <h2 id="knapper">Knapper</h2>
 
-      <p>
-        <button class="contrast">Kontrast knap</button>
-      </p>
-      <p>
-        <button>Standard knap</button>
-      </p>
-      <p>
-        <button class="outline">Outline knap</button>
-      </p>
-      <p>
-        <button class="secondary">Sekundær knap</button>
-      </p>
-      <p>
-        <button disabled>Knap disabled</button>
-      </p>
+      <section class="light-dark-wrapper">
+
+        <article class="light-wrapper">
+          <p>
+            <button class="contrast">Kontrast knap</button>
+          </p>
+          <p>
+            <button>Standard knap</button>
+          </p>
+          <p>
+            <button class="outline">Outline knap</button>
+          </p>
+          <p>
+            <button class="secondary">Sekundær knap</button>
+          </p>
+          <p>
+            <button disabled>Knap disabled</button>
+          </p>
+        </article>
+
+        <article data-theme="dark" class="dark-wrapper">
+          <p>
+            <button class="contrast">Kontrast knap</button>
+          </p>
+          <p>
+            <button>Standard knap</button>
+          </p>
+          <p>
+            <button class="outline">Outline knap</button>
+          </p>
+          <p>
+            <button class="secondary">Sekundær knap</button>
+          </p>
+          <p>
+            <button disabled>Knap disabled</button>
+          </p>
+        </article>
+      </section>  
 
       <h2 id="tabeller">Tabeller</h2>
 
@@ -349,12 +369,6 @@
         </p>
       </section>
     </main>
-
-    <footer data-theme="dark">
-
-      <p class="container">This is a footer</p>
-
-    </footer>
 
   </body>
 </html>
