@@ -14,11 +14,15 @@ This repository is meant to be used in tandem with [Design System Icons](https:/
 Presently, you can install DSCSS via NPM and bundle it with with your other frontend assets.
 
 1. Install package
-   `npm install git@github.com:SDFIdk/design-system-css.git`
-   Note that you'll need proper access to the Github repo. 
+   ```
+   npm install --save https://github.com/SDFIdk/design-system-css.git
+   ```
 2. Import DSCSS
-   `import 'design-system-css`
-   Your bundler should accept ASS/SCSS and knows how to bundle it properly. You might need to install and setup a loader depending on your build setup.
+   ```
+   import 'design-system-css`
+   ```
+   Your bundler should accept SASS/SCSS and know how to bundle it properly. 
+   You might need to install and setup a loader depending on your build setup.
 
 ### Option 2 - Refer assets in HTML `<head>`
 
