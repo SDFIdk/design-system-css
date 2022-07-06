@@ -18,6 +18,10 @@
 
     <style>
       /* Custom CSS for this page*/
+      .nav-fixed {
+        display: flex; 
+        flex-flow: column nowrap;
+      }
       .colorswatch {
         display: flex;
         flex-flow: row nowrap;
@@ -29,11 +33,6 @@
         height: 3rem;
         border-radius: 50%;
         display: inline-block;
-      }
-      .light-dark-wrapper {
-        display: flex; 
-        flex-flow: row nowrap; 
-        gap: 2rem;
       }
       .light-wrapper {
         padding: 2rem 3rem; 
@@ -47,19 +46,20 @@
   </head>
   <body>
 
-    <header class="container" style="margin-bottom: 2rem;">
+    <header class="container ds-margin">
 
       <h1>Designguide eksempler</h1>
       <p>Dette er reference-implmentationer af SDFI designguide med HTML/CSS</p>
 
       <!-- A nav is used to wrap around navigation menus and links and such  -->
-      <nav style="display: flex; flex-flow: column nowrap;">
+      <nav class="nav-fixed">
         <h2>Indholdsfortegnelse</h2>
         <a href="#typografi">Typografi</a>
         <a href="#formular">Formularer og inputfelter</a>
         <a href="#knapper">Knapper</a>
         <a href="#tabeller">Tabeller</a>
         <a href="#farver">Farver</a>
+        <a href="#grid">Layout</a>
       </nav>
 
     </header>
@@ -69,7 +69,7 @@
 
       <h2 id="typografi">Typografi</h2>
 
-      <section class="light-dark-wrapper" style="margin-bottom: 2rem;">
+      <section class="ds-grid">
         <!-- A sction contains several things that are alike in some way -->
         <article data-theme="light" class="light-wrapper">
           <!-- An article is a single unit of content -->
@@ -102,7 +102,7 @@
 
       <h2 id="formular">Formularer og inputfelter</h2>
 
-      <section class="light-dark-wrapper" style="margin-bottom: 2rem;">
+      <section class="ds-grid">
 
         <form class="light-wrapper">
           
@@ -223,7 +223,7 @@
 
       <h2 id="knapper">Knapper</h2>
 
-      <section class="light-dark-wrapper" style="margin-bottom: 2rem;">
+      <section class="ds-grid">
 
         <article class="light-wrapper">
           <p>
@@ -265,7 +265,7 @@
       <h2 id="tabeller">Tabeller</h2>
 
       <!-- This is a preview of a table and how to set it up -->
-      <table style="margin-bottom: 2rem;">
+      <table class="ds-margin">
         <caption>
           User Details
         </caption>
@@ -297,7 +297,7 @@
 
       <h2 id="farver">Farver</h2>
 
-      <section style="display: grid; grid-template-columns: auto auto; gap: 1rem;">
+      <section class="ds-flexgrid">
         <p class="colorswatch">
           <span style="background-color: #0097A7;"></span>
           Tyrkis 
@@ -368,7 +368,78 @@
           <code>hsl(0,100%,66%)</code>
         </p>
       </section>
+
     </main>
+
+    <aside data-theme="dark" class="ds-padding">
+
+      <h2 id="grid">Layout</h2>
+
+
+      <h3>Grids</h3>
+
+      <p>Lav et simpelt grid ved at tilføje <code>ds-grid</code> class til det element, der indeholder de elementer, som skal vises i et grid.</p>
+    
+      <section class="ds-grid">
+        <div data-theme="light" class="ds-padding">1</div>
+        <div data-theme="light" class="ds-padding">2</div>
+        <div data-theme="light" class="ds-padding">3</div>
+        <div data-theme="light" class="ds-padding">4</div>
+        <div data-theme="light" class="ds-padding">5</div>
+        <div data-theme="light" class="ds-padding">6</div>
+        <div data-theme="light" class="ds-padding">7</div>
+        <div data-theme="light" class="ds-padding">8</div>
+      </section>
+
+      <p>Du kan lave et grid, som ombryder, når skærmen er for smal, ved at tilføje <code>ds-flexgrid</code> class i stedet.</p>
+
+      <section class="ds-flexgrid">
+        <div data-theme="light" class="ds-padding">1</div>
+        <div data-theme="light" class="ds-padding">2</div>
+        <div data-theme="light" class="ds-padding">3</div>
+        <div data-theme="light" class="ds-padding">4</div>
+        <div data-theme="light" class="ds-padding">5</div>
+        <div data-theme="light" class="ds-padding">6</div>
+        <div data-theme="light" class="ds-padding">7</div>
+        <div data-theme="light" class="ds-padding">8</div>
+      </section>
+
+      <h3>Udvendig afstand / margin</h3>
+
+      <p>Du kan sætte den korrekte margin ved at bruge class <code>ds-margin</code> i HTML.</p>
+      <code>
+        <pre>
+          &lt;div class="ds-margin"> ... &lt;/div>
+        </pre>
+      </code>
+      <p>Hvis du skal bruge den officielle margin i CSS, kan du bruge CSS custom property <code>--margin</code>.</p>
+      <code>
+        <pre>
+          .my-custom-class {
+            margin: var(--margin);
+          }
+        </pre>
+      </code>
+
+      <h3>Indvendig afstand / padding</h3>
+
+      <p>Du kan sætte den korrekte padding ved at bruge class <code>ds-padding</code> i HTML.</p>
+      <code>
+        <pre>
+          &lt;div class="ds-padding"> ... &lt;/div>
+        </pre>
+      </code>
+      <p>Hvis du skal bruge den officielle padding i CSS, kan du bruge CSS custom property <code>--padding</code>.</p>
+      <code>
+        <pre>
+          .my-custom-class {
+            padding: var(--padding);
+          }
+        </pre>
+      </code>
+
+
+    </aside>
 
   </body>
 </html>

@@ -25,10 +25,15 @@
   --font-weight: 300;
   --font-size: 100%;
 
-  // Responsive typography
+  // Margins, paddings
+  --margin: 1rem;
+  --padding: 1.5rem 1rem 2rem;
+
+  // Responsive typography and margins
   @if map-get($breakpoints, "sm") {
     @media (min-width: map-get($breakpoints, "sm")) {
       --font-size: 17px;
+      --margin: 3.5vw 5vw;
     }
   }
 
@@ -62,8 +67,8 @@
   // Spacings for typography elements
   --typography-spacing-vertical: 1.5rem;
 
-  --grid-spacing-vertical: 0;
-  --grid-spacing-horizontal: var(--spacing);
+  --grid-spacing-vertical: 3.5vw;
+  --grid-spacing-horizontal: 3.5vw;
 
   // Spacings for form elements and button
   --form-element-spacing-vertical: 0.75rem;
