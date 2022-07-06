@@ -28,12 +28,26 @@
   // Margins, paddings
   --margin: 1rem;
   --padding: 1.5rem 1rem 2rem;
+  --optical-padding: 0 0.25rem;
+  --optical-margin: 0 -0.25rem;
 
-  // Responsive typography and margins
+  // Spacings
+  --spacing: 1rem;
+
+  // Spacings for typography elements
+  --typography-spacing-vertical: 1.5rem;
+
+  --grid-spacing-vertical: 1rem;
+  --grid-spacing-horizontal: 1rem;
+
+  // Responsive typography and spacing
   @if map-get($breakpoints, "sm") {
     @media (min-width: map-get($breakpoints, "sm")) {
       --font-size: 17px;
       --margin: 3.5vw 5vw;
+      --margin-vertical: 3.5vw;
+      --grid-spacing-vertical: 3.5vw;
+      --grid-spacing-horizontal: 3.5vw;
     }
   }
 
@@ -60,15 +74,6 @@
   --border-radius: 0.25rem;
   --border-width: 1px;
   --outline-width: 3px;
-
-  // Spacings
-  --spacing: 1rem;
-
-  // Spacings for typography elements
-  --typography-spacing-vertical: 1.5rem;
-
-  --grid-spacing-vertical: 3.5vw;
-  --grid-spacing-horizontal: 3.5vw;
 
   // Spacings for form elements and button
   --form-element-spacing-vertical: 0.75rem;

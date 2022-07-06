@@ -1,0 +1,20 @@
+/**
+ * Spacing
+ * Utility classes for margins, paddings, etc.
+ */
+
+.ds-padding {
+  padding: var(--padding);
+}
+
+.ds-optical-padding {
+  padding: var(--optical-padding);
+}
+
+.ds-margin {
+  margin: var(--margin);
+}
+
+.ds-optical-margin {
+  margin: var(--optical-margin);
+}

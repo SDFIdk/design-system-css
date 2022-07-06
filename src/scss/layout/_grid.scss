@@ -9,11 +9,11 @@
   grid-row-gap: var(--grid-spacing-vertical);
   display: grid;
   grid-template-columns: 1fr;
-  margin: 3.5vw 5vw;
+  margin-bottom: var(--grid-spacing-horizontal);
 
   @if map-get($breakpoints, "lg") {
     @media (min-width: map-get($breakpoints, "lg")) {
-      grid-template-columns: repeat(auto-fit, minmax(0%, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     }
   }
 
@@ -22,18 +22,59 @@
   }
 }
 
-// margin, padding, and flexbox classes for general layout tasks
+.ds-grid-2-1 {
 
-.ds-padding {
-  padding: var(--padding);
+  grid-column-gap: var(--grid-spacing-horizontal);
+  grid-row-gap: var(--grid-spacing-vertical);
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: var(--grid-spacing-horizontal);
+  
+  @if map-get($breakpoints, "lg") {
+    @media (min-width: map-get($breakpoints, "lg")) {
+      grid-template-columns: 2fr 1fr;
+    }
+  }
 }
 
-.ds-margin {
-  margin: var(--margin);
+.ds-grid-1-2 {
+
+  grid-column-gap: var(--grid-spacing-horizontal);
+  grid-row-gap: var(--grid-spacing-vertical);
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: var(--grid-spacing-horizontal);
+
+  @if map-get($breakpoints, "lg") {
+    @media (min-width: map-get($breakpoints, "lg")) {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: var(--grid-spacing-horizontal);
+    }
+  }
 }
 
 .ds-flexgrid {
-  display: flex; 
-  flex-flow: row wrap; 
-  gap: 3.5vw;
+  
+  & > * {
+    margin: 1rem 0;
+    width: 100%;
+  }
+
+  @if map-get($breakpoints, "sm") {
+    @media (min-width: map-get($breakpoints, "sm")) {
+      display: flex; 
+      flex-flow: row wrap; 
+      gap: 3.5vw;
+      margin-bottom: var(--grid-spacing-horizontal);
+
+      & > * {
+        flex: 1 1 auto;
+        margin: 0;
+        width: auto;
+        min-width: 15rem;
+        max-width: 44rem;
+      }
+    }
+  }
 }

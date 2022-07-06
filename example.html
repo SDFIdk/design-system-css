@@ -28,7 +28,7 @@
         align-items: center;
         gap: 1rem;
       }
-      .colorswatch span {
+      .colorswatch span:first-child {
         width: 3rem;
         height: 3rem;
         border-radius: 50%;
@@ -297,148 +297,212 @@
 
       <h2 id="farver">Farver</h2>
 
-      <section class="ds-flexgrid">
+      <section class="ds-grid">
         <p class="colorswatch">
           <span style="background-color: #0097A7;"></span>
-          Tyrkis 
+          <span>
+          Tyrkis<br>
           <code>#0097A7</code>
           <code>hsl(186,100%,33%)</code>
+        </span>
         </p>
         <p class="colorswatch">
           <span style="background-color: #00393F;"></span>
-          Mørk tyrkis 
+          <span>
+          Mørk tyrkis<br>
           <code>#00393F</code>
           <code>hsl(186,100%,12%)</code>
+        </span>
         </p>
         <p class="colorswatch">
           <span style="background-color: hsla(186,40%,82%,0.7);"></span>
-          Vibrant steel 
+          <span>
+          Vibrant steel<br>
           <code>hsla(186,40%,82%,0.7)</code>
+        </span>
         </p>
         <p class="colorswatch">
           <span style="background-color: hsla(186,25%,64%,0.6);"></span>
-          Dark steel
+          <span>
+          Dark steel<br>
           <code>hsla(186,25%,64%,0.6)</code>
+        </span>
         </p>
         <p class="colorswatch">
           <span style="background-color: #E1ECED;"></span>
-          Medium steel
-          <code>#E1ECED</code>
-          <code>hsl(186,25%,91%)</code>
+          <span>
+            Medium steel<br>
+            <code>#E1ECED</code>
+            <code>hsl(186,25%,91%)</code>
+          </span>
         </p>
         <p class="colorswatch">
           <span style="background-color: #F2F7F7;"></span>
-          Lys steel
+          <span>
+          Lys steel<br>
           <code>#F2F7F7</code>
           <code>hsl(186,25%,96%)</code>
+        </span>
         </p>
         <p class="colorswatch">
           <span style="background-color: #000;"></span>
-          Sort
+          <span>
+          Sort<br>
           <code>#000000</code>
           <code>hsl(0,0%,0%)</code>
+        </span>
         </p>
         <p class="colorswatch">
           <span style="background-color: hsla(0,0%,0%,0.65);"></span>
-          65% sort
+          <span>
+          65% sort<br>
           <code>hsla(0,0%,0%,0.65)</code>
+        </span>
         </p>
         <p class="colorswatch">
           <span style="background-color: #fff; border: solid 1px #E1ECED;"></span>
-          Hvid
+          <span>
+          Hvid<br>
           <code>#FFFFFF</code>
           <code>hsl(0,0%,100%)</code>
+        </span>
         </p>
         <p class="colorswatch">
           <span style="background-color: #3EDDC6;"></span>
-          Aktion
+          <span>
+          Aktion<br>
           <code>#3EDDC6</code>
           <code>hsl(171,70%,55%)</code>
+        </span>
         </p>
         <p class="colorswatch">
           <span style="background-color: #E98436;"></span>
-          Highlight
+          <span>
+          Highlight<br>
           <code>#E98436</code>
           <code>hsl(26,80%,56%)</code>
+        </span>
         </p>
         <p class="colorswatch">
           <span style="background-color: #FF5252;"></span>
-          Advarsel
+          <span>
+          Advarsel<br>
           <code>#FF5252</code>
           <code>hsl(0,100%,66%)</code>
+        </span>
         </p>
+      </section>
+
+      <section class="ds-padding">
+
+        <h2 id="grid">Layout</h2>
+
+        <h3>Kolonner og grids</h3>
+
+        <p>Lav et simpelt kolonne-layout ved at tilføje <code>ds-grid</code> class til det element, der indeholder de elementer, som skal vises i kolonner.</p>
+      
+        <section class="ds-grid">
+          <div data-theme="dark" class="ds-padding">1</div>
+          <div data-theme="dark" class="ds-padding">2</div>
+          <div data-theme="dark" class="ds-padding">3</div>
+          <div data-theme="dark" class="ds-padding">4</div>
+        </section>
+
+        <p>Hvis boksene gerne må bruge den plads, der er til rådighed, så kan du bruge <code>ds-flexgrid</code> class i stedet.</p>
+
+        <section class="ds-flexgrid">
+          <div data-theme="dark" class="ds-padding">1</div>
+          <div data-theme="dark" class="ds-padding">2</div>
+          <div data-theme="dark" class="ds-padding">3</div>
+          <div data-theme="dark" class="ds-padding">4</div>
+          <div data-theme="dark" class="ds-padding">5</div>
+        </section>
+
+        <p>Brug class <code>.ds-grid-2-1</code> på elementet udenom, når du vil vise to elementer som hhv. primær og sekundær kolonne.</p>
+        <section class="ds-grid-2-1">
+          <div data-theme="dark" class="ds-padding">Primær / main</div>
+          <div data-theme="dark" class="ds-padding">Sekundær</div>
+        </section>
+
+        <p>Brug class <code>.ds-grid-1-2</code> hvis rækkefølgen skal være omvendt.</p>
+        
+        <section class="ds-grid-1-2">
+          <div data-theme="dark" class="ds-padding">Sekundær</div>
+          <div data-theme="dark" class="ds-padding">Primær / main</div>
+        </section>
+
+        <h3>Udvendig afstand / margin</h3>
+
+        <p>Du kan sætte den korrekte margin ved at bruge class <code>ds-margin</code> i HTML.</p>
+        <code>
+          <pre>
+            &lt;div class="ds-margin"> ... &lt;/div>
+          </pre>
+        </code>
+        <p>Hvis du skal bruge den officielle margin i CSS, kan du bruge CSS custom property <code>--margin</code>.</p>
+        <code>
+          <pre>
+            .my-custom-class {
+              margin: var(--margin);
+            }
+          </pre>
+        </code>
+
+        <h3>Indvendig afstand / padding</h3>
+
+        <p>Du kan sætte den korrekte padding ved at bruge class <code>ds-padding</code> i HTML.</p>
+        <code>
+          <pre>
+            &lt;div class="ds-padding"> ... &lt;/div>
+          </pre>
+        </code>
+        <p>Hvis du skal bruge den officielle padding i CSS, kan du bruge CSS custom property <code>--padding</code>.</p>
+        <code>
+          <pre>
+            .my-custom-class {
+              padding: var(--padding);
+            }
+          </pre>
+        </code>
+
+        <p>Når tekst og elementer med runde kanter (ikoner, knapper, etc.) står sammen, skal teksten og de runde elementer rykkes lidt i forhold til hinanden. Det er for at modvirke et optisk fænomen, hvor det ser ud som om, at de ikke står på linie.</p>
+        <p>Du kan gøre det ved at give teksten lidt ekstra padding med <code>ds-optical-padding</code> class ELLER give ikoner/knapper en justeringsmargin.</p>
+        <code>
+          <pre>
+            &lt;p class="ds-optical-padding">Her er din tekst&lt;/p>
+            &lt;button>En knap&lt;/button>
+          </pre>
+        </code>
+
+        <code>
+          <pre>
+            &lt;p>Her er din tekst&lt;/p>
+            &lt;button class="ds-optical-margin">En knap&lt;/button>
+          </pre>
+        </code>
+
+        <p>Her kan du også bruge CSS custom properties <code>--optical-padding</code> og <code>--optical-margin</code> til mere specialiserede layouts.</p>
+
+        <h3>Indholds-containere</h3>
+        
+        <p class="ds-container">Hvis du skal vise noget indhold i én kolonne midt i skærmen, så sæt <code>ds-container</code> class på elementet. Indholdet i denne tekst er centreret med <code>ds-container</code>-class. <a href="#example-ds-container">Se eksemplet her.</a></p>
+        
+        <p class="ds-container-fluid">Hvis du skal vise noget indhold i én kolonne, som fylder hele skærmen, så sæt <code>ds-container-fluid</code> class på elementet. <a href="#example-ds-container-fluid">Se eksemplet her.</a></p>
+
       </section>
 
     </main>
 
-    <aside data-theme="dark" class="ds-padding">
+    <aside class="ds-container ds-padding" data-theme="dark" id="example-ds-container" style="margin-bottom: var(--grid-spacing-vertical);">
+      <p>Eksempel på indhold, der vises midt på skærmen med <code>ds-container</code> class.</p>
+    </aside>
 
-      <h2 id="grid">Layout</h2>
+    <aside class="ds-container-fluid ds-padding" data-theme="dark" id="example-ds-container-fluid" style="margin-bottom: var(--grid-spacing-vertical);">
+      <p>Eksempel på indhold, der vises i hele skærmens bredde med <code>ds-container-fluid</code> class.</p>
+    </aside>
 
-
-      <h3>Grids</h3>
-
-      <p>Lav et simpelt grid ved at tilføje <code>ds-grid</code> class til det element, der indeholder de elementer, som skal vises i et grid.</p>
-    
-      <section class="ds-grid">
-        <div data-theme="light" class="ds-padding">1</div>
-        <div data-theme="light" class="ds-padding">2</div>
-        <div data-theme="light" class="ds-padding">3</div>
-        <div data-theme="light" class="ds-padding">4</div>
-        <div data-theme="light" class="ds-padding">5</div>
-        <div data-theme="light" class="ds-padding">6</div>
-        <div data-theme="light" class="ds-padding">7</div>
-        <div data-theme="light" class="ds-padding">8</div>
-      </section>
-
-      <p>Du kan lave et grid, som ombryder, når skærmen er for smal, ved at tilføje <code>ds-flexgrid</code> class i stedet.</p>
-
-      <section class="ds-flexgrid">
-        <div data-theme="light" class="ds-padding">1</div>
-        <div data-theme="light" class="ds-padding">2</div>
-        <div data-theme="light" class="ds-padding">3</div>
-        <div data-theme="light" class="ds-padding">4</div>
-        <div data-theme="light" class="ds-padding">5</div>
-        <div data-theme="light" class="ds-padding">6</div>
-        <div data-theme="light" class="ds-padding">7</div>
-        <div data-theme="light" class="ds-padding">8</div>
-      </section>
-
-      <h3>Udvendig afstand / margin</h3>
-
-      <p>Du kan sætte den korrekte margin ved at bruge class <code>ds-margin</code> i HTML.</p>
-      <code>
-        <pre>
-          &lt;div class="ds-margin"> ... &lt;/div>
-        </pre>
-      </code>
-      <p>Hvis du skal bruge den officielle margin i CSS, kan du bruge CSS custom property <code>--margin</code>.</p>
-      <code>
-        <pre>
-          .my-custom-class {
-            margin: var(--margin);
-          }
-        </pre>
-      </code>
-
-      <h3>Indvendig afstand / padding</h3>
-
-      <p>Du kan sætte den korrekte padding ved at bruge class <code>ds-padding</code> i HTML.</p>
-      <code>
-        <pre>
-          &lt;div class="ds-padding"> ... &lt;/div>
-        </pre>
-      </code>
-      <p>Hvis du skal bruge den officielle padding i CSS, kan du bruge CSS custom property <code>--padding</code>.</p>
-      <code>
-        <pre>
-          .my-custom-class {
-            padding: var(--padding);
-          }
-        </pre>
-      </code>
-
-
+    <aside class="ds-container-fluid" data-theme="dark">
+      <p class="ds-container ds-padding"><code>ds-container-fluid</code> og <code>ds-container</code> kan kombineres.</p>
     </aside>
 
   </body>

@@ -3,16 +3,18 @@
  */
 
 .container,
-.container-fluid {
+.container-fluid,
+.ds-container,
+.ds-container-fluid {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 1rem;
-      padding-left: 1rem;
-  
+  padding-right: 0;
+  padding-left: 0;
 }
 
-.container {
+.container,
+.ds-container {
   @if map-get($breakpoints, "sm") {
     @media (min-width: map-get($breakpoints, "sm")) {
       max-width: map-get($viewports, "sm");
