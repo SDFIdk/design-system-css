@@ -8,12 +8,12 @@
 
   // Texts colors
   --color: #{$black};
-  --h1-color: #{$grey-900};
-  --h2-color: #{mix($grey-900, $grey-800)};
-  --h3-color: #{$grey-800};
-  --h4-color: #{mix($grey-800, $grey-700)};
-  --h5-color: #{$grey-700};
-  --h6-color: #{mix($grey-700, $grey-600)};
+  --h1-color: #{$black};
+  --h2-color: #{$black};
+  --h3-color: #{$grey-900};
+  --h4-color: #{$grey-900};
+  --h5-color: #{$grey-900};
+  --h6-color: #{$grey-900};
 
   // Muted colors
   --muted-color: #{$grey-500};

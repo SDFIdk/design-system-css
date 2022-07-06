@@ -46,21 +46,24 @@
   </head>
   <body>
 
-    <header class="container ds-margin">
+    <header data-theme="dark" style="margin-bottom: var(--grid-spacing-vertical);">
 
-      <h1>Designguide eksempler</h1>
-      <p>Dette er reference-implmentationer af SDFI designguide med HTML/CSS</p>
+      <div class="container ds-padding">
+        <h1>Designguide eksempler</h1>
+        <p>Dette er reference-implmentationer af SDFI designguide med HTML/CSS</p>
 
-      <!-- A nav is used to wrap around navigation menus and links and such  -->
-      <nav class="nav-fixed">
-        <h2>Indholdsfortegnelse</h2>
-        <a href="#typografi">Typografi</a>
-        <a href="#formular">Formularer og inputfelter</a>
-        <a href="#knapper">Knapper</a>
-        <a href="#tabeller">Tabeller</a>
-        <a href="#farver">Farver</a>
-        <a href="#grid">Layout</a>
-      </nav>
+        <!-- A nav is used to wrap around navigation menus and links and such  -->
+        <nav class="nav-fixed">
+          <h2>Indholdsfortegnelse</h2>
+          <a href="#typografi">Typografi</a>
+          <a href="#formular">Formularer og inputfelter</a>
+          <a href="#knapper">Knapper</a>
+          <a href="#tabeller">Tabeller</a>
+          <a href="#farver">Farver</a>
+          <a href="#grid">Layout</a>
+        </nav>
+
+      </div>
 
     </header>
 
@@ -73,30 +76,42 @@
         <!-- A sction contains several things that are alike in some way -->
         <article data-theme="light" class="light-wrapper">
           <!-- An article is a single unit of content -->
-          <h1>H1. This is a heading</h1>
-          <h2>H2. This is a heading level 2</h2>
-          <h3>H3. This is a heading level 3</h3>
-          <h4>H4. This is a heading level 4</h4>
-          <h5>H5. This is a heading level 5</h5>
-          <blockquote>Manchet/blockquote.This is a paragraph in an article.</blockquote>
-          <p>Alm. brødtekst. <a href="#typografi">Here is a link.</a> This is a paragraph in an article. It has many words in it but still does not convey any information of interest.</p>
+          <h1>Overskrift niveau 1</h1>
+          <p>Ovenstående overskrift/heading laves med <code>&lt;h1></code> eller <code>class="h1"</code>.</p>
+          <h2>Overskrift niveau 2</h2>
+          <h3>Overskrift niveau 3</h3>
+          <h4>Overskrift niveau 4</h4>
+          <h5>Overskrift niveau 5</h5>
+          <blockquote>Manchet/blockquote. Lorem ipsom dolor amet etc.</blockquote>
+          <p>Ovenstående manchet/blockquote laves med <code>&lt;blockquote></code> eller <code>class="blockquote"</code></p>
           <p>
-            <small>Lille brødtekst. <a href="#typografi">Here is a link.</a> It has many words in it but still does not convey any information of interest.</small><br>
-            <small><em>Lille kursiv brødtekst. This is a paragraph in an article.</em></small>
+            Almindelig brødtekst. <a href="#typografi">Her er et link i teksten.</a> Lorem ipsum dolor etc. Fås osgå som <em>kursiv brødtekst,</em> hvis du bruger <code>&lt;em></code> elementet.
           </p>
+          <p><em>Bemærk!</em> Lav aldrig om på headings - f.eks. ved at lave en <code>&lt;h1></code> om til en <code>&lt;h3></code> hvis du bare synes overskriften skal have en anden størrelse. Niveau-opdelingen har betydning for tilgængelighed og SEO.</p>
+          <p>Brug i stedet en style class på heading, der matcher din ønskede størrelse. F.eks. <code>&lt;h1 class="h3"></code>.</p>
+          <p>
+            <small>Lille brødtekst. <a href="#typografi">Here is a link.</a> Benyttes i HTML med <code>&lt;small></code> elementet.</small><br>
+            <small><em>Lille kursiv brødtekst. </a> Benyttes i HTML med <code>&lt;small></code> og <code>&lt;em></code> elementerne.</small></em></small>
+          </p>
+          <p><code>&lt;code>Her er noget kode&lt;/code></code></p>
         </article>
         <article data-theme="dark" class="dark-wrapper">
-          <h1>H1. This is a heading</h1>
-          <h2>H2. This is a heading level 2</h2>
-          <h3>H3. This is a heading level 3</h3>
-          <h4>H4. This is a heading level 4</h4>
-          <h5>H5. This is a heading level 5</h5>
+          <h1>This is a heading at level 1</h1>
+          <h2>This is a heading level 2</h2>
+          <h3>This is a heading level 3</h3>
+          <h4>This is a heading level 4</h4>
+          <h5>This is a heading level 5</h5>
           <blockquote>Manchet/blockquote.This is a paragraph in an article.</blockquote>
-          <p>Alm. brødtekst. This is a paragraph in an article. <a href="#typografi">Here is a link.</a> It has many words in it but still does not convey any information of interest.</p>
+          <p>
+            Alm. brødtekst. <a href="#typografi">Here is a link.</a> This is a paragraph in an article. It has many words in it but still does not convey any information of interest.<br>
+            Sådan ser en <em>alm. kursiv brødtekst</em> ud. 
+          </p>
+          <p>
           <p>
             <small>Lille brødtekst. It has many words in it but still does not convey any information of interest. <a href="#typografi">Here is a link.</a></small><br>
             <small><em>Lille kursiv brødtekst. This is a paragraph in an article.</em></small>
           </p>
+          <p><code>&lt;code>Her er noget kode&lt;/code></code></p>
         </article>
       </section>
 
