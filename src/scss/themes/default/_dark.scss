@@ -18,7 +18,12 @@
 
   // Muted colors
   --muted-color: #{$grey-500};
-  --muted-border-color: #{mix($grey-900, $grey-800, 75%)};
+  --muted-border-color: #{$primary-800};
+
+  // Link colors
+  --link: #{$primary-300};
+  --link-hover: #{$primary-400};
+  --link-focus: #{$amber-300};
 
   // Primary colors
   --primary: #{$primary-600};
@@ -63,7 +68,7 @@
   --form-element-placeholder-color: var(--muted-color);
   --form-element-active-background-color: transparent;
   --form-element-active-border-color: var(--primary);
-  --form-element-focus-color: var(--primary-focus);
+  --form-element-focus-color: #{$amber-300};
   --form-element-disabled-background-color: #{$grey-800};
   --form-element-disabled-border-color: #{$grey-700};
   --form-element-disabled-opacity: 0.5;
@@ -107,21 +112,9 @@
   --accordion-close-summary-color: var(--color);
   --accordion-open-summary-color: var(--muted-color);
 
-  // Card (<article>)
-  $box-shadow-elevation: 1rem;
-  $box-shadow-blur-strengh: 6rem;
-  $box-shadow-opacity: 0.06;
-  --card-background-color: #{mix($black, $grey-900, 25%)};
-  --card-border-color: var(--card-background-color);
-  --card-box-shadow:
-    #{($box-shadow-elevation * 0.5 * 0.029)} #{($box-shadow-elevation * 0.029)} #{($box-shadow-blur-strengh * 0.029)} #{rgba($black, ($box-shadow-opacity * 0.283))},
-    #{($box-shadow-elevation * 0.5 * 0.067)} #{($box-shadow-elevation * 0.067)} #{($box-shadow-blur-strengh * 0.067)} #{rgba($black, ($box-shadow-opacity * 0.4))},
-    #{($box-shadow-elevation * 0.5 * 0.125)} #{($box-shadow-elevation * 0.125)} #{($box-shadow-blur-strengh * 0.125)} #{rgba($black, ($box-shadow-opacity * 0.5))},
-    #{($box-shadow-elevation * 0.5 * 0.225)} #{($box-shadow-elevation * 0.225)} #{($box-shadow-blur-strengh * 0.225)} #{rgba($black, ($box-shadow-opacity * 0.6))},
-    #{($box-shadow-elevation * 0.5 * 0.417)} #{($box-shadow-elevation * 0.417)} #{($box-shadow-blur-strengh * 0.417)} #{rgba($black, ($box-shadow-opacity * 0.717))},
-    #{($box-shadow-elevation * 0.5)} #{$box-shadow-elevation} #{$box-shadow-blur-strengh} #{rgba($black, $box-shadow-opacity)},
-    0 0 0 0.0625rem #{rgba($black, ($box-shadow-opacity * 0.25) )};
-  --card-sectionning-background-color: #{mix($black, $grey-900, 12.5%)};
+  // Card
+  --card-background-color: #{$primary-900};
+  --card-border-color: #{$primary-50};
 
   // Dropdown (<details role="list">)
   --dropdown-background-color: #{$grey-900};

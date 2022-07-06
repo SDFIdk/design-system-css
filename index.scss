@@ -80,6 +80,10 @@
 @import "./src/scss/content/form-checkbox-radio";
 @import "./src/scss/content/form-alt-input-types";
 @import "./src/scss/content/table"; // table, tr, td, ...
+@import "./src/scss/content/miscs"; // hr
+
+// Components
+@import "./src/scss/components/card"; // produktkort
 
 // Utilities
 //@import "utilities/accessibility"; // -ms-touch-action, aria-*

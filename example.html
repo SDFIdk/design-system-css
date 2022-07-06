@@ -36,7 +36,7 @@
       }
       .light-wrapper {
         padding: 2rem 3rem; 
-        border: solid 1px var(--dark-steel);
+        border: solid 1px var(--vibrant-steel);
       }
       .dark-wrapper {
         padding: 2rem 3rem;
@@ -50,7 +50,7 @@
 
       <div class="container ds-padding">
         <h1>Designguide eksempler</h1>
-        <p>Dette er reference-implmentationer af SDFI designguide med HTML/CSS</p>
+        <p class="blockquote">Reference-implmentationer af SDFIs designguide med HTML/CSS</p>
 
         <!-- A nav is used to wrap around navigation menus and links and such  -->
         <nav class="nav-fixed">
@@ -60,6 +60,7 @@
           <a href="#knapper">Knapper</a>
           <a href="#tabeller">Tabeller</a>
           <a href="#farver">Farver</a>
+          <a href="#cards">Cards</a>
           <a href="#grid">Layout</a>
         </nav>
 
@@ -172,6 +173,8 @@
             <textarea placeholder="Some text in a textarea"></textarea>
           </fieldset>
 
+          <hr>
+
           <input type="submit" value="Go!">
           <input type="button" class="secondary" value="Don't go">
 
@@ -229,6 +232,8 @@
             <label for="mytext">A textarea</label>
             <textarea placeholder="Some text in a textarea"></textarea>
           </fieldset>
+          
+          <hr>
 
           <input type="submit" value="Go!">
           <input type="button" class="secondary" value="Don't go">
@@ -280,7 +285,7 @@
       <h2 id="tabeller">Tabeller</h2>
 
       <!-- This is a preview of a table and how to set it up -->
-      <table class="ds-margin">
+      <table>
         <caption>
           User Details
         </caption>
@@ -408,7 +413,41 @@
         </p>
       </section>
 
-      <section class="ds-padding">
+      <article class="ds-padding" style="background-color: var(--lys-steel);">
+        <h3>Indhold med baggrundsfarve.</h3>
+        <p>
+          Kan bruges med CSS custom properties:<br> 
+          <code>&lt;div style="background-color: var(--lys-steel);"> ... &lt;/div></code>
+        </p>
+      </article>
+      <article class="ds-padding" style="background-color: var(--medium-steel);">
+        <h3>Indhold med baggrundsfarve.</h3>
+        <p>
+          Benyttes ofte til footer og lign. Kan bruges med CSS custom properties:<br> 
+          <code>&lt;div style="background-color: var(--medium-steel);"> ... &lt;/div></code>
+        </p>
+      </article>
+      <article class="ds-padding" data-theme="dark">
+        <h3>Indhold med mørk baggrundsfarve.</h3>
+        <p>Benytter "dark" tema. <code>&lt;div data-theme="dark"> ... &lt;/div></code></p> 
+      </article>
+
+      <h2 id="cards">Produktkort/cards</h2>
+      <section class="ds-grid">
+        <article class="ds-card">
+          <img src="https://raw.githubusercontent.com/iamfrank/semstrap/master/assets/images/bg-img-1.jpg" alt="">
+          
+          <h3>Produktkort titel</h3>
+          <p>Lorem ipsum dolor sit amit consequetur etc.</p>
+        </article>
+        <article class="ds-card" data-theme="dark">
+          <img src="https://raw.githubusercontent.com/iamfrank/semstrap/master/assets/images/bg-img-1.jpg" alt="">
+          <h3>Produktkort titel</h3>
+          <p>Lorem ipsum dolor sit amit consequetur etc.</p>
+        </article>  
+      </section>
+
+      <section>
 
         <h2 id="grid">Layout</h2>
 
@@ -519,6 +558,12 @@
     <aside class="ds-container-fluid" data-theme="dark" style="margin-bottom: var(--grid-spacing-vertical);">
       <p class="ds-container ds-padding"><code>ds-container-fluid</code> og <code>ds-container</code> kan kombineres.</p>
     </aside>
+
+    <footer style="background-color: var(--medium-steel);">
+      <p class="container ds-padding">
+        2022 Styrelsen for Dataforsyning og Infrastruktur
+      </p>
+    </footer>
 
   </body>
 </html>

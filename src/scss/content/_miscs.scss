@@ -14,20 +14,11 @@ hr {
   border: 0;
   border-top: 1px solid var(--muted-border-color);
   color: inherit; // 1
+  margin: var(--typography-spacing-vertical) 0;
 }
 
 // Add the correct display in IE 10+
 [hidden],
 template {
-  @if $enable-important {
-    display: none !important;
-  } 
-  @else {
-    display: none;
-  }
-}
-
-// Add the correct display in IE 9-
-canvas {
-  display: inline-block;
+  display: none;
 }
