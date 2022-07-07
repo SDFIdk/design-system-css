@@ -5,6 +5,10 @@
 
 .ds-padding {
   padding: var(--padding);
+
+  & > *:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .ds-optical-padding {

@@ -154,3 +154,26 @@ a[role="button"]:not([href]) {
   opacity: 0.5;
   pointer-events: none;
 }
+
+.ds-button-group {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  margin-bottom: var(--spacing);
+
+  & > button,
+  & > input,
+  & > a {
+    border-radius: 0;
+    display: block;
+    margin: 0;
+
+    &:first-child {
+      border-radius: 2.5rem 0 0 2.5rem;
+    }
+
+    &:last-child {
+      border-radius: 0 2.5rem 2.5rem 0;
+    }
+  }
+}

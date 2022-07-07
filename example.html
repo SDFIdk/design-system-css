@@ -434,17 +434,53 @@
 
       <h2 id="cards">Produktkort/cards</h2>
       <section class="ds-grid">
+
         <article class="ds-card">
           <img src="https://raw.githubusercontent.com/iamfrank/semstrap/master/assets/images/bg-img-1.jpg" alt="">
-          
-          <h3>Produktkort titel</h3>
-          <p>Lorem ipsum dolor sit amit consequetur etc.</p>
+          <div class="ds-padding">
+            <h3>Produktkort titel</h3>
+            <p>Dette er et produktkort/card.</p>
+            <pre>
+              <code>
+&lt;article class="ds-card">
+  &lt;img src="..." alt="">
+  &lt;div class="ds-padding">
+    &lt;h3>Produktkort titel&lt;/h3>
+    &lt;p>Dette er et produktkort/card.&lt;/p>
+    &lt;footer>
+      &lt;button>Gør noget&lt;/button>
+    &lt;/footer>
+  &lt;/div>
+&lt;/article>
+              </code>            
+            </pre>      
+          </div>
+          <footer>
+            <button>Gør noget</button>
+          </footer>
         </article>
+
         <article class="ds-card" data-theme="dark">
           <img src="https://raw.githubusercontent.com/iamfrank/semstrap/master/assets/images/bg-img-1.jpg" alt="">
-          <h3>Produktkort titel</h3>
-          <p>Lorem ipsum dolor sit amit consequetur etc.</p>
-        </article>  
+          <div class="ds-padding">
+            <h3>Produktkort titel</h3>
+            <p>Dette produktkort har <code>data-theme="dark"</code>.</p>
+            <pre>
+              <code>
+&lt;article class="ds-card" data-theme="dark">
+  ...
+&lt;/article>
+              </code>            
+            </pre>
+          </div>
+          <footer>
+            <div class="ds-button-group">
+              <button>Gør noget</button>
+              <button class="secondary">Gør noget andet</button>
+            </div>
+          </footer>
+        </article>
+
       </section>
 
       <section>
