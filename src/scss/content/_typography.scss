@@ -67,20 +67,21 @@ a,
   --background-color: transparent;
   outline: none;
   background-color: var(--background-color); // 1
+  border-bottom: solid 1px transparent;
   color: var(--link);
-  text-decoration: var(--text-decoration);
+  text-decoration: none;
   font-weight: var(--font-weight);
 
-  transition: background-color var(--transition), color var(--transition),
-  text-decoration var(--transition), box-shadow var(--transition);
+  transition: background-color var(--transition), color var(--transition);
 
-  &:is([aria-current], :hover, :active, :focus) {
-    --color: var(--link-hover);
-    --text-decoration: underline;
+  &:is([aria-current], :hover, :active) {
+    color: var(--link-hover);
+    border-color: var(--link-hover);
   }
 
   &:focus {
-    --background-color: var(--link-focus);
+    color: var(--link-focus);
+    border-color: var(--link-focus);
   }
 
   // Secondary
