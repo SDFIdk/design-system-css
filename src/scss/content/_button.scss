@@ -111,7 +111,7 @@ input[type="reset"] {
   }
 }
 
-// Outline (primary)
+// Outline
 :is(button, input[type="submit"], input[type="button"], [role="button"]).outline,
 input[type="reset"].outline {
   background-color: transparent;
@@ -128,25 +128,6 @@ input[type="reset"].outline {
     border-color: var(--primary-focus) !important;
     background-color: var(--primary-focus) !important;
     color: #{$white} !important;
-  }
-}
-
-// Outline (secondary)
-:is(button, input[type="submit"], input[type="button"], [role="button"]).outline.secondary,
-input[type="reset"].outline {
-  --color: var(--secondary);
-
-  &:is([aria-current], :hover, :active, :focus) {
-    --color: var(--secondary-hover);
-  }
-}
-
-// Outline (contrast)
-:is(button, input[type="submit"], input[type="button"], [role="button"]).outline.contrast {
-  --color: var(--contrast);
-
-  &:is([aria-current], :hover, :active, :focus) {
-    --color: var(--contrast-hover);
   }
 }
 
