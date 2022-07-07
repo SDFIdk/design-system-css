@@ -35,11 +35,7 @@
         display: inline-block;
       }
       .light-wrapper {
-        padding: 2rem 3rem; 
         border: solid 1px var(--vibrant-steel);
-      }
-      .dark-wrapper {
-        padding: 2rem 3rem;
       }
     </style>
 
@@ -53,15 +49,18 @@
         <p class="blockquote">Reference-implmentationer af SDFIs designguide med HTML/CSS</p>
 
         <!-- A nav is used to wrap around navigation menus and links and such  -->
-        <nav class="nav-fixed">
-          <h2>Indholdsfortegnelse</h2>
-          <a href="#typografi">Typografi</a>
-          <a href="#formular">Formularer og inputfelter</a>
-          <a href="#knapper">Knapper</a>
-          <a href="#tabeller">Tabeller</a>
-          <a href="#farver">Farver</a>
-          <a href="#cards">Cards</a>
-          <a href="#grid">Layout</a>
+        <h2>Indholdsfortegnelse</h2>
+        <nav class="ds-nav-vertical">
+          <ul>
+            <li><a href="#typografi">Typografi</a></li>
+            <li><a href="#formular">Formularer og inputfelter</a></li>
+            <li><a href="#knapper">Knapper</a></li>
+            <li><a href="#tabeller">Tabeller</a></li>
+            <li><a href="#farver">Farver</a></li>
+            <li><a href="#cards">Cards</a></li>
+            <li><a href="#navs">Navigation</a></li>
+            <li><a href="#grid">Layout</a></li>
+          </ul>
         </nav>
 
       </div>
@@ -75,7 +74,7 @@
 
       <section class="ds-grid">
         <!-- A sction contains several things that are alike in some way -->
-        <article data-theme="light" class="light-wrapper">
+        <article data-theme="light" class="light-wrapper ds-padding">
           <!-- An article is a single unit of content -->
           <h1>Overskrift niveau 1</h1>
           <p>Ovenstående overskrift/heading laves med <code>&lt;h1></code> eller <code>class="h1"</code>.</p>
@@ -96,7 +95,7 @@
           </p>
           <p><code>&lt;code>Her er noget kode&lt;/code></code></p>
         </article>
-        <article data-theme="dark" class="dark-wrapper">
+        <article data-theme="dark" class="ds-padding">
           <h1>This is a heading at level 1</h1>
           <h2>This is a heading level 2</h2>
           <h3>This is a heading level 3</h3>
@@ -120,7 +119,7 @@
 
       <section class="ds-grid">
 
-        <form class="light-wrapper">
+        <form class="light-wrapper ds-padding">
           
           <fieldset>
             <label for="myinput">A text input</label>
@@ -180,7 +179,7 @@
 
         </form>
 
-        <form data-theme="dark" class="dark-wrapper">
+        <form data-theme="dark" class="ds-padding">
           
           <fieldset>
             <label for="myinput">A text input</label>
@@ -245,7 +244,7 @@
 
       <section>
 
-        <article class="light-wrapper">
+        <article class="light-wrapper ds-padding">
         
           <button>Standard knap</button>
           <button class="secondary">Sekundær knap</button>
@@ -287,7 +286,7 @@
           </p>
         </article>
 
-        <article data-theme="dark" class="dark-wrapper">
+        <article data-theme="dark" class="ds-padding">
           <h3>Knapper i <code>dark</code> theme</h3>
         
           <button>Standard knap</button>
@@ -519,6 +518,148 @@
             </div>
           </footer>
         </article>
+
+      </section>
+
+      <section>
+        <h2 id="navs">Navigationselementer</h2>
+
+        <p>Navigationselementer laves med <code>&lt;nav></code> elementet.</p>
+
+        <div class="ds-grid">
+
+          <div class="ds-padding light-wrapper">
+            <h3>Basic navigation</h3>
+            <nav>
+              <ul>
+                <li><a href="#navs">Link</a></li>
+                <li><a href="#navs">Link</a></li>
+                <li><a href="#navs">Link</a></li>
+              </ul>
+            </nav>
+            <p>
+              <pre>
+                <code>
+&lt;nav>
+  &lt;ul>
+    &lt;li>
+      &lt;a href="#">Link&lt;/a>
+    &lt;/li>
+    ...
+  &lt;/ul>
+&lt;/nav>
+                </code>
+              </pre>
+            </p>
+            <hr>
+            <h3>Lodret navigation</h3>
+            <p><code>&lt;nav class="ds-nav-vertical"></code></p>
+            <nav class="ds-nav-vertical">
+              <ul>
+                <li><a href="#navs">Link</a></li>
+                <li><a href="#navs">Link</a></li>
+                <li><a href="#navs">Link</a></li>
+              </ul>
+            </nav>
+            <hr>
+            <h3>Hovedmenu</h3>
+            <p><code>&lt;nav class="ds-nav-main"></code></p>
+            <nav class="ds-nav-main">
+              <ul>
+                <li>
+                  Produktnavn
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="#navs">Link</a>    
+                </li>
+                <li>
+                  <a href="#navs">Link</a>    
+                </li>
+                <li>
+                  <a href="#navs">Link</a>    
+                </li>
+              </ul>
+            </nav>
+            <hr>
+            <h3>Tabs</h3>
+            <p><code>&lt;nav class="ds-nav-tabs"></code></p>
+            <nav class="ds-nav-tabs">
+              <ul>
+                <li>
+                  <h4>Produktnavn</h4>
+                </li>
+                <li>
+                  <a href="#navs">Link</a>    
+                </li>
+                <li>
+                  <a href="#navs">Link</a>    
+                </li>
+                <li>
+                  <a href="#navs">Link</a>    
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div data-theme="dark" class="ds-padding">
+            <h3>Basic navigation</h3>
+            <nav>
+              <ul>
+                <li><a href="#navs">Link</a></li>
+                <li><a href="#navs">Link</a></li>
+                <li><a href="#navs">Link</a></li>
+              </ul>
+            </nav>
+            <hr>
+            <h3>Lodret navigation</h3>
+            <nav class="ds-nav-vertical">
+              <ul>
+                <li><a href="#navs">Link</a></li>
+                <li><a href="#navs">Link</a></li>
+                <li><a href="#navs">Link</a></li>
+              </ul>
+            </nav>
+            <hr>
+            <h3>Hovedmenu</h3>
+            <nav class="ds-nav-main">
+              <ul>
+                <li>
+                  Produktnavn
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="#navs">Link</a>    
+                </li>
+                <li>
+                  <a href="#navs">Link</a>    
+                </li>
+                <li>
+                  <a href="#navs">Link</a>    
+                </li>
+              </ul>
+            </nav>
+            <hr>
+            <h3>Tabs</h3>
+            <nav class="ds-nav-tabs">
+              <ul>
+                <li>
+                  <h4>Produktnavn</h4>
+                </li>
+                <li>
+                  <a href="#navs">Link</a>    
+                </li>
+                <li>
+                  <a href="#navs">Link</a>    
+                </li>
+                <li>
+                  <a href="#navs">Link</a>    
+                </li>
+              </ul>
+            </nav>
+        </div>
 
       </section>
 

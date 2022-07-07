@@ -78,6 +78,11 @@
   --form-element-valid-active-border-color: #{$green-600};
   --form-element-valid-focus-color: #{rgba($green-600, 0.125)};
 
+  // Navigation
+  --nav-link-color: #{$black};
+  --nav-tab-border: #{$green-400};
+  --nav-tab-font-weight: 300;
+
   // Switch (input[type="checkbox"][role="switch"])
   --switch-background-color: #{$grey-200};
   --switch-color: var(--primary-inverse);

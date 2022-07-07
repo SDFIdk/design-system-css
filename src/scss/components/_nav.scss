@@ -1,0 +1,116 @@
+/**
+ * Nav
+ */
+
+// Reboot based on :
+// - sanitize.css v13.0.0 | CC0 1.0 Universal | github.com/csstools/sanitize.css
+
+// Pico
+// ––––––––––––––––––––
+
+// Horizontal Nav
+nav,
+nav ul {
+  display: flex;
+}
+
+nav {
+  justify-content: space-between;
+
+  ol,
+  ul {
+    align-items: center;
+    margin-bottom: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+
+    a, 
+    [role="link"],
+    button,
+    [role="button"] {
+      @extend .h4;
+      display: inline-block;
+      color: var(--nav-link-color);
+      padding: 0.5em 1.5em;
+      margin: 0;
+      border-radius: 2.5rem;
+      border: none;
+
+      &:hover,
+      &:active {
+        background-color: var(--primary);
+        color: var(--primary-inverse);
+      }
+
+      &:focus {
+        background-color: var(--link-focus);
+        color: var(--primary-inverse);
+      }
+    }
+  }
+}
+
+// Main nav
+.ds-nav-main {
+  li > * {
+    padding: 1.5rem 2rem;
+  }
+}
+
+// Tabs
+.ds-nav-tabs {
+  border-bottom: solid 1px var(--nav-tab-border);
+
+  li > * {
+    margin: 0 0 -1px;
+    padding: 1rem 1.5rem;
+    border-bottom: solid 0.25rem transparent !important;
+  }
+
+  a, 
+  [role="link"],
+  button,
+  [role="button"] {
+    background-color: transparent;
+    --font-weight: var(--nav-tab-font-weight);
+    border-radius: 0;
+
+    &:hover,
+    &:active {
+      border-color: var(--nav-tab-border) !important;
+      background-color: transparent;
+      color: var(--link-hover);
+    }
+
+    &:focus {
+      border-color: var(--link-focus) !important;
+      background-color: transparent;
+      color:  var(--link-focus);
+    }
+  }
+}
+
+// Vertical Nav
+aside,
+.ds-nav-vertical {
+  nav,
+  ol,
+  ul,
+  li {
+    display: block;
+  }
+
+  li {
+    
+    a {
+      display: block;
+      margin-bottom: var(--spacing);
+    }
+  }
+}
