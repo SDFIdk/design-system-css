@@ -55,7 +55,7 @@ input[type="reset"],
   text-align: center;
   cursor: pointer;
 
-  transition: background-color var(--transition), border-color var(--transition), color var(--transition), box-shadow var(--transition);
+  transition: background-color var(--transition), border-color var(--transition), color var(--transition);
 
   &:is([aria-current], :hover, :active) {
     background-color: var(--primary-hover);

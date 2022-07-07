@@ -2,13 +2,7 @@
  * Nav
  */
 
-// Reboot based on :
-// - sanitize.css v13.0.0 | CC0 1.0 Universal | github.com/csstools/sanitize.css
-
-// Pico
-// ––––––––––––––––––––
-
-// Horizontal Nav
+// Basic horizontal Nav
 nav,
 nav ul {
   display: flex;
@@ -112,5 +106,54 @@ aside,
       display: block;
       margin-bottom: var(--spacing);
     }
+  }
+}
+
+// Tool bar nav
+nav.ds-nav-tools,
+aside.ds-nav-tools {
+  justify-content: flex-start;
+  align-items: center;
+  
+  & > button,
+  & > [role="button"] {
+    border-radius: 0;
+    border-style: solid;
+    border-width: .25rem 0;
+    border-color: var(--card-border-color);
+    background-color: var(--background-color);
+    color: var(--link) !important;
+    padding: 1rem 1.5rem;
+    display: block;
+    margin: 0;
+
+    &:hover,
+    &:active {
+      background-color: var(--primary);
+      color: var(--primary-inverse) !important;
+    }
+
+    &:focus {
+      background-color: var(--link-focus);
+      color: var(--primary-inverse) !important;
+    }
+
+    &:first-child {
+      border-radius: 2.5rem 0 0 2.5rem;
+      border-left-width: .25rem;
+    }
+    &:last-child {
+      border-radius: 0 2.5rem 2.5rem 0;
+      border-right-width: .25rem;
+    }
+  }
+
+  & > hr {
+    display: block;
+    border: solid .25rem var(--card-border-color);
+    border-width: .25rem 0;
+    background-color: var(--card-border-color);
+    width: 1px;
+    height: 3.75rem;
   }
 }
