@@ -26,22 +26,20 @@
   --link-focus: #{$amber-300};
 
   // Primary colors
-  --primary: #{$primary-600};
-  --primary-hover: #{$primary-500};
-  --primary-focus: #{rgba($primary-600, 0.25)};
+  --primary: #{$green-400};
   --primary-inverse: #{$white};
+  --primary-hover: #{$green-600};
+  --primary-focus: #{$amber-400};
 
   // Secondary colors
-  --secondary: #{$grey-600};
-  --secondary-hover: #{$grey-500};
-  --secondary-focus: #{rgba($grey-500, 0.25)};
-  --secondary-inverse: #{$white};
+  --secondary: #{$primary-50};
+  --secondary-inverse: #{$grey-50};
+  --secondary-hover: #{$green-600};
 
   // Contrast colors
-  --contrast: #{$grey-50};
-  --contrast-hover: #{$white};
-  --contrast-focus: #{rgba($grey-500, 0.25)};
-  --contrast-inverse: #{$black};
+  --contrast: #{$white};
+  --contrast-inverse: #{$grey-900};
+  --contrast-hover: #{$green-300};
 
   // Highlighted text (<mark>)
   --mark-background-color: #{mix($grey-300, $amber-300)};

@@ -243,40 +243,66 @@
 
       <h2 id="knapper">Knapper</h2>
 
-      <section class="ds-grid">
+      <section>
 
         <article class="light-wrapper">
-          <p>
-            <button class="contrast">Kontrast knap</button>
-          </p>
-          <p>
+        
+          <button>Standard knap</button>
+          <button class="secondary">Sekundær knap</button>
+          <button class="outline">Outline knap</button>
+          <button class="contrast">Kontrast knap</button>
+          <button disabled>Knap disabled</button>
+          
+          <p>Du kan ændre typografi i knapperne ved at bruge <code>.hx</code> classes på knapperne.<br> F.eks. <code>&lt;button class="h4">H4 tekst knap&lt;/button></code></p>
+
+          <button class="h2">H2 tekst</button>
+          <button class="secondary h2">H2 tekst</button>
+          <button class="outline h4">H4 tekst</button>
+          <button class="contrast h5">H5 tekst</button>
+          <button disabled class="h5">Knap disabled</button>
+        
+          <p>Du kan lave knapgrupper ved at pakke <code>&lt;button></code> elementerne ind i et element med <code>class="ds-button-group"</code>.</p>
+          <p class="ds-button-group">
             <button>Standard knap</button>
-          </p>
-          <p>
-            <button class="outline">Outline knap</button>
-          </p>
-          <p>
             <button class="secondary">Sekundær knap</button>
           </p>
           <p>
+            Knapgrupper kan indeholde et vilkårligt antal knapper.<br> 
+            <em>Bemærk:</em> Vær opmærksom på, om der er plads til alle knapperne på små skærme.
+          </p>
+          <p class="ds-button-group">
+            <button>Standard knap</button>
+            <button class="secondary">Sekundær knap</button>
+            <button class="secondary">Sekundær knap</button>
+            <button class="outline">Outline knap</button>
             <button disabled>Knap disabled</button>
           </p>
         </article>
 
         <article data-theme="dark" class="dark-wrapper">
-          <p>
-            <button class="contrast">Kontrast knap</button>
-          </p>
-          <p>
+          <h3>Knapper i <code>dark</code> theme</h3>
+        
+          <button>Standard knap</button>
+          <button class="secondary">Sekundær knap</button>
+          <button class="outline">Outline knap</button>
+          <button class="contrast">Kontrast knap</button>
+          <button disabled>Knap disabled</button>
+          <br>
+          <button class="h2">H2 tekst</button>
+          <button class="secondary h2">H2 tekst</button>
+          <button class="outline h4">H4 tekst</button>
+          <button class="contrast h5">H5 tekst</button>
+          <button disabled class="h5">Knap disabled</button>
+          
+          <p class="ds-button-group">
             <button>Standard knap</button>
-          </p>
-          <p>
-            <button class="outline">Outline knap</button>
-          </p>
-          <p>
             <button class="secondary">Sekundær knap</button>
           </p>
-          <p>
+          <p class="ds-button-group">
+            <button>Standard knap</button>
+            <button class="secondary">Sekundær knap</button>
+            <button class="secondary">Sekundær knap</button>
+            <button class="outline">Outline knap</button>
             <button disabled>Knap disabled</button>
           </p>
         </article>

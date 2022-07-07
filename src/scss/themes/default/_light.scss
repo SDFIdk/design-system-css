@@ -25,23 +25,22 @@
   --link-focus: #{$amber-400};
 
   // Primary colors
-  --primary: var(--tyrkis);
-  --primary-inverse: var(--hvid);
-  --primary-hover: #{$primary-700};
-  --primary-focus: #{$primary-700};
+  --primary: #{$green-400};
+  --primary-inverse: #{$white};
+  --primary-hover: #{$green-600};
+  --primary-focus: #{$amber-400};
 
   // Secondary colors
-  --secondary: var(--mork-tyrkis);
-  --secondary-inverse: #{$white};
-  --secondary-hover: #{$primary-800};
-  --secondary-focus: #{$primary-800};
+  --secondary: #{$primary-50};
+  --secondary-inverse: #{$grey-900};
+  --secondary-hover: #{$green-600};
+  --secondary-focus: #{$amber-400};
 
   // Contrast colors
-  --contrast: var(--mork-tyrkis);
+  --contrast: #{$primary-900};
   --contrast-inverse: #{$white};
-  --contrast-hover: #{$primary-800};
-  --contrast-focus: #{$primary-800};
-
+  --contrast-hover: #{$primary-700};
+  --contrast-focus: #{$amber-400};
 
   // Highlighted text (<mark>)
   --mark-background-color: #{mix($amber-100, $amber-50)};
