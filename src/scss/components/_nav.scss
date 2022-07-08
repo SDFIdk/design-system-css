@@ -112,48 +112,31 @@ aside,
 // Tool bar nav
 nav.ds-nav-tools,
 aside.ds-nav-tools {
-  justify-content: flex-start;
-  align-items: center;
+  display: inline-block;
+
+  ul {
+    flex: 0 1 auto;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 2.5rem;
+    border: solid .25rem var(--card-border-color);
+    height: 4rem;
+    background-color: #{$white};
+    padding: 0 0.5rem;
+  }
   
-  & > button,
-  & > [role="button"] {
-    border-radius: 0;
-    border-style: solid;
-    border-width: .25rem 0;
-    border-color: var(--card-border-color);
-    background-color: var(--background-color);
-    color: var(--link) !important;
-    padding: 1rem 1.5rem;
-    display: block;
+  button,
+  [role="button"] {
     margin: 0;
-
-    &:hover,
-    &:active {
-      background-color: var(--primary);
-      color: var(--primary-inverse) !important;
-    }
-
-    &:focus {
-      background-color: var(--link-focus);
-      color: var(--primary-inverse) !important;
-    }
-
-    &:first-child {
-      border-radius: 2.5rem 0 0 2.5rem;
-      border-left-width: .25rem;
-    }
-    &:last-child {
-      border-radius: 0 2.5rem 2.5rem 0;
-      border-right-width: .25rem;
-    }
   }
 
-  & > hr {
-    display: block;
-    border: solid .25rem var(--card-border-color);
-    border-width: .25rem 0;
+  hr {
+    display: inline-block;
+    border: none;
     background-color: var(--card-border-color);
     width: 1px;
-    height: 3.75rem;
+    height: 2.5rem;
+    margin: 0 0.5rem;
   }
 }
