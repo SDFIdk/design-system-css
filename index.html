@@ -1,0 +1,806 @@
+<!doctype html>
+<html lang="en" data-theme="light"> <!-- Remember correct lang attribute -->    
+  <head>
+
+    <!-- You always need this -->    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,user-scalable=yes">
+    <title>Design system example</title>
+
+    <!-- 
+      Optional: Maybe include some fonts 
+      Loading fonts impacts performance. This bit of code loads ALL the fonts specified in the design guide.
+      We advise you only load the fonts and font weights that are needed.
+    -->
+    
+    <!-- Design system CSS -->
+    <link rel="stylesheet" href="assets/designsystem.css">
+
+    <style>
+      /* Custom CSS for this page*/
+      .nav-fixed {
+        display: flex; 
+        flex-flow: column nowrap;
+      }
+      .colorswatch {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        gap: 1rem;
+      }
+      .colorswatch span:first-child {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        display: inline-block;
+      }
+      .light-wrapper {
+        border: solid 1px var(--vibrant-steel);
+      }
+    </style>
+
+  </head>
+  <body>
+
+    <header data-theme="dark" style="margin-bottom: var(--grid-spacing-vertical);">
+
+      <div class="container ds-padding">
+        <h1>Designguide eksempler</h1>
+        <p class="blockquote">Reference-implmentationer af SDFIs designguide med HTML/CSS</p>
+
+        <!-- A nav is used to wrap around navigation menus and links and such  -->
+        <h2>Indholdsfortegnelse</h2>
+        <nav class="ds-nav-vertical">
+          <ul>
+            <li><a href="#typografi">Typografi</a></li>
+            <li><a href="#formular">Formularer og inputfelter</a></li>
+            <li><a href="#knapper">Knapper</a></li>
+            <li><a href="#tabeller">Tabeller</a></li>
+            <li><a href="#farver">Farver</a></li>
+            <li><a href="#cards">Cards</a></li>
+            <li><a href="#navs">Navigation</a></li>
+            <li><a href="#grid">Layout</a></li>
+          </ul>
+        </nav>
+
+      </div>
+
+    </header>
+
+    <!-- Content goes here -->
+    <main class="container">
+
+      <h2 id="typografi">Typografi</h2>
+
+      <section class="ds-grid">
+        <!-- A sction contains several things that are alike in some way -->
+        <article data-theme="light" class="light-wrapper ds-padding">
+          <!-- An article is a single unit of content -->
+          <h1>Overskrift niveau 1</h1>
+          <p>Ovenstående overskrift/heading laves med <code>&lt;h1></code> eller <code>class="h1"</code>.</p>
+          <h2>Overskrift niveau 2</h2>
+          <h3>Overskrift niveau 3</h3>
+          <h4>Overskrift niveau 4</h4>
+          <h5>Overskrift niveau 5</h5>
+          <blockquote>Manchet/blockquote. Lorem ipsom dolor amet etc.</blockquote>
+          <p>Ovenstående manchet/blockquote laves med <code>&lt;blockquote></code> eller <code>class="blockquote"</code></p>
+          <p>
+            Almindelig brødtekst. <a href="#typografi">Her er et link i teksten.</a> Lorem ipsum dolor etc. Fås osgå som <em>kursiv brødtekst,</em> hvis du bruger <code>&lt;em></code> elementet.
+          </p>
+          <p><em>Bemærk!</em> Lav aldrig om på headings - f.eks. ved at lave en <code>&lt;h1></code> om til en <code>&lt;h3></code> hvis du bare synes overskriften skal have en anden størrelse. Niveau-opdelingen har betydning for tilgængelighed og SEO.</p>
+          <p>Brug i stedet en style class på heading, der matcher din ønskede størrelse. F.eks. <code>&lt;h1 class="h3"></code>.</p>
+          <p>
+            <small>Lille brødtekst. <a href="#typografi">Here is a link.</a> Benyttes i HTML med <code>&lt;small></code> elementet.</small><br>
+            <small><em>Lille kursiv brødtekst. </a> Benyttes i HTML med <code>&lt;small></code> og <code>&lt;em></code> elementerne.</small></em></small>
+          </p>
+          <p><code>&lt;code>Her er noget kode&lt;/code></code></p>
+        </article>
+        <article data-theme="dark" class="ds-padding">
+          <h1>This is a heading at level 1</h1>
+          <h2>This is a heading level 2</h2>
+          <h3>This is a heading level 3</h3>
+          <h4>This is a heading level 4</h4>
+          <h5>This is a heading level 5</h5>
+          <blockquote>Manchet/blockquote.This is a paragraph in an article.</blockquote>
+          <p>
+            Alm. brødtekst. <a href="#typografi">Here is a link.</a> This is a paragraph in an article. It has many words in it but still does not convey any information of interest.<br>
+            Sådan ser en <em>alm. kursiv brødtekst</em> ud. 
+          </p>
+          <p>
+          <p>
+            <small>Lille brødtekst. It has many words in it but still does not convey any information of interest. <a href="#typografi">Here is a link.</a></small><br>
+            <small><em>Lille kursiv brødtekst. This is a paragraph in an article.</em></small>
+          </p>
+          <p><code>&lt;code>Her er noget kode&lt;/code></code></p>
+        </article>
+      </section>
+
+      <h2 id="formular">Formularer og inputfelter</h2>
+
+      <section class="ds-grid">
+
+        <form class="light-wrapper ds-padding">
+          
+          <fieldset>
+            <label for="myinput">A text input</label>
+            <input type="text" placeholder="Insert some text" id="myinput">
+          </fieldset>
+
+          <fieldset>
+            <label for="mydateinput">A date input</label>
+            <input type="date" id="mydateinput">
+          </fieldset>
+
+          <fieldset>
+            <label for="myrageinput">A range input</label>
+            <input type="range" id="myrangeinput">
+          </fieldset>
+
+          <fieldset>
+            <label for="myfileinput">A file input</label>
+            <input type="file" id="myfileinput">
+          </fieldset>
+
+          <fieldset>
+            <legend>Some choices</legend> <!-- A title for the contents of a fieldset -->
+
+            <input type="radio" name="myradio" id="myradio1">
+            <label for="myradio1">This option</label>
+            <br>
+            <input type="radio" name="myradio" id="myradio2">
+            <label for="myradio2">The other option</label>
+          </fieldset>
+
+          <fieldset>
+            <input type="checkbox" id="mycheckbox">
+            <label for="mycheckbox">Check this box</label>
+          </fieldset>
+
+          <fieldset>
+            <label for="myselect">A select box</label>
+            <select id="myselect">
+              <option>Something to select</option>
+              <optgroup>
+                <option>Something else</option>
+                <option>Something else entirely</option>
+              </optgroup>
+            </select>
+          </fieldset>
+
+          <fieldset>
+            <label for="mytext">A textarea</label>
+            <textarea placeholder="Some text in a textarea"></textarea>
+          </fieldset>
+
+          <hr>
+
+          <input type="submit" value="Go!">
+          <input type="button" class="secondary" value="Don't go">
+
+        </form>
+
+        <form data-theme="dark" class="ds-padding">
+          
+          <fieldset>
+            <label for="myinput">A text input</label>
+            <input type="text" placeholder="Insert some text" id="myinput">
+          </fieldset>
+
+          <fieldset>
+            <label for="mydateinput">A date input</label>
+            <input type="date" id="mydateinput">
+          </fieldset>
+
+          <fieldset>
+            <label for="myrageinput">A range input</label>
+            <input type="range" id="myrangeinput">
+          </fieldset>
+
+          <fieldset>
+            <label for="myfileinput">A file input</label>
+            <input type="file" id="myfileinput">
+          </fieldset>
+
+          <fieldset>
+            <legend>Some choices</legend> <!-- A title for the contents of a fieldset -->
+
+            <input type="radio" name="myradiox" id="myradio1x">
+            <label for="myradio1x">This option</label>
+            <br>
+            <input type="radio" name="myradiox" id="myradio2x">
+            <label for="myradio2x">The other option</label>
+          </fieldset>
+
+          <fieldset>
+            <input type="checkbox" id="mycheckboxx">
+            <label for="mycheckboxx">Check this box</label>
+          </fieldset>
+
+          <fieldset>
+            <label for="myselect">A select box</label>
+            <select id="myselect">
+              <option>Something to select</option>
+              <optgroup>
+                <option>Something else</option>
+                <option>Something else entirely</option>
+              </optgroup>
+            </select>
+          </fieldset>
+
+          <fieldset>
+            <label for="mytext">A textarea</label>
+            <textarea placeholder="Some text in a textarea"></textarea>
+          </fieldset>
+          
+          <hr>
+
+          <input type="submit" value="Go!">
+          <input type="button" class="secondary" value="Don't go">
+        </form>
+
+      </section>
+
+      <h2 id="knapper">Knapper</h2>
+
+      <section>
+
+        <article class="light-wrapper ds-padding">
+        
+          <button>Standard knap</button>
+          <button class="secondary">Sekundær knap</button>
+          <button class="outline">Outline knap</button>
+          <button class="contrast">Kontrast knap</button>
+          <button disabled>Knap disabled</button>
+          
+          <p>Du kan ændre typografi i knapperne ved at bruge <code>.hx</code> classes på knapperne.<br> F.eks. <code>&lt;button class="h4">H4 tekst knap&lt;/button></code></p>
+
+          <button class="h2">H2 tekst</button>
+          <button class="secondary h2">H2 tekst</button>
+          <button class="outline h4">H4 tekst</button>
+          <button class="contrast h5">H5 tekst</button>
+          <button disabled class="h5">Knap disabled</button>
+
+          <p>Links kan styles som knapper ved at sætte <code>role="button"</code> på dem.</p>
+          <p>
+            <a href="#knapper" role="button">Link-knap</a>
+            <a href="#knapper" role="button" class="secondary">Link-knap</a>
+            <a href="#knapper" role="button" class="outline">Link-knap</a>
+            <a href="#knapper" role="button" class="contrast">Link-knap</a>
+          </p>
+        
+          <p>Du kan lave knapgrupper ved at pakke <code>&lt;button></code> elementerne ind i et element med <code>class="ds-button-group"</code>.</p>
+          <p class="ds-button-group">
+            <button>Standard knap</button>
+            <button class="secondary">Sekundær knap</button>
+          </p>
+          <p>
+            Knapgrupper kan indeholde et vilkårligt antal knapper.<br> 
+            <em>Bemærk:</em> Vær opmærksom på, om der er plads til alle knapperne på små skærme.
+          </p>
+          <p class="ds-button-group">
+            <button>Standard knap</button>
+            <button class="secondary">Sekundær knap</button>
+            <button class="secondary">Sekundær knap</button>
+            <button class="outline">Outline knap</button>
+            <button disabled>Knap disabled</button>
+          </p>
+        </article>
+
+        <article data-theme="dark" class="ds-padding">
+          <h3>Knapper i <code>dark</code> theme</h3>
+        
+          <button>Standard knap</button>
+          <button class="secondary">Sekundær knap</button>
+          <button class="outline">Outline knap</button>
+          <button class="contrast">Kontrast knap</button>
+          <button disabled>Knap disabled</button>
+          <br>
+          <button class="h2">H2 tekst</button>
+          <button class="secondary h2">H2 tekst</button>
+          <button class="outline h4">H4 tekst</button>
+          <button class="contrast h5">H5 tekst</button>
+          <button disabled class="h5">Knap disabled</button>
+          <p>
+            <a href="#knapper" role="button">Link-knap</a>
+            <a href="#knapper" role="button" class="secondary">Link-knap</a>
+            <a href="#knapper" role="button" class="outline">Link-knap</a>
+            <a href="#knapper" role="button" class="contrast">Link-knap</a>
+          </p>
+          <p class="ds-button-group">
+            <button>Standard knap</button>
+            <button class="secondary">Sekundær knap</button>
+          </p>
+          <p class="ds-button-group">
+            <button>Standard knap</button>
+            <button class="secondary">Sekundær knap</button>
+            <button class="secondary">Sekundær knap</button>
+            <button class="outline">Outline knap</button>
+            <button disabled>Knap disabled</button>
+          </p>
+        </article>
+      </section>  
+
+      <h2 id="tabeller">Tabeller</h2>
+
+      <!-- This is a preview of a table and how to set it up -->
+      <table>
+        <caption>
+          User Details
+        </caption>
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>Name</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>John Carter</td>
+            <td>johncarter@mail.com</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Peter Parker</td>
+            <td>peterparker@mail.com</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>John Rambo</td>
+            <td>johnrambo@mail.com</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 id="farver">Farver</h2>
+
+      <section class="ds-grid">
+        <p class="colorswatch">
+          <span style="background-color: #0097A7;"></span>
+          <span>
+          Tyrkis<br>
+          <code>#0097A7</code>
+          <code>hsl(186,100%,33%)</code>
+        </span>
+        </p>
+        <p class="colorswatch">
+          <span style="background-color: #00393F;"></span>
+          <span>
+          Mørk tyrkis<br>
+          <code>#00393F</code>
+          <code>hsl(186,100%,12%)</code>
+        </span>
+        </p>
+        <p class="colorswatch">
+          <span style="background-color: hsla(186,40%,82%,0.7);"></span>
+          <span>
+          Vibrant steel<br>
+          <code>hsla(186,40%,82%,0.7)</code>
+        </span>
+        </p>
+        <p class="colorswatch">
+          <span style="background-color: hsla(186,25%,64%,0.6);"></span>
+          <span>
+          Dark steel<br>
+          <code>hsla(186,25%,64%,0.6)</code>
+        </span>
+        </p>
+        <p class="colorswatch">
+          <span style="background-color: #E1ECED;"></span>
+          <span>
+            Medium steel<br>
+            <code>#E1ECED</code>
+            <code>hsl(186,25%,91%)</code>
+          </span>
+        </p>
+        <p class="colorswatch">
+          <span style="background-color: #F2F7F7;"></span>
+          <span>
+          Lys steel<br>
+          <code>#F2F7F7</code>
+          <code>hsl(186,25%,96%)</code>
+        </span>
+        </p>
+        <p class="colorswatch">
+          <span style="background-color: #000;"></span>
+          <span>
+          Sort<br>
+          <code>#000000</code>
+          <code>hsl(0,0%,0%)</code>
+        </span>
+        </p>
+        <p class="colorswatch">
+          <span style="background-color: hsla(0,0%,0%,0.65);"></span>
+          <span>
+          65% sort<br>
+          <code>hsla(0,0%,0%,0.65)</code>
+        </span>
+        </p>
+        <p class="colorswatch">
+          <span style="background-color: #fff; border: solid 1px #E1ECED;"></span>
+          <span>
+          Hvid<br>
+          <code>#FFFFFF</code>
+          <code>hsl(0,0%,100%)</code>
+        </span>
+        </p>
+        <p class="colorswatch">
+          <span style="background-color: #3EDDC6;"></span>
+          <span>
+          Aktion<br>
+          <code>#3EDDC6</code>
+          <code>hsl(171,70%,55%)</code>
+        </span>
+        </p>
+        <p class="colorswatch">
+          <span style="background-color: #E98436;"></span>
+          <span>
+          Highlight<br>
+          <code>#E98436</code>
+          <code>hsl(26,80%,56%)</code>
+        </span>
+        </p>
+        <p class="colorswatch">
+          <span style="background-color: #FF5252;"></span>
+          <span>
+          Advarsel<br>
+          <code>#FF5252</code>
+          <code>hsl(0,100%,66%)</code>
+        </span>
+        </p>
+      </section>
+
+      <article class="ds-padding" style="background-color: var(--lys-steel);">
+        <h3>Indhold med baggrundsfarve.</h3>
+        <p>
+          Kan bruges med CSS custom properties:<br> 
+          <code>&lt;div style="background-color: var(--lys-steel);"> ... &lt;/div></code>
+        </p>
+      </article>
+      <article class="ds-padding" style="background-color: var(--medium-steel);">
+        <h3>Indhold med baggrundsfarve.</h3>
+        <p>
+          Benyttes ofte til footer og lign. Kan bruges med CSS custom properties:<br> 
+          <code>&lt;div style="background-color: var(--medium-steel);"> ... &lt;/div></code>
+        </p>
+      </article>
+      <article class="ds-padding" data-theme="dark">
+        <h3>Indhold med mørk baggrundsfarve.</h3>
+        <p>Benytter "dark" tema. <code>&lt;div data-theme="dark"> ... &lt;/div></code></p> 
+      </article>
+
+      <h2 id="cards">Produktkort/cards</h2>
+      <section class="ds-grid">
+
+        <article class="ds-card">
+          <img src="https://raw.githubusercontent.com/iamfrank/semstrap/master/assets/images/bg-img-1.jpg" alt="">
+          <div class="ds-padding">
+            <h3>Produktkort titel</h3>
+            <p>Dette er et produktkort/card.</p>
+            <pre>
+              <code>
+&lt;article class="ds-card">
+  &lt;img src="..." alt="">
+  &lt;div class="ds-padding">
+    &lt;h3>Produktkort titel&lt;/h3>
+    &lt;p>Dette er et produktkort/card.&lt;/p>
+    &lt;footer>
+      &lt;button>Gør noget&lt;/button>
+    &lt;/footer>
+  &lt;/div>
+&lt;/article>
+              </code>            
+            </pre>      
+          </div>
+          <footer>
+            <button>Gør noget</button>
+          </footer>
+        </article>
+
+        <article class="ds-card" data-theme="dark">
+          <img src="https://raw.githubusercontent.com/iamfrank/semstrap/master/assets/images/bg-img-1.jpg" alt="">
+          <div class="ds-padding">
+            <h3>Produktkort titel</h3>
+            <p>Dette produktkort har <code>data-theme="dark"</code>.</p>
+            <pre>
+              <code>
+&lt;article class="ds-card" data-theme="dark">
+  ...
+&lt;/article>
+              </code>            
+            </pre>
+          </div>
+          <footer>
+            <div class="ds-button-group">
+              <button>Gør noget</button>
+              <button class="secondary">Gør noget andet</button>
+            </div>
+          </footer>
+        </article>
+
+      </section>
+
+      <section>
+        <h2 id="navs">Navigationselementer</h2>
+
+        <p>Navigationselementer laves med <code>&lt;nav></code> elementet.</p>
+
+        <div class="ds-grid">
+
+          <div class="ds-padding light-wrapper">
+            <h3>Basic navigation</h3>
+            <nav>
+              <ul>
+                <li><a href="#navs">Link</a></li>
+                <li><a href="#navs">Link</a></li>
+                <li><a href="#navs">Link</a></li>
+              </ul>
+            </nav>
+            <p>
+              <pre>
+                <code>
+&lt;nav>
+  &lt;ul>
+    &lt;li>
+      &lt;a href="#">Link&lt;/a>
+    &lt;/li>
+    ...
+  &lt;/ul>
+&lt;/nav>
+                </code>
+              </pre>
+            </p>
+            <hr>
+            <h3>Lodret navigation</h3>
+            <p><code>&lt;nav class="ds-nav-vertical"></code></p>
+            <nav class="ds-nav-vertical">
+              <ul>
+                <li><a href="#navs">Link</a></li>
+                <li><a href="#navs">Link</a></li>
+                <li><a href="#navs">Link</a></li>
+              </ul>
+            </nav>
+            <hr>
+            <h3>Hovedmenu</h3>
+            <p><code>&lt;nav class="ds-nav-main"></code></p>
+            <nav class="ds-nav-main">
+              <ul>
+                <li>
+                  Produktnavn
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="#navs">Link</a>    
+                </li>
+                <li>
+                  <a href="#navs">Link</a>    
+                </li>
+                <li>
+                  <a href="#navs">Link</a>    
+                </li>
+              </ul>
+            </nav>
+            <hr>
+            <h3>Tabs</h3>
+            <p><code>&lt;nav class="ds-nav-tabs"></code></p>
+            <nav class="ds-nav-tabs">
+              <ul>
+                <li>
+                  <h4>Produktnavn</h4>
+                </li>
+                <li>
+                  <a href="#navs">Link</a>    
+                </li>
+                <li>
+                  <a href="#navs">Link</a>    
+                </li>
+                <li>
+                  <a href="#navs">Link</a>    
+                </li>
+              </ul>
+            </nav>
+            
+            <h3>Værktøjslinie</h3>
+            <p><code>&lt;nav class="ds-nav-tools"></code></p>
+            <nav class="ds-nav-tools">
+              <button>Tool 1</button>
+              <button><span class="ds-icon-clipboard">Tool 2</span>Tool 2</button>
+              <hr>
+              <a href="#" role="button">Tool 3</a>
+              <hr>
+              <button>Tool 4</button>
+            </nav>
+          </div>
+
+          <div data-theme="dark" class="ds-padding">
+            <h3>Basic navigation</h3>
+            <nav>
+              <ul>
+                <li><a href="#navs">Link</a></li>
+                <li><a href="#navs">Link</a></li>
+                <li><a href="#navs">Link</a></li>
+              </ul>
+            </nav>
+            <hr>
+            <h3>Lodret navigation</h3>
+            <nav class="ds-nav-vertical">
+              <ul>
+                <li><a href="#navs">Link</a></li>
+                <li><a href="#navs">Link</a></li>
+                <li><a href="#navs">Link</a></li>
+              </ul>
+            </nav>
+            <hr>
+            <h3>Hovedmenu</h3>
+            <nav class="ds-nav-main">
+              <ul>
+                <li>
+                  Produktnavn
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="#navs">Link</a>    
+                </li>
+                <li>
+                  <a href="#navs">Link</a>    
+                </li>
+                <li>
+                  <a href="#navs">Link</a>    
+                </li>
+              </ul>
+            </nav>
+            <hr>
+            <h3>Tabs</h3>
+            <nav class="ds-nav-tabs">
+              <ul>
+                <li>
+                  <h4>Produktnavn</h4>
+                </li>
+                <li>
+                  <a href="#navs">Link</a>    
+                </li>
+                <li>
+                  <a href="#navs">Link</a>    
+                </li>
+                <li>
+                  <a href="#navs">Link</a>    
+                </li>
+              </ul>
+            </nav>
+
+            <h3>Værktøjslinie</h3>
+            <nav class="ds-nav-tools">
+              <button>Tool 1</button>
+              <button>Tool 2</button>
+              <hr>
+              <a href="#" role="button">Tool 3</a>
+              <hr>
+              <button>Tool 4</button>
+            </nav>
+        </div>
+
+      </section>
+
+      <section>
+
+        <h2 id="grid">Layout</h2>
+
+        <h3>Kolonner og grids</h3>
+
+        <p>Lav et simpelt kolonne-layout ved at tilføje <code>ds-grid</code> class til det element, der indeholder de elementer, som skal vises i kolonner.</p>
+      
+        <section class="ds-grid">
+          <div data-theme="dark" class="ds-padding">1</div>
+          <div data-theme="dark" class="ds-padding">2</div>
+          <div data-theme="dark" class="ds-padding">3</div>
+          <div data-theme="dark" class="ds-padding">4</div>
+        </section>
+
+        <p>Hvis boksene gerne må bruge den plads, der er til rådighed, så kan du bruge <code>ds-flexgrid</code> class i stedet.</p>
+
+        <section class="ds-flexgrid">
+          <div data-theme="dark" class="ds-padding">1</div>
+          <div data-theme="dark" class="ds-padding">2</div>
+          <div data-theme="dark" class="ds-padding">3</div>
+          <div data-theme="dark" class="ds-padding">4</div>
+          <div data-theme="dark" class="ds-padding">5</div>
+        </section>
+
+        <p>Brug class <code>.ds-grid-2-1</code> på elementet udenom, når du vil vise to elementer som hhv. primær og sekundær kolonne.</p>
+        <section class="ds-grid-2-1">
+          <div data-theme="dark" class="ds-padding">Primær / main</div>
+          <div data-theme="dark" class="ds-padding">Sekundær</div>
+        </section>
+
+        <p>Brug class <code>.ds-grid-1-2</code> hvis rækkefølgen skal være omvendt.</p>
+        
+        <section class="ds-grid-1-2">
+          <div data-theme="dark" class="ds-padding">Sekundær</div>
+          <div data-theme="dark" class="ds-padding">Primær / main</div>
+        </section>
+
+        <h3>Udvendig afstand / margin</h3>
+
+        <p>Du kan sætte den korrekte margin ved at bruge class <code>ds-margin</code> i HTML.</p>
+        <code>
+          <pre>
+            &lt;div class="ds-margin"> ... &lt;/div>
+          </pre>
+        </code>
+        <p>Hvis du skal bruge den officielle margin i CSS, kan du bruge CSS custom property <code>--margin</code>.</p>
+        <code>
+          <pre>
+            .my-custom-class {
+              margin: var(--margin);
+            }
+          </pre>
+        </code>
+
+        <h3>Indvendig afstand / padding</h3>
+
+        <p>Du kan sætte den korrekte padding ved at bruge class <code>ds-padding</code> i HTML.</p>
+        <code>
+          <pre>
+            &lt;div class="ds-padding"> ... &lt;/div>
+          </pre>
+        </code>
+        <p>Hvis du skal bruge den officielle padding i CSS, kan du bruge CSS custom property <code>--padding</code>.</p>
+        <code>
+          <pre>
+            .my-custom-class {
+              padding: var(--padding);
+            }
+          </pre>
+        </code>
+
+        <p>Når tekst og elementer med runde kanter (ikoner, knapper, etc.) står sammen, skal teksten og de runde elementer rykkes lidt i forhold til hinanden. Det er for at modvirke et optisk fænomen, hvor det ser ud som om, at de ikke står på linie.</p>
+        <p>Du kan gøre det ved at give teksten lidt ekstra padding med <code>ds-optical-padding</code> class ELLER give ikoner/knapper en justeringsmargin.</p>
+        <code>
+          <pre>
+            &lt;p class="ds-optical-padding">Her er din tekst&lt;/p>
+            &lt;button>En knap&lt;/button>
+          </pre>
+        </code>
+
+        <code>
+          <pre>
+            &lt;p>Her er din tekst&lt;/p>
+            &lt;button class="ds-optical-margin">En knap&lt;/button>
+          </pre>
+        </code>
+
+        <p>Her kan du også bruge CSS custom properties <code>--optical-padding</code> og <code>--optical-margin</code> til mere specialiserede layouts.</p>
+
+        <h3>Indholds-containere</h3>
+        
+        <p class="ds-container">Hvis du skal vise noget indhold i én kolonne midt i skærmen, så sæt <code>ds-container</code> class på elementet. Indholdet i denne tekst er centreret med <code>ds-container</code>-class. <a href="#example-ds-container">Se eksemplet her.</a></p>
+        
+        <p class="ds-container-fluid">Hvis du skal vise noget indhold i én kolonne, som fylder hele skærmen, så sæt <code>ds-container-fluid</code> class på elementet. <a href="#example-ds-container-fluid">Se eksemplet her.</a></p>
+
+      </section>
+
+    </main>
+
+    <aside class="ds-container ds-padding" data-theme="dark" id="example-ds-container" style="margin-bottom: var(--grid-spacing-vertical);">
+      <p>Eksempel på indhold, der vises midt på skærmen med <code>ds-container</code> class.</p>
+    </aside>
+
+    <aside class="ds-container-fluid ds-padding" data-theme="dark" id="example-ds-container-fluid" style="margin-bottom: var(--grid-spacing-vertical);">
+      <p>Eksempel på indhold, der vises i hele skærmens bredde med <code>ds-container-fluid</code> class.</p>
+    </aside>
+
+    <aside class="ds-container-fluid" data-theme="dark" style="margin-bottom: var(--grid-spacing-vertical);">
+      <p class="ds-container ds-padding"><code>ds-container-fluid</code> og <code>ds-container</code> kan kombineres.</p>
+    </aside>
+
+    <footer style="background-color: var(--medium-steel);">
+      <p class="container ds-padding">
+        2022 Styrelsen for Dataforsyning og Infrastruktur
+      </p>
+    </footer>
+
+  </body>
+</html>
