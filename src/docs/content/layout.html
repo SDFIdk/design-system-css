@@ -1,0 +1,109 @@
+<section class="ds-container" id="grid">
+
+  <h2>Layout</h2>
+
+  <h3>Kolonner og grids</h3>
+
+  <p>Lav et simpelt kolonne-layout ved at tilføje <code>ds-grid</code> class til det element, der indeholder de elementer, som skal vises i kolonner.</p>
+
+  <section class="ds-grid">
+    <div data-theme="dark" class="ds-padding">1</div>
+    <div data-theme="dark" class="ds-padding">2</div>
+    <div data-theme="dark" class="ds-padding">3</div>
+    <div data-theme="dark" class="ds-padding">4</div>
+  </section>
+
+  <p>Hvis boksene gerne må bruge den plads, der er til rådighed, så kan du bruge <code>ds-flexgrid</code> class i stedet.</p>
+
+  <section class="ds-flexgrid">
+    <div data-theme="dark" class="ds-padding">1</div>
+    <div data-theme="dark" class="ds-padding">2</div>
+    <div data-theme="dark" class="ds-padding">3</div>
+    <div data-theme="dark" class="ds-padding">4</div>
+    <div data-theme="dark" class="ds-padding">5</div>
+  </section>
+
+  <p>Brug class <code>.ds-grid-2-1</code> på elementet udenom, når du vil vise to elementer som hhv. primær og sekundær kolonne.</p>
+  <section class="ds-grid-2-1">
+    <div data-theme="dark" class="ds-padding">Primær / main</div>
+    <div data-theme="dark" class="ds-padding">Sekundær</div>
+  </section>
+
+  <p>Brug class <code>.ds-grid-1-2</code> hvis rækkefølgen skal være omvendt.</p>
+  
+  <section class="ds-grid-1-2">
+    <div data-theme="dark" class="ds-padding">Sekundær</div>
+    <div data-theme="dark" class="ds-padding">Primær / main</div>
+  </section>
+
+  <h3>Udvendig afstand / margin</h3>
+
+  <p>Du kan sætte den korrekte margin ved at bruge class <code>ds-margin</code> i HTML.</p>
+  <code>
+    <pre>
+      &lt;div class="ds-margin"> ... &lt;/div>
+    </pre>
+  </code>
+  <p>Hvis du skal bruge den officielle margin i CSS, kan du bruge CSS custom property <code>--margin</code>.</p>
+  <code>
+    <pre>
+      .my-custom-class {
+        margin: var(--margin);
+      }
+    </pre>
+  </code>
+
+  <h3>Indvendig afstand / padding</h3>
+
+  <p>Du kan sætte den korrekte padding ved at bruge class <code>ds-padding</code> i HTML.</p>
+  <code>
+    <pre>
+      &lt;div class="ds-padding"> ... &lt;/div>
+    </pre>
+  </code>
+  <p>Hvis du skal bruge den officielle padding i CSS, kan du bruge CSS custom property <code>--padding</code>.</p>
+  <code>
+    <pre>
+      .my-custom-class {
+        padding: var(--padding);
+      }
+    </pre>
+  </code>
+
+  <p>Når tekst og elementer med runde kanter (ikoner, knapper, etc.) står sammen, skal teksten og de runde elementer rykkes lidt i forhold til hinanden. Det er for at modvirke et optisk fænomen, hvor det ser ud som om, at de ikke står på linie.</p>
+  <p>Du kan gøre det ved at give teksten lidt ekstra padding med <code>ds-optical-padding</code> class ELLER give ikoner/knapper en justeringsmargin.</p>
+  <code>
+    <pre>
+      &lt;p class="ds-optical-padding">Her er din tekst&lt;/p>
+      &lt;button>En knap&lt;/button>
+    </pre>
+  </code>
+
+  <code>
+    <pre>
+      &lt;p>Her er din tekst&lt;/p>
+      &lt;button class="ds-optical-margin">En knap&lt;/button>
+    </pre>
+  </code>
+
+  <p>Her kan du også bruge CSS custom properties <code>--optical-padding</code> og <code>--optical-margin</code> til mere specialiserede layouts.</p>
+
+  <h3>Indholds-containere</h3>
+  
+  <p class="ds-container">Hvis du skal vise noget indhold i én kolonne midt i skærmen, så sæt <code>ds-container</code> class på elementet. Indholdet i denne tekst er centreret med <code>ds-container</code>-class. <a href="#example-ds-container">Se eksemplet her.</a></p>
+  
+  <p class="ds-container-fluid">Hvis du skal vise noget indhold i én kolonne, som fylder hele skærmen, så sæt <code>ds-container-fluid</code> class på elementet. <a href="#example-ds-container-fluid">Se eksemplet her.</a></p>
+
+</section>
+
+<aside class="ds-container ds-padding" data-theme="dark" id="example-ds-container" style="margin-bottom: var(--grid-spacing-vertical);">
+<p>Eksempel på indhold, der vises midt på skærmen med <code>ds-container</code> class.</p>
+</aside>
+
+<aside class="ds-container-fluid ds-padding" data-theme="dark" id="example-ds-container-fluid" style="margin-bottom: var(--grid-spacing-vertical);">
+<p>Eksempel på indhold, der vises i hele skærmens bredde med <code>ds-container-fluid</code> class.</p>
+</aside>
+
+<aside class="ds-container-fluid" data-theme="dark" style="margin-bottom: var(--grid-spacing-vertical);">
+<p class="ds-container ds-padding"><code>ds-container-fluid</code> og <code>ds-container</code> kan kombineres.</p>
+</aside>

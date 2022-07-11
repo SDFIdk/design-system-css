@@ -5,6 +5,8 @@
   "main": "index.scss",
   "scripts": {
     "build": "sass index.scss assets/designsystem.css --style compressed",
+    "build-docs": "utils/build_docs.sh",
+    "start": "firefox index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

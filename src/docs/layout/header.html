@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en" data-theme="light"> <!-- Remember correct lang attribute -->    
+  <head>
+
+    <!-- You always need this -->    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,user-scalable=yes">
+    <title>Design system example</title>
+
+    <!-- 
+      Optional: Maybe include some fonts 
+      Loading fonts impacts performance. This bit of code loads ALL the fonts specified in the design guide.
+      We advise you only load the fonts and font weights that are needed.
+    -->
+    
+    <!-- Design system CSS -->
+    <link rel="stylesheet" href="assets/designsystem.css">
+
+    <style>
+      /* Custom CSS for this page*/
+      .nav-fixed {
+        display: flex; 
+        flex-flow: column nowrap;
+      }
+      .colorswatch {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        gap: 1rem;
+      }
+      .colorswatch span:first-child {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        display: inline-block;
+      }
+      .light-wrapper {
+        border: solid 1px var(--vibrant-steel);
+      }
+      .icon-list li {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        gap: var(--spacing);
+      }
+    </style>
+
+  </head>
+  <body>
+
+    <header data-theme="dark" style="margin-bottom: var(--grid-spacing-vertical);">
+
+      <div class="container ds-padding">
+        <h1>Designguide eksempler</h1>
+        <p class="blockquote">Reference-implmentationer af SDFIs designguide med HTML/CSS</p>
+
+        <!-- A nav is used to wrap around navigation menus and links and such  -->
+        <h2>Indholdsfortegnelse</h2>
+        <nav class="ds-nav-vertical">
+          <ul>
+            <li><a href="#typografi">Typografi</a></li>
+            <li><a href="#formular">Formularer og inputfelter</a></li>
+            <li><a href="#knapper">Knapper</a></li>
+            <li><a href="#tabeller">Tabeller</a></li>
+            <li><a href="#farver">Farver</a></li>
+            <li><a href="#cards">Cards</a></li>
+            <li><a href="#icons">Ikoner</a></li>
+            <li><a href="#navs">Navigation</a></li>
+            <li><a href="#grid">Layout</a></li>
+          </ul>
+        </nav>
+
+      </div>
+
+    </header>
+
+    <!-- Content goes here -->
+    <main>
