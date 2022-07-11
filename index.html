@@ -6,15 +6,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,user-scalable=yes">
     <title>Design system example</title>
-
-    <!-- 
-      Optional: Maybe include some fonts 
-      Loading fonts impacts performance. This bit of code loads ALL the fonts specified in the design guide.
-      We advise you only load the fonts and font weights that are needed.
-    -->
     
     <!-- Design system CSS -->
     <link rel="stylesheet" href="assets/designsystem.css">
+
+    <link rel="icon" href="assets/logos/logo-simple-micro.svg">
 
     <style>
       /* Custom CSS for this page*/
@@ -33,9 +29,6 @@
         height: 3rem;
         border-radius: 50%;
         display: inline-block;
-      }
-      .light-wrapper {
-        border: solid 1px var(--vibrant-steel);
       }
       .icon-list li {
         list-style: none;
@@ -76,6 +69,7 @@
             <li><a href="#grid">Layout</a></li>
             <li><a href="#navs">Navigation</a></li>
             <li><a href="#icons">Ikoner</a></li>
+            <li><a href="#logos">Logo</a></li>
             <li><a href="#cards">Cards</a></li>
             <li><a href="#tabeller">Tabeller</a></li>
           </ul>
@@ -84,11 +78,17 @@
 
       <!-- Content goes here -->
       <main>
+
+        <article class="ds-padding">
+          <h2>Introduktion</h2>
+          <p>Dette er dokumentationen for, hvordan du bruger elementerne i Design System CSS - en implementation af SDFIs design guide.</p>
+          <p><a href="https://www.figma.com/file/G9g2vp2MOcejoPB3d1xJvU/Dataforsyningen-Design-System">Den komplette design guide kan findes på Figma.</a></p>
+        </article>
 <section id="typografi">
 
   <h2 class="ds-padding" style="margin-bottom: 0;">Typografi</h2>
 
-  <article data-theme="light" class="light-wrapper ds-padding" style="margin-bottom: var(--typography-spacing-vertical);">
+  <article data-theme="light" class="ds-padding" style="margin-bottom: var(--typography-spacing-vertical);">
     <h1>Overskrift niveau 1</h1>
     <p>Ovenstående overskrift/heading laves med <code>&lt;h1></code> eller <code>class="h1"</code>.</p>
     <h2>Overskrift niveau 2</h2>
@@ -331,7 +331,7 @@
 
   <h2 class="ds-padding" style="margin-bottom: 0;">Formularer og inputfelter</h2>
 
-  <form class="light-wrapper ds-padding">
+  <form class="ds-padding">
     
     <fieldset>
       <label for="myinput">A text input</label>
@@ -803,7 +803,50 @@
     <li class="icon"><span class="ds-icon-some_youtube"></span><code>&lt;span class="ds-icon-some_youtube">&lt;/span></code></li>
   </ul>
               
-</section><section id="cards">
+</section><section id="logos" class="ds-padding">
+
+  <h2>Logo</h2>
+
+  <p><em>Bemærk!</em> SDFIs logo må kun bruges af Styrelsen for Dataforsyning og Infrastruktur.</p>
+
+  <div data-theme="light" class="ds-padding">
+    <p>
+      <a class="ds-logo">
+        <strong>Dataforsyningen</strong>
+        <span>Styrelsen for Dataforsyning og Infrastruktur</span>
+      </a>
+    </p>
+
+    <p>
+      <a class="ds-logo-micro">
+        <strong>Dataforsyningen</strong>
+        <span>Styrelsen for Dataforsyning og Infrastruktur</span>
+      </a>
+    </p>
+  </div>
+
+  <div data-theme="dark" class="ds-padding">
+    <p>
+      <a class="ds-logo">
+        <strong>Dataforsyningen</strong>
+        <span>Styrelsen for Dataforsyning og Infrastruktur</span>
+      </a>
+    </p>
+  
+    <p>
+      <a class="ds-logo-micro">
+        <strong>Dataforsyningen</strong>
+        <span>Styrelsen for Dataforsyning og Infrastruktur</span>
+      </a>
+    </p>
+  </div>
+
+  <h3>Favicon/bogmærkeikon</h3>
+  <p>Som favicon bruges <code>logo-simple-micro.svg</code> <img src="assets/logos/logo-simple-micro.svg" alt=""></p>
+  <p>For at bruge det skal du indsætte denne linie i HTML <code>&lt;head></code> sektionen. Sørg for at "path" svarer til logofilens placering på serveren.</p>
+  <code>&lt;link rel="icon" href="path/logo-simple-micro.svg"></code>
+</section>
+<section id="cards">
 
   <div class="ds-padding" style="padding-bottom: 0;">
     <h2>Produktkort/cards</h2> 
@@ -832,7 +875,7 @@
         <p>Dette er et produktkort/card.</p>      
       </div>
       <footer>
-        <button>Gør noget</button>
+        <button>Noget</button>
       </footer>
     </article>
 
@@ -852,7 +895,7 @@
       <footer>
         <div class="ds-button-group">
           <button>Gør noget</button>
-          <button class="secondary">Gør noget andet</button>
+          <button class="secondary">Noget andet</button>
         </div>
       </footer>
     </article>

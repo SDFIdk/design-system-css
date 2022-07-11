@@ -161,7 +161,7 @@ h3,
 h4,
 .h4 {
   --color: var(--h4-color);
-  --font-size: 0.75rem;
+  --font-size: 0.875rem;
   --line-height: 1.15;
   --font-weight: 700;
   text-transform: uppercase;
@@ -172,7 +172,7 @@ h6,
 .h5,
 .h6 {
   --color: var(--h5-color);
-  --font-size: 0.625rem;
+  --font-size: 0.75rem;
   --font-weight: 700;
   --line-height: 1.15;
   text-transform: uppercase;
@@ -185,6 +185,7 @@ p {
 }
 
 // Small
+.small,
 small {
   color: var(--h4-color);
   --font-size: 0.875rem;
