@@ -46,36 +46,41 @@
         align-items: center;
         gap: var(--spacing);
       }
+      section {
+        margin-bottom: var(--typography-spacing-vertical);
+      }
     </style>
 
   </head>
   <body>
 
-    <header data-theme="dark" style="margin-bottom: var(--grid-spacing-vertical);">
+    <header data-theme="dark" id="header" style="margin-bottom: var(--typography-spacing-vertical);">
 
-      <div class="container ds-padding">
+      <div class="ds-container ds-padding">
         <h1>Designguide eksempler</h1>
         <p class="blockquote">Reference-implmentationer af SDFIs designguide med HTML/CSS</p>
-
-        <!-- A nav is used to wrap around navigation menus and links and such  -->
-        <h2>Indholdsfortegnelse</h2>
-        <nav class="ds-nav-vertical">
-          <ul>
-            <li><a href="#typografi">Typografi</a></li>
-            <li><a href="#formular">Formularer og inputfelter</a></li>
-            <li><a href="#knapper">Knapper</a></li>
-            <li><a href="#tabeller">Tabeller</a></li>
-            <li><a href="#farver">Farver</a></li>
-            <li><a href="#cards">Cards</a></li>
-            <li><a href="#icons">Ikoner</a></li>
-            <li><a href="#navs">Navigation</a></li>
-            <li><a href="#grid">Layout</a></li>
-          </ul>
-        </nav>
-
       </div>
 
     </header>
 
-    <!-- Content goes here -->
-    <main>
+    <div class="ds-container ds-grid-1-2">
+
+      <div>
+        <h2 class="ds-padding" style="margin: 0;">Indholdsfortegnelse</h2>
+        <nav style="position: sticky; top: 1.5rem;" class="ds-nav-vertical">
+          <ul>
+            <li><a href="#typografi">Typografi</a></li>
+            <li><a href="#farver">Farver</a></li>
+            <li><a href="#knapper">Knapper</a></li>
+            <li><a href="#formular">Formularer og inputfelter</a></li>
+            <li><a href="#grid">Layout</a></li>
+            <li><a href="#navs">Navigation</a></li>
+            <li><a href="#icons">Ikoner</a></li>
+            <li><a href="#cards">Cards</a></li>
+            <li><a href="#tabeller">Tabeller</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Content goes here -->
+      <main>

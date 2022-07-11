@@ -4,7 +4,7 @@
   "description": "Cascading style sheets (CSS) implementation of SDFI designguide.",
   "main": "index.scss",
   "scripts": {
-    "build": "sass index.scss assets/designsystem.css --style compressed",
+    "build": "sass index.scss assets/designsystem.css --style compressed && npm run build-docs",
     "build-docs": "utils/build_docs.sh",
     "start": "firefox index.html",
     "test": "echo \"Error: no test specified\" && exit 1"

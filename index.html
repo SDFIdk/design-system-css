@@ -46,173 +46,89 @@
         align-items: center;
         gap: var(--spacing);
       }
+      section {
+        margin-bottom: var(--typography-spacing-vertical);
+      }
     </style>
 
   </head>
   <body>
 
-    <header data-theme="dark" style="margin-bottom: var(--grid-spacing-vertical);">
+    <header data-theme="dark" id="header" style="margin-bottom: var(--typography-spacing-vertical);">
 
-      <div class="container ds-padding">
+      <div class="ds-container ds-padding">
         <h1>Designguide eksempler</h1>
         <p class="blockquote">Reference-implmentationer af SDFIs designguide med HTML/CSS</p>
-
-        <!-- A nav is used to wrap around navigation menus and links and such  -->
-        <h2>Indholdsfortegnelse</h2>
-        <nav class="ds-nav-vertical">
-          <ul>
-            <li><a href="#typografi">Typografi</a></li>
-            <li><a href="#formular">Formularer og inputfelter</a></li>
-            <li><a href="#knapper">Knapper</a></li>
-            <li><a href="#tabeller">Tabeller</a></li>
-            <li><a href="#farver">Farver</a></li>
-            <li><a href="#cards">Cards</a></li>
-            <li><a href="#icons">Ikoner</a></li>
-            <li><a href="#navs">Navigation</a></li>
-            <li><a href="#grid">Layout</a></li>
-          </ul>
-        </nav>
-
       </div>
 
     </header>
 
-    <!-- Content goes here -->
-    <main>
-<section class="ds-container" id="knapper">
+    <div class="ds-container ds-grid-1-2">
 
-  <h2>Knapper</h2>
+      <div>
+        <h2 class="ds-padding" style="margin: 0;">Indholdsfortegnelse</h2>
+        <nav style="position: sticky; top: 1.5rem;" class="ds-nav-vertical">
+          <ul>
+            <li><a href="#typografi">Typografi</a></li>
+            <li><a href="#farver">Farver</a></li>
+            <li><a href="#knapper">Knapper</a></li>
+            <li><a href="#formular">Formularer og inputfelter</a></li>
+            <li><a href="#grid">Layout</a></li>
+            <li><a href="#navs">Navigation</a></li>
+            <li><a href="#icons">Ikoner</a></li>
+            <li><a href="#cards">Cards</a></li>
+            <li><a href="#tabeller">Tabeller</a></li>
+          </ul>
+        </nav>
+      </div>
 
-  <article class="light-wrapper ds-padding">
-  
-    <button>Standard knap</button>
-    <button class="secondary">Sekundær knap</button>
-    <button class="outline">Outline knap</button>
-    <button class="contrast">Kontrast knap</button>
-    <button disabled>Knap disabled</button>
-    
-    <p>Du kan ændre typografi i knapperne ved at bruge <code>.hx</code> classes på knapperne.<br> F.eks. <code>&lt;button class="h4">H4 tekst knap&lt;/button></code></p>
+      <!-- Content goes here -->
+      <main>
+<section id="typografi">
 
-    <button class="h2">H2 tekst</button>
-    <button class="secondary h2">H2 tekst</button>
-    <button class="outline h4">H4 tekst</button>
-    <button class="contrast h5">H5 tekst</button>
-    <button disabled class="h5">Knap disabled</button>
+  <h2 class="ds-padding" style="margin-bottom: 0;">Typografi</h2>
 
-    <p>Links kan styles som knapper ved at sætte <code>role="button"</code> på dem.</p>
+  <article data-theme="light" class="light-wrapper ds-padding" style="margin-bottom: var(--typography-spacing-vertical);">
+    <h1>Overskrift niveau 1</h1>
+    <p>Ovenstående overskrift/heading laves med <code>&lt;h1></code> eller <code>class="h1"</code>.</p>
+    <h2>Overskrift niveau 2</h2>
+    <h3>Overskrift niveau 3</h3>
+    <h4>Overskrift niveau 4</h4>
+    <h5>Overskrift niveau 5</h5>
+    <blockquote>Manchet/blockquote. Lorem ipsom dolor amet etc.</blockquote>
+    <p>Ovenstående manchet/blockquote laves med <code>&lt;blockquote></code> eller <code>class="blockquote"</code></p>
     <p>
-      <a href="#knapper" role="button">Link-knap</a>
-      <a href="#knapper" role="button" class="secondary">Link-knap</a>
-      <a href="#knapper" role="button" class="outline">Link-knap</a>
-      <a href="#knapper" role="button" class="contrast">Link-knap</a>
+      Almindelig brødtekst. <a href="#typografi">Her er et link i teksten.</a> Lorem ipsum dolor etc. Fås osgå som <em>kursiv brødtekst,</em> hvis du bruger <code>&lt;em></code> elementet.
     </p>
-  
-    <p>Du kan lave knapgrupper ved at pakke <code>&lt;button></code> elementerne ind i et element med <code>class="ds-button-group"</code>.</p>
-    <p class="ds-button-group">
-      <button>Standard knap</button>
-      <button class="secondary">Sekundær knap</button>
-    </p>
+    <p><em>Bemærk!</em> Lav aldrig om på headings - f.eks. ved at lave en <code>&lt;h1></code> om til en <code>&lt;h3></code> hvis du bare synes overskriften skal have en anden størrelse. Niveau-opdelingen har betydning for tilgængelighed og SEO.</p>
+    <p>Brug i stedet en style class på heading, der matcher din ønskede størrelse. F.eks. <code>&lt;h1 class="h3"></code>.</p>
     <p>
-      Knapgrupper kan indeholde et vilkårligt antal knapper.<br> 
-      <em>Bemærk:</em> Vær opmærksom på, om der er plads til alle knapperne på små skærme.
+      <small>Lille brødtekst. <a href="#typografi">Here is a link.</a> Benyttes i HTML med <code>&lt;small></code> elementet.</small><br>
+      <small><em>Lille kursiv brødtekst. </a> Benyttes i HTML med <code>&lt;small></code> og <code>&lt;em></code> elementerne.</small></em></small>
     </p>
-    <p class="ds-button-group">
-      <button>Standard knap</button>
-      <button class="secondary">Sekundær knap</button>
-      <button class="secondary">Sekundær knap</button>
-      <button class="outline">Outline knap</button>
-      <button disabled>Knap disabled</button>
-    </p>
+    <p><code>&lt;code>Her er noget kode&lt;/code></code></p>
   </article>
 
   <article data-theme="dark" class="ds-padding">
-    <h3>Knapper i <code>dark</code> theme</h3>
-  
-    <button>Standard knap</button>
-    <button class="secondary">Sekundær knap</button>
-    <button class="outline">Outline knap</button>
-    <button class="contrast">Kontrast knap</button>
-    <button disabled>Knap disabled</button>
-    <br>
-    <button class="h2">H2 tekst</button>
-    <button class="secondary h2">H2 tekst</button>
-    <button class="outline h4">H4 tekst</button>
-    <button class="contrast h5">H5 tekst</button>
-    <button disabled class="h5">Knap disabled</button>
+    <h1>This is a heading at level 1</h1>
+    <h2>This is a heading level 2</h2>
+    <h3>This is a heading level 3</h3>
+    <h4>This is a heading level 4</h4>
+    <h5>This is a heading level 5</h5>
+    <blockquote>Manchet/blockquote.This is a paragraph in an article.</blockquote>
     <p>
-      <a href="#knapper" role="button">Link-knap</a>
-      <a href="#knapper" role="button" class="secondary">Link-knap</a>
-      <a href="#knapper" role="button" class="outline">Link-knap</a>
-      <a href="#knapper" role="button" class="contrast">Link-knap</a>
+      Alm. brødtekst. <a href="#typografi">Here is a link.</a> This is a paragraph in an article. It has many words in it but still does not convey any information of interest.<br>
+      Sådan ser en <em>alm. kursiv brødtekst</em> ud. 
     </p>
-    <p class="ds-button-group">
-      <button>Standard knap</button>
-      <button class="secondary">Sekundær knap</button>
+    <p>
+    <p>
+      <small>Lille brødtekst. It has many words in it but still does not convey any information of interest. <a href="#typografi">Here is a link.</a></small><br>
+      <small><em>Lille kursiv brødtekst. This is a paragraph in an article.</em></small>
     </p>
-    <p class="ds-button-group">
-      <button>Standard knap</button>
-      <button class="secondary">Sekundær knap</button>
-      <button class="secondary">Sekundær knap</button>
-      <button class="outline">Outline knap</button>
-      <button disabled>Knap disabled</button>
-    </p>
+    <p><code>&lt;code>Her er noget kode&lt;/code></code></p>
   </article>
-</section>  <section class="ds-container" id="cards">
 
-  <h2>Produktkort/cards</h2>
-
-  <div class="ds-grid">
-
-    <article class="ds-card">
-      <img src="https://raw.githubusercontent.com/iamfrank/semstrap/master/assets/images/bg-img-1.jpg" alt="">
-      <div class="ds-padding">
-        <h3>Produktkort titel</h3>
-        <p>Dette er et produktkort/card.</p>
-        <pre>
-          <code>
-&lt;article class="ds-card">
-&lt;img src="..." alt="">
-&lt;div class="ds-padding">
-&lt;h3>Produktkort titel&lt;/h3>
-&lt;p>Dette er et produktkort/card.&lt;/p>
-&lt;footer>
-&lt;button>Gør noget&lt;/button>
-&lt;/footer>
-&lt;/div>
-&lt;/article>
-          </code>            
-        </pre>      
-      </div>
-      <footer>
-        <button>Gør noget</button>
-      </footer>
-    </article>
-
-    <article class="ds-card" data-theme="dark">
-      <img src="https://raw.githubusercontent.com/iamfrank/semstrap/master/assets/images/bg-img-1.jpg" alt="">
-      <div class="ds-padding">
-        <h3>Produktkort titel</h3>
-        <p>Dette produktkort har <code>data-theme="dark"</code>.</p>
-        <pre>
-          <code>
-&lt;article class="ds-card" data-theme="dark">
-...
-&lt;/article>
-          </code>            
-        </pre>
-      </div>
-      <footer>
-        <div class="ds-button-group">
-          <button>Gør noget</button>
-          <button class="secondary">Gør noget andet</button>
-        </div>
-      </footer>
-    </article>
-
-  </div>
-
-</section>
-<section class="ds-container" id="farver">
+</section><section class="ds-padding" id="farver">
 
   <h2>Farver</h2>
 
@@ -312,229 +228,230 @@
     </p>
   </div>
 
-</section>
-
-<article class="ds-padding" style="background-color: var(--lys-steel);">
-  <h3>Indhold med baggrundsfarve.</h3>
-  <p>
-    Kan bruges med CSS custom properties:<br> 
-    <code>&lt;div style="background-color: var(--lys-steel);"> ... &lt;/div></code>
-  </p>
-</article>
-<article class="ds-padding" style="background-color: var(--medium-steel);">
-  <h3>Indhold med baggrundsfarve.</h3>
-  <p>
-    Benyttes ofte til footer og lign. Kan bruges med CSS custom properties:<br> 
-    <code>&lt;div style="background-color: var(--medium-steel);"> ... &lt;/div></code>
-  </p>
-</article>
-<article class="ds-padding" data-theme="dark">
-  <h3>Indhold med mørk baggrundsfarve.</h3>
-  <p>Benytter "dark" tema. <code>&lt;div data-theme="dark"> ... &lt;/div></code></p> 
-</article><section class="ds-container" id="formular">
-
-  <h2>Formularer og inputfelter</h2>
-
-  <div class="ds-grid">
-
-    <form class="light-wrapper ds-padding">
-      
-      <fieldset>
-        <label for="myinput">A text input</label>
-        <input type="text" placeholder="Insert some text" id="myinput">
-      </fieldset>
-
-      <fieldset>
-        <label for="mydateinput">A date input</label>
-        <input type="date" id="mydateinput">
-      </fieldset>
-
-      <fieldset>
-        <label for="myrageinput">A range input</label>
-        <input type="range" id="myrangeinput">
-      </fieldset>
-
-      <fieldset>
-        <label for="myfileinput">A file input</label>
-        <input type="file" id="myfileinput">
-      </fieldset>
-
-      <fieldset>
-        <legend>Some choices</legend> <!-- A title for the contents of a fieldset -->
-
-        <input type="radio" name="myradio" id="myradio1">
-        <label for="myradio1">This option</label>
-        <br>
-        <input type="radio" name="myradio" id="myradio2">
-        <label for="myradio2">The other option</label>
-      </fieldset>
-
-      <fieldset>
-        <input type="checkbox" id="mycheckbox">
-        <label for="mycheckbox">Check this box</label>
-      </fieldset>
-
-      <fieldset>
-        <label for="myselect">A select box</label>
-        <select id="myselect">
-          <option>Something to select</option>
-          <optgroup>
-            <option>Something else</option>
-            <option>Something else entirely</option>
-          </optgroup>
-        </select>
-      </fieldset>
-
-      <fieldset>
-        <label for="mytext">A textarea</label>
-        <textarea placeholder="Some text in a textarea"></textarea>
-      </fieldset>
-
-      <hr>
-
-      <input type="submit" value="Go!">
-      <input type="button" class="secondary" value="Don't go">
-
-    </form>
-
-    <form data-theme="dark" class="ds-padding">
-      
-      <fieldset>
-        <label for="myinput">A text input</label>
-        <input type="text" placeholder="Insert some text" id="myinput">
-      </fieldset>
-
-      <fieldset>
-        <label for="mydateinput">A date input</label>
-        <input type="date" id="mydateinput">
-      </fieldset>
-
-      <fieldset>
-        <label for="myrageinput">A range input</label>
-        <input type="range" id="myrangeinput">
-      </fieldset>
-
-      <fieldset>
-        <label for="myfileinput">A file input</label>
-        <input type="file" id="myfileinput">
-      </fieldset>
-
-      <fieldset>
-        <legend>Some choices</legend> <!-- A title for the contents of a fieldset -->
-
-        <input type="radio" name="myradiox" id="myradio1x">
-        <label for="myradio1x">This option</label>
-        <br>
-        <input type="radio" name="myradiox" id="myradio2x">
-        <label for="myradio2x">The other option</label>
-      </fieldset>
-
-      <fieldset>
-        <input type="checkbox" id="mycheckboxx">
-        <label for="mycheckboxx">Check this box</label>
-      </fieldset>
-
-      <fieldset>
-        <label for="myselect">A select box</label>
-        <select id="myselect">
-          <option>Something to select</option>
-          <optgroup>
-            <option>Something else</option>
-            <option>Something else entirely</option>
-          </optgroup>
-        </select>
-      </fieldset>
-
-      <fieldset>
-        <label for="mytext">A textarea</label>
-        <textarea placeholder="Some text in a textarea"></textarea>
-      </fieldset>
-      
-      <hr>
-
-      <input type="submit" value="Go!">
-      <input type="button" class="secondary" value="Don't go">
-    </form>
-
-  </div>
+  <article class="ds-padding" style="background-color: var(--lys-steel);">
+    <h3>Indhold med baggrundsfarve.</h3>
+    <p>
+      Kan bruges med CSS custom properties:<br> 
+      <code>&lt;div style="background-color: var(--lys-steel);"> ... &lt;/div></code>
+    </p>
+  </article>
+  <article class="ds-padding" style="background-color: var(--medium-steel);">
+    <h3>Indhold med baggrundsfarve.</h3>
+    <p>
+      Benyttes ofte til footer og lign. Kan bruges med CSS custom properties:<br> 
+      <code>&lt;div style="background-color: var(--medium-steel);"> ... &lt;/div></code>
+    </p>
+  </article>
+  <article class="ds-padding" data-theme="dark">
+    <h3>Indhold med mørk baggrundsfarve.</h3>
+    <p>Benytter "dark" tema. <code>&lt;div data-theme="dark"> ... &lt;/div></code></p> 
+  </article>
 
 </section>
-<section id="icons" class="ds-container">
+<section id="knapper">
 
-  <h2>Ikoner</h2>
+  <h2 class="ds-padding" style="margin-bottom: 0;">Knapper</h2>
 
-  <ul class="ds-grid icon-list">
-    <li class="icon"><span class="ds-icon-hentdata_icon_choose"></span><code>&lt;span class="ds-icon-hentdata_icon_choose">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-hentdata_icon_download"></span><code>&lt;span class="ds-icon-hentdata_icon_download">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-hentdata_icon_exitsite"></span><code>&lt;span class="ds-icon-hentdata_icon_exitsite">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-hentdata_icon_get"></span><code>&lt;span class="ds-icon-hentdata_icon_get">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-hentdata_icon_pending"></span><code>&lt;span class="ds-icon-hentdata_icon_pending">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-icon_besked"></span><code>&lt;span class="ds-icon-icon_besked">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-icon_burgerbar"></span><code>&lt;span class="ds-icon-icon_burgerbar">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-icon_calendar"></span><code>&lt;span class="ds-icon-icon_calendar">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-icon_checkbox"></span><code>&lt;span class="ds-icon-icon_checkbox">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-icon_clipboard"></span><code>&lt;span class="ds-icon-icon_clipboard">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-icon_close"></span><code>&lt;span class="ds-icon-icon_close">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-icon_code"></span><code>&lt;span class="ds-icon-icon_code">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-icon_copy"></span><code>&lt;span class="ds-icon-icon_copy">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-icon_crosshair"></span><code>&lt;span class="ds-icon-icon_crosshair">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-icon_document"></span><code>&lt;span class="ds-icon-icon_document">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-icon_drift"></span><code>&lt;span class="ds-icon-icon_drift">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-icon_dropdown"></span><code>&lt;span class="ds-icon-icon_dropdown">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-icon_edit"></span><code>&lt;span class="ds-icon-icon_edit">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-icon_eye"></span><code>&lt;span class="ds-icon-icon_eye">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-icon_faq"></span><code>&lt;span class="ds-icon-icon_faq">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-icon_fullscreen"></span><code>&lt;span class="ds-icon-icon_fullscreen">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-icon_inbox"></span><code>&lt;span class="ds-icon-icon_inbox">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-icon_info"></span><code>&lt;span class="ds-icon-icon_info">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-icon_lock"></span><code>&lt;span class="ds-icon-icon_lock">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-icon_mail"></span><code>&lt;span class="ds-icon-icon_mail">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-icon_manual"></span><code>&lt;span class="ds-icon-icon_manual">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-icon_minus"></span><code>&lt;span class="ds-icon-icon_minus">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-icon_moremore"></span><code>&lt;span class="ds-icon-icon_moremore">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-icon_more"></span><code>&lt;span class="ds-icon-icon_more">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-icon_notification"></span><code>&lt;span class="ds-icon-icon_notification">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-icon_ok"></span><code>&lt;span class="ds-icon-icon_ok">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-icon_phone"></span><code>&lt;span class="ds-icon-icon_phone">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-icon_plus"></span><code>&lt;span class="ds-icon-icon_plus">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-icon_print"></span><code>&lt;span class="ds-icon-icon_print">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-icon_radiobutton"></span><code>&lt;span class="ds-icon-icon_radiobutton">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-icon_rotate"></span><code>&lt;span class="ds-icon-icon_rotate">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-icon_search"></span><code>&lt;span class="ds-icon-icon_search">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-icon_share"></span><code>&lt;span class="ds-icon-icon_share">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-icon_sortering"></span><code>&lt;span class="ds-icon-icon_sortering">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-icon_stack"></span><code>&lt;span class="ds-icon-icon_stack">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-icon_support"></span><code>&lt;span class="ds-icon-icon_support">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-icon_thrash"></span><code>&lt;span class="ds-icon-icon_thrash">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-icon_token"></span><code>&lt;span class="ds-icon-icon_token">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-icon_users"></span><code>&lt;span class="ds-icon-icon_users">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-map_icon_adresse"></span><code>&lt;span class="ds-icon-map_icon_adresse">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-map_icon_download_gridvalg"></span><code>&lt;span class="ds-icon-map_icon_download_gridvalg">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-map_icon_download_listvalg"></span><code>&lt;span class="ds-icon-map_icon_download_listvalg">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-map_icon_download_polygonareal"></span><code>&lt;span class="ds-icon-map_icon_download_polygonareal">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-map_icon_download_tegnetareal"></span><code>&lt;span class="ds-icon-map_icon_download_tegnetareal">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-map_icon_findonmap"></span><code>&lt;span class="ds-icon-map_icon_findonmap">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-map_icon_koordinater"></span><code>&lt;span class="ds-icon-map_icon_koordinater">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-map_icon_nordpil"></span><code>&lt;span class="ds-icon-map_icon_nordpil">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-map_icon_sted"></span><code>&lt;span class="ds-icon-map_icon_sted">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-map_icon_vej"></span><code>&lt;span class="ds-icon-map_icon_vej">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-sider_icon_accessibility"></span><code>&lt;span class="ds-icon-sider_icon_accessibility">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-sider_icon_apps"></span><code>&lt;span class="ds-icon-sider_icon_apps">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-sider_icon_cases"></span><code>&lt;span class="ds-icon-sider_icon_cases">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-sider_icon_data"></span><code>&lt;span class="ds-icon-sider_icon_data">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-sider_icon_english"></span><code>&lt;span class="ds-icon-sider_icon_english">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-sider_icon_lab"></span><code>&lt;span class="ds-icon-sider_icon_lab">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-sider_icon_map"></span><code>&lt;span class="ds-icon-sider_icon_map">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-sider_icon_privatliv"></span><code>&lt;span class="ds-icon-sider_icon_privatliv">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-sider_icon_terms"></span><code>&lt;span class="ds-icon-sider_icon_terms">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-sider_icon_user"></span><code>&lt;span class="ds-icon-sider_icon_user">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-some_linkedin"></span><code>&lt;span class="ds-icon-some_linkedin">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-some_trello"></span><code>&lt;span class="ds-icon-some_trello">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-some_twitter"></span><code>&lt;span class="ds-icon-some_twitter">&lt;/span></code></li>
-    <li class="icon"><span class="ds-icon-some_youtube"></span><code>&lt;span class="ds-icon-some_youtube">&lt;/span></code></li>
-  </ul>
-              
-</section><section class="ds-container" id="grid">
+  <article class="light-wrapper ds-padding" style="margin-bottom: var(--typography-spacing-vertical);">
+  
+    <button>Standard knap</button>
+    <button class="secondary">Sekundær knap</button>
+    <button class="outline">Outline knap</button>
+    <button class="contrast">Kontrast knap</button>
+    <button disabled>Knap disabled</button>
+    
+    <p>Du kan ændre typografi i knapperne ved at bruge <code>.hx</code> classes på knapperne.<br> F.eks. <code>&lt;button class="h4">H4 tekst knap&lt;/button></code></p>
+
+    <button class="h2">H2 tekst</button>
+    <button class="secondary h2">H2 tekst</button>
+    <button class="outline h4">H4 tekst</button>
+    <button class="contrast h5">H5 tekst</button>
+    <button disabled class="h5">Knap disabled</button>
+
+    <p>Links kan styles som knapper ved at sætte <code>role="button"</code> på dem.</p>
+    <p>
+      <a href="#knapper" role="button">Link-knap</a>
+      <a href="#knapper" role="button" class="secondary">Link-knap</a>
+      <a href="#knapper" role="button" class="outline">Link-knap</a>
+      <a href="#knapper" role="button" class="contrast">Link-knap</a>
+    </p>
+  
+    <p>Du kan lave knapgrupper ved at pakke <code>&lt;button></code> elementerne ind i et element med <code>class="ds-button-group"</code>.</p>
+    <p class="ds-button-group">
+      <button>Standard knap</button>
+      <button class="secondary">Sekundær knap</button>
+    </p>
+    <p>
+      Knapgrupper kan indeholde et vilkårligt antal knapper.<br> 
+      <em>Bemærk:</em> Vær opmærksom på, om der er plads til alle knapperne på små skærme.
+    </p>
+    <p class="ds-button-group">
+      <button>Standard knap</button>
+      <button class="secondary">Sekundær knap</button>
+      <button class="secondary">Sekundær knap</button>
+      <button class="outline">Outline knap</button>
+      <button disabled>Knap disabled</button>
+    </p>
+  </article>
+
+  <article data-theme="dark" class="ds-padding">
+    <h3>Knapper i <code>dark</code> theme</h3>
+  
+    <button>Standard knap</button>
+    <button class="secondary">Sekundær knap</button>
+    <button class="outline">Outline knap</button>
+    <button class="contrast">Kontrast knap</button>
+    <button disabled>Knap disabled</button>
+    <br>
+    <button class="h2">H2 tekst</button>
+    <button class="secondary h2">H2 tekst</button>
+    <button class="outline h4">H4 tekst</button>
+    <button class="contrast h5">H5 tekst</button>
+    <button disabled class="h5">Knap disabled</button>
+    <p>
+      <a href="#knapper" role="button">Link-knap</a>
+      <a href="#knapper" role="button" class="secondary">Link-knap</a>
+      <a href="#knapper" role="button" class="outline">Link-knap</a>
+      <a href="#knapper" role="button" class="contrast">Link-knap</a>
+    </p>
+    <p class="ds-button-group">
+      <button>Standard knap</button>
+      <button class="secondary">Sekundær knap</button>
+    </p>
+    <p class="ds-button-group">
+      <button>Standard knap</button>
+      <button class="secondary">Sekundær knap</button>
+      <button class="secondary">Sekundær knap</button>
+      <button class="outline">Outline knap</button>
+      <button disabled>Knap disabled</button>
+    </p>
+  </article>
+
+</section>  <section id="formular">
+
+  <h2 class="ds-padding" style="margin-bottom: 0;">Formularer og inputfelter</h2>
+
+  <form class="light-wrapper ds-padding">
+    
+    <fieldset>
+      <label for="myinput">A text input</label>
+      <input type="text" placeholder="Insert some text" id="myinput">
+    </fieldset>
+
+    <fieldset>
+      <label for="mydateinput">A date input</label>
+      <input type="date" id="mydateinput">
+    </fieldset>
+
+    <fieldset>
+      <label for="myrageinput">A range input</label>
+      <input type="range" id="myrangeinput">
+    </fieldset>
+
+    <fieldset>
+      <label for="myfileinput">A file input</label>
+      <input type="file" id="myfileinput">
+    </fieldset>
+
+    <fieldset>
+      <legend>Some choices</legend> <!-- A title for the contents of a fieldset -->
+
+      <input type="radio" name="myradio" id="myradio1">
+      <label for="myradio1">This option</label>
+      <br>
+      <input type="radio" name="myradio" id="myradio2">
+      <label for="myradio2">The other option</label>
+    </fieldset>
+
+    <fieldset>
+      <input type="checkbox" id="mycheckbox">
+      <label for="mycheckbox">Check this box</label>
+    </fieldset>
+
+    <fieldset>
+      <label for="myselect">A select box</label>
+      <select id="myselect">
+        <option>Something to select</option>
+        <optgroup>
+          <option>Something else</option>
+          <option>Something else entirely</option>
+        </optgroup>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <label for="mytext">A textarea</label>
+      <textarea placeholder="Some text in a textarea"></textarea>
+    </fieldset>
+
+    <hr>
+
+    <input type="submit" value="Go!">
+    <input type="button" class="secondary" value="Don't go">
+
+  </form>
+
+  <form data-theme="dark" class="ds-padding">
+    
+    <fieldset>
+      <label for="myinput">A text input</label>
+      <input type="text" placeholder="Insert some text" id="myinput">
+    </fieldset>
+
+    <fieldset>
+      <label for="mydateinput">A date input</label>
+      <input type="date" id="mydateinput">
+    </fieldset>
+
+    <fieldset>
+      <label for="myrageinput">A range input</label>
+      <input type="range" id="myrangeinput">
+    </fieldset>
+
+    <fieldset>
+      <label for="myfileinput">A file input</label>
+      <input type="file" id="myfileinput">
+    </fieldset>
+
+    <fieldset>
+      <legend>Some choices</legend> <!-- A title for the contents of a fieldset -->
+
+      <input type="radio" name="myradiox" id="myradio1x">
+      <label for="myradio1x">This option</label>
+      <br>
+      <input type="radio" name="myradiox" id="myradio2x">
+      <label for="myradio2x">The other option</label>
+    </fieldset>
+
+    <fieldset>
+      <input type="checkbox" id="mycheckboxx">
+      <label for="mycheckboxx">Check this box</label>
+    </fieldset>
+
+    <fieldset>
+      <label for="myselect">A select box</label>
+      <select id="myselect">
+        <option>Something to select</option>
+        <optgroup>
+          <option>Something else</option>
+          <option>Something else entirely</option>
+        </optgroup>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <label for="mytext">A textarea</label>
+      <textarea placeholder="Some text in a textarea"></textarea>
+    </fieldset>
+    
+    <hr>
+
+    <input type="submit" value="Go!">
+    <input type="button" class="secondary" value="Don't go">
+  </form>
+
+</section>
+<section class="ds-padding" id="grid">
 
   <h2>Layout</h2>
 
@@ -608,6 +525,7 @@
 
   <p>Når tekst og elementer med runde kanter (ikoner, knapper, etc.) står sammen, skal teksten og de runde elementer rykkes lidt i forhold til hinanden. Det er for at modvirke et optisk fænomen, hvor det ser ud som om, at de ikke står på linie.</p>
   <p>Du kan gøre det ved at give teksten lidt ekstra padding med <code>ds-optical-padding</code> class ELLER give ikoner/knapper en justeringsmargin.</p>
+   
   <code>
     <pre>
       &lt;p class="ds-optical-padding">Her er din tekst&lt;/p>
@@ -622,46 +540,44 @@
     </pre>
   </code>
 
+  <div class="ds-padding" data-theme="dark" style="margin-bottom: var(--typography-spacing-vertical);">
+    <p class="ds-optical-padding">Her er din tekst med optical padding.</p>
+    <button>En knap</button>
+  </div>
+
+  <div class="ds-padding" data-theme="dark" style="margin-bottom: var(--typography-spacing-vertical);">
+    <p>Her er din tekst</p>
+    <button class="ds-optical-margin">En knap med optical margin</button>
+  </div>
+
   <p>Her kan du også bruge CSS custom properties <code>--optical-padding</code> og <code>--optical-margin</code> til mere specialiserede layouts.</p>
 
   <h3>Indholds-containere</h3>
   
-  <p class="ds-container">Hvis du skal vise noget indhold i én kolonne midt i skærmen, så sæt <code>ds-container</code> class på elementet. Indholdet i denne tekst er centreret med <code>ds-container</code>-class. <a href="#example-ds-container">Se eksemplet her.</a></p>
-  
-  <p class="ds-container-fluid">Hvis du skal vise noget indhold i én kolonne, som fylder hele skærmen, så sæt <code>ds-container-fluid</code> class på elementet. <a href="#example-ds-container-fluid">Se eksemplet her.</a></p>
+  <p class="ds-container">Hvis du skal vise noget indhold i én kolonne midt i skærmen, så sæt <code>ds-container</code> class på elementet. Indholdet i denne tekst er centreret med <code>ds-container</code>-class.</p>
 
 </section>
-
-<aside class="ds-container ds-padding" data-theme="dark" id="example-ds-container" style="margin-bottom: var(--grid-spacing-vertical);">
-<p>Eksempel på indhold, der vises midt på skærmen med <code>ds-container</code> class.</p>
-</aside>
-
-<aside class="ds-container-fluid ds-padding" data-theme="dark" id="example-ds-container-fluid" style="margin-bottom: var(--grid-spacing-vertical);">
-<p>Eksempel på indhold, der vises i hele skærmens bredde med <code>ds-container-fluid</code> class.</p>
-</aside>
-
-<aside class="ds-container-fluid" data-theme="dark" style="margin-bottom: var(--grid-spacing-vertical);">
-<p class="ds-container ds-padding"><code>ds-container-fluid</code> og <code>ds-container</code> kan kombineres.</p>
-</aside><section class="ds-container" id="navs">
+<section id="navs">
   
-  <h2>Navigationselementer</h2>
+  <div class="ds-padding">
+    <h2>Navigationselementer</h2>
 
-  <p>Navigationselementer laves med <code>&lt;nav></code> elementet.</p>
+    <p>Navigationselementer laves med <code>&lt;nav></code> elementet.</p>
 
-  <div class="ds-grid">
+  </div>
 
-    <div class="ds-padding light-wrapper">
-      <h3>Basic navigation</h3>
-      <nav>
-        <ul>
-          <li><a href="#navs">Link</a></li>
-          <li><a href="#navs">Link</a></li>
-          <li><a href="#navs">Link</a></li>
-        </ul>
-      </nav>
-      <p>
-        <pre>
-          <code>
+  <div class="ds-padding light-wrapper" style="margin-bottom: var(--typography-spacing-vertical);">
+    <h3>Basic navigation</h3>
+    <nav>
+      <ul>
+        <li><a href="#navs">Link</a></li>
+        <li><a href="#navs">Link</a></li>
+        <li><a href="#navs">Link</a></li>
+      </ul>
+    </nav>
+    <p>
+      <pre>
+        <code>
 &lt;nav>
 &lt;ul>
 &lt;li>
@@ -670,153 +586,283 @@
 ...
 &lt;/ul>
 &lt;/nav>
-          </code>
-        </pre>
-      </p>
-      <hr>
-      <h3>Lodret navigation</h3>
-      <p><code>&lt;nav class="ds-nav-vertical"></code></p>
-      <nav class="ds-nav-vertical">
-        <ul>
-          <li><a href="#navs">Link</a></li>
-          <li><a href="#navs">Link</a></li>
-          <li><a href="#navs">Link</a></li>
-        </ul>
-      </nav>
-      <hr>
-      <h3>Hovedmenu</h3>
-      <p><code>&lt;nav class="ds-nav-main"></code></p>
-      <nav class="ds-nav-main">
-        <ul>
-          <li>
-            Produktnavn
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <a href="#navs">Link</a>    
-          </li>
-          <li>
-            <a href="#navs">Link</a>    
-          </li>
-          <li>
-            <a href="#navs">Link</a>    
-          </li>
-        </ul>
-      </nav>
-      <hr>
-      <h3>Tabs</h3>
-      <p><code>&lt;nav class="ds-nav-tabs"></code></p>
-      <nav class="ds-nav-tabs">
-        <ul>
-          <li>
-            <h4>Produktnavn</h4>
-          </li>
-          <li>
-            <a href="#navs">Link</a>    
-          </li>
-          <li>
-            <a href="#navs">Link</a>    
-          </li>
-          <li>
-            <a href="#navs">Link</a>    
-          </li>
-        </ul>
-      </nav>
-      
-      <h3>Værktøjslinie</h3>
-      <p><code>&lt;nav class="ds-nav-tools"></code></p>
-      <nav class="ds-nav-tools">
-        <ul>
-          <li><button class="ds-icon-button ds-icon-map_icon_download_listvalg" title="Liste">Liste</button></li>
-          <li><hr></li>
-          <li><button class="ds-icon-button ds-icon-map_icon_download_gridvalg" title="Gridvalg">Gridvalg</button></li>
-          <li><a href="#" role="button" class="ds-icon-button ds-icon-map_icon_download_polygonareal" title="Værktøj X">Værktøj X</a></li>
-          <li><hr></li>
-          <li><button class="ds-icon-button ds-icon-icon_search" title="Search">Search</button></li>
-          <li><a href="#" role="button" class="ds-icon-button ds-icon-icon_minus" title="Zoom out">Zoom out</a></li>
-          <li><button class="ds-icon-button ds-icon-icon_plus" title="Zoom in">Zoom in</button></li>
-        </ul>
-      </nav>
-    </div>
-
-    <div data-theme="dark" class="ds-padding">
-      <h3>Basic navigation</h3>
-      <nav>
-        <ul>
-          <li><a href="#navs">Link</a></li>
-          <li><a href="#navs">Link</a></li>
-          <li><a href="#navs">Link</a></li>
-        </ul>
-      </nav>
-      <hr>
-      <h3>Lodret navigation</h3>
-      <nav class="ds-nav-vertical">
-        <ul>
-          <li><a href="#navs">Link</a></li>
-          <li><a href="#navs">Link</a></li>
-          <li><a href="#navs">Link</a></li>
-        </ul>
-      </nav>
-      <hr>
-      <h3>Hovedmenu</h3>
-      <nav class="ds-nav-main">
-        <ul>
-          <li>
-            Produktnavn
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <a href="#navs">Link</a>    
-          </li>
-          <li>
-            <a href="#navs">Link</a>    
-          </li>
-          <li>
-            <a href="#navs">Link</a>    
-          </li>
-        </ul>
-      </nav>
-      <hr>
-      <h3>Tabs</h3>
-      <nav class="ds-nav-tabs">
-        <ul>
-          <li>
-            <h4>Produktnavn</h4>
-          </li>
-          <li>
-            <a href="#navs">Link</a>    
-          </li>
-          <li>
-            <a href="#navs">Link</a>    
-          </li>
-          <li>
-            <a href="#navs">Link</a>    
-          </li>
-        </ul>
-      </nav>
-
-      <h3>Værktøjslinie</h3>
-      <nav class="ds-nav-tools">
-        <ul>
-          <li><button class="ds-icon-button ds-icon-map_icon_download_listvalg" title="Liste">Liste</button></li>
-          <li><hr></li>
-          <li><button class="ds-icon-button ds-icon-map_icon_download_gridvalg" title="Gridvalg">Gridvalg</button></li>
-          <li><a href="#" role="button" class="ds-icon-button ds-icon-map_icon_download_polygonareal" title="Værktøj X">Værktøj X</a></li>
-          <li><hr></li>
-          <li><button class="ds-icon-button ds-icon-icon_search" title="Search">Search</button></li>
-          <li><a href="#" role="button" class="ds-icon-button ds-icon-icon_minus" title="Zoom out">Zoom out</a></li>
-          <li><button class="ds-icon-button ds-icon-icon_plus" title="Zoom in">Zoom in</button></li>
-        </ul>
-      </nav>
+        </code>
+      </pre>
+    </p>
+    <hr>
+    <h3>Lodret navigation</h3>
+    <p><code>&lt;nav class="ds-nav-vertical"></code></p>
+    <nav class="ds-nav-vertical">
+      <ul>
+        <li><a href="#navs">Link</a></li>
+        <li><a href="#navs">Link</a></li>
+        <li><a href="#navs">Link</a></li>
+      </ul>
+    </nav>
+    <hr>
+    <h3>Hovedmenu</h3>
+    <p><code>&lt;nav class="ds-nav-main"></code></p>
+    <nav class="ds-nav-main">
+      <ul>
+        <li>
+          Produktnavn
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a href="#navs">Link</a>    
+        </li>
+        <li>
+          <a href="#navs">Link</a>    
+        </li>
+        <li>
+          <a href="#navs">Link</a>    
+        </li>
+      </ul>
+    </nav>
+    <hr>
+    <h3>Tabs</h3>
+    <p><code>&lt;nav class="ds-nav-tabs"></code></p>
+    <nav class="ds-nav-tabs">
+      <ul>
+        <li>
+          <h4>Produktnavn</h4>
+        </li>
+        <li>
+          <a href="#navs">Link</a>    
+        </li>
+        <li>
+          <a href="#navs">Link</a>    
+        </li>
+        <li>
+          <a href="#navs">Link</a>    
+        </li>
+      </ul>
+    </nav>
     
+    <h3>Værktøjslinie</h3>
+    <p><code>&lt;nav class="ds-nav-tools"></code></p>
+    <nav class="ds-nav-tools">
+      <ul>
+        <li><button class="ds-icon-button ds-icon-map_icon_download_listvalg" title="Liste">Liste</button></li>
+        <li><hr></li>
+        <li><button class="ds-icon-button ds-icon-map_icon_download_gridvalg" title="Gridvalg">Gridvalg</button></li>
+        <li><a href="#" role="button" class="ds-icon-button ds-icon-map_icon_download_polygonareal" title="Værktøj X">Værktøj X</a></li>
+        <li><hr></li>
+        <li><button class="ds-icon-button ds-icon-icon_search" title="Search">Search</button></li>
+        <li><a href="#" role="button" class="ds-icon-button ds-icon-icon_minus" title="Zoom out">Zoom out</a></li>
+        <li><button class="ds-icon-button ds-icon-icon_plus" title="Zoom in">Zoom in</button></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div data-theme="dark" class="ds-padding">
+    <h3>Basic navigation</h3>
+    <nav>
+      <ul>
+        <li><a href="#navs">Link</a></li>
+        <li><a href="#navs">Link</a></li>
+        <li><a href="#navs">Link</a></li>
+      </ul>
+    </nav>
+    <hr>
+    <h3>Lodret navigation</h3>
+    <nav class="ds-nav-vertical">
+      <ul>
+        <li><a href="#navs">Link</a></li>
+        <li><a href="#navs">Link</a></li>
+        <li><a href="#navs">Link</a></li>
+      </ul>
+    </nav>
+    <hr>
+    <h3>Hovedmenu</h3>
+    <nav class="ds-nav-main">
+      <ul>
+        <li>
+          Produktnavn
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a href="#navs">Link</a>    
+        </li>
+        <li>
+          <a href="#navs">Link</a>    
+        </li>
+        <li>
+          <a href="#navs">Link</a>    
+        </li>
+      </ul>
+    </nav>
+    <hr>
+    <h3>Tabs</h3>
+    <nav class="ds-nav-tabs">
+      <ul>
+        <li>
+          <h4>Produktnavn</h4>
+        </li>
+        <li>
+          <a href="#navs">Link</a>    
+        </li>
+        <li>
+          <a href="#navs">Link</a>    
+        </li>
+        <li>
+          <a href="#navs">Link</a>    
+        </li>
+      </ul>
+    </nav>
+
+    <h3>Værktøjslinie</h3>
+    <nav class="ds-nav-tools">
+      <ul>
+        <li><button class="ds-icon-button ds-icon-map_icon_download_listvalg" title="Liste">Liste</button></li>
+        <li><hr></li>
+        <li><button class="ds-icon-button ds-icon-map_icon_download_gridvalg" title="Gridvalg">Gridvalg</button></li>
+        <li><a href="#" role="button" class="ds-icon-button ds-icon-map_icon_download_polygonareal" title="Værktøj X">Værktøj X</a></li>
+        <li><hr></li>
+        <li><button class="ds-icon-button ds-icon-icon_search" title="Search">Search</button></li>
+        <li><a href="#" role="button" class="ds-icon-button ds-icon-icon_minus" title="Zoom out">Zoom out</a></li>
+        <li><button class="ds-icon-button ds-icon-icon_plus" title="Zoom in">Zoom in</button></li>
+      </ul>
+    </nav>
+
+</section>
+<section id="icons">
+
+  <h2 class="ds-padding" style="margin-bottom: 0;">Ikoner</h2>
+
+  <ul class="ds-grid icon-list">
+    <li class="icon"><span class="ds-icon-hentdata_icon_choose"></span><code>&lt;span class="ds-icon-hentdata_icon_choose">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-hentdata_icon_download"></span><code>&lt;span class="ds-icon-hentdata_icon_download">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-hentdata_icon_exitsite"></span><code>&lt;span class="ds-icon-hentdata_icon_exitsite">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-hentdata_icon_get"></span><code>&lt;span class="ds-icon-hentdata_icon_get">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-hentdata_icon_pending"></span><code>&lt;span class="ds-icon-hentdata_icon_pending">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-icon_besked"></span><code>&lt;span class="ds-icon-icon_besked">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-icon_burgerbar"></span><code>&lt;span class="ds-icon-icon_burgerbar">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-icon_calendar"></span><code>&lt;span class="ds-icon-icon_calendar">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-icon_checkbox"></span><code>&lt;span class="ds-icon-icon_checkbox">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-icon_clipboard"></span><code>&lt;span class="ds-icon-icon_clipboard">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-icon_close"></span><code>&lt;span class="ds-icon-icon_close">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-icon_code"></span><code>&lt;span class="ds-icon-icon_code">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-icon_copy"></span><code>&lt;span class="ds-icon-icon_copy">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-icon_crosshair"></span><code>&lt;span class="ds-icon-icon_crosshair">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-icon_document"></span><code>&lt;span class="ds-icon-icon_document">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-icon_drift"></span><code>&lt;span class="ds-icon-icon_drift">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-icon_dropdown"></span><code>&lt;span class="ds-icon-icon_dropdown">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-icon_edit"></span><code>&lt;span class="ds-icon-icon_edit">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-icon_eye"></span><code>&lt;span class="ds-icon-icon_eye">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-icon_faq"></span><code>&lt;span class="ds-icon-icon_faq">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-icon_fullscreen"></span><code>&lt;span class="ds-icon-icon_fullscreen">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-icon_inbox"></span><code>&lt;span class="ds-icon-icon_inbox">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-icon_info"></span><code>&lt;span class="ds-icon-icon_info">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-icon_lock"></span><code>&lt;span class="ds-icon-icon_lock">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-icon_mail"></span><code>&lt;span class="ds-icon-icon_mail">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-icon_manual"></span><code>&lt;span class="ds-icon-icon_manual">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-icon_minus"></span><code>&lt;span class="ds-icon-icon_minus">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-icon_moremore"></span><code>&lt;span class="ds-icon-icon_moremore">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-icon_more"></span><code>&lt;span class="ds-icon-icon_more">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-icon_notification"></span><code>&lt;span class="ds-icon-icon_notification">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-icon_ok"></span><code>&lt;span class="ds-icon-icon_ok">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-icon_phone"></span><code>&lt;span class="ds-icon-icon_phone">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-icon_plus"></span><code>&lt;span class="ds-icon-icon_plus">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-icon_print"></span><code>&lt;span class="ds-icon-icon_print">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-icon_radiobutton"></span><code>&lt;span class="ds-icon-icon_radiobutton">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-icon_rotate"></span><code>&lt;span class="ds-icon-icon_rotate">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-icon_search"></span><code>&lt;span class="ds-icon-icon_search">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-icon_share"></span><code>&lt;span class="ds-icon-icon_share">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-icon_sortering"></span><code>&lt;span class="ds-icon-icon_sortering">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-icon_stack"></span><code>&lt;span class="ds-icon-icon_stack">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-icon_support"></span><code>&lt;span class="ds-icon-icon_support">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-icon_thrash"></span><code>&lt;span class="ds-icon-icon_thrash">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-icon_token"></span><code>&lt;span class="ds-icon-icon_token">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-icon_users"></span><code>&lt;span class="ds-icon-icon_users">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-map_icon_adresse"></span><code>&lt;span class="ds-icon-map_icon_adresse">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-map_icon_download_gridvalg"></span><code>&lt;span class="ds-icon-map_icon_download_gridvalg">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-map_icon_download_listvalg"></span><code>&lt;span class="ds-icon-map_icon_download_listvalg">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-map_icon_download_polygonareal"></span><code>&lt;span class="ds-icon-map_icon_download_polygonareal">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-map_icon_download_tegnetareal"></span><code>&lt;span class="ds-icon-map_icon_download_tegnetareal">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-map_icon_findonmap"></span><code>&lt;span class="ds-icon-map_icon_findonmap">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-map_icon_koordinater"></span><code>&lt;span class="ds-icon-map_icon_koordinater">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-map_icon_nordpil"></span><code>&lt;span class="ds-icon-map_icon_nordpil">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-map_icon_sted"></span><code>&lt;span class="ds-icon-map_icon_sted">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-map_icon_vej"></span><code>&lt;span class="ds-icon-map_icon_vej">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-sider_icon_accessibility"></span><code>&lt;span class="ds-icon-sider_icon_accessibility">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-sider_icon_apps"></span><code>&lt;span class="ds-icon-sider_icon_apps">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-sider_icon_cases"></span><code>&lt;span class="ds-icon-sider_icon_cases">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-sider_icon_data"></span><code>&lt;span class="ds-icon-sider_icon_data">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-sider_icon_english"></span><code>&lt;span class="ds-icon-sider_icon_english">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-sider_icon_lab"></span><code>&lt;span class="ds-icon-sider_icon_lab">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-sider_icon_map"></span><code>&lt;span class="ds-icon-sider_icon_map">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-sider_icon_privatliv"></span><code>&lt;span class="ds-icon-sider_icon_privatliv">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-sider_icon_terms"></span><code>&lt;span class="ds-icon-sider_icon_terms">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-sider_icon_user"></span><code>&lt;span class="ds-icon-sider_icon_user">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-some_linkedin"></span><code>&lt;span class="ds-icon-some_linkedin">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-some_trello"></span><code>&lt;span class="ds-icon-some_trello">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-some_twitter"></span><code>&lt;span class="ds-icon-some_twitter">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-some_youtube"></span><code>&lt;span class="ds-icon-some_youtube">&lt;/span></code></li>
+  </ul>
+              
+</section><section id="cards">
+
+  <div class="ds-padding" style="padding-bottom: 0;">
+    <h2>Produktkort/cards</h2> 
+    <pre>
+      <code>
+&lt;article class="ds-card">
+  &lt;img src="..." alt="">
+  &lt;div class="ds-padding">
+    &lt;h3>Produktkort titel&lt;/h3>
+    &lt;p>Dette er et produktkort/card.&lt;/p>
+    &lt;footer>
+      &lt;button>Gør noget&lt;/button>
+    &lt;/footer>
+  &lt;/div>
+&lt;/article>
+      </code>            
+    </pre>
+  </div>
+
+  <div class="ds-grid">
+
+    <article class="ds-card">
+      <img src="https://raw.githubusercontent.com/iamfrank/semstrap/master/assets/images/bg-img-1.jpg" alt="">
+      <div class="ds-padding">
+        <h3>Produktkort titel</h3>
+        <p>Dette er et produktkort/card.</p>      
+      </div>
+      <footer>
+        <button>Gør noget</button>
+      </footer>
+    </article>
+
+    <article class="ds-card" data-theme="dark">
+      <img src="https://raw.githubusercontent.com/iamfrank/semstrap/master/assets/images/bg-img-1.jpg" alt="">
+      <div class="ds-padding">
+        <h3>Produktkort titel</h3>
+        <p>Dette produktkort har <code>data-theme="dark"</code>.</p>
+        <pre>
+          <code>
+&lt;article class="ds-card" data-theme="dark">
+...
+&lt;/article>
+          </code>            
+        </pre>
+      </div>
+      <footer>
+        <div class="ds-button-group">
+          <button>Gør noget</button>
+          <button class="secondary">Gør noget andet</button>
+        </div>
+      </footer>
+    </article>
+
   </div>
 
 </section>
-<section class="ds-container" id="tabeller">
+<section class="ds-padding" id="tabeller">
       
-  <h2>Tabeller</h2>
+  <h2 style="margin-bottom: 0;">Tabeller</h2>
 
   <!-- This is a preview of a table and how to set it up -->
   <table>
@@ -849,55 +895,11 @@
     </tbody>
   </table>
 
-</section><section class="ds-container" id="typografi">
-
-  <h2>Typografi</h2>
-
-  <div class="ds-grid">
-    <!-- A sction contains several things that are alike in some way -->
-    <article data-theme="light" class="light-wrapper ds-padding">
-      <!-- An article is a single unit of content -->
-      <h1>Overskrift niveau 1</h1>
-      <p>Ovenstående overskrift/heading laves med <code>&lt;h1></code> eller <code>class="h1"</code>.</p>
-      <h2>Overskrift niveau 2</h2>
-      <h3>Overskrift niveau 3</h3>
-      <h4>Overskrift niveau 4</h4>
-      <h5>Overskrift niveau 5</h5>
-      <blockquote>Manchet/blockquote. Lorem ipsom dolor amet etc.</blockquote>
-      <p>Ovenstående manchet/blockquote laves med <code>&lt;blockquote></code> eller <code>class="blockquote"</code></p>
-      <p>
-        Almindelig brødtekst. <a href="#typografi">Her er et link i teksten.</a> Lorem ipsum dolor etc. Fås osgå som <em>kursiv brødtekst,</em> hvis du bruger <code>&lt;em></code> elementet.
-      </p>
-      <p><em>Bemærk!</em> Lav aldrig om på headings - f.eks. ved at lave en <code>&lt;h1></code> om til en <code>&lt;h3></code> hvis du bare synes overskriften skal have en anden størrelse. Niveau-opdelingen har betydning for tilgængelighed og SEO.</p>
-      <p>Brug i stedet en style class på heading, der matcher din ønskede størrelse. F.eks. <code>&lt;h1 class="h3"></code>.</p>
-      <p>
-        <small>Lille brødtekst. <a href="#typografi">Here is a link.</a> Benyttes i HTML med <code>&lt;small></code> elementet.</small><br>
-        <small><em>Lille kursiv brødtekst. </a> Benyttes i HTML med <code>&lt;small></code> og <code>&lt;em></code> elementerne.</small></em></small>
-      </p>
-      <p><code>&lt;code>Her er noget kode&lt;/code></code></p>
-    </article>
-    <article data-theme="dark" class="ds-padding">
-      <h1>This is a heading at level 1</h1>
-      <h2>This is a heading level 2</h2>
-      <h3>This is a heading level 3</h3>
-      <h4>This is a heading level 4</h4>
-      <h5>This is a heading level 5</h5>
-      <blockquote>Manchet/blockquote.This is a paragraph in an article.</blockquote>
-      <p>
-        Alm. brødtekst. <a href="#typografi">Here is a link.</a> This is a paragraph in an article. It has many words in it but still does not convey any information of interest.<br>
-        Sådan ser en <em>alm. kursiv brødtekst</em> ud. 
-      </p>
-      <p>
-      <p>
-        <small>Lille brødtekst. It has many words in it but still does not convey any information of interest. <a href="#typografi">Here is a link.</a></small><br>
-        <small><em>Lille kursiv brødtekst. This is a paragraph in an article.</em></small>
-      </p>
-      <p><code>&lt;code>Her er noget kode&lt;/code></code></p>
-    </article>
-  </div>
-
-</section>    <footer style="background-color: var(--medium-steel);">
-      <p class="container ds-padding">
+</section>    
+    </div>
+    
+    <footer style="background-color: var(--medium-steel);">
+      <p class="container ds-padding" style="margin-bottom: 0;">
         2022 Styrelsen for Dataforsyning og Infrastruktur
       </p>
     </footer>
