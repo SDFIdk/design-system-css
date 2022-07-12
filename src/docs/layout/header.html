@@ -10,6 +10,9 @@
     <!-- Design system CSS -->
     <link rel="stylesheet" href="assets/designsystem.css">
 
+    <!-- Highlight.js CSS -->
+    <link rel="stylesheet" href="utils/css/highlight.min.css">
+
     <link rel="icon" href="assets/logos/logo-simple-micro.svg">
 
     <style>
@@ -39,6 +42,10 @@
         align-items: center;
         gap: var(--spacing);
       }
+      .icon-list li > span:first-child {
+        flex: 0 0 3rem;
+        width: 3rem;
+      }
       section {
         margin-bottom: var(--typography-spacing-vertical);
       }
@@ -56,25 +63,7 @@
 
     </header>
 
-    <div class="ds-container ds-grid-1-2">
-
-      <div>
-        <h2 class="ds-padding" style="margin: 0;">Indholdsfortegnelse</h2>
-        <nav style="position: sticky; top: 1.5rem;" class="ds-nav-vertical">
-          <ul>
-            <li><a href="#typografi">Typografi</a></li>
-            <li><a href="#farver">Farver</a></li>
-            <li><a href="#knapper">Knapper</a></li>
-            <li><a href="#formular">Formularer og inputfelter</a></li>
-            <li><a href="#grid">Layout</a></li>
-            <li><a href="#navs">Navigation</a></li>
-            <li><a href="#icons">Ikoner</a></li>
-            <li><a href="#logos">Logo</a></li>
-            <li><a href="#cards">Cards</a></li>
-            <li><a href="#tabeller">Tabeller</a></li>
-          </ul>
-        </nav>
-      </div>
+    <div class="ds-container ds-grid-2-1">
 
       <!-- Content goes here -->
       <main>

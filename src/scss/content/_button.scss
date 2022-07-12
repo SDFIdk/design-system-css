@@ -154,11 +154,21 @@ a[role="button"]:not([href]) {
     margin: 0;
 
     &:first-child {
+      min-width: 3.25rem;
       border-radius: 2.5rem 0 0 2.5rem;
+      &::before {
+        left: auto;
+        right: 0.25rem;
+      }
     }
 
     &:last-child {
+      min-width: 3.25rem;
       border-radius: 0 2.5rem 2.5rem 0;
+      &::before {
+        right: auto;
+        left: 0.25rem;
+      }
     }
   }
 }

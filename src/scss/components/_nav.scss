@@ -112,27 +112,33 @@ aside,
 // Tool bar nav
 nav.ds-nav-tools,
 aside.ds-nav-tools {
-  display: inline-block;
-
-  ul {
-    flex: 0 1 auto;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
-    border-radius: 2.5rem;
-    border: solid .25rem var(--card-border-color);
-    height: 4rem;
-    background-color: #{$white};
-    padding: 0 0.5rem;
-  }
   
+  .ds-button-group {
+    border-radius: 2.5rem;  
+    border: solid .25rem var(--card-border-color);
+    justify-content: flex-start;
+  }
+
   button,
   [role="button"] {
-    margin: 0;
+    background-color: transparent;
+    border-color: transparent;
+    color: var(--nav-tab-border) !important;
+
+    &:hover,
+    &:active {
+      background-color: var(--primary);
+      color: var(--primary-inverse);
+    }
+
+    &:focus {
+      background-color: $amber-400;
+      color: var(--primary-inverse);
+    }
   }
 
   hr {
-    display: inline-block;
+    display: block;
     border: none;
     background-color: var(--card-border-color);
     width: 1px;

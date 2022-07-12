@@ -1,6 +1,7 @@
 # Design System CSS
 
 Design System CSS (DSCSS) is an implementation of SDFIs official design guide.
+
 [The design system guide is available on Figma.](https://www.figma.com/file/G9g2vp2MOcejoPB3d1xJvU/Dataforsyningen-Design-System)
 
 The system is a single CSS file and useful accompanying font files that you can embed in your web project for at SDFI branded look and feel.
@@ -50,8 +51,6 @@ Link to `designssytem.css` CSS directly into your HTML's `<head>`.
 The Design System assumes you have the "Roboto" and "Source Code Pro" fonts available. If that is not the case you can include the font from [Google Fonts](https://fonts.google.com/) or self host the font files.
 
 Font files are included in [`assets/fonts`](./assets/fonts) along with [`font.css`](./assets/fonts/font.css) file to give you an example on how to use `@font-face` to include font files in CSS.
-
-[The design system guide is available on Figma.](https://www.figma.com/file/G9g2vp2MOcejoPB3d1xJvU/Dataforsyningen-Design-System)
 
 ## Acknowlegdements
 
