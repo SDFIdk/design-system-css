@@ -38,7 +38,7 @@
   --modal-margin: 3.5vw 5vw;
 
   // Spacings for typography elements
-  --typography-spacing-vertical: 1.35rem;
+  --typography-spacing-vertical: 1rem;
 
   // Spacing for grids
   --grid-spacing-vertical: 1rem;
@@ -52,6 +52,7 @@
       --grid-spacing-vertical: 3.5vw;
       --grid-spacing-horizontal: 3.5vw;
       --map-element-spacing: 1.5rem 3.5vw 2rem;
+      --typography-spacing-vertical: 3.5vw;
     }
   }
 
