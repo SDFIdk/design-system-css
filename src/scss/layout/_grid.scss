@@ -22,33 +22,34 @@
   }
 }
 
-.ds-grid-2-1 {
+.ds-grid-2-1,
+.ds-grid-1-2 {
 
-  grid-column-gap: var(--grid-spacing-horizontal);
-  grid-row-gap: var(--grid-spacing-vertical);
-  display: grid;
-  grid-template-columns: 1fr;
-  margin-bottom: var(--grid-spacing-horizontal);
-  
   @if map-get($breakpoints, "lg") {
     @media (min-width: map-get($breakpoints, "lg")) {
-      grid-template-columns: 2fr 1fr;
+      grid-column-gap: var(--grid-spacing-horizontal);
+      grid-row-gap: var(--grid-spacing-vertical);
+      display: grid;
+      margin-bottom: var(--grid-spacing-horizontal);
+    }
+  }
+}
+
+.ds-grid-2-1 {
+
+  @if map-get($breakpoints, "lg") {
+    @media (min-width: map-get($breakpoints, "lg")) {
+      grid-template-columns: minmax(auto, 66%) minmax(auto, 33%);
     }
   }
 }
 
 .ds-grid-1-2 {
 
-  grid-column-gap: var(--grid-spacing-horizontal);
-  grid-row-gap: var(--grid-spacing-vertical);
-  display: grid;
-  grid-template-columns: 1fr;
-  margin-bottom: var(--grid-spacing-horizontal);
-
   @if map-get($breakpoints, "lg") {
     @media (min-width: map-get($breakpoints, "lg")) {
       display: grid;
-      grid-template-columns: 1fr 2fr;
+      grid-template-columns: minmax(auto, 33%) minmax(auto, 66%);
       gap: var(--grid-spacing-horizontal);
     }
   }
