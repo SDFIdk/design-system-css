@@ -151,6 +151,10 @@
   --icon-filter-outline: invert(100%);
   --icon-filter-contrast: none;
 
+  span[class*="ds-icon-"]:not([class*="ds-icon-some"]) {
+    filter: var(--icon-filter-standard);
+  }
+
   h1,
   .h1 {
     font-weight: 300;

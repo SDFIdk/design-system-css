@@ -17,10 +17,6 @@
 
     <style>
       /* Custom CSS for this page*/
-      .nav-fixed {
-        display: flex; 
-        flex-flow: column nowrap;
-      }
       .colorswatch {
         display: flex;
         flex-flow: row nowrap;
@@ -41,12 +37,22 @@
         flex-flow: row nowrap;
         align-items: center;
         gap: var(--spacing);
+        word-wrap: break-word;
       }
       .icon-list li > span:first-child {
         flex: 0 0 3rem;
         width: 3rem;
       }
+      .icon-list code {
+        overflow: auto;
+      }
       section {
+        margin-bottom: var(--typography-spacing-vertical);
+      }
+      .bordered {
+        padding: var(--padding);
+        border: solid 1px var(--vibrant-steel);
+        border-radius: 0.125rem;
         margin-bottom: var(--typography-spacing-vertical);
       }
     </style>

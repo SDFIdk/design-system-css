@@ -17,10 +17,6 @@
 
     <style>
       /* Custom CSS for this page*/
-      .nav-fixed {
-        display: flex; 
-        flex-flow: column nowrap;
-      }
       .colorswatch {
         display: flex;
         flex-flow: row nowrap;
@@ -41,12 +37,22 @@
         flex-flow: row nowrap;
         align-items: center;
         gap: var(--spacing);
+        word-wrap: break-word;
       }
       .icon-list li > span:first-child {
         flex: 0 0 3rem;
         width: 3rem;
       }
+      .icon-list code {
+        overflow: auto;
+      }
       section {
+        margin-bottom: var(--typography-spacing-vertical);
+      }
+      .bordered {
+        padding: var(--padding);
+        border: solid 1px var(--vibrant-steel);
+        border-radius: 0.125rem;
         margin-bottom: var(--typography-spacing-vertical);
       }
     </style>
@@ -626,84 +632,89 @@
   </div>
 
   <div class="ds-padding light-wrapper" style="margin-bottom: var(--typography-spacing-vertical);">
+    
     <h3>Basic navigation</h3>
-    <nav>
-      <ul>
-        <li><a href="#navs">Link</a></li>
-        <li><a href="#navs">Link</a></li>
-        <li><a href="#navs">Link</a></li>
-      </ul>
-    </nav>
-    <p>
-      <pre>
-        <code>
-&lt;nav>
-&lt;ul>
-&lt;li>
-&lt;a href="#">Link&lt;/a>
-&lt;/li>
-...
-&lt;/ul>
-&lt;/nav>
-        </code>
-      </pre>
-    </p>
-    <hr>
+    <div id="ex-nav-5" class="bordered">
+      <nav>
+        <ul>
+          <li><a href="#navs">Link</a></li>
+          <li><a href="#navs">Link</a></li>
+          <li><a href="#navs">Link</a></li>
+        </ul>
+      </nav>
+    </div>
+    
+    <code-example data-snip="ex-nav-5"></code-example>
+
     <h3>Lodret navigation</h3>
-    <p><code>&lt;nav class="ds-nav-vertical"></code></p>
-    <nav class="ds-nav-vertical">
-      <ul>
-        <li><a href="#navs">Link</a></li>
-        <li><a href="#navs">Link</a></li>
-        <li><a href="#navs">Link</a></li>
-      </ul>
-    </nav>
-    <hr>
+    <p>Laves ved at tilføje class <code>ds-nav-vertical</code></p>
+
+    <div id="ex-nav-4" class="bordered">
+      <nav class="ds-nav-vertical">
+        <ul>
+          <li><a href="#navs">Link</a></li>
+          <li><a href="#navs">Link</a></li>
+          <li><a href="#navs">Link</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <code-example data-snip="ex-nav-4"></code-example>
+    
     <h3>Hovedmenu</h3>
-    <p><code>&lt;nav class="ds-nav-main"></code></p>
-    <nav class="ds-nav-main">
-      <ul>
-        <li>
-          Produktnavn
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <a href="#navs">Link</a>    
-        </li>
-        <li>
-          <a href="#navs">Link</a>    
-        </li>
-        <li>
-          <a href="#navs">Link</a>    
-        </li>
-      </ul>
-    </nav>
-    <hr>
+    <p>Laves ved at tilføje class <code>ds-nav-main</code>. "Produktnavn" kan udelades.</p>
+
+    <div id="ex-nav-3" class="bordered">
+      <nav class="ds-nav-main">
+        <h4>
+            Produktnavn
+        </h4>  
+        <ul>
+          <li>
+            <a href="#navs">Link</a>    
+          </li>
+          <li>
+            <a href="#navs">Link</a>    
+          </li>
+          <li>
+            <a href="#navs">Link</a>    
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <code-example data-snip="ex-nav-3"></code-example>
+    
     <h3>Tabs</h3>
-    <p><code>&lt;nav class="ds-nav-tabs"></code></p>
-    <nav class="ds-nav-tabs">
-      <ul>
-        <li>
-          <h4>Produktnavn</h4>
-        </li>
-        <li>
-          <a href="#navs">Link</a>    
-        </li>
-        <li>
-          <a href="#navs">Link</a>    
-        </li>
-        <li>
-          <a href="#navs">Link</a>    
-        </li>
-      </ul>
-    </nav>
+    <p>Laves ved at tilføje class <code>ds-nav-tabs</code></p>
+
+    <div id="ex-nav-2" class="bordered">
+      <nav class="ds-nav-tabs">
+        <ul>
+          <li>
+            <h4>Produktnavn</h4>
+          </li>
+          <li>
+            <a href="#navs">Link</a>    
+          </li>
+          <li>
+            <a href="#navs">Link</a>    
+          </li>
+          <li>
+            <a href="#navs">Link</a>    
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <code-example data-snip="ex-nav-2"></code-example>
     
     <h3>Værktøjslinie</h3>
-    <p><code>&lt;nav class="ds-nav-tools"></code></p>
+    <p>Er en simpel <a href="#knapper">knapgruppe</a> med et <code>nav</code> element udenom, der har class <code>ds-nav-tools</code></p>
+    <p>Adskillelseslinier kan laves ved at indsætte <code>&lt;hr></code> imellem knapper.</p>
     <div id="ex-nav-1">
       <nav class="ds-nav-tools">
-        <span class="ds-button-group">
+        <div class="ds-button-group">
           <button class="ds-icon-map_icon_download_listvalg" title="Liste"></button>
           <hr>
           <button class="ds-icon-map_icon_download_gridvalg" title="Gridvalg"></button>
@@ -712,7 +723,7 @@
           <button class="ds-icon-icon_search" title="Search"></button>
           <a href="#" role="button" class="ds-icon-icon_minus" title="Zoom out"></a>
           <button class="ds-icon-icon_plus" title="Zoom in"></button>
-        </span>
+        </div>
       </nav>
     </div>
     <code-example data-snip="ex-nav-1"></code-example>
@@ -727,7 +738,7 @@
         <li><a href="#navs">Link</a></li>
       </ul>
     </nav>
-    <hr>
+    
     <h3>Lodret navigation</h3>
     <nav class="ds-nav-vertical">
       <ul>
@@ -736,7 +747,7 @@
         <li><a href="#navs">Link</a></li>
       </ul>
     </nav>
-    <hr>
+    
     <h3>Hovedmenu</h3>
     <nav class="ds-nav-main">
       <ul>
@@ -756,7 +767,7 @@
         </li>
       </ul>
     </nav>
-    <hr>
+    
     <h3>Tabs</h3>
     <nav class="ds-nav-tabs">
       <ul>
@@ -864,6 +875,15 @@
     <li class="icon"><span class="ds-icon-some_twitter"></span><code>&lt;span class="ds-icon-some_twitter">&lt;/span></code></li>
     <li class="icon"><span class="ds-icon-some_youtube"></span><code>&lt;span class="ds-icon-some_youtube">&lt;/span></code></li>
   </ul>
+  <p>Ikoner virker også, hvis de præsenteres i et element med <code>data-theme="dark"</code></p>
+  <div data-theme="dark">
+    <ul class="ds-grid icon-list" style="padding-top: 1.5rem; padding-bottom: 2rem; margin: 0;">
+      <li class="icon"><span class="ds-icon-sider_icon_privatliv"></span><code>&lt;span class="ds-icon-sider_icon_privatliv">&lt;/span></code></li>
+      <li class="icon"><span class="ds-icon-sider_icon_terms"></span><code>&lt;span class="ds-icon-sider_icon_terms">&lt;/span></code></li>
+      <li class="icon"><span class="ds-icon-sider_icon_user"></span><code>&lt;span class="ds-icon-sider_icon_user">&lt;/span></code></li>
+      <li class="icon"><span class="ds-icon-some_linkedin"></span><code>&lt;span class="ds-icon-some_linkedin">&lt;/span></code></li>
+    </ul>
+  </div>
               
 </section><section id="logos" class="ds-padding">
 

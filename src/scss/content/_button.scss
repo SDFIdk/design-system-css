@@ -172,3 +172,45 @@ a[role="button"]:not([href]) {
     }
   }
 }
+
+
+// Icon buttons
+
+button, 
+input[type="submit"], 
+input[type="button"],
+[role="button"] {
+  
+  &[class*="ds-icon-"] {
+
+    padding: 0.5rem 1.5rem 0.5rem 3rem;
+    
+    // We assume that a button with `title` attribute only displays the icon
+    &[title] {
+      width: 3rem;
+      background-position: center center;
+      padding: 0.5rem 1.5rem;
+    }
+
+    &::before {
+      filter: var(--icon-filter-standard);
+    }
+
+    &.secondary::before {
+      filter: var(--icon-filter-secondary);
+    }
+
+    &.secondary:hover::before,
+    &.secondary:active::before {
+      filter: var(--icon-filter-secondary-hover);
+    }
+  
+    &.outline::before {
+      filter: var(--icon-filter-outline);
+    }
+  
+    &.contrast::before {
+      filter: var(--icon-filter-contrast);
+    }
+  }
+}
