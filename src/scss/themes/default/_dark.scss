@@ -141,9 +141,9 @@
   --tooltip-color: var(--contrast-inverse);
 
   // Logos
-  --logo-filter: brightness(0%) invert(100%);
-  --logo-filter-hover: brightness(120%);
-  --logo-filter-focus: hue-rotate(200deg);
+  --logo-filter: brightness(0) invert(100%);
+  --logo-filter-hover: brightness(1.2) saturate(70%);
+  --logo-filter-focus: invert(100%) saturate(85%) hue-rotate(20deg);
 
   // Icons
   --icon-filter-standard: invert(100%);
