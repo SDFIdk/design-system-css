@@ -1,66 +1,73 @@
 <section id="formular">
+  
+  <div class="ds-padding">
+    <h2 style="margin-bottom: 0;">Formularer og inputfelter</h2>
+    <p>Inputfelter til formularer er allerede stylet for dig. Du skal ikke gøre noget særligt ud over at bruge korrekt HTML.</p>
+  </div>
 
-  <h2 class="ds-padding" style="margin-bottom: 0;">Formularer og inputfelter</h2>
+  <div id="ex-form-1">
+    <form class="ds-padding">
+      
+      <fieldset>
+        <label for="myinput">A text input</label>
+        <input type="text" placeholder="Insert some text" id="myinput">
+      </fieldset>
 
-  <form class="ds-padding">
-    
-    <fieldset>
-      <label for="myinput">A text input</label>
-      <input type="text" placeholder="Insert some text" id="myinput">
-    </fieldset>
+      <fieldset>
+        <label for="mydateinput">A date input</label>
+        <input type="date" id="mydateinput">
+      </fieldset>
 
-    <fieldset>
-      <label for="mydateinput">A date input</label>
-      <input type="date" id="mydateinput">
-    </fieldset>
+      <fieldset>
+        <label for="myrageinput">A range input</label>
+        <input type="range" id="myrangeinput">
+      </fieldset>
 
-    <fieldset>
-      <label for="myrageinput">A range input</label>
-      <input type="range" id="myrangeinput">
-    </fieldset>
+      <fieldset>
+        <label for="myfileinput">A file input</label>
+        <input type="file" id="myfileinput">
+      </fieldset>
 
-    <fieldset>
-      <label for="myfileinput">A file input</label>
-      <input type="file" id="myfileinput">
-    </fieldset>
+      <fieldset>
+        <legend>Some choices</legend> <!-- A title for the contents of a fieldset -->
 
-    <fieldset>
-      <legend>Some choices</legend> <!-- A title for the contents of a fieldset -->
+        <input type="radio" name="myradio" id="myradio1">
+        <label for="myradio1">This option</label>
+        <br>
+        <input type="radio" name="myradio" id="myradio2">
+        <label for="myradio2">The other option</label>
+      </fieldset>
 
-      <input type="radio" name="myradio" id="myradio1">
-      <label for="myradio1">This option</label>
-      <br>
-      <input type="radio" name="myradio" id="myradio2">
-      <label for="myradio2">The other option</label>
-    </fieldset>
+      <fieldset>
+        <input type="checkbox" id="mycheckbox">
+        <label for="mycheckbox">Check this box</label>
+      </fieldset>
 
-    <fieldset>
-      <input type="checkbox" id="mycheckbox">
-      <label for="mycheckbox">Check this box</label>
-    </fieldset>
+      <fieldset>
+        <label for="myselect">A select box</label>
+        <select id="myselect">
+          <option>Something to select</option>
+          <optgroup>
+            <option>Something else</option>
+            <option>Something else entirely</option>
+          </optgroup>
+        </select>
+      </fieldset>
 
-    <fieldset>
-      <label for="myselect">A select box</label>
-      <select id="myselect">
-        <option>Something to select</option>
-        <optgroup>
-          <option>Something else</option>
-          <option>Something else entirely</option>
-        </optgroup>
-      </select>
-    </fieldset>
+      <fieldset>
+        <label for="mytext">A textarea</label>
+        <textarea placeholder="Some text in a textarea"></textarea>
+      </fieldset>
 
-    <fieldset>
-      <label for="mytext">A textarea</label>
-      <textarea placeholder="Some text in a textarea"></textarea>
-    </fieldset>
+      <hr>
 
-    <hr>
+      <input type="submit" value="Go!">
+      <input type="button" class="secondary" value="Don't go">
 
-    <input type="submit" value="Go!">
-    <input type="button" class="secondary" value="Don't go">
+    </form>
+  </div>
 
-  </form>
+  <code-example data-snip="ex-form-1"></code-example>
 
   <form data-theme="dark" class="ds-padding">
     

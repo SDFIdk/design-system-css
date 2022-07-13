@@ -85,14 +85,14 @@
           <h2>Introduktion</h2>
           <p>Dette er dokumentationen for, hvordan du bruger elementerne i Design System CSS - en implementation af SDFIs design guide.</p>
           <p><a href="https://www.figma.com/file/G9g2vp2MOcejoPB3d1xJvU/Dataforsyningen-Design-System">Den komplette designguide kan findes på Figma.</a></p>
+          <p>Design System CSS er baseret på <a href="https://picocss.com/">pico.css.</a> Du kan finde deres <a href="https://picocss.com/docs/">dokumentation her.</a></p>
         </article>
 <section id="typografi">
 
   <h2 class="ds-padding" style="margin-bottom: 0;">Typografi</h2>
 
-  <article data-theme="light" class="ds-padding" style="margin-bottom: var(--typography-spacing-vertical);">
+  <article data-theme="light" class="ds-padding" style="margin-bottom: var(--typography-spacing-vertical);" id="ex-typo-1">
     <h1>Overskrift niveau 1</h1>
-    <p>Ovenstående overskrift/heading laves med <code>&lt;h1></code> eller <code>class="h1"</code>.</p>
     <h2>Overskrift niveau 2</h2>
     <h3>Overskrift niveau 3</h3>
     <h4>Overskrift niveau 4</h4>
@@ -100,16 +100,18 @@
     <blockquote>Manchet/blockquote. Lorem ipsom dolor amet etc.</blockquote>
     <p>Ovenstående manchet/blockquote laves med <code>&lt;blockquote></code> eller <code>class="blockquote"</code></p>
     <p>
-      Almindelig brødtekst. <a href="#typografi">Her er et link i teksten.</a> Lorem ipsum dolor etc. Fås osgå som <em>kursiv brødtekst,</em> hvis du bruger <code>&lt;em></code> elementet.
+      Almindelig brødtekst. <a href="#typografi">Her er et link i teksten.</a> Lorem ipsum dolor etc.<br> Fås osgå som <em>kursiv brødtekst,</em> hvis du bruger <code>&lt;em></code> elementet.
     </p>
     <p><em>Bemærk!</em> Lav aldrig om på headings - f.eks. ved at lave en <code>&lt;h1></code> om til en <code>&lt;h3></code> hvis du bare synes overskriften skal have en anden størrelse. Niveau-opdelingen har betydning for tilgængelighed og SEO.</p>
-    <p>Brug i stedet en style class på heading, der matcher din ønskede størrelse. F.eks. <code>&lt;h1 class="h3"></code>.</p>
+    <p>Brug i stedet en style class på heading, der matcher din ønskede størrelse.<br> F.eks. <code>&lt;h1 class="h3"></code>.</p>
     <p>
       <small>Lille brødtekst. <a href="#typografi">Here is a link.</a> Benyttes i HTML med <code>&lt;small></code> elementet.</small><br>
       <small><em>Lille kursiv brødtekst. </a> Benyttes i HTML med <code>&lt;small></code> og <code>&lt;em></code> elementerne.</small></em></small>
     </p>
-    <p><code>&lt;code>Her er noget kode&lt;/code></code></p>
+    <p>Her er noget kode</code></p>
   </article>
+
+  <code-example data-snip="ex-typo-1"></code-example>
 
   <article data-theme="dark" class="ds-padding">
     <h1>This is a heading at level 1</h1>
@@ -230,24 +232,37 @@
     </p>
   </div>
 
-  <article class="ds-padding" style="background-color: var(--lys-steel);">
-    <h3>Indhold med baggrundsfarve.</h3>
-    <p>
-      Kan bruges med CSS custom properties:<br> 
-      <code>&lt;div style="background-color: var(--lys-steel);"> ... &lt;/div></code>
-    </p>
-  </article>
-  <article class="ds-padding" style="background-color: var(--medium-steel);">
-    <h3>Indhold med baggrundsfarve.</h3>
-    <p>
-      Benyttes ofte til footer og lign. Kan bruges med CSS custom properties:<br> 
-      <code>&lt;div style="background-color: var(--medium-steel);"> ... &lt;/div></code>
-    </p>
-  </article>
-  <article class="ds-padding" data-theme="dark">
-    <h3>Indhold med mørk baggrundsfarve.</h3>
-    <p>Benytter "dark" tema. <code>&lt;div data-theme="dark"> ... &lt;/div></code></p> 
-  </article>
+  <div id="ex-color-3">
+    <article class="ds-padding" style="background-color: var(--lys-steel);">
+      <h3>Indhold med baggrundsfarve.</h3>
+      <p>
+        Kan laves vha. CSS custom properties, som i eksemplet nedenfor. 
+      </p>
+    </article>
+  </div>
+
+  <code-example data-snip="ex-color-3"></code-example>
+
+  <div id="ex-color-2">
+    <article class="ds-padding" style="background-color: var(--medium-steel);">
+      <h3>Indhold med baggrundsfarve.</h3>
+      <p>
+        Benyttes ofte til footer og lign.<br> 
+        Kan laves vha. CSS custom properties, som i eksemplet nedenfor.
+      </p>
+    </article>
+  </div>
+
+  <code-example data-snip="ex-color-2"></code-example>
+
+  <div id="ex-color-1">
+    <article class="ds-padding" data-theme="dark">
+      <h3>Indhold med mørk baggrundsfarve.</h3>
+      <p>Benytter "dark" tema.</p> 
+    </article>
+  </div>
+
+  <code-example data-snip="ex-color-1"></code-example>
 
 </section>
 <section id="knapper">
@@ -400,68 +415,75 @@
   </article>
 
 </section>  <section id="formular">
+  
+  <div class="ds-padding">
+    <h2 style="margin-bottom: 0;">Formularer og inputfelter</h2>
+    <p>Inputfelter til formularer er allerede stylet for dig. Du skal ikke gøre noget særligt ud over at bruge korrekt HTML.</p>
+  </div>
 
-  <h2 class="ds-padding" style="margin-bottom: 0;">Formularer og inputfelter</h2>
+  <div id="ex-form-1">
+    <form class="ds-padding">
+      
+      <fieldset>
+        <label for="myinput">A text input</label>
+        <input type="text" placeholder="Insert some text" id="myinput">
+      </fieldset>
 
-  <form class="ds-padding">
-    
-    <fieldset>
-      <label for="myinput">A text input</label>
-      <input type="text" placeholder="Insert some text" id="myinput">
-    </fieldset>
+      <fieldset>
+        <label for="mydateinput">A date input</label>
+        <input type="date" id="mydateinput">
+      </fieldset>
 
-    <fieldset>
-      <label for="mydateinput">A date input</label>
-      <input type="date" id="mydateinput">
-    </fieldset>
+      <fieldset>
+        <label for="myrageinput">A range input</label>
+        <input type="range" id="myrangeinput">
+      </fieldset>
 
-    <fieldset>
-      <label for="myrageinput">A range input</label>
-      <input type="range" id="myrangeinput">
-    </fieldset>
+      <fieldset>
+        <label for="myfileinput">A file input</label>
+        <input type="file" id="myfileinput">
+      </fieldset>
 
-    <fieldset>
-      <label for="myfileinput">A file input</label>
-      <input type="file" id="myfileinput">
-    </fieldset>
+      <fieldset>
+        <legend>Some choices</legend> <!-- A title for the contents of a fieldset -->
 
-    <fieldset>
-      <legend>Some choices</legend> <!-- A title for the contents of a fieldset -->
+        <input type="radio" name="myradio" id="myradio1">
+        <label for="myradio1">This option</label>
+        <br>
+        <input type="radio" name="myradio" id="myradio2">
+        <label for="myradio2">The other option</label>
+      </fieldset>
 
-      <input type="radio" name="myradio" id="myradio1">
-      <label for="myradio1">This option</label>
-      <br>
-      <input type="radio" name="myradio" id="myradio2">
-      <label for="myradio2">The other option</label>
-    </fieldset>
+      <fieldset>
+        <input type="checkbox" id="mycheckbox">
+        <label for="mycheckbox">Check this box</label>
+      </fieldset>
 
-    <fieldset>
-      <input type="checkbox" id="mycheckbox">
-      <label for="mycheckbox">Check this box</label>
-    </fieldset>
+      <fieldset>
+        <label for="myselect">A select box</label>
+        <select id="myselect">
+          <option>Something to select</option>
+          <optgroup>
+            <option>Something else</option>
+            <option>Something else entirely</option>
+          </optgroup>
+        </select>
+      </fieldset>
 
-    <fieldset>
-      <label for="myselect">A select box</label>
-      <select id="myselect">
-        <option>Something to select</option>
-        <optgroup>
-          <option>Something else</option>
-          <option>Something else entirely</option>
-        </optgroup>
-      </select>
-    </fieldset>
+      <fieldset>
+        <label for="mytext">A textarea</label>
+        <textarea placeholder="Some text in a textarea"></textarea>
+      </fieldset>
 
-    <fieldset>
-      <label for="mytext">A textarea</label>
-      <textarea placeholder="Some text in a textarea"></textarea>
-    </fieldset>
+      <hr>
 
-    <hr>
+      <input type="submit" value="Go!">
+      <input type="button" class="secondary" value="Don't go">
 
-    <input type="submit" value="Go!">
-    <input type="button" class="secondary" value="Don't go">
+    </form>
+  </div>
 
-  </form>
+  <code-example data-snip="ex-form-1"></code-example>
 
   <form data-theme="dark" class="ds-padding">
     
@@ -531,102 +553,109 @@
 
   <p>Lav et simpelt kolonne-layout ved at tilføje <code>ds-grid</code> class til det element, der indeholder de elementer, som skal vises i kolonner.</p>
 
-  <section class="ds-grid">
-    <div data-theme="dark" class="ds-padding">1</div>
-    <div data-theme="dark" class="ds-padding">2</div>
-    <div data-theme="dark" class="ds-padding">3</div>
-    <div data-theme="dark" class="ds-padding">4</div>
-  </section>
+  <div id="ex-grid-1">
+    <section class="ds-grid">
+      <div data-theme="dark" class="ds-padding">1</div>
+      <div data-theme="dark" class="ds-padding">2</div>
+      <div data-theme="dark" class="ds-padding">3</div>
+      <div data-theme="dark" class="ds-padding">4</div>
+    </section>
+  </div>
+
+  <code-example data-snip="ex-grid-1"></code-example>
 
   <p>Hvis boksene gerne må bruge den plads, der er til rådighed, så kan du bruge <code>ds-flexgrid</code> class i stedet.</p>
 
-  <section class="ds-flexgrid">
-    <div data-theme="dark" class="ds-padding">1</div>
-    <div data-theme="dark" class="ds-padding">2</div>
-    <div data-theme="dark" class="ds-padding">3</div>
-    <div data-theme="dark" class="ds-padding">4</div>
-    <div data-theme="dark" class="ds-padding">5</div>
-  </section>
+  <div id="ex-grid-2">
+    <section class="ds-flexgrid">
+      <div data-theme="dark" class="ds-padding">1</div>
+      <div data-theme="dark" class="ds-padding">2</div>
+      <div data-theme="dark" class="ds-padding">3</div>
+      <div data-theme="dark" class="ds-padding">4</div>
+      <div data-theme="dark" class="ds-padding">5</div>
+    </section>
+  </div>
+
+  <code-example data-snip="ex-grid-2"></code-example>
 
   <p>Brug class <code>.ds-grid-2-1</code> på elementet udenom, når du vil vise to elementer som hhv. primær og sekundær kolonne.</p>
-  <section class="ds-grid-2-1">
-    <div data-theme="dark" class="ds-padding">Primær / main</div>
-    <div data-theme="dark" class="ds-padding">Sekundær</div>
-  </section>
+  
+  <div id="ex-grid-3">
+    <section class="ds-grid-2-1">
+      <div data-theme="dark" class="ds-padding">Primær / main</div>
+      <div data-theme="dark" class="ds-padding">Sekundær</div>
+    </section>
+  </div>
+
+  <code-example data-snip="ex-grid-3"></code-example>
 
   <p>Brug class <code>.ds-grid-1-2</code> hvis rækkefølgen skal være omvendt.</p>
   
-  <section class="ds-grid-1-2">
-    <div data-theme="dark" class="ds-padding">Sekundær</div>
-    <div data-theme="dark" class="ds-padding">Primær / main</div>
-  </section>
+  <div id="ex-grid-4">
+    <section class="ds-grid-1-2">
+      <div data-theme="dark" class="ds-padding">Sekundær</div>
+      <div data-theme="dark" class="ds-padding">Primær / main</div>
+    </section>
+  </div>
+
+  <code-example data-snip="ex-grid-4"></code-example>
 
   <h3>Udvendig afstand / margin</h3>
 
   <p>Du kan sætte den korrekte margin ved at bruge class <code>ds-margin</code> i HTML.</p>
-  <code>
-    <pre>
-      &lt;div class="ds-margin"> ... &lt;/div>
-    </pre>
-  </code>
+  <pre><code>&lt;div class="ds-margin"> ... &lt;/div></code></pre>
+
+  <div class="bordered">
+    <div data-theme="dark" class="ds-margin ds-padding">Indhold med ds-margin udenom</div>
+  </div>
+
   <p>Hvis du skal bruge den officielle margin i CSS, kan du bruge CSS custom property <code>--margin</code>.</p>
-  <code>
-    <pre>
-      .my-custom-class {
-        margin: var(--margin);
-      }
-    </pre>
-  </code>
+  <pre><code>.my-custom-class {
+    margin: var(--margin);
+  }</code></pre>
 
   <h3>Indvendig afstand / padding</h3>
 
   <p>Du kan sætte den korrekte padding ved at bruge class <code>ds-padding</code> i HTML.</p>
-  <code>
-    <pre>
-      &lt;div class="ds-padding"> ... &lt;/div>
-    </pre>
-  </code>
+  <pre><code>&lt;div class="ds-padding"> ... &lt;/div></code></pre>
+
+  <div class="bordered ds-padding">
+    Indhold med ds-padding indeni.
+  </div>
+
   <p>Hvis du skal bruge den officielle padding i CSS, kan du bruge CSS custom property <code>--padding</code>.</p>
-  <code>
-    <pre>
-      .my-custom-class {
-        padding: var(--padding);
-      }
-    </pre>
-  </code>
+  <pre><code>.my-custom-class {
+    padding: var(--padding);
+  }</code></pre>
 
   <p>Når tekst og elementer med runde kanter (ikoner, knapper, etc.) står sammen, skal teksten og de runde elementer rykkes lidt i forhold til hinanden. Det er for at modvirke et optisk fænomen, hvor det ser ud som om, at de ikke står på linie.</p>
   <p>Du kan gøre det ved at give teksten lidt ekstra padding med <code>ds-optical-padding</code> class ELLER give ikoner/knapper en justeringsmargin.</p>
-   
-  <code>
-    <pre>
-      &lt;p class="ds-optical-padding">Her er din tekst&lt;/p>
-      &lt;button>En knap&lt;/button>
-    </pre>
-  </code>
-
-  <code>
-    <pre>
-      &lt;p>Her er din tekst&lt;/p>
-      &lt;button class="ds-optical-margin">En knap&lt;/button>
-    </pre>
-  </code>
 
   <div class="ds-padding" data-theme="dark" style="margin-bottom: var(--typography-spacing-vertical);">
     <p class="ds-optical-padding">Her er din tekst med optical padding.</p>
     <button>En knap</button>
   </div>
 
+  <pre><code>
+    &lt;p class="ds-optical-padding">Her er din tekst&lt;/p>
+    &lt;button>En knap&lt;/button>
+  </code></pre>
+
   <div class="ds-padding" data-theme="dark" style="margin-bottom: var(--typography-spacing-vertical);">
     <p>Her er din tekst</p>
     <button class="ds-optical-margin">En knap med optical margin</button>
   </div>
 
+  <pre><code>
+    &lt;p>Her er din tekst&lt;/p>
+    &lt;button class="ds-optical-margin">En knap&lt;/button>
+  </code></pre>
+
   <p>Her kan du også bruge CSS custom properties <code>--optical-padding</code> og <code>--optical-margin</code> til mere specialiserede layouts.</p>
 
   <h3>Indholds-containere</h3>
   
-  <p class="ds-container">Hvis du skal vise noget indhold i én kolonne midt i skærmen, så sæt <code>ds-container</code> class på elementet. Indholdet i denne tekst er centreret med <code>ds-container</code>-class.</p>
+  <p class="ds-container">Hvis du skal vise noget indhold i én kolonne midt i skærmen, så sæt <code>ds-container</code> class på elementet. Indholdet i denne tekst er centreret med class <code>ds-container</code></p>
 
 </section>
 <section id="navs">
@@ -973,27 +1002,13 @@
     <code>/node-modules/design-system-css/assets/logos/logo-simple-micro.svg</code>
   </p>
 </section>
-<section id="cards">
+<section id="cards" class="ds-padding">
 
-  <div class="ds-padding" style="padding-bottom: 0;">
-    <h2>Produktkort/cards</h2> 
-    <pre>
-      <code>
-&lt;article class="ds-card">
-  &lt;img src="..." alt="">
-  &lt;div class="ds-padding">
-    &lt;h3>Produktkort titel&lt;/h3>
-    &lt;p>Dette er et produktkort/card.&lt;/p>
-    &lt;footer>
-      &lt;button>Gør noget&lt;/button>
-    &lt;/footer>
-  &lt;/div>
-&lt;/article>
-      </code>            
-    </pre>
-  </div>
+  <h2>Produktkort/cards</h2> 
+  
+  <p>Produktkort og cards laves nemt ved at sætte class <code>ds-card</code> på et element. Det første <code>&lt;img></code> element i et ds-card bliver altid vist som hovedbilledet.</p>
 
-  <div class="ds-grid">
+  <div class="ds-grid" id="ex-card-1">
 
     <article class="ds-card">
       <img src="https://raw.githubusercontent.com/iamfrank/semstrap/master/assets/images/bg-img-1.jpg" alt="">
@@ -1011,13 +1026,6 @@
       <div class="ds-padding">
         <h3>Produktkort titel</h3>
         <p>Dette produktkort har <code>data-theme="dark"</code>.</p>
-        <pre>
-          <code>
-&lt;article class="ds-card" data-theme="dark">
-...
-&lt;/article>
-          </code>            
-        </pre>
       </div>
       <footer>
         <div class="ds-button-group">
@@ -1029,41 +1037,81 @@
 
   </div>
 
+  <code-example data-snip="ex-card-1"></code-example>
+
 </section>
 <section class="ds-padding" id="tabeller">
       
   <h2 style="margin-bottom: 0;">Tabeller</h2>
 
-  <!-- This is a preview of a table and how to set it up -->
-  <table>
-    <caption>
-      User Details
-    </caption>
-    <thead>
-      <tr>
-        <th>No.</th>
-        <th>Name</th>
-        <th>Email</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td>John Carter</td>
-        <td>johncarter@mail.com</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Peter Parker</td>
-        <td>peterparker@mail.com</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>John Rambo</td>
-        <td>johnrambo@mail.com</td>
-      </tr>
-    </tbody>
-  </table>
+  <p>Tabeller kræver intet særligt, da de allerede er stylet som default. Du skal blot bruge korrekt HTML.</p>
+
+  <div id="ex-table-1">
+    <table>
+      <caption>
+        User Details
+      </caption>
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>Name</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>John Carter</td>
+          <td>johncarter@mail.com</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Peter Parker</td>
+          <td>peterparker@mail.com</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>John Rambo</td>
+          <td>johnrambo@mail.com</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <code-example data-snip="ex-table-1"></code-example>
+
+  <div data-theme="dark" class="ds-padding">
+    <h3>"Dark" version</h3>
+    <table>
+      <caption>
+        User Details
+      </caption>
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>Name</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>John Carter</td>
+          <td>johncarter@mail.com</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Peter Parker</td>
+          <td>peterparker@mail.com</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>John Rambo</td>
+          <td>johnrambo@mail.com</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
 </section>      </main>
 

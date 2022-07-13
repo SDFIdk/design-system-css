@@ -1,24 +1,10 @@
-<section id="cards">
+<section id="cards" class="ds-padding">
 
-  <div class="ds-padding" style="padding-bottom: 0;">
-    <h2>Produktkort/cards</h2> 
-    <pre>
-      <code>
-&lt;article class="ds-card">
-  &lt;img src="..." alt="">
-  &lt;div class="ds-padding">
-    &lt;h3>Produktkort titel&lt;/h3>
-    &lt;p>Dette er et produktkort/card.&lt;/p>
-    &lt;footer>
-      &lt;button>Gør noget&lt;/button>
-    &lt;/footer>
-  &lt;/div>
-&lt;/article>
-      </code>            
-    </pre>
-  </div>
+  <h2>Produktkort/cards</h2> 
+  
+  <p>Produktkort og cards laves nemt ved at sætte class <code>ds-card</code> på et element. Det første <code>&lt;img></code> element i et ds-card bliver altid vist som hovedbilledet.</p>
 
-  <div class="ds-grid">
+  <div class="ds-grid" id="ex-card-1">
 
     <article class="ds-card">
       <img src="https://raw.githubusercontent.com/iamfrank/semstrap/master/assets/images/bg-img-1.jpg" alt="">
@@ -36,13 +22,6 @@
       <div class="ds-padding">
         <h3>Produktkort titel</h3>
         <p>Dette produktkort har <code>data-theme="dark"</code>.</p>
-        <pre>
-          <code>
-&lt;article class="ds-card" data-theme="dark">
-...
-&lt;/article>
-          </code>            
-        </pre>
       </div>
       <footer>
         <div class="ds-button-group">
@@ -53,5 +32,7 @@
     </article>
 
   </div>
+
+  <code-example data-snip="ex-card-1"></code-example>
 
 </section>
