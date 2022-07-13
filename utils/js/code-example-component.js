@@ -12,7 +12,6 @@ class CodeExample extends HTMLElement {
 
   connectedCallback() {
     let snippet = document.getElementById(this.dataset.snip).cloneNode(true).innerHTML
-    console.log(snippet)
     const regex = /\u0020{2,}/g;
   
     const container = document.createElement('p')
