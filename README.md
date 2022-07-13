@@ -40,7 +40,7 @@ Link to `designssytem.css` CSS directly into your HTML's `<head>`.
   <head>
     ...
 
-    <link rel="stylesheet" href="/assets/designsystem.css">
+    <link rel="stylesheet" href="/somewhere/designsystem.css">
 
     ...
   </head>
@@ -48,9 +48,13 @@ Link to `designssytem.css` CSS directly into your HTML's `<head>`.
 
 ## Typography
 
-The Design System assumes you have the "Roboto" and "Source Code Pro" fonts available. If that is not the case you can include the font from [Google Fonts](https://fonts.google.com/) or self host the font files.
+The Design System assumes you self host the "Roboto" and "Source Code Pro" fonts and have them available in a `./fonts` directory related to the path of your `designssytem.css` file.
 
-Font files are included in [`assets/fonts`](./assets/fonts) along with [`font.css`](./assets/fonts/font.css) file to give you an example on how to use `@font-face` to include font files in CSS.
+So if your css file has path `/somewhere/somewhere/designsystem.css`, your font files should be at `/somewhere/somewhere/fonts/`
+
+Font files are included in [`assets/fonts`](./assets/fonts) along with [`font.css`](./assets/fonts/font.css) file to give you an example on how to use `@font-face` to make custom font includes.
+
+Alternatively, you can include the fonts from [Google Fonts](https://fonts.google.com/) but beware of Google using the font files to track users.
 
 ## Acknowlegdements
 
