@@ -6,9 +6,7 @@ Design System CSS (DSCSS) is an implementation of SDFIs official design guide.
 
 The system is a single CSS file and useful accompanying font files that you can embed in your web project for at SDFI branded look and feel.
 
-[Read the documentation here.](https://sdfidk.github.io/design-system-css/)
-
-This repository is meant to be used in tandem with [Design System Icons](https://github.com/SDFIdk/design-system-icons) repo at https://github.com/SDFIdk/design-system-icons
+[Get started with the official documentation here!](https://sdfidk.github.io/design-system-css/)
 
 ## Usage
 
