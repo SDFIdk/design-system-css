@@ -60,11 +60,11 @@
   --button-hover-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
 
   // Form elements
-  --form-element-background-color: transparent;
+  --form-element-background-color: #{$primary-900};
   --form-element-border-color: #{$primary-700};
   --form-element-color: var(--color);
   --form-element-placeholder-color: var(--muted-color);
-  --form-element-active-background-color: transparent;
+  --form-element-active-background-color: #{$primary-900};
   --form-element-active-border-color: var(--primary);
   --form-element-focus-color: #{$amber-300};
   --form-element-disabled-background-color: #{$grey-800};
