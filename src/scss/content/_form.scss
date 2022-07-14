@@ -274,6 +274,8 @@ textarea {
 
 // Select
 select {
+  background-color: var(--background-color);
+
   // Unstyle the caret on `<select>`s in IE10+.
   &::-ms-expand {
     border: 0;
@@ -285,18 +287,11 @@ select {
     padding-left: var(--form-element-spacing-horizontal);
     padding-inline-start: var(--form-element-spacing-horizontal);
     padding-inline-end: calc(var(--form-element-spacing-horizontal) + 1.5rem);
+    
     background-image: var(--icon-chevron);
+    background-size: 1.5rem auto;
     background-position: center right 0.75rem;
-    background-size: 1rem auto;
     background-repeat: no-repeat;
-  }
-}
-
-[dir="rtl"] {
-  select {
-    &:not([multiple]):not([size]) {
-      background-position: center left 0.75rem;
-    }
   }
 }
 
