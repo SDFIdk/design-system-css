@@ -4,8 +4,11 @@
   position: relative;
   width: auto;
   height: 3rem;
-  display: inline-block;
+  display: inline-flex;
   vertical-align: middle;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
   margin: 0;
 
   &::before {
