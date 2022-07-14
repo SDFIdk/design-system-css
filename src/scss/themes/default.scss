@@ -25,4 +25,11 @@
 // Enabled if forced with data-theme="dark"
 [data-theme="dark"] {
   @include dark;
+  background-color: var(--background-color);
+}
+
+// Light theme (Forced)
+// Enabled if forced with data-theme="light"
+[data-theme="light"] {
+  background-color: var(--background-color);
 }

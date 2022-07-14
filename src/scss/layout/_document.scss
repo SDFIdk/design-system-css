@@ -56,6 +56,7 @@ body {
 body {
   margin: 0;
   padding: 0;
+  background-color: var(--background-color);
 }
 
 div,
@@ -68,6 +69,6 @@ main,
 footer,
 aside {
   color: var(--color);
-  background-color: var(--background-color);
+  background-color: transparent;
   max-width: 100%;
 }
