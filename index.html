@@ -84,7 +84,7 @@
         <article class="ds-padding">
           <h2>Introduktion</h2>
           <p>Dette er dokumentationen for, hvordan du bruger elementerne i Design System CSS - en implementation af SDFIs design guide.</p>
-          <p><a href="https://www.figma.com/file/G9g2vp2MOcejoPB3d1xJvU/Dataforsyningen-Design-System">Den komplette designguide kan findes på Figma.</a></p>
+          <p><a href="https://www.figma.com/file/G9g2vp2MOcejoPB3d1xJvU/Dataforsyningen-Design-System">Den komplette designguide kan findes på Figma.</a> (Kræver SDFI login.)</p>
           <p>Design System CSS er baseret på <a href="https://picocss.com/">pico.css.</a> Du kan finde deres <a href="https://picocss.com/docs/">dokumentation her.</a></p>
         </article>
 <section id="typografi">
@@ -841,8 +841,10 @@
 </section>
 <section id="icons">
 
-  <h2 class="ds-padding" style="margin-bottom: 0;">Ikoner</h2>
-
+  <div class="ds-padding">
+    <h2>Ikoner</h2>
+    <p>Ikoner er indlejret som baggrundsbilleder i CSS, så du skal bare sætte en class <code>ds-icon-*</code> på et element for at bruge dem.</p>
+  </div>
   <ul class="ds-grid icon-list">
     <li class="icon"><span class="ds-icon-hentdata_icon_choose"></span><code>&lt;span class="ds-icon-hentdata_icon_choose">&lt;/span></code></li>
     <li class="icon"><span class="ds-icon-hentdata_icon_download"></span><code>&lt;span class="ds-icon-hentdata_icon_download">&lt;/span></code></li>

@@ -3,6 +3,7 @@
 Design System CSS (DSCSS) is an implementation of SDFIs official design guide.
 
 [The design system guide is available on Figma.](https://www.figma.com/file/G9g2vp2MOcejoPB3d1xJvU/Dataforsyningen-Design-System)
+(Requires SDFI login)
 
 The system is a single CSS file and useful accompanying font files that you can embed in your web project for at SDFI branded look and feel.
 
