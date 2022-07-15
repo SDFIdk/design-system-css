@@ -8,16 +8,13 @@ echo ':root {' >> icons.css
 for i in ../node_modules/design-system-icons/icons/*.svg; do
   svgstr1=$(cat ${i})
   svgstr2=${svgstr1//black/#3EDDC6}
-  svgstr3=${svgstr2//#000/#3EDDC6}
-  svgstr4=$(node convert_svg.js "$svgstr3")
+  svgstr4=$(node convert_svg.js "$svgstr2")
   echo "--${i:42:(-4)}: url('data:image/svg+xml;utf8,${svgstr4}');" >> icons.css
 done
 
 echo '}' >> icons.css
 
 for i in ../node_modules/design-system-icons/icons/*.svg; do
-  svgstr1=$(cat ${i})
-  svgstr2=$(node convert_svg.js "$svgstr1")
   echo ".ds-icon-${i:42:(-4)}::before { background-image: var(--${i:42:(-4)});}" >> icons.css
 done
 
