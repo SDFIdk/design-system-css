@@ -208,9 +208,23 @@ input[type="button"],
     &.outline::before {
       filter: var(--icon-filter-outline);
     }
+
+    &.outline:hover::before,
+    &.outline:active::before {
+      filter: var(--icon-filter-outline-hover);
+    }
   
     &.contrast::before {
       filter: var(--icon-filter-contrast);
+    }
+
+    &.contrast:hover::before,
+    &.contrast:active::before {
+      filter: var(--icon-filter-contrast-hover);
+    }
+
+    &:focus::before {
+      filter: var(--icon-filter-standard) !important;
     }
   }
 }

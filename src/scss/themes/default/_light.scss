@@ -146,9 +146,12 @@
   --logo-filter-focus: invert(100%) saturate(70%);
 
   // Icons
-  --icon-filter-standard: invert(100%);
+  --icon-filter: brightness(0);
+  --icon-filter-standard: brightness(0) invert(100%);
+  --icon-filter-secondary: none;
   --icon-filter-secondary: none;
   --icon-filter-outline: none;
-  --icon-filter-contrast: invert(100%); 
-  --icon-filter-secondary-hover: none;
+  --icon-filter-outline-hover: brightness(0) invert(100%);
+  --icon-filter-contrast: brightness(0) invert(100%); 
+  --icon-filter-secondary-hover: brightness(0);
 }

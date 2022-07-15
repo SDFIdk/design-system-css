@@ -146,14 +146,14 @@
   --logo-filter-focus: invert(100%) saturate(85%) hue-rotate(20deg);
 
   // Icons
-  --icon-filter-standard: invert(100%);
-  --icon-filter-secondary: invert(100%);
-  --icon-filter-outline: invert(100%);
+  --icon-filter: brightness(0) invert(100%);
+  --icon-filter-standard: brightness(0) invert(100%);
+  --icon-filter-secondary: brightness(0) invert(100%);
+  --icon-filter-secondary-hover: none;
+  --icon-filter-outline: brightness(0) invert(100%);
+  --icon-filter-outline-hover: brightness(0) invert(100%);
   --icon-filter-contrast: none;
-
-  span[class*="ds-icon-"]:not([class*="ds-icon-some"]) {
-    filter: var(--icon-filter-standard);
-  }
+  --icon-filter-contrast-hover: brightness(0);
 
   h1,
   .h1 {
