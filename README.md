@@ -55,6 +55,21 @@ Font files are included in [`assets/fonts`](./assets/fonts) along with [`font.cs
 
 Alternatively, you can include the fonts from [Google Fonts](https://fonts.google.com/) but beware of Google using the font files to track users.
 
+## Development
+
+### Build doc site from source
+
+```
+npm run build
+```
+Builds documentation into `index.html` and copies a new version of `designsystem.css` into the `assets` directory.
+
+```
+npm run start
+```
+Opens `index.html` in a Firefox browser (if one is installed).
+
+
 ## Acknowlegdements
 
 Design System CSS is heavily inspired by Pico.css
