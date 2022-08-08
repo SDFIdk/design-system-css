@@ -144,6 +144,11 @@ aside.ds-nav-tools {
     &::before {
       filter: var(--icon-filter-secondary);
     }
+
+    &:hover::before,
+    &:active::before {
+      filter: var(--icon-filter-standard);
+    }
   }
 
   hr {
