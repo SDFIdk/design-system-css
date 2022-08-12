@@ -44,10 +44,10 @@ input[type="reset"],
   display: inline-block;
   width: auto;
   padding: 0.5em 1.5em;
-  border: 1px solid var(--primary);
+  border: 1px solid #{$green-700};
   border-radius: 2.5rem;
   outline: none;
-  background-color: var(--primary);
+  background-color: #{$green-700};
   color: var(--primary-inverse) !important;
   font-weight: 400;
   font-size: 1rem;
