@@ -43,14 +43,19 @@
   <p>Nogle gange skal logo trækkes lidt til venstre for at få kronen til at være på linie med venstre kant af indholdet. Det gøres nemt ved at sætte <code>ds-logo-pull-left</code> på logo-elementet.</p>
 
   <div data-theme="light" class="ds-padding">
-    <p id="ex-logo-4">
+    <div id="ex-logo-4">
       <span class="ds-logo ds-logo-pull-left">
         <strong>Dataforsyningen</strong>
         <span>Styrelsen for Dataforsyning og Infrastruktur</span>
       </span>
       <h2>Eksempel indhold</h2>
       <p>Indholdet starter her.</p>
-    </p>
+      <span class="ds-logo-micro ds-logo-pull-left">
+        <strong>Dataforsyningen</strong>
+        <span>Styrelsen for Dataforsyning og Infrastruktur</span>
+      </span>
+      <p>Her er lidt mere tekstindhold.</p>
+    </div>
     <code-example data-snip="ex-logo-4"></code-example>
   </div>
 
@@ -73,7 +78,7 @@
   <h3>Favicon/bogmærkeikon</h3>
   <p>Som favicon bruges <code>logo-simple-micro.svg</code> <img src="assets/logos/logo-simple-micro.svg" alt=""></p>
   <p>For at bruge det skal du indsætte denne linie i HTML <code>&lt;head></code> sektionen. Sørg for at "path" svarer til logofilens placering på serveren.</p>
-  <pre><code>&lt;link rel="icon" href="path/logo-simple-micro.svg"></code></pre>
+  <pre><code>&lt;link rel="shortcut icon" href="path/logo-simple-micro.svg"></code></pre>
   <p>
     Denne fil følger med i design-system-css pakken under<br>
     <code>/node-modules/design-system-css/assets/logos/logo-simple-micro.svg</code>
