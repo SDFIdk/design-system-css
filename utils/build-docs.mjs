@@ -31,32 +31,17 @@ async function writeHTML(file, html) {
   }
 }
 
-async function updateIconHTML(outputfile) {
-  const CSSdir = 'node_modules/design-system-icons/css'
-  let html_snippets = '<ul class="ds-grid icon-list">'
-
-  try {
-    const CSSfiles = await readdir(CSSdir)
-    for (const file of CSSfiles) {
-      const shortname = file.replace('.css', '')
-      html_snippets += `<li class="icon"><span class="ds-icon-${ shortname }"></span><code>&lt;span class="ds-icon-${ shortname }">&lt;/span></code></li>`
-    }
-  } catch (err) {
-    console.error(err)
-  }
-
-  html_snippets += '</ul>'
-  await writeHTML(outputfile, html_snippets)
-}
-
 console.log('Building docs')
 
 // Build icon CSS from node_modules/design-system-icons
 esbuild.build({
-  entryPoints: ['node_modules/design-system-icons/index.css'],
+  entryPoints: ['utils/css/docs.css'],
   bundle: true,
   minify: true,
-  outfile: 'docs/css/icons.css'
+  loader: {
+    '.ttf': 'file'
+  },
+  outfile: 'docs/css/main.css'
 }).catch(
   () => process.exit(1)
 )

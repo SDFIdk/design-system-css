@@ -5,7 +5,7 @@
   "main": "index.scss",
   "scripts": {
     "build": "sass index.scss assets/designsystem.css --style compressed && npm run build-docs",
-    "build-docs": "node utils/build-docs.mjs",
+    "build-docs": "node utils/build-docs.mjs && utils/docs-copy-files.sh",
     "start": "firefox index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
