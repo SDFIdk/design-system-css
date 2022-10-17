@@ -35,7 +35,7 @@
   &::before {
     height: 5rem;
     width: 5rem;
-    background-image: var(--logo-img-lg);
+    background-image: var(--ds-logo-normal-tyrkis);
     background-size: 5rem auto;
     filter: var(--logo-filter);
   }
@@ -55,7 +55,7 @@
   min-height: 1.5rem;
 
   &::before {
-    background-image: var(--logo-img-sm);
+    background-image: var(--ds-logo-micro);
     background-size: 1.5rem auto;
     filter: var(--logo-filter);
     height: 1.5rem;
@@ -82,7 +82,7 @@
       min-height: 1.5rem;
 
       &::before {
-        background-image: var(--logo-img-sm);
+        background-image: var(--ds-logo-micro);
         background-size: 1.5rem auto;
         filter: var(--logo-filter);
         height: 1.5rem;
@@ -114,7 +114,7 @@
       &::before {
         height: 3rem;
         width: 3rem;
-        background-image: var(--logo-img-lg);
+        background-image: var(--ds-logo-normal-tyrkis);
         background-size: 3rem auto;
         filter: var(--logo-filter);
       }

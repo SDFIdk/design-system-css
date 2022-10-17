@@ -62,7 +62,6 @@ esbuild.build({
 )
 
 // Build HTML
-await updateIconHTML('src/docs/content/08_icons.html')
 
 const docs_dir = 'src/docs/content'
 let markup = ''

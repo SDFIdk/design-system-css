@@ -2,6 +2,28 @@
 
   <div class="ds-padding">
     <h2>Ikoner</h2>
-    <p>Ikoner er indlejret som baggrundsbilleder i CSS, så du skal bare sætte en class <code>ds-icon-*</code> på et element for at bruge dem.</p>
-  </div>
+    <p>Hvis du vil bruge SDFI-ikoner og logoer, <a href="https://sdfidk.github.io/design-system-icons/">skal du inkludere dem fra <code>design-system-icons</code> som beskrevet her.</a></p>
+    <p>Ikoner kan indlejres som SVG eller importeres og indlejres som baggrundsbilleder i CSS, så du bare skal sætte en class <code>ds-icon-*</code> på et element for at bruge dem.</p>
+    <p>F.eks.</p>
+
+    <ul class="ds-grid icon-list" style="padding-top: 1.5rem; padding-bottom: 2rem; margin: 0;">
+      <li class="icon"><span class="ds-icon-sider-icon-privatliv"></span><code>&lt;span class="ds-icon-sider-icon-privatliv">&lt;/span></code></li>
+      <li class="icon"><span class="ds-icon-sider-icon-terms"></span><code>&lt;span class="ds-icon-sider-icon-terms">&lt;/span></code></li>
+      <li class="icon"><span class="ds-icon-sider-icon-user"></span><code>&lt;span class="ds-icon-sider-icon-user">&lt;/span></code></li>
+      <li class="icon"><span class="ds-icon-some-linkedin"></span><code>&lt;span class="ds-icon-some-linkedin">&lt;/span></code></li>
+    </ul>
     
+    <p>Ikoner virker også, hvis de præsenteres i et element med <code>data-theme="dark"</code></p>
+  </div>
+
+  
+  <div data-theme="dark">
+    <ul class="ds-grid icon-list" style="padding-top: 1.5rem; padding-bottom: 2rem; margin: 0;">
+      <li class="icon"><span class="ds-icon-sider-icon-privatliv"></span><code>&lt;span class="ds-icon-sider-icon-privatliv">&lt;/span></code></li>
+      <li class="icon"><span class="ds-icon-sider-icon-terms"></span><code>&lt;span class="ds-icon-sider-icon-terms">&lt;/span></code></li>
+      <li class="icon"><span class="ds-icon-sider-icon-user"></span><code>&lt;span class="ds-icon-sider-icon-user">&lt;/span></code></li>
+      <li class="icon"><span class="ds-icon-some-linkedin"></span><code>&lt;span class="ds-icon-some-linkedin">&lt;/span></code></li>
+    </ul>
+  </div>
+              
+</section>
