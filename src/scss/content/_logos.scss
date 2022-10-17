@@ -35,7 +35,7 @@
   &::before {
     height: 5rem;
     width: 5rem;
-    background-image: var(--ds-logo-normal-tyrkis);
+    background-image: var(--ds-logo-big);
     background-size: 5rem auto;
     filter: var(--logo-filter);
   }
@@ -114,7 +114,7 @@
       &::before {
         height: 3rem;
         width: 3rem;
-        background-image: var(--ds-logo-normal-tyrkis);
+        background-image: var(--ds-logo-big);
         background-size: 3rem auto;
         filter: var(--logo-filter);
       }
@@ -155,7 +155,7 @@ a.ds-logo-responsive {
   
   &:hover,
   &:active {
-    color: $primary-600;
+    color: var(--logo-hover);
     
     &::before {
       filter: var(--logo-filter-hover);
