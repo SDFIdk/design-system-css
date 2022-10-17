@@ -5,7 +5,7 @@
   "main": "index.scss",
   "scripts": {
     "build": "sass index.scss assets/designsystem.css --style compressed && npm run build-docs",
-    "build-docs": "utils/build_docs.sh",
+    "build-docs": "node utils/build-docs.mjs",
     "start": "firefox index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,7 +21,8 @@
   },
   "homepage": "https://github.com/SDFIdk/design-system-css#readme",
   "devDependencies": {
-    "sass": "^1.53.0",
-    "design-system-icons": "github:SDFIdk/design-system-icons"
+    "design-system-icons": "github:SDFIdk/design-system-icons",
+    "esbuild": "^0.15.10",
+    "sass": "^1.53.0"
   }
 }
