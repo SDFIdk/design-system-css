@@ -17,11 +17,16 @@ Presently, you can install DSCSS via NPM and bundle it with with your other fron
 
 1. Install package
    ```
-   npm install --save https://github.com/SDFIdk/design-system-css.git
+   npm i --save @dataforsyningen/css
    ```
 2. Import DSCSS
+   (Javascript)
    ```
-   import 'design-system-css`
+   import '@dataforsyningen/css`
+   ```
+   (CSS)
+   ```
+   @import "@dataforsyningen/css";
    ```
    Your bundler should accept SASS/SCSS and know how to bundle it properly. 
    You might need to install and setup a loader depending on your build setup.
