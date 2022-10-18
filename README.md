@@ -11,7 +11,7 @@ The system is a single CSS file and useful accompanying font files that you can 
 
 ## Usage
 
-### Option 1 - Pack it into your JS/CSS bundle
+### Option 1 - Bundle with your JS/CSS
 
 Presently, you can install DSCSS via NPM and bundle it with with your other frontend assets.
 
@@ -20,11 +20,12 @@ Presently, you can install DSCSS via NPM and bundle it with with your other fron
    npm i --save @dataforsyningen/css
    ```
 2. Import DSCSS
-   (Javascript)
+
+   **Javascript**
    ```
-   import '@dataforsyningen/css`
+   import "@dataforsyningen/css";
    ```
-   (CSS)
+   **CSS**
    ```
    @import "@dataforsyningen/css";
    ```
