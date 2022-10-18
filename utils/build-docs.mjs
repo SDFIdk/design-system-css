@@ -33,7 +33,7 @@ async function writeHTML(file, html) {
 
 console.log('Building docs')
 
-// Build icon CSS from node_modules/design-system-icons
+// Build icon CSS from node_modules/@dataforsyningen/icons
 esbuild.build({
   entryPoints: ['utils/css/docs.css'],
   bundle: true,

@@ -29,7 +29,7 @@ Presently, you can install DSCSS via NPM and bundle it with with your other fron
    ```
    @import "@dataforsyningen/css";
    ```
-   Your bundler should accept SASS/SCSS and know how to bundle it properly. 
+   Your bundler should accept SASS/SCSS and know how to bundle it properly.
    You might need to install and setup a loader depending on your build setup.
 
 ### Option 2 - Refer assets in HTML `<head>`
