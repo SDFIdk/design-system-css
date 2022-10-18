@@ -1,6 +1,6 @@
 {
-  "name": "design-system-css",
-  "version": "2.0.0",
+  "name": "@dataforsyningen/css",
+  "version": "0.1.0",
   "description": "Cascading style sheets (CSS) implementation of SDFI designguide.",
   "main": "index.scss",
   "scripts": {
@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/SDFIdk/design-system-css#readme",
   "devDependencies": {
-    "design-system-icons": "github:SDFIdk/design-system-icons",
+    "@dataforsyningen/icons": "^0.1.31",
     "esbuild": "^0.15.10",
     "sass": "^1.53.0"
   }
