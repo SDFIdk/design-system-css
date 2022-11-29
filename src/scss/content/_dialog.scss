@@ -1,0 +1,35 @@
+dialog[open] {
+  @include dark;
+  border-radius: 2rem;
+  border-width: 0;
+  box-shadow: 0 0.5rem 1.5rem $grey-900;
+  margin: auto;
+  padding: 1.5rem;
+  background-color: var(--mork-tyrkis);
+}
+
+dialog > header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  gap: var(--spacing);
+  align-items: center;
+  margin-bottom: var(--spacing);
+}
+
+dialog > header > *,
+dialog > footer > * {
+  margin: 0;
+}
+
+dialog > footer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  gap: var(--spacing);
+  align-items: center;
+}
+
+dialog > header > button.ds-icon-icon-close {
+  border: none;
+}

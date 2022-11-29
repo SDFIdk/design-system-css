@@ -1101,7 +1101,53 @@
     </dl>
   </article>
 
-</section>      </main>
+</section><section id="dialog" class="ds-padding">
+
+  <h2>Dialogboks</h2>
+
+  <div id="ex-dialog-1">
+
+    <button class="btn-toggle-dialog">Vis dialogboks</button>
+
+    <dialog id="example-dialog">
+      <header>
+        <h3 tabindex="0">Dialogboks overskrift</h3>
+        <button class="btn-toggle-dialog secondary ds-icon-icon-close" title="Luk dialogboks"></button>
+      </header>
+      <article>
+        <p>Denne dialogbox indeholder en besked til dig.</p>
+      </article>
+      <footer>
+        <button class="btn-toggle-dialog">OK</button>
+        <button class="secondary btn-toggle-dialog">Not OK</button>
+      </footer>
+    </dialog>
+
+    <script>
+
+      const dialog_element = document.querySelector('#example-dialog')
+      
+      // Toggle the dialog
+      function toggleDialog(event) {
+        if (dialog_element.open) {
+          dialog_element.close()
+        } else {
+          dialog_element.showModal()
+        }
+      }
+      // Add event listeners
+      document.querySelectorAll('.btn-toggle-dialog').forEach(function(element) {
+        element.addEventListener('click', toggleDialog)
+      })
+
+    </script>
+
+  </div>
+
+  <code-example data-snip="ex-dialog-1"></code-example>
+
+</section>
+      </main>
 
       <div>
         <h2 class="ds-padding" style="margin: 0;">Indholdsfortegnelse</h2>
@@ -1118,6 +1164,7 @@
             <li><a href="#cards">Cards</a></li>
             <li><a href="#tabeller">Tabeller</a></li>
             <li><a href="#lists">Lister</a></li>
+            <li><a href="#dialog">Dialogboks</a></li>
           </ul>
         </nav>
       </div>
