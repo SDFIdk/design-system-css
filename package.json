@@ -13,8 +13,12 @@
     "type": "git",
     "url": "git+https://github.com/SDFIdk/design-system-css.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["SDFI", "design system", "css", "styles", "style guide"],
+  "author": {
+    "name" : "Styrelsen for Dataforsyning og Infrastruktur",
+    "email" : "support@sdfi.dk",
+    "url" : "https://sdfi.dk/"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/SDFIdk/design-system-css/issues"
