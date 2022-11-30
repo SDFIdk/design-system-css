@@ -1,6 +1,6 @@
 {
   "name": "@dataforsyningen/css",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Cascading style sheets (CSS) implementation of SDFI designguide.",
   "main": "index.scss",
   "scripts": {
@@ -13,11 +13,17 @@
     "type": "git",
     "url": "git+https://github.com/SDFIdk/design-system-css.git"
   },
-  "keywords": ["SDFI", "design system", "css", "styles", "style guide"],
+  "keywords": [
+    "SDFI",
+    "design system",
+    "css",
+    "styles",
+    "style guide"
+  ],
   "author": {
-    "name" : "Styrelsen for Dataforsyning og Infrastruktur",
-    "email" : "support@sdfi.dk",
-    "url" : "https://sdfi.dk/"
+    "name": "Styrelsen for Dataforsyning og Infrastruktur",
+    "email": "support@sdfi.dk",
+    "url": "https://sdfi.dk/"
   },
   "license": "MIT",
   "bugs": {
