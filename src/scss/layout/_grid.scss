@@ -26,6 +26,12 @@
 .ds-grid-1-2 {
 
   @if map-get($breakpoints, "lg") {
+    @media (max-width: map-get($breakpoints, "lg")) {
+      & > * {
+        margin-bottom: var(--grid-spacing-vertical);
+      }
+    }
+
     @media (min-width: map-get($breakpoints, "lg")) {
       grid-column-gap: var(--grid-spacing-horizontal);
       grid-row-gap: var(--grid-spacing-vertical);
@@ -72,9 +78,7 @@
       & > * {
         flex: 1 1 auto;
         margin: 0;
-        width: auto;
-        min-width: 15rem;
-        max-width: 44rem;
+        width: 15rem;
       }
     }
   }
