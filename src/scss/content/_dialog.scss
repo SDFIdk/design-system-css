@@ -1,11 +1,28 @@
 dialog[open] {
   @include dark;
-  border-radius: 2rem;
+  border-radius: 0.5rem;
   border-width: 0;
   box-shadow: 0 0.5rem 1.5rem $grey-900;
   margin: auto;
   padding: 1.5rem;
   background-color: var(--mork-tyrkis);
+  margin: var(--margin);
+  width: auto;
+
+  @if map-get($breakpoints, "lg") {
+    @media (min-width: map-get($breakpoints, "lg")) {
+      
+      & {
+        width: auto;
+        min-width: 15rem;
+        max-width: 44rem;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      
+    }
+  }
+  
 }
 
 dialog > header {
