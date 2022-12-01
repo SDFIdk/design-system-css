@@ -124,8 +124,8 @@ h6,
 .h4,
 .h5,
 .h6 {
-  margin-top: var(--typography-spacing-vertical);
-  margin-bottom: var(--typography-spacing-vertical);
+  margin-top: var(--typography-spacing-vertical-top);
+  margin-bottom: var(--typography-spacing-vertical-bottom);
   font-family: var(--font-family);
   font-weight: var(--font-weight);
   line-height: var(--line-height);

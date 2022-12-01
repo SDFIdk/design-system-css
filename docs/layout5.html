@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en" data-theme="light"> <!-- Remember correct lang attribute -->    
+  <head>
+
+    <!-- You always need this -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,user-scalable=yes">
+    <title>Design system example</title>
+
+    <!-- Icon and design system CSS -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Highlight.js CSS -->
+    <link rel="stylesheet" href="css/highlight.min.css">
+
+    <link rel="icon" href="img/logo-simple-micro.svg">
+
+    <style>
+      /* Custom CSS for this page*/
+      header,
+      article,
+      footer {
+        background-color: var(--medium-steel);
+      }
+      section {
+        flex-grow: 1;
+      }
+      article:nth-child(1) {
+        background-color: var(--lys-steel);
+      }
+    </style>
+
+  </head>
+  <body style="display: flex; flex-flow: column nowrap;">
+
+    <header>
+      <div class="ds-margin">
+        <h1>Layout-demo: Smal/bred spalter</h1>
+        <p class="blockquote">
+          Spalter er sat med <code>class="ds-grid-1-2"</code>
+        </p>
+        <p><a href="index.html#grid">Tilbage til layouts</a></p>
+      </div>
+    </header>
+
+    <main id="ex-layout" style="flex-grow: 1; display: flex; flex-flow: column nowrap;">
+
+      <section class="ds-grid-1-2 ds-margin">
+
+        <article class="ds-padding">
+          <h2>Smal spalte</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </article>
+
+        <article class="ds-padding">
+          <h2>Bred spalte</h2>
+          <p>Primær Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </article>
+
+      </section>
+
+    </main>
+    
+    <footer>
+      <div class="ds-margin">
+        <code-example data-snip="ex-layout"></code-example>
+      </div>
+      <p class="ds-margin">© 2022 Styrelsen for Dataforsyning og Infrastruktur</p>
+    </footer>
+
+    <script src="js/code-example-component.js"></script>
+    <script src="js/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll()
+    </script>
+
+  </body>
+</html>

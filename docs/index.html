@@ -90,7 +90,7 @@
         </article>
 <section id="typografi">
 
-  <h2 class="ds-padding" style="margin-bottom: 0;">Typografi</h2>
+  <h2 class="ds-padding">Typografi</h2>
 
   <article data-theme="light" class="ds-padding" style="margin-bottom: var(--typography-spacing-vertical);" id="ex-typo-1">
     <h1>Overskrift niveau 1</h1>
@@ -136,6 +136,8 @@
 </section><section class="ds-padding" id="farver">
 
   <h2>Farver</h2>
+  
+  <hr>
 
   <div class="ds-grid">
     <p class="colorswatch">
@@ -268,9 +270,9 @@
 </section>
 <section id="knapper">
 
-  <h2 class="ds-padding" style="margin-bottom: 0;">Knapper</h2>
-
   <article class="light-wrapper ds-padding" style="margin-bottom: var(--typography-spacing-vertical);">
+
+    <h2>Knapper</h2>
   
     <p>Knapper laves ved at bruge <code>&lt;button></code> elementet.</p>
     <p><button>En knap</button></p>
@@ -420,7 +422,8 @@
 </section>  <section id="formular">
   
   <div class="ds-padding">
-    <h2 style="margin-bottom: 0;">Formularer og inputfelter</h2>
+    <h2>Formularer og inputfelter</h2>
+    
     <p>Inputfelter til formularer er allerede stylet for dig. Du skal ikke gøre noget særligt ud over at bruge korrekt HTML.</p>
   </div>
 
@@ -555,6 +558,7 @@
   <h3>Kolonner og grids</h3>
 
   <p>Lav et simpelt kolonne-layout ved at tilføje <code>ds-grid</code> class til det element, der indeholder de elementer, som skal vises i kolonner.</p>
+  <p><a href="layout1.html">Se demo</a></p>
 
   <div id="ex-grid-1">
     <section class="ds-grid">
@@ -567,7 +571,10 @@
 
   <code-example data-snip="ex-grid-1"></code-example>
 
+  <h4>Fleksible kolonner</h4>
+
   <p>Hvis boksene gerne må bruge den plads, der er til rådighed, så kan du bruge <code>ds-flexgrid</code> class i stedet.</p>
+  <p><a href="layout2.html">Se demo</a></p>
 
   <div id="ex-grid-2">
     <section class="ds-flexgrid">
@@ -581,8 +588,12 @@
 
   <code-example data-snip="ex-grid-2"></code-example>
 
+  <h4>Primære/sekundære kolonner</h4>
+
   <p>Brug class <code>.ds-grid-2-1</code> på elementet udenom, når du vil vise to elementer som hhv. primær og sekundær kolonne.</p>
   
+  <p><a href="layout4.html">Se demo</a></p>
+
   <div id="ex-grid-3">
     <section class="ds-grid-2-1">
       <div data-theme="dark" class="ds-padding">Primær / main</div>
@@ -594,6 +605,8 @@
 
   <p>Brug class <code>.ds-grid-1-2</code> hvis rækkefølgen skal være omvendt.</p>
   
+  <p><a href="layout5.html">Se demo</a></p>
+
   <div id="ex-grid-4">
     <section class="ds-grid-1-2">
       <div data-theme="dark" class="ds-padding">Sekundær</div>
@@ -603,10 +616,17 @@
 
   <code-example data-snip="ex-grid-4"></code-example>
 
+  <h3>Indholds-containere</h3>
+  
+  <p class="ds-container">Hvis du skal vise noget indhold i én kolonne midt i skærmen, så sæt <code>ds-container</code> class på elementet. Indholdet i denne tekst er centreret med class <code>ds-container</code></p>
+  <p><a href="layout3.html">Se demo</a></p>
+
   <h3>Udvendig afstand / margin</h3>
 
   <p>Du kan sætte den korrekte margin ved at bruge class <code>ds-margin</code> i HTML.</p>
   <pre><code>&lt;div class="ds-margin"> ... &lt;/div></code></pre>
+
+  <p><a href="layout2.html">Se demo</a></p>
 
   <div class="bordered">
     <div data-theme="dark" class="ds-margin ds-padding">Indhold med ds-margin udenom</div>
@@ -621,6 +641,8 @@
 
   <p>Du kan sætte den korrekte padding ved at bruge class <code>ds-padding</code> i HTML.</p>
   <pre><code>&lt;div class="ds-padding"> ... &lt;/div></code></pre>
+
+  <p><a href="layout1.html">Se demo</a></p>
 
   <div class="bordered ds-padding">
     Indhold med ds-padding indeni.
@@ -655,10 +677,6 @@
   </code></pre>
 
   <p>Her kan du også bruge CSS custom properties <code>--optical-padding</code> og <code>--optical-margin</code> til mere specialiserede layouts.</p>
-
-  <h3>Indholds-containere</h3>
-  
-  <p class="ds-container">Hvis du skal vise noget indhold i én kolonne midt i skærmen, så sæt <code>ds-container</code> class på elementet. Indholdet i denne tekst er centreret med class <code>ds-container</code></p>
 
 </section>
 <section id="navs">
@@ -1002,7 +1020,7 @@
 </section>
 <section class="ds-padding" id="tabeller">
       
-  <h2 style="margin-bottom: 0;">Tabeller</h2>
+  <h2>Tabeller</h2>
 
   <p>Tabeller kræver intet særligt, da de allerede er stylet som default. Du skal blot bruge korrekt HTML.</p>
 
@@ -1075,7 +1093,7 @@
 
 </section><section id="lists" class="ds-padding">
 
-  <h2 style="margin-bottom: 0;">Lister</h2>
+  <h2>Lister</h2>
 
   <h3>Definition list</h3>
   Her er et eksempel på en definition list:
