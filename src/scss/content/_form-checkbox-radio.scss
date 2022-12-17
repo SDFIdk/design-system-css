@@ -5,9 +5,10 @@
 
 [type="checkbox"],
 [type="radio"] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+  // TODO: This causes missing checkbox icon. A checkmark icon should be included in this package
+  //-webkit-appearance: none;
+  //-moz-appearance: none;
+  //appearance: none;
   width: 1.25em;
   height: 1.25em;
   margin-top: -0.125em;
