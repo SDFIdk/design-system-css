@@ -13,7 +13,7 @@ The system is a single CSS file and useful accompanying font files that you can 
 
 ### Option 1 - Bundle with your JS/CSS
 
-Presently, you can install DSCSS via NPM and bundle it with with your other frontend assets.
+Presently, you can install DSCSS via NPM and bundle it with your other frontend assets.
 
 1. Install package
    ```
@@ -30,7 +30,7 @@ Presently, you can install DSCSS via NPM and bundle it with with your other fron
    @import "@dataforsyningen/css";
    ```
    Your bundler should accept SASS/SCSS and know how to bundle it properly.
-   You might need to install and setup a loader depending on your build setup.
+   You might need to install and set up a loader depending on your build setup.
 
 ### Option 2 - Refer assets in HTML `<head>`
 
@@ -53,13 +53,13 @@ Link to `designssytem.css` CSS directly into your HTML's `<head>`.
 
 ## Typography
 
-The Design System assumes you self host the "Roboto" and "Source Code Pro" fonts and have them available in a `./fonts` directory related to the path of your `designssytem.css` file.
+The Design System assumes you host the "Roboto" and "Source Code Pro" fonts yourself and have them available in a `./fonts` directory related to the path of your `designsystem.css` file.
 
-So if your css file has path `/somewhere/somewhere/designsystem.css`, your font files should be at `/somewhere/somewhere/fonts/`
+So if your CSS file has path `/somewhere/somewhere/designsystem.css`, your font files should be at `/somewhere/somewhere/fonts/`
 
 Font files are included in [`assets/fonts`](./assets/fonts) along with [`font.css`](./assets/fonts/font.css) file to give you an example on how to use `@font-face` to make custom font includes.
 
-Alternatively, you can include the fonts from [Google Fonts](https://fonts.google.com/) but beware of Google using the font files to track users.
+Alternatively, you can include the fonts from [Google Fonts](https://fonts.google.com/), but beware of Google using the font files to track users.
 
 ## Development
 
@@ -76,7 +76,7 @@ npm run start
 Opens `index.html` in a Firefox browser (if one is installed).
 
 
-## Acknowlegdements
+## Acknowledgements
 
 Design System CSS is heavily inspired by Pico.css
 
