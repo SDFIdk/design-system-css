@@ -75,6 +75,10 @@ npm run start
 ```
 Opens `index.html` in a Firefox browser (if one is installed).
 
+## Publish NPM
+
+Create a new release in Github to publish an updated NPM package.
+Details are available in the "Npm" section of SDFI ITU's wiki.
 
 ## Acknowledgements
 
