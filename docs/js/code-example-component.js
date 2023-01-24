@@ -2,7 +2,7 @@ class CodeExample extends HTMLElement {
 
   // public properties
   template = `
-    <label style="display: inline-block; border-radius: 1rem 1rem 0 0; margin: 1rem 0 0; background-color: var(--lys-steel); padding: 0.75rem 1rem 0.25rem;">Kode</label>
+    <label style="display: inline-block; border-radius: 1rem 1rem 0 0; margin: 1rem 0 0; background-color: var(--lys-steel); color: var(--mork-tyrkis); padding: 0.75rem 1rem 0.25rem;">Kode</label>
     <pre><code class="language-html"></code></pre>
   `
 

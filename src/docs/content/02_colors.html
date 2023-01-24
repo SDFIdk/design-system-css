@@ -101,10 +101,11 @@
   </div>
 
   <div id="ex-color-3">
-    <article class="ds-padding" style="background-color: var(--lys-steel);">
-      <h3>Indhold med baggrundsfarve.</h3>
+    <article class="ds-padding" data-theme="light" style="background-color: var(--lys-steel);">
+      <h3>Indhold med baggrundsfarve</h3>
       <p>
-        Kan laves vha. CSS custom properties, som i eksemplet nedenfor. 
+        Kan laves vha. CSS custom properties, som i eksemplet nedenfor.<br>
+        Husk at sætte <code>data-theme="light"</code> på elementet, så tekst andet indhold får farver, der passer til en lys baggrund.
       </p>
     </article>
   </div>
@@ -112,8 +113,8 @@
   <code-example data-snip="ex-color-3"></code-example>
 
   <div id="ex-color-2">
-    <article class="ds-padding" style="background-color: var(--medium-steel);">
-      <h3>Indhold med baggrundsfarve.</h3>
+    <article class="ds-padding" data-theme="light" style="background-color: var(--medium-steel);">
+      <h3>Indhold med baggrundsfarve</h3>
       <p>
         Benyttes ofte til footer og lign.<br> 
         Kan laves vha. CSS custom properties, som i eksemplet nedenfor.
@@ -125,8 +126,8 @@
 
   <div id="ex-color-1">
     <article class="ds-padding" data-theme="dark">
-      <h3>Indhold med mørk baggrundsfarve.</h3>
-      <p>Benytter "dark" tema.</p> 
+      <h3>Indhold med mørk baggrundsfarve</h3>
+      <p>Her har vi blot sat <code>data-theme="dark"</code> på elementet.</p>
     </article>
   </div>
 

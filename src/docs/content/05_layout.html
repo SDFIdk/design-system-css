@@ -1,5 +1,16 @@
 <section class="ds-padding" id="grid">
 
+  <style>
+    #ex-grid-1 div,
+    #ex-grid-2 div,
+    #ex-grid-3 div,
+    #ex-grid-4 div {
+      color: var(--background-color);
+      background-color: var(--color);
+      padding: var(--padding);
+    }
+  </style>
+
   <h2>Layout</h2>
 
   <h3>Kolonner og grids</h3>
@@ -9,10 +20,10 @@
 
   <div id="ex-grid-1">
     <section class="ds-grid">
-      <div data-theme="dark" class="ds-padding">1</div>
-      <div data-theme="dark" class="ds-padding">2</div>
-      <div data-theme="dark" class="ds-padding">3</div>
-      <div data-theme="dark" class="ds-padding">4</div>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
     </section>
   </div>
 
@@ -25,11 +36,11 @@
 
   <div id="ex-grid-2">
     <section class="ds-flexgrid">
-      <div data-theme="dark" class="ds-padding">1</div>
-      <div data-theme="dark" class="ds-padding">2</div>
-      <div data-theme="dark" class="ds-padding">3</div>
-      <div data-theme="dark" class="ds-padding">4</div>
-      <div data-theme="dark" class="ds-padding">5</div>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
     </section>
   </div>
 
@@ -43,8 +54,8 @@
 
   <div id="ex-grid-3">
     <section class="ds-grid-2-1">
-      <div data-theme="dark" class="ds-padding">Primær / main</div>
-      <div data-theme="dark" class="ds-padding">Sekundær</div>
+      <div>Primær / main</div>
+      <div>Sekundær</div>
     </section>
   </div>
 
@@ -56,8 +67,8 @@
 
   <div id="ex-grid-4">
     <section class="ds-grid-1-2">
-      <div data-theme="dark" class="ds-padding">Sekundær</div>
-      <div data-theme="dark" class="ds-padding">Primær / main</div>
+      <div>Sekundær</div>
+      <div>Primær / main</div>
     </section>
   </div>
 
@@ -75,8 +86,8 @@
 
   <p><a href="layout2.html">Se demo</a></p>
 
-  <div class="bordered">
-    <div data-theme="dark" class="ds-margin ds-padding">Indhold med ds-margin udenom</div>
+  <div class="bordered" style="padding: 0;">
+    <div class="ds-margin">Indhold med ds-margin udenom</div>
   </div>
 
   <p>Hvis du skal bruge den officielle margin i CSS, kan du bruge CSS custom property <code>--margin</code>.</p>
@@ -103,7 +114,7 @@
   <p>Når tekst og elementer med runde kanter (ikoner, knapper, etc.) står sammen, skal teksten og de runde elementer rykkes lidt i forhold til hinanden. Det er for at modvirke et optisk fænomen, hvor det ser ud som om, at de ikke står på linie.</p>
   <p>Du kan gøre det ved at give teksten lidt ekstra padding med <code>ds-optical-padding</code> class ELLER give ikoner/knapper en justeringsmargin.</p>
 
-  <div class="ds-padding" data-theme="dark" style="margin-bottom: var(--typography-spacing-vertical);">
+  <div class="bordered">
     <p class="ds-optical-padding">Her er din tekst med optical padding.</p>
     <button>En knap</button>
   </div>
@@ -113,7 +124,7 @@
     &lt;button>En knap&lt;/button>
   </code></pre>
 
-  <div class="ds-padding" data-theme="dark" style="margin-bottom: var(--typography-spacing-vertical);">
+  <div class="bordered">
     <p>Her er din tekst</p>
     <button class="ds-optical-margin">En knap med optical margin</button>
   </div>

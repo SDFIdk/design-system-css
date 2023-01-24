@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="light"> <!-- Remember correct lang attribute -->    
+<html lang="en"> <!-- Remember correct lang attribute -->    
   <head>
 
     <!-- You always need this -->    
@@ -55,12 +55,18 @@
         border-radius: 0.125rem;
         margin-bottom: var(--typography-spacing-vertical);
       }
+      .theme-switch {
+        display: flex;
+      }
+      .theme-switch input[value="light"] {
+        margin-left: 0.5rem;
+      }
     </style>
 
   </head>
   <body>
 
-    <header data-theme="dark" id="header" style="margin-bottom: var(--typography-spacing-vertical);">
+    <header data-theme="dark" id="header" style="margin-bottom: var(--typography-spacing-vertical); border-bottom: solid 1px var(--tyrkis);">
 
       <div class="ds-container ds-padding">
         <p class="ds-logo-responsive ds-logo-pull-left">

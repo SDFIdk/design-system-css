@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="light"> <!-- Remember correct lang attribute -->    
+<html lang="en"> <!-- Remember correct lang attribute -->    
   <head>
 
     <!-- You always need this -->    
@@ -55,12 +55,18 @@
         border-radius: 0.125rem;
         margin-bottom: var(--typography-spacing-vertical);
       }
+      .theme-switch {
+        display: flex;
+      }
+      .theme-switch input[value="light"] {
+        margin-left: 0.5rem;
+      }
     </style>
 
   </head>
   <body>
 
-    <header data-theme="dark" id="header" style="margin-bottom: var(--typography-spacing-vertical);">
+    <header data-theme="dark" id="header" style="margin-bottom: var(--typography-spacing-vertical); border-bottom: solid 1px var(--tyrkis);">
 
       <div class="ds-container ds-padding">
         <p class="ds-logo-responsive ds-logo-pull-left">
@@ -71,7 +77,7 @@
 
       <div class="ds-container ds-padding" style="padding: 3rem 1rem;">
         <h1 style="margin: 0;">Designguide eksempler</h1>
-        <p class="blockquote" style="margin: 0;">Reference-implmentationer af SDFIs designguide med HTML/CSS</p>
+        <p class="blockquote" style="margin: 0;">Reference-implementationer af SDFIs designguide med HTML/CSS</p>
       </div>
 
     </header>
@@ -88,11 +94,11 @@
           <p><a href="https://github.com/SDFIdk/design-system-css">Koden og tilhørende dokumentation findes på Github.</a></p>
           <p>Design System CSS er baseret på <a href="https://picocss.com/">pico.css.</a> Du kan finde deres <a href="https://picocss.com/docs/">dokumentation her.</a></p>
         </article>
-<section id="typografi">
+<section id="typografi" class="ds-padding">
 
-  <h2 class="ds-padding">Typografi</h2>
+  <h2>Typografi</h2>
 
-  <article data-theme="light" class="ds-padding" style="margin-bottom: var(--typography-spacing-vertical);" id="ex-typo-1">
+  <article style="margin-bottom: var(--typography-spacing-vertical);" id="ex-typo-1">
     <h1>Overskrift niveau 1</h1>
     <h2>Overskrift niveau 2</h2>
     <h3>Overskrift niveau 3</h3>
@@ -113,25 +119,6 @@
   </article>
 
   <code-example data-snip="ex-typo-1"></code-example>
-
-  <article data-theme="dark" class="ds-padding">
-    <h1>This is a heading at level 1</h1>
-    <h2>This is a heading level 2</h2>
-    <h3>This is a heading level 3</h3>
-    <h4>This is a heading level 4</h4>
-    <h5>This is a heading level 5</h5>
-    <blockquote>Manchet/blockquote.This is a paragraph in an article.</blockquote>
-    <p>
-      Alm. brødtekst. <a href="#typografi">Here is a link.</a> This is a paragraph in an article. It has many words in it but still does not convey any information of interest.<br>
-      Sådan ser en <em>alm. kursiv brødtekst</em> ud. 
-    </p>
-    <p>
-    <p>
-      <small>Lille brødtekst. It has many words in it but still does not convey any information of interest. <a href="#typografi">Here is a link.</a></small><br>
-      <small><em>Lille kursiv brødtekst. This is a paragraph in an article.</em></small>
-    </p>
-    <p><code>&lt;code>Her er noget kode&lt;/code></code></p>
-  </article>
 
 </section><section class="ds-padding" id="farver">
 
@@ -236,10 +223,11 @@
   </div>
 
   <div id="ex-color-3">
-    <article class="ds-padding" style="background-color: var(--lys-steel);">
-      <h3>Indhold med baggrundsfarve.</h3>
+    <article class="ds-padding" data-theme="light" style="background-color: var(--lys-steel);">
+      <h3>Indhold med baggrundsfarve</h3>
       <p>
-        Kan laves vha. CSS custom properties, som i eksemplet nedenfor. 
+        Kan laves vha. CSS custom properties, som i eksemplet nedenfor.<br>
+        Husk at sætte <code>data-theme="light"</code> på elementet, så tekst andet indhold får farver, der passer til en lys baggrund.
       </p>
     </article>
   </div>
@@ -247,8 +235,8 @@
   <code-example data-snip="ex-color-3"></code-example>
 
   <div id="ex-color-2">
-    <article class="ds-padding" style="background-color: var(--medium-steel);">
-      <h3>Indhold med baggrundsfarve.</h3>
+    <article class="ds-padding" data-theme="light" style="background-color: var(--medium-steel);">
+      <h3>Indhold med baggrundsfarve</h3>
       <p>
         Benyttes ofte til footer og lign.<br> 
         Kan laves vha. CSS custom properties, som i eksemplet nedenfor.
@@ -260,8 +248,8 @@
 
   <div id="ex-color-1">
     <article class="ds-padding" data-theme="dark">
-      <h3>Indhold med mørk baggrundsfarve.</h3>
-      <p>Benytter "dark" tema.</p> 
+      <h3>Indhold med mørk baggrundsfarve</h3>
+      <p>Her har vi blot sat <code>data-theme="dark"</code> på elementet.</p>
     </article>
   </div>
 
@@ -370,65 +358,13 @@
     <code-example data-snip="btn-ex-6"></code-example>
   </article>
 
-  <article data-theme="dark" class="ds-padding">
-    <h3>Knapper i <code>dark</code> theme</h3>
+</section>  <section id="formular" class="ds-padding">
   
-    <p>
-      <button>Standard knap</button>
-      <button class="secondary">Sekundær knap</button>
-      <button class="outline">Outline knap</button>
-      <button class="contrast">Kontrast knap</button>
-      <button disabled>Knap disabled</button>
-    </p>
-    <p>
-      <button class="h2">H2 tekst</button>
-      <button class="secondary h2">H2 tekst</button>
-      <button class="outline h4">H4 tekst</button>
-      <button class="contrast h5">H5 tekst</button>
-    </p>
-    <p>
-      <a href="#knapper" role="button">Link-knap</a>
-      <a href="#knapper" role="button" class="secondary">Link-knap</a>
-      <a href="#knapper" role="button" class="outline">Link-knap</a>
-      <a href="#knapper" role="button" class="contrast">Link-knap</a>
-    </p>
-    <p class="ds-button-group">
-      <button>Standard knap</button>
-      <button class="secondary">Sekundær knap</button>
-      <button class="outline">Outline knap</button>
-      <button disabled>Knap disabled</button>
-    </p>
-    <p>
-      <button title="Kopier" class="ds-icon-icon-clipboard"></button>
-      <a title="Vælg" role="button" href="#buttons" class="ds-icon-hentdata-icon-choose"></a>
-      <button title="Kopier" class="secondary ds-icon-icon-clipboard"></button>
-      <button title="Kopier" class="outline ds-icon-icon-clipboard"></button>
-      <button title="Kopier" class="contrast ds-icon-icon-clipboard"></button>
-    </p>
-    <p class="ds-button-group">
-      <button title="Download" class="secondary ds-icon-hentdata-icon-download"></button>
-      <button title="Email" class="secondary ds-icon-icon-mail"></button>
-      <button title="Kopier" class="ds-icon-icon-clipboard"></button>
-    </p>
-    <p>
-      <button class="ds-icon-icon-plus">Tilføj</button>
-      <button class="ds-icon-icon-plus secondary">Tilføj</button>
-      <button class="ds-icon-icon-plus outline">Tilføj</button>
-      <button class="ds-icon-icon-plus contrast">Tilføj</button>
-      <a role="button" class="ds-icon-icon-plus secondary" href="#knapper">Link</a>
-    </p>
-  </article>
-
-</section>  <section id="formular">
-  
-  <div class="ds-padding">
-    <h2>Formularer og inputfelter</h2>
-    
-    <p>Inputfelter til formularer er allerede stylet for dig. Du skal ikke gøre noget særligt ud over at bruge korrekt HTML.</p>
-  </div>
+  <h2>Formularer og inputfelter</h2>
+  <p>Inputfelter til formularer er allerede stylet for dig. Du skal ikke gøre noget særligt ud over at bruge korrekt HTML.</p>
 
   <div id="ex-form-1">
-    <form class="ds-padding">
+    <form>
       
       <fieldset>
         <label for="myinput">A text input</label>
@@ -491,67 +427,19 @@
 
   <code-example data-snip="ex-form-1"></code-example>
 
-  <form data-theme="dark" class="ds-padding">
-    
-    <fieldset>
-      <label for="myinput">A text input</label>
-      <input type="text" placeholder="Insert some text" id="myinput">
-    </fieldset>
-
-    <fieldset>
-      <label for="mydateinput">A date input</label>
-      <input type="date" id="mydateinput">
-    </fieldset>
-
-    <fieldset>
-      <label for="myrageinput">A range input</label>
-      <input type="range" id="myrangeinput">
-    </fieldset>
-
-    <fieldset>
-      <label for="myfileinput">A file input</label>
-      <input type="file" id="myfileinput">
-    </fieldset>
-
-    <fieldset>
-      <legend>Some choices</legend> <!-- A title for the contents of a fieldset -->
-
-      <input type="radio" name="myradiox" id="myradio1x">
-      <label for="myradio1x">This option</label>
-      <br>
-      <input type="radio" name="myradiox" id="myradio2x">
-      <label for="myradio2x">The other option</label>
-    </fieldset>
-
-    <fieldset>
-      <input type="checkbox" id="mycheckboxx">
-      <label for="mycheckboxx">Check this box</label>
-    </fieldset>
-
-    <fieldset>
-      <label for="myselect">A select box</label>
-      <select id="myselect">
-        <option>Something to select</option>
-        <optgroup>
-          <option>Something else</option>
-          <option>Something else entirely</option>
-        </optgroup>
-      </select>
-    </fieldset>
-
-    <fieldset>
-      <label for="mytext">A textarea</label>
-      <textarea placeholder="Some text in a textarea"></textarea>
-    </fieldset>
-    
-    <hr>
-
-    <input type="submit" value="Go!">
-    <input type="button" class="secondary" value="Don't go">
-  </form>
-
 </section>
 <section class="ds-padding" id="grid">
+
+  <style>
+    #ex-grid-1 div,
+    #ex-grid-2 div,
+    #ex-grid-3 div,
+    #ex-grid-4 div {
+      color: var(--background-color);
+      background-color: var(--color);
+      padding: var(--padding);
+    }
+  </style>
 
   <h2>Layout</h2>
 
@@ -562,10 +450,10 @@
 
   <div id="ex-grid-1">
     <section class="ds-grid">
-      <div data-theme="dark" class="ds-padding">1</div>
-      <div data-theme="dark" class="ds-padding">2</div>
-      <div data-theme="dark" class="ds-padding">3</div>
-      <div data-theme="dark" class="ds-padding">4</div>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
     </section>
   </div>
 
@@ -578,11 +466,11 @@
 
   <div id="ex-grid-2">
     <section class="ds-flexgrid">
-      <div data-theme="dark" class="ds-padding">1</div>
-      <div data-theme="dark" class="ds-padding">2</div>
-      <div data-theme="dark" class="ds-padding">3</div>
-      <div data-theme="dark" class="ds-padding">4</div>
-      <div data-theme="dark" class="ds-padding">5</div>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
     </section>
   </div>
 
@@ -596,8 +484,8 @@
 
   <div id="ex-grid-3">
     <section class="ds-grid-2-1">
-      <div data-theme="dark" class="ds-padding">Primær / main</div>
-      <div data-theme="dark" class="ds-padding">Sekundær</div>
+      <div>Primær / main</div>
+      <div>Sekundær</div>
     </section>
   </div>
 
@@ -609,8 +497,8 @@
 
   <div id="ex-grid-4">
     <section class="ds-grid-1-2">
-      <div data-theme="dark" class="ds-padding">Sekundær</div>
-      <div data-theme="dark" class="ds-padding">Primær / main</div>
+      <div>Sekundær</div>
+      <div>Primær / main</div>
     </section>
   </div>
 
@@ -628,8 +516,8 @@
 
   <p><a href="layout2.html">Se demo</a></p>
 
-  <div class="bordered">
-    <div data-theme="dark" class="ds-margin ds-padding">Indhold med ds-margin udenom</div>
+  <div class="bordered" style="padding: 0;">
+    <div class="ds-margin">Indhold med ds-margin udenom</div>
   </div>
 
   <p>Hvis du skal bruge den officielle margin i CSS, kan du bruge CSS custom property <code>--margin</code>.</p>
@@ -656,7 +544,7 @@
   <p>Når tekst og elementer med runde kanter (ikoner, knapper, etc.) står sammen, skal teksten og de runde elementer rykkes lidt i forhold til hinanden. Det er for at modvirke et optisk fænomen, hvor det ser ud som om, at de ikke står på linie.</p>
   <p>Du kan gøre det ved at give teksten lidt ekstra padding med <code>ds-optical-padding</code> class ELLER give ikoner/knapper en justeringsmargin.</p>
 
-  <div class="ds-padding" data-theme="dark" style="margin-bottom: var(--typography-spacing-vertical);">
+  <div class="bordered">
     <p class="ds-optical-padding">Her er din tekst med optical padding.</p>
     <button>En knap</button>
   </div>
@@ -666,7 +554,7 @@
     &lt;button>En knap&lt;/button>
   </code></pre>
 
-  <div class="ds-padding" data-theme="dark" style="margin-bottom: var(--typography-spacing-vertical);">
+  <div class="bordered">
     <p>Her er din tekst</p>
     <button class="ds-optical-margin">En knap med optical margin</button>
   </div>
@@ -786,77 +674,6 @@
     <code-example data-snip="ex-nav-1"></code-example>
   </div>
 
-  <div data-theme="dark" class="ds-padding">
-    <h3>Basic navigation</h3>
-    <nav>
-      <ul>
-        <li><a href="#navs">Link</a></li>
-        <li><a href="#navs">Link</a></li>
-        <li><a href="#navs">Link</a></li>
-      </ul>
-    </nav>
-    
-    <h3>Lodret navigation</h3>
-    <nav class="ds-nav-vertical">
-      <ul>
-        <li><a href="#navs">Link</a></li>
-        <li><a href="#navs">Link</a></li>
-        <li><a href="#navs">Link</a></li>
-      </ul>
-    </nav>
-    
-    <h3>Hovedmenu</h3>
-    <nav class="ds-nav-main">
-      <ul>
-        <li>
-          Produktnavn
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <a href="#navs">Link</a>    
-        </li>
-        <li>
-          <a href="#navs">Link</a>    
-        </li>
-        <li>
-          <a href="#navs">Link</a>    
-        </li>
-      </ul>
-    </nav>
-    
-    <h3>Tabs</h3>
-    <nav class="ds-nav-tabs">
-      <ul>
-        <li>
-          <h4>Produktnavn</h4>
-        </li>
-        <li>
-          <a href="#navs">Link</a>    
-        </li>
-        <li>
-          <a href="#navs">Link</a>    
-        </li>
-        <li>
-          <a href="#navs">Link</a>    
-        </li>
-      </ul>
-    </nav>
-
-    <h3>Værktøjslinie</h3>
-    <nav class="ds-nav-tools">
-      <span class="ds-button-group">
-        <button class="ds-icon-map-icon-download-listvalg" title="Liste"></button>
-        <hr>
-        <button class="ds-icon-map-icon-download-gridvalg" title="Gridvalg"></button>
-        <a href="#" role="button" class="ds-icon-map-icon-download-polygonareal" title="Værktøj X"></a>
-        <hr>
-        <button class="ds-icon-icon-search" title="Search"></button>
-        <a href="#" role="button" class="ds-icon-icon-minus" title="Zoom out"></a>
-        <button class="ds-icon-icon-plus" title="Zoom in"></button>
-      </span>
-    </nav>
-
 </section>
 <section id="icons">
 
@@ -866,24 +683,13 @@
     <p>Ikoner kan indlejres som SVG eller importeres og indlejres som baggrundsbilleder i CSS, så du bare skal sætte en class <code>ds-icon-*</code> på et element for at bruge dem.</p>
     <p>F.eks.</p>
 
-    <ul class="ds-grid icon-list" style="padding-top: 1.5rem; padding-bottom: 2rem; margin: 0;">
+    <ul class="ds-grid icon-list" style="padding: 1.5rem 0 2rem; margin: 0;">
       <li class="icon"><span class="ds-icon-sider-icon-privatliv"></span><code>&lt;span class="ds-icon-sider-icon-privatliv">&lt;/span></code></li>
       <li class="icon"><span class="ds-icon-sider-icon-terms"></span><code>&lt;span class="ds-icon-sider-icon-terms">&lt;/span></code></li>
       <li class="icon"><span class="ds-icon-sider-icon-user"></span><code>&lt;span class="ds-icon-sider-icon-user">&lt;/span></code></li>
       <li class="icon"><span class="ds-icon-some-linkedin"></span><code>&lt;span class="ds-icon-some-linkedin">&lt;/span></code></li>
     </ul>
-    
-    <p>Ikoner virker også, hvis de præsenteres i et element med <code>data-theme="dark"</code></p>
-  </div>
 
-  
-  <div data-theme="dark">
-    <ul class="ds-grid icon-list" style="padding-top: 1.5rem; padding-bottom: 2rem; margin: 0;">
-      <li class="icon"><span class="ds-icon-sider-icon-privatliv"></span><code>&lt;span class="ds-icon-sider-icon-privatliv">&lt;/span></code></li>
-      <li class="icon"><span class="ds-icon-sider-icon-terms"></span><code>&lt;span class="ds-icon-sider-icon-terms">&lt;/span></code></li>
-      <li class="icon"><span class="ds-icon-sider-icon-user"></span><code>&lt;span class="ds-icon-sider-icon-user">&lt;/span></code></li>
-      <li class="icon"><span class="ds-icon-some-linkedin"></span><code>&lt;span class="ds-icon-some-linkedin">&lt;/span></code></li>
-    </ul>
   </div>
               
 </section><section id="logos" class="ds-padding">
@@ -902,7 +708,7 @@
   
   <p>Sæt class <code>ds-logo</code> på et element for at vise SDFIs bomærke. Det kan f.eks. være på et link-element som vist herunder.</p>
 
-  <div data-theme="light" class="ds-padding">
+  <div>
     <p id="ex-logo-1">
       <a class="ds-logo" href="#logos">
         <strong>Dataforsyningen</strong>
@@ -914,7 +720,7 @@
 
   <p>Logo fås i en mindre udgave ved at bruge class <code>ds-logo-micro</code></p>
 
-  <div data-theme="light" class="ds-padding">
+  <div>
     <p id="ex-logo-2">
       <a class="ds-logo-micro" href="#logos">
         <strong>Dataforsyningen</strong>
@@ -926,7 +732,7 @@
 
   <p>Hvis logo skal kunne ændre størrelse ift. skærmstørrelse, så brug <code>ds-logo-responsive</code></p>
 
-  <div data-theme="light" class="ds-padding">
+  <div>
     <p id="ex-logo-3">
       <span class="ds-logo-responsive">
         <strong>Dataforsyningen</strong>
@@ -938,7 +744,7 @@
 
   <p>Nogle gange skal logo trækkes lidt til venstre for at få kronen til at være på linie med venstre kant af indholdet. Det gøres nemt ved at sætte <code>ds-logo-pull-left</code> på logo-elementet.</p>
 
-  <div data-theme="light" class="ds-padding">
+  <div>
     <div id="ex-logo-4">
       <span class="ds-logo ds-logo-pull-left">
         <strong>Dataforsyningen</strong>
@@ -953,22 +759,6 @@
       <p>Her er lidt mere tekstindhold.</p>
     </div>
     <code-example data-snip="ex-logo-4"></code-example>
-  </div>
-
-  <div data-theme="dark" class="ds-padding">
-    <p>
-      <a class="ds-logo" href="#logos">
-        <strong>Dataforsyningen</strong>
-        <span>Styrelsen for Dataforsyning og Infrastruktur</span>
-      </a>
-    </p>
-  
-    <p>
-      <span class="ds-logo-micro">
-        <strong>Dataforsyningen</strong>
-        <span>Styrelsen for Dataforsyning og Infrastruktur</span>
-      </span>
-    </p>
   </div>
 
   <h3>Favicon/bogmærkeikon</h3>
@@ -999,11 +789,11 @@
       </footer>
     </article>
 
-    <article class="ds-card" data-theme="dark">
+    <article class="ds-card">
       <img src="https://raw.githubusercontent.com/iamfrank/semstrap/master/assets/images/bg-img-1.jpg" alt="">
       <div class="ds-padding">
         <h3>Produktkort titel</h3>
-        <p>Dette produktkort har <code>data-theme="dark"</code>.</p>
+        <p>Dette er et produktkort/card.</p>      
       </div>
       <footer>
         <div class="ds-button-group">
@@ -1058,39 +848,6 @@
 
   <code-example data-snip="ex-table-1"></code-example>
 
-  <div data-theme="dark" class="ds-padding">
-    <h3>"Dark" version</h3>
-    <table>
-      <caption>
-        User Details
-      </caption>
-      <thead>
-        <tr>
-          <th>No.</th>
-          <th>Name</th>
-          <th>Email</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>John Carter</td>
-          <td>johncarter@mail.com</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Peter Parker</td>
-          <td>peterparker@mail.com</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>John Rambo</td>
-          <td>johnrambo@mail.com</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
 </section><section id="lists" class="ds-padding">
 
   <h2>Lister</h2>
@@ -1098,7 +855,7 @@
   <h3>Definition list</h3>
   Her er et eksempel på en definition list:
 
-  <article data-theme="light" style="margin-bottom: var(--typography-spacing-vertical);" id="ex-list-1">
+  <article style="margin-bottom: var(--typography-spacing-vertical);" id="ex-list-1">
     <dl>
       <dt>Definition term</dt>
       <dd>Definition description</dd>
@@ -1108,16 +865,6 @@
   </article>
 
   <code-example data-snip="ex-list-1"></code-example>
-
-  <article data-theme="dark" class="ds-padding">
-    <h3>Definition list</h3>
-    <dl>
-      <dt>Defintion term</dt>
-      <dd>Defintion description</dd>
-      <dt>(Eksempel) Design Guide</dt>
-      <dd>En samling af tekst og billeder, der orienterer om korrekt brug af elementer i et designsystem.</dd>
-    </dl>
-  </article>
 
 </section><section id="dialog" class="ds-padding">
 
@@ -1169,27 +916,42 @@
 
       <div>
         <h2 class="ds-padding" style="margin: 0;">Indholdsfortegnelse</h2>
-        <nav style="position: sticky; top: 1.5rem;" class="ds-nav-vertical">
-          <ul>
-            <li><a href="#typografi">Typografi</a></li>
-            <li><a href="#farver">Farver</a></li>
-            <li><a href="#knapper">Knapper</a></li>
-            <li><a href="#formular">Formularer og inputfelter</a></li>
-            <li><a href="#grid">Layout</a></li>
-            <li><a href="#navs">Navigation</a></li>
-            <li><a href="#icons">Ikoner</a></li>
-            <li><a href="#logos">Logo</a></li>
-            <li><a href="#cards">Cards</a></li>
-            <li><a href="#tabeller">Tabeller</a></li>
-            <li><a href="#lists">Lister</a></li>
-            <li><a href="#dialog">Dialogboks</a></li>
-          </ul>
-        </nav>
+
+        <div style="position: sticky; top: 1.5rem;">
+
+          <fieldset class="theme-switch ds-padding" style="padding-bottom: 0; padding-top: 0;">
+            <label>
+              Lys
+              <input type="radio" name="theme" value="light">
+            </label>
+            <label>
+              <input type="radio" name="theme" value="dark">
+              Mørk
+            </label>
+          </fieldset>
+
+          <nav class="ds-nav-vertical">
+            <ul>
+              <li><a href="#typografi">Typografi</a></li>
+              <li><a href="#farver">Farver</a></li>
+              <li><a href="#knapper">Knapper</a></li>
+              <li><a href="#formular">Formularer og inputfelter</a></li>
+              <li><a href="#grid">Layout</a></li>
+              <li><a href="#navs">Navigation</a></li>
+              <li><a href="#icons">Ikoner</a></li>
+              <li><a href="#logos">Logo</a></li>
+              <li><a href="#cards">Cards</a></li>
+              <li><a href="#tabeller">Tabeller</a></li>
+              <li><a href="#lists">Lister</a></li>
+              <li><a href="#dialog">Dialogboks</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
 
     </div>
     
-    <footer style="background-color: var(--medium-steel);">
+    <footer style="background-color: var(--medium-steel);" data-theme="light">
       <div class="container ds-padding">
         <p>© 2022 Styrelsen for Dataforsyning og Infrastruktur</p>
         <p style="margin-left: -1rem;"><span class="ds-icon-icon-github"></span> <a href="https://github.com/SDFIdk/design-system-css">Find os på Github</a></p>
@@ -1200,6 +962,14 @@
     <script src="js/highlight.min.js"></script>
     <script>
       hljs.highlightAll()
+    </script>
+
+    <script>
+      const switer_el = document.querySelector('.theme-switch')
+      const html_el = document.children[0]
+      switer_el.addEventListener('change', function(event) {
+        html_el.dataset.theme = event.target.value
+      })
     </script>
 
   </body>

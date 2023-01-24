@@ -6,7 +6,7 @@
   "scripts": {
     "build": "sass index.scss assets/designsystem.css --style compressed && npm run build-docs",
     "build-docs": "node utils/build-docs.mjs && utils/docs-copy-files.sh",
-    "start": "firefox index.html",
+    "start": "cd docs && python3 -m http.server 7777",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "repository": {

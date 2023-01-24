@@ -2,27 +2,42 @@
 
       <div>
         <h2 class="ds-padding" style="margin: 0;">Indholdsfortegnelse</h2>
-        <nav style="position: sticky; top: 1.5rem;" class="ds-nav-vertical">
-          <ul>
-            <li><a href="#typografi">Typografi</a></li>
-            <li><a href="#farver">Farver</a></li>
-            <li><a href="#knapper">Knapper</a></li>
-            <li><a href="#formular">Formularer og inputfelter</a></li>
-            <li><a href="#grid">Layout</a></li>
-            <li><a href="#navs">Navigation</a></li>
-            <li><a href="#icons">Ikoner</a></li>
-            <li><a href="#logos">Logo</a></li>
-            <li><a href="#cards">Cards</a></li>
-            <li><a href="#tabeller">Tabeller</a></li>
-            <li><a href="#lists">Lister</a></li>
-            <li><a href="#dialog">Dialogboks</a></li>
-          </ul>
-        </nav>
+
+        <div style="position: sticky; top: 1.5rem;">
+
+          <fieldset class="theme-switch ds-padding" style="padding-bottom: 0; padding-top: 0;">
+            <label>
+              Lys
+              <input type="radio" name="theme" value="light">
+            </label>
+            <label>
+              <input type="radio" name="theme" value="dark">
+              Mørk
+            </label>
+          </fieldset>
+
+          <nav class="ds-nav-vertical">
+            <ul>
+              <li><a href="#typografi">Typografi</a></li>
+              <li><a href="#farver">Farver</a></li>
+              <li><a href="#knapper">Knapper</a></li>
+              <li><a href="#formular">Formularer og inputfelter</a></li>
+              <li><a href="#grid">Layout</a></li>
+              <li><a href="#navs">Navigation</a></li>
+              <li><a href="#icons">Ikoner</a></li>
+              <li><a href="#logos">Logo</a></li>
+              <li><a href="#cards">Cards</a></li>
+              <li><a href="#tabeller">Tabeller</a></li>
+              <li><a href="#lists">Lister</a></li>
+              <li><a href="#dialog">Dialogboks</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
 
     </div>
     
-    <footer style="background-color: var(--medium-steel);">
+    <footer style="background-color: var(--medium-steel);" data-theme="light">
       <div class="container ds-padding">
         <p>© 2022 Styrelsen for Dataforsyning og Infrastruktur</p>
         <p style="margin-left: -1rem;"><span class="ds-icon-icon-github"></span> <a href="https://github.com/SDFIdk/design-system-css">Find os på Github</a></p>
@@ -33,6 +48,14 @@
     <script src="js/highlight.min.js"></script>
     <script>
       hljs.highlightAll()
+    </script>
+
+    <script>
+      const switer_el = document.querySelector('.theme-switch')
+      const html_el = document.children[0]
+      switer_el.addEventListener('change', function(event) {
+        html_el.dataset.theme = event.target.value
+      })
     </script>
 
   </body>
