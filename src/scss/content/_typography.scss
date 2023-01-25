@@ -7,6 +7,10 @@
 // - sanitize.css v13.0.0 | CC0 1.0 Universal | github.com/csstools/sanitize.css
 // ––––––––––––––––––––
 
+p {
+  max-width: 44rem;
+}
+
 // Add the correct font weight in Chrome, Edge, and Safari
 b,
 strong {
@@ -131,6 +135,7 @@ h6,
   line-height: var(--line-height);
   font-size: var(--font-size);
   color: var(--color);
+  max-width: 44rem;
 
   &:first-child {
     margin-top: 0;

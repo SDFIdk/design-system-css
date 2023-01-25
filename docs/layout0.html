@@ -19,20 +19,24 @@
       /* Custom CSS for this page*/
       header,
       article{
-        background-color: hsla(0,0%,0%,0.1);
+        background-color: var(--lys-steel);
+      }
+      @media screen and (min-width: 1900px) {
+        #ex-layout {
+          border-left: var(--border);
+          border-right: var(--border);
+        }
       }
     </style>
 
   </head>
-  <body class="ds-container">
+  <body>
 
-    <div id="ex-layout">
+    <div id="ex-layout" class="ds-container">
 
-      <header style="padding: 1px;">
-        <div class="ds-margin">
-          <h1>Hovedoverskrift (h1)</h1>
-          <p>Denne linie kan max. være 44rem bred. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
+      <header class="ds-margin">
+        <h1>Hovedoverskrift (h1)</h1>
+        <p>Denne linie kan max. være 44rem bred. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       </header>
 
       <main class="ds-margin">
@@ -86,15 +90,15 @@
 
       </main>
 
+      <footer class="ds-margin" data-theme="light" style="background-color: var(--lys-steel);">
+        <p>© 2022 Styrelsen for Dataforsyning og Infrastruktur</p>
+      </footer>
+
     </div>
 
-    <aside>
+    <aside class="ds-container">
       <code-example data-snip="ex-layout"></code-example>
     </aside>
-    
-    <footer class="ds-padding" data-theme="light" style="background-color: var(--lys-steel);">
-      <p>© 2022 Styrelsen for Dataforsyning og Infrastruktur</p>
-    </footer>
 
     <script src="js/code-example-component.js"></script>
     <script src="js/highlight.min.js"></script>
