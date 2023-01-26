@@ -1,4 +1,4 @@
-<section class="ds-padding" id="grid">
+<section id="grid">
 
   <style>
     #ex-grid-1 div,
@@ -12,6 +12,9 @@
   </style>
 
   <h2>Layout</h2>
+
+  <p>Vi har lavet nogle eksempler, hvor du kan se forskellige layout-teknikker i praksis.<br> <a href="layout0.html">Se eksempelside.</a></p>
+  <p>Herunder kan du finde flere detaljer om, hvordan du nemt laver layouts i SDFI-stil.</p>
 
   <h3>Kolonner og grids</h3>
 
@@ -86,9 +89,9 @@
 
   <p><a href="layout2.html">Se demo</a></p>
 
-  <div class="bordered" style="padding: 0;">
-    <div class="ds-margin">Indhold med ds-margin udenom</div>
-  </div>
+  <p class="ds-margin" style="border: var(--border); display: inline-block;">
+    Indhold med ds-margin omkring sig
+  </p>
 
   <p>Hvis du skal bruge den officielle margin i CSS, kan du bruge CSS custom property <code>--margin</code>.</p>
   <pre><code>.my-custom-class {
@@ -102,9 +105,9 @@
 
   <p><a href="layout1.html">Se demo</a></p>
 
-  <div class="bordered ds-padding">
-    Indhold med ds-padding indeni.
-  </div>
+  <p class="ds-padding" style="border: var(--border); display: inline-block;">
+    Indhold med ds-padding omkring sig.
+  </p>
 
   <p>Hvis du skal bruge den officielle padding i CSS, kan du bruge CSS custom property <code>--padding</code>.</p>
   <pre><code>.my-custom-class {

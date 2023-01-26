@@ -41,3 +41,13 @@
     }
   }
 }
+
+// Container-fluid width should max out at about 1900px
+@if map-get($breakpoints, "xxl") {
+  @media (min-width: map-get($breakpoints, "xxl")) {
+    .container-fluid,
+    .ds-container-fluid {
+      max-width: map-get($viewports, "xxl");
+    }
+  }
+}

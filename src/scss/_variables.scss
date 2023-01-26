@@ -23,6 +23,7 @@ $breakpoints: (
   md: 768px,
   lg: 992px,
   xl: 1200px,
+  xxl: 82rem
 ) !default;
 
 // Viewports
@@ -31,5 +32,6 @@ $viewports: (
   sm: 510px,
   md: 700px,
   lg: 920px,
-  xl: 1130px
+  xl: 1130px,
+  xxl: 82rem
 ) !default;
