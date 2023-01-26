@@ -5,59 +5,36 @@
 
 .grid,
 .ds-grid {
-  grid-column-gap: var(--grid-spacing-horizontal);
-  grid-row-gap: var(--grid-spacing-vertical);
   display: grid;
-  grid-template-columns: 1fr;
-  margin-bottom: var(--grid-spacing-horizontal);
+  gap: var(--grid-spacing);
+  grid-template-columns: minmax(15rem, 1fr);
+  margin-bottom: var(--grid-spacing);
+
+
+  @if map-get($breakpoints, "sm") {
+    @media (min-width: map-get($breakpoints, "sm")) {
+      grid-template-columns: 1fr 1fr;
+
+      & .ds-grid-item-large {
+        grid-column: span 2;
+      }
+    }
+  }
+
+  @if map-get($breakpoints, "md") {
+    @media (min-width: map-get($breakpoints, "md")) {
+      
+    }
+  }
 
   @if map-get($breakpoints, "lg") {
     @media (min-width: map-get($breakpoints, "lg")) {
-      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+      grid-template-columns: 1fr 1fr 1fr;
     }
   }
 
   & > * {
     min-width: 0; // HACK for childs in overflow
-  }
-}
-
-.ds-grid-2-1,
-.ds-grid-1-2 {
-
-  @if map-get($breakpoints, "lg") {
-    @media (max-width: map-get($breakpoints, "lg")) {
-      & > * {
-        margin-bottom: var(--grid-spacing-vertical);
-      }
-    }
-
-    @media (min-width: map-get($breakpoints, "lg")) {
-      grid-column-gap: var(--grid-spacing-horizontal);
-      grid-row-gap: var(--grid-spacing-vertical);
-      display: grid;
-      margin-bottom: var(--grid-spacing-horizontal);
-    }
-  }
-}
-
-.ds-grid-2-1 {
-
-  @if map-get($breakpoints, "lg") {
-    @media (min-width: map-get($breakpoints, "lg")) {
-      grid-template-columns: minmax(auto, 66%) minmax(auto, 33%);
-    }
-  }
-}
-
-.ds-grid-1-2 {
-
-  @if map-get($breakpoints, "lg") {
-    @media (min-width: map-get($breakpoints, "lg")) {
-      display: grid;
-      grid-template-columns: minmax(auto, 33%) minmax(auto, 66%);
-      gap: var(--grid-spacing-horizontal);
-    }
   }
 }
 
@@ -72,14 +49,58 @@
     @media (min-width: map-get($breakpoints, "sm")) {
       display: flex; 
       flex-flow: row wrap; 
-      gap: 3.5vw;
+      gap: 2rem;
       margin-bottom: var(--grid-spacing-horizontal);
 
       & > * {
-        flex: 1 1 auto;
+        flex: 1 0 15rem;
         margin: 0;
-        width: 15rem;
+        //min-width: 15rem;
       }
+    }
+  }
+
+  @if map-get($breakpoints, "md") {
+    @media (min-width: map-get($breakpoints, "md")) { 
+      gap: 3.5rem;
+    }
+  }
+}
+
+.ds-grid-2-1,
+.ds-grid-1-2 {
+
+  @if map-get($breakpoints, "lg") {
+    @media (max-width: map-get($breakpoints, "lg")) {
+      & > * {
+        margin-bottom: var(--grid-spacing);
+      }
+    }
+
+    @media (min-width: map-get($breakpoints, "lg")) {
+      display: grid;
+      gap: var(--grid-spacing);
+      margin-bottom: var(--grid-spacing);
+    }
+  }
+}
+
+.ds-grid-2-1 {
+
+  @if map-get($breakpoints, "lg") {
+    @media (min-width: map-get($breakpoints, "lg")) {
+      grid-template-columns: 2fr 1fr;
+    }
+  }
+}
+
+.ds-grid-1-2 {
+
+  @if map-get($breakpoints, "lg") {
+    @media (min-width: map-get($breakpoints, "lg")) {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: var(--grid-spacing);
     }
   }
 }

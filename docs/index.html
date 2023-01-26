@@ -68,33 +68,36 @@
 
     <header data-theme="dark" id="header" style="margin-bottom: var(--typography-spacing-vertical); border-bottom: solid 1px var(--tyrkis);">
 
-      <div class="ds-container ds-padding">
+      <div class="ds-container-fluid ds-margin">
+
         <p class="ds-logo-responsive ds-logo-pull-left">
           <strong>Dataforsyningen</strong>
           <span>Styrelsen for Dataforsyning og Infrastruktur</span>
         </p>  
-      </div>
+      
 
-      <div class="ds-container ds-padding" style="padding: 3rem 1rem;">
-        <h1 style="margin: 0;">Designguide eksempler</h1>
-        <p class="blockquote" style="margin: 0;">Reference-implementationer af SDFIs designguide med HTML/CSS</p>
+        <div style="padding: 3rem 0 0;">
+          <h1>Designguide eksempler</h1>
+          <p class="blockquote" style="margin: 0;">Reference-implementationer af SDFIs designguide med HTML/CSS</p>
+        </div>
+
       </div>
 
     </header>
 
-    <div class="ds-container ds-grid-2-1">
+    <div class="ds-container-fluid ds-grid ds-margin">
 
       <!-- Content goes here -->
-      <main>
+      <main class="ds-grid-item-large">
 
-        <article class="ds-padding">
+        <article>
           <h2>Introduktion</h2>
           <p>Dette er dokumentationen for, hvordan du bruger elementerne i Design System CSS - en implementation af SDFIs design guide.</p>
           <p><a href="https://www.figma.com/file/G9g2vp2MOcejoPB3d1xJvU/Dataforsyningen-Design-System">Den komplette designguide kan findes på Figma.</a> (Kræver SDFI login.)</p>
           <p><a href="https://github.com/SDFIdk/design-system-css">Koden og tilhørende dokumentation findes på Github.</a></p>
           <p>Design System CSS er baseret på <a href="https://picocss.com/">pico.css.</a> Du kan finde deres <a href="https://picocss.com/docs/">dokumentation her.</a></p>
         </article>
-<section id="typografi" class="ds-padding">
+<section id="typografi">
 
   <h2>Typografi</h2>
 
@@ -120,7 +123,7 @@
 
   <code-example data-snip="ex-typo-1"></code-example>
 
-</section><section class="ds-padding" id="farver">
+</section><section id="farver">
 
   <h2>Farver</h2>
   
@@ -258,7 +261,7 @@
 </section>
 <section id="knapper">
 
-  <article class="light-wrapper ds-padding" style="margin-bottom: var(--typography-spacing-vertical);">
+  <article class="light-wrapper" style="margin-bottom: var(--typography-spacing-vertical);">
 
     <h2>Knapper</h2>
   
@@ -358,7 +361,7 @@
     <code-example data-snip="btn-ex-6"></code-example>
   </article>
 
-</section>  <section id="formular" class="ds-padding">
+</section>  <section id="formular">
   
   <h2>Formularer og inputfelter</h2>
   <p>Inputfelter til formularer er allerede stylet for dig. Du skal ikke gøre noget særligt ud over at bruge korrekt HTML.</p>
@@ -428,7 +431,7 @@
   <code-example data-snip="ex-form-1"></code-example>
 
 </section>
-<section class="ds-padding" id="grid">
+<section id="grid">
 
   <style>
     #ex-grid-1 div,
@@ -519,9 +522,9 @@
 
   <p><a href="layout2.html">Se demo</a></p>
 
-  <div class="bordered" style="padding: 0;">
-    <div class="ds-margin">Indhold med ds-margin udenom</div>
-  </div>
+  <p class="ds-margin" style="border: var(--border); display: inline-block;">
+    Indhold med ds-margin omkring sig
+  </p>
 
   <p>Hvis du skal bruge den officielle margin i CSS, kan du bruge CSS custom property <code>--margin</code>.</p>
   <pre><code>.my-custom-class {
@@ -535,9 +538,9 @@
 
   <p><a href="layout1.html">Se demo</a></p>
 
-  <div class="bordered ds-padding">
-    Indhold med ds-padding indeni.
-  </div>
+  <p class="ds-padding" style="border: var(--border); display: inline-block;">
+    Indhold med ds-padding omkring sig.
+  </p>
 
   <p>Hvis du skal bruge den officielle padding i CSS, kan du bruge CSS custom property <code>--padding</code>.</p>
   <pre><code>.my-custom-class {
@@ -572,12 +575,9 @@
 </section>
 <section id="navs">
   
-  <div class="ds-padding">
-    <h2>Navigationselementer</h2>
+  <h2>Navigationselementer</h2>
 
-    <p>Navigationselementer laves med <code>&lt;nav></code> elementet.</p>
-
-  </div>
+  <p>Navigationselementer laves med <code>&lt;nav></code> elementet.</p>
 
   <div class="ds-padding light-wrapper" style="margin-bottom: var(--typography-spacing-vertical);">
     
@@ -680,22 +680,19 @@
 </section>
 <section id="icons">
 
-  <div class="ds-padding">
-    <h2>Ikoner</h2>
-    <p>Hvis du vil bruge SDFI-ikoner og logoer, <a href="https://sdfidk.github.io/design-system-icons/">skal du importere og indlejre NPM-pakken <code>@dataforsyningen/icons</code></a></p>
-    <p>Ikoner kan indlejres som SVG eller importeres og indlejres som baggrundsbilleder i CSS, så du bare skal sætte en class <code>ds-icon-*</code> på et element for at bruge dem.</p>
-    <p>F.eks.</p>
+  <h2>Ikoner</h2>
+  <p>Hvis du vil bruge SDFI-ikoner og logoer, <a href="https://sdfidk.github.io/design-system-icons/">skal du importere og indlejre NPM-pakken <code>@dataforsyningen/icons</code></a></p>
+  <p>Ikoner kan indlejres som SVG eller importeres og indlejres som baggrundsbilleder i CSS, så du bare skal sætte en class <code>ds-icon-*</code> på et element for at bruge dem.</p>
+  <p>F.eks.</p>
 
-    <ul class="ds-grid icon-list" style="padding: 1.5rem 0 2rem; margin: 0;">
-      <li class="icon"><span class="ds-icon-sider-icon-privatliv"></span><code>&lt;span class="ds-icon-sider-icon-privatliv">&lt;/span></code></li>
-      <li class="icon"><span class="ds-icon-sider-icon-terms"></span><code>&lt;span class="ds-icon-sider-icon-terms">&lt;/span></code></li>
-      <li class="icon"><span class="ds-icon-sider-icon-user"></span><code>&lt;span class="ds-icon-sider-icon-user">&lt;/span></code></li>
-      <li class="icon"><span class="ds-icon-some-linkedin"></span><code>&lt;span class="ds-icon-some-linkedin">&lt;/span></code></li>
-    </ul>
-
-  </div>
+  <ul class="ds-grid icon-list" style="padding: 1.5rem 0 2rem; margin: 0;">
+    <li class="icon"><span class="ds-icon-sider-icon-privatliv"></span><code>&lt;span class="ds-icon-sider-icon-privatliv">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-sider-icon-terms"></span><code>&lt;span class="ds-icon-sider-icon-terms">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-sider-icon-user"></span><code>&lt;span class="ds-icon-sider-icon-user">&lt;/span></code></li>
+    <li class="icon"><span class="ds-icon-some-linkedin"></span><code>&lt;span class="ds-icon-some-linkedin">&lt;/span></code></li>
+  </ul>
               
-</section><section id="logos" class="ds-padding">
+</section><section id="logos">
 
   <h2>Logo</h2>
 
@@ -773,7 +770,7 @@
     <code>/node-modules/@dataforsyningen/css/assets/logos/logo-simple-micro.svg</code>
   </p>
 </section>
-<section id="cards" class="ds-padding">
+<section id="cards">
 
   <h2>Produktkort/cards</h2> 
   
@@ -811,7 +808,7 @@
   <code-example data-snip="ex-card-1"></code-example>
 
 </section>
-<section class="ds-padding" id="tabeller">
+<section id="tabeller">
       
   <h2>Tabeller</h2>
 
@@ -851,7 +848,7 @@
 
   <code-example data-snip="ex-table-1"></code-example>
 
-</section><section id="lists" class="ds-padding">
+</section><section id="lists">
 
   <h2>Lister</h2>
 
@@ -869,7 +866,7 @@
 
   <code-example data-snip="ex-list-1"></code-example>
 
-</section><section id="dialog" class="ds-padding">
+</section><section id="dialog">
 
   <h2>Dialogboks</h2>
 
@@ -918,11 +915,11 @@
       </main>
 
       <div>
-        <h2 class="ds-padding" style="margin: 0;">Indholdsfortegnelse</h2>
+        <h2 >Indholdsfortegnelse</h2>
 
         <div style="position: sticky; top: 1.5rem;">
 
-          <fieldset class="theme-switch ds-padding" style="padding-bottom: 0; padding-top: 0;">
+          <fieldset class="theme-switch">
             <label>
               Lys
               <input type="radio" name="theme" value="light">
@@ -932,6 +929,8 @@
               Mørk
             </label>
           </fieldset>
+
+          <hr>
 
           <nav class="ds-nav-vertical">
             <ul>
@@ -955,7 +954,7 @@
     </div>
     
     <footer style="background-color: var(--medium-steel);" data-theme="light">
-      <div class="container ds-padding">
+      <div class="ds-container-fluid ds-margin">
         <p>© 2022 Styrelsen for Dataforsyning og Infrastruktur</p>
         <p style="margin-left: -1rem;"><span class="ds-icon-icon-github"></span> <a href="https://github.com/SDFIdk/design-system-css">Find os på Github</a></p>
       </div>

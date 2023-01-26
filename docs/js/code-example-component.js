@@ -3,7 +3,7 @@ class CodeExample extends HTMLElement {
   // public properties
   template = `
     <label style="display: inline-block; border-radius: 1rem 1rem 0 0; margin: 1rem 0 0; background-color: var(--lys-steel); color: var(--mork-tyrkis); padding: 0.75rem 1rem 0.25rem;">Kode</label>
-    <pre><code class="language-html"></code></pre>
+    <pre><code class="language-html" style="border-radius: 0 0.25rem 0.25rem 0.25rem;"></code></pre>
   `
 
   constructor() {
@@ -14,7 +14,7 @@ class CodeExample extends HTMLElement {
     let snippet = document.getElementById(this.dataset.snip).cloneNode(true).innerHTML
     const regex = /\u0020{2,}/g;
   
-    const container = document.createElement('p')
+    const container = document.createElement('div')
     container.innerHTML = this.template
     this.append(container)
     this.querySelector('code').textContent = snippet.replaceAll(regex, '').trim()
