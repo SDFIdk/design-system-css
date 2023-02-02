@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"> <!-- Remember correct lang attribute -->    
+<html lang="da">
   <head>
 
     <!-- You always need this -->    
@@ -57,9 +57,17 @@
       }
       .theme-switch {
         display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
       }
-      .theme-switch input[value="light"] {
-        margin-left: 0.5rem;
+      .theme-switch p {
+        margin: 0;
+      }
+      .theme-switch input {
+        margin-right: 0.125rem;
+      }
+      .theme-switch label {
+        margin-right: 0.5rem;
       }
     </style>
 

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"> <!-- Remember correct lang attribute -->    
+<html lang="da">
   <head>
 
     <!-- You always need this -->    
@@ -57,9 +57,17 @@
       }
       .theme-switch {
         display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
       }
-      .theme-switch input[value="light"] {
-        margin-left: 0.5rem;
+      .theme-switch p {
+        margin: 0;
+      }
+      .theme-switch input {
+        margin-right: 0.125rem;
+      }
+      .theme-switch label {
+        margin-right: 0.5rem;
       }
     </style>
 
@@ -934,14 +942,19 @@
         <div style="position: sticky; top: 1.5rem;">
 
           <fieldset class="theme-switch">
-            <label>
-              Lys
-              <input type="radio" name="theme" value="light">
-            </label>
-            <label>
-              <input type="radio" name="theme" value="dark">
-              Mørk
-            </label>
+            <span class="ds-icon-sider-icon-lab"></span>
+            <p>
+              <input id="theme-auto" type="radio" name="theme" value="" checked>
+              <label for="theme-auto">Auto</label>
+            </p>
+            <p>
+              <input id="theme-light" type="radio" name="theme" value="light">
+              <label for="theme-light">Lys</label>
+            </p>
+            <p>
+              <input id="theme-dark" type="radio" name="theme" value="dark">
+              <label for="theme-dark">Mørk</label>
+            </p>
           </fieldset>
 
           <hr>
