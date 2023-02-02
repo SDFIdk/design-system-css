@@ -64,6 +64,11 @@ nav {
 // Tabs
 .ds-nav-tabs {
   border-bottom: solid 1px var(--nav-tab-border);
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-end;
+  overflow-y: auto;
+  justify-content: flex-start;
 
   li > * {
     margin: 0 0 -1px;
@@ -93,6 +98,25 @@ nav {
     }
   }
 }
+
+.ds-nav-tabs > a,
+.ds-nav-tabs > [role="link"] {
+  @extend .h4;
+  padding: 1rem 1.5rem;
+  margin: 0;
+  border-bottom: solid 0.25rem transparent !important;
+
+  &:hover,
+  &:active {
+    color: var(--link-hover);
+    border-color: var(--nav-tab-border) !important;
+  }
+
+  &:focus {
+    color:  var(--link-focus);
+    border-color: var(--link-focus) !important;
+  }
+} 
 
 // Vertical Nav
 aside,
