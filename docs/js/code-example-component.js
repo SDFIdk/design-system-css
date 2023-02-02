@@ -17,7 +17,7 @@ class CodeExample extends HTMLElement {
     const container = document.createElement('div')
     container.innerHTML = this.template
     this.append(container)
-    this.querySelector('code').textContent = snippet.replaceAll(regex, '').trim()
+    this.querySelector('code').textContent = snippet//.replaceAll(regex, '')
   }
 }
 

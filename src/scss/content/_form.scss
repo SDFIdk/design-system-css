@@ -112,7 +112,7 @@ textarea {
 input:not([type="checkbox"]):not([type="radio"]):not([type="range"]) {
   height: calc(
     (1rem * var(--line-height)) + (var(--form-element-spacing-vertical) * 2) +
-      (var(--border-width) * 2)
+      (var(--form-border-width) * 2)
   );
 }
 
@@ -133,7 +133,7 @@ fieldset legend {
 }
 
 // Blocks, 100%
-input:not([type="checkbox"]):not([type="radio"]),
+input:not([type="checkbox"]):not([type="radio"]):not([type="date"]),
 select,
 textarea {
   width: 100%;
@@ -156,7 +156,7 @@ textarea {
   --border-color: var(--form-element-border-color);
   --color: var(--form-element-color);
   --box-shadow: none;
-  border: var(--border-width) solid var(--border-color);
+  border: var(--form-border-width) solid var(--border-color);
   border-radius: var(--border-radius);
   outline: none;
   background-color: var(--background-color);
