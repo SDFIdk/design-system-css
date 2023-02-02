@@ -31,23 +31,11 @@ var Tabs = class {
 };
 
 // src/components/toggle.js
-var ToggleBtn = class extends HTMLElement {
-  template = `
-    <button>
-      <slot>
-        Toggle a thing
-      </slot>
-    </button>
-  `;
-  createDOM() {
-    this.innerHTML = this.template;
-  }
-  connectedCallback() {
-    this.createDOM();
-    const button_element = this.querySelector("button");
-    const panel_element = document.querySelector(`#${this.getAttribute("for")}`);
-    button_element.addEventListener("click", function() {
-      panel_element.hidden = !panel_element.hidden;
+var ToggleBtn = class {
+  constructor(element) {
+    const event = new Event(`toggle-${element.getAttribute("aria-controls")}`, { bubbles: true });
+    element.addEventListener("click", () => {
+      element.dispatchEvent(event);
     });
   }
 };
@@ -90,6 +78,9 @@ var TogglePanel = class extends HTMLElement {
   connectedCallback() {
     this.createShadowDOM();
     this.hidden = true;
+    document.addEventListener(`toggle-${this.id}`, () => {
+      this.hidden = !this.hidden;
+    });
     const close_btn_element = this.querySelector(".btn-close");
     if (close_btn_element) {
       close_btn_element.addEventListener("click", () => {

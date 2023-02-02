@@ -1,34 +1,12 @@
-/** A button that toggles a togglePanel */
-class ToggleBtn extends HTMLElement {
+/** A class for buttons that toggle a togglePanel */
+class ToggleBtn {
 
-  // Properties
-  template = `
-    <button>
-      <slot>
-        Toggle a thing
-      </slot>
-    </button>
-  `
-
-  // Methods
-  createDOM() {
-    // Attach the template to the DOM
-    this.innerHTML = this.template
-  }
-
-  // Lifecycle events
-
-  connectedCallback() {
-    this.createDOM()
-
-    const button_element = this.querySelector('button')
-    const panel_element = document.querySelector(`#${ this.getAttribute('for') }`)
-    
-    button_element.addEventListener('click', function() {
-      panel_element.hidden = !panel_element.hidden
+  constructor(element) {
+    const event = new Event(`toggle-${ element.getAttribute('aria-controls') }`, {bubbles: true})
+    element.addEventListener('click', () => {
+      element.dispatchEvent(event)
     })
   }
-
 }
 
 
@@ -86,6 +64,10 @@ class TogglePanel extends HTMLElement {
 
     this.createShadowDOM()
     this.hidden = true
+
+    document.addEventListener(`toggle-${ this.id }`, () => {
+      this.hidden = !this.hidden
+    })
 
     // If a button with class `btn-close` is present, use it to close the panel.
     const close_btn_element = this.querySelector('.btn-close')
