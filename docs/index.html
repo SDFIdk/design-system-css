@@ -17,6 +17,9 @@
 
     <style>
       /* Custom CSS for this page*/
+      code-example {
+        margin-bottom: var(--spacing);
+      }
       .colorswatch {
         display: flex;
         flex-flow: row nowrap;
@@ -700,6 +703,42 @@
   </div>
 
 </section>
+<section id="tabs">
+
+  <h2>Tabs</h2>
+
+  <div id="ex-tabs-1">
+
+    <section class="ds-tabs">
+      <nav class="ds-nav-tabs">
+        <a href="#content1">Something</a>
+        <a href="#content2">Something else</a>
+        <a href="#content3">Another thing</a>
+      </nav>
+      <article class="ds-tab-panel ds-padding" id="#content1">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      </article>
+      <article class="ds-tab-panel ds-padding" id="#content2">
+        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </article>
+      <article class="ds-tab-panel ds-padding" id="#content3">
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </article>
+    </section>
+
+    <script type="module">
+
+      import { Tabs } from './js/designsystem.js'
+      
+      const tabs = new Tabs(document.querySelector('.ds-tabs'))
+
+    </script>
+
+  </div>
+
+  <code-example data-snip="ex-tabs-1"></code-example>
+
+</section>
 <section id="icons">
 
   <h2>Ikoner</h2>
@@ -934,6 +973,56 @@
   <code-example data-snip="ex-dialog-1"></code-example>
 
 </section>
+<section id="togglepanel">
+
+  <h2>Skjult panel</h2>
+
+  <div id="ex-togglepanel-1">
+
+    <ds-toggle-button for="toggle-panel-1">
+      Toggle a ting
+    </ds-toggle-button>
+    <ds-toggle-panel id="toggle-panel-1">
+      <button class="btn-close ds-icon-icon-close outline" style="float: right;" title="Luk"></button>
+      <h2>The thing</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    </ds-toggle-panel>
+
+    <script type="module">
+
+      import { ToggleBtn, TogglePanel } from './js/designsystem.js'
+      
+      customElements.define('ds-toggle-button', ToggleBtn)
+      customElements.define('ds-toggle-panel', TogglePanel)
+
+    </script>
+
+  </div>
+
+  <code-example data-snip="ex-togglepanel-1"></code-example>
+
+</section>
+<section id="spinner">
+
+  <h2>Loading spinner</h2>
+
+  <div id="ex-spinner-1">
+
+    <ds-spinner></ds-spinner>
+
+    <script type="module">
+
+      import { Spinner } from './js/designsystem.js'
+      
+      customElements.define('ds-spinner', Spinner)
+
+    </script>
+
+  </div>
+
+  <code-example data-snip="ex-spinner-1"></code-example>
+
+</section>
       </main>
 
       <div>
@@ -967,12 +1056,15 @@
               <li><a href="#formular">Formularer og inputfelter</a></li>
               <li><a href="#grid">Layout</a></li>
               <li><a href="#navs">Navigation</a></li>
+              <li><a href="#tabs">Tabs</a></li>
               <li><a href="#icons">Ikoner</a></li>
               <li><a href="#logos">Logo</a></li>
               <li><a href="#cards">Cards</a></li>
               <li><a href="#tabeller">Tabeller</a></li>
               <li><a href="#lists">Lister</a></li>
               <li><a href="#dialog">Dialogboks</a></li>
+              <li><a href="#togglepanel">Skjult panel</a></li>
+              <li><a href="#spinner">Loading spinner</a></li>
             </ul>
           </nav>
         </div>
