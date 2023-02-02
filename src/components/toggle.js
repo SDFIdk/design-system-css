@@ -2,7 +2,7 @@
 class ToggleBtn {
 
   constructor(element) {
-    const event = new Event(`toggle-${ element.getAttribute('aria-controls') }`, {bubbles: true})
+    const event = new Event(`toggle-${ element.getAttribute('aria-controls') }`, {bubbles: true, composed: true})
     element.addEventListener('click', () => {
       element.dispatchEvent(event)
     })
@@ -65,7 +65,7 @@ class TogglePanel extends HTMLElement {
     this.createShadowDOM()
     this.hidden = true
 
-    document.addEventListener(`toggle-${ this.id }`, () => {
+    document.body.addEventListener(`toggle-${ this.id }`, () => {
       this.hidden = !this.hidden
     })
 
