@@ -68,14 +68,6 @@ class TogglePanel extends HTMLElement {
     document.body.addEventListener(`toggle-${ this.id }`, () => {
       this.hidden = !this.hidden
     })
-
-    // If a button with class `btn-close` is present, use it to close the panel.
-    const close_btn_element = this.querySelector('.btn-close')
-    if (close_btn_element) {
-      close_btn_element.addEventListener('click', () => {
-        this.hidden = true
-      })
-    }
   }
 
 }
