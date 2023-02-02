@@ -12,7 +12,6 @@ export class Spinner extends HTMLElement {
     svg {
       width: 100%;
       height: auto;
-      background-color: hsl(186,100%,12%);
     }
     
   `

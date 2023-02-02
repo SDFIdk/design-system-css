@@ -81,12 +81,6 @@ var TogglePanel = class extends HTMLElement {
     document.body.addEventListener(`toggle-${this.id}`, () => {
       this.hidden = !this.hidden;
     });
-    const close_btn_element = this.querySelector(".btn-close");
-    if (close_btn_element) {
-      close_btn_element.addEventListener("click", () => {
-        this.hidden = true;
-      });
-    }
   }
 };
 
@@ -101,7 +95,6 @@ var Spinner = class extends HTMLElement {
     svg {
       width: 100%;
       height: auto;
-      background-color: hsl(186,100%,12%);
     }
     
   `;
