@@ -12,7 +12,7 @@ $grey-800: hsla(186, 10%, 8%, .75);
 $grey-900: hsla(0, 0%, 0%, .65); // 65% sort
 
 // Primary colors
-$primary-50: hsl(186,40%,84%,0.7); // Vibrant steel
+$primary-50: hsl(186,40%,82%,0.7); // Vibrant steel
 $primary-100: hsl(186,60%,80%);
 $primary-200: hsl(186,70%,70%);
 $primary-300: hsl(186,80%,50%);
@@ -64,16 +64,57 @@ $red-800: hsl(0,100%,20%);
 $red-900: hsl(0,100%,10%);
 
 :root {
-  --tyrkis: hsl(186,100%,33%);
-  --mork-tyrkis: hsl(186,100%,12%);
+  
+  // Main colors
+  --c1: #fff; // Hvid
+  --c2: hsl(186, 25%, 98%);
+  --c3: hsl(186, 25%, 96%); // Lys steel
+  --c4: hsl(186, 25%, 91%); // Medium steel
+  --c5: hsl(186, 25%, 64%); // Dark steel opacity 100%
+  --c6: hsl(186, 100%, 33%); // Tyrkis
+  
+  --c7: hsl(186, 92%, 21%);// Mørk tyrkis
+  
+  --c8: hsl(186,100%,12%); // Mørk tyrkis plus
+  --c9: hsl(186,100%,7%); // Sort tyrkis
+  --c10: #000; // Sort
+
+  // "Green" colors
+  --g1: hsl(171,70%,98%);
+  --g2: hsl(171,70%,95%);
+  --g3: hsl(171,70%,90%);
+  --g4: hsl(171,70%,80%);
+  --g5: hsl(171,70%,55%); // Aktion
+  --g6: hsl(171,70%,40%);
+
+  // "Red" colors
+  --r1: hsl(0,100%,98%);
+  --r2: hsl(0,100%,94%);
+  --r3: hsl(0,100%,90%);
+  --r4: hsl(0,100%,80%);
+  --r5: hsl(0,100%,66%); // Advarsel
+  --r6: hsl(0,100%,51%);
+
+  // "Orange" colors
+  --o1: hsl(26,80%,98%);
+  --o2: hsl(26,80%,95%);
+  --o3: hsl(26,80%,90%);
+  --o4: hsl(26,80%,80%);
+  --o5: hsl(26,80%,56%); // Highligt
+  --o6: hsl(26,80%,41%);
+
+
+  // Color shorthands
+  --tyrkis: var(--c6);
+  --mork-tyrkis: var(--c8);
   --vibrant-steel: hsla(186,40%,82%,0.7);
-  --dark-steel: hsla(186,25%,64%,0.6);
-  --medium-steel: hsl(186,25%,91%);
-  --lys-steel: hsl(186,25%,96%);
-  --sort: #000;
+  --sort: var(--c10);
   --65-sort: hsla(0,0%,0%,0.65);
-  --hvid: #fff;
-  --aktion: hsl(171,70%,55%);
-  --highlight: hsl(26,80%,56%);
-  --advarsel: hsl(0,100%,66%);
+  --hvid: var(--c1);
+  --dark-steel: hsla(186,25%,64%,0.6);
+  --medium-steel: var(--c4);
+  --lys-steel: var(--c3);
+  --aktion: var(--g5);
+  --highlight: var(--o5);
+  --advarsel: var(--r5);
 }

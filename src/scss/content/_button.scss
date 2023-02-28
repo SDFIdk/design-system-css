@@ -44,11 +44,11 @@ input[type="reset"],
   display: inline-block;
   width: auto;
   padding: 0.5em 1.5em;
-  border: 1px solid #{$green-700};
+  border: 1px solid var(--aktion);
   border-radius: 2.5rem;
   outline: none;
-  background-color: #{$green-700};
-  color: var(--primary-inverse) !important;
+  background-color: var(--aktion);
+  color: var(--c9) !important;
   font-weight: 400;
   font-size: 1rem;
   line-height: var(--line-height);
@@ -58,14 +58,14 @@ input[type="reset"],
   transition: background-color var(--transition), border-color var(--transition), color var(--transition);
 
   &:is([aria-current], :hover, :active) {
-    background-color: var(--primary-hover);
-    border-color: var(--primary-hover);
+    background-color: var(--g4);
+    border-color: var(--g4);
   }
 
   &:focus {
-    border-color: var(--primary-focus) !important;
-    background-color: var(--primary-focus) !important;
-    color: #{$white} !important;
+    border-color: var(--highlight) !important;
+    background-color: var(--highlight) !important;
+    color: var(--hvid) !important;
   }
 }
 
@@ -75,39 +75,30 @@ input[type="reset"],
 :is(button, input[type="submit"], input[type="button"], [role="button"]).secondary,
 input[type="reset"] {
   background-color: transparent;
-  border-color: var(--secondary);
+  border-color: var(--aktion);
   color: var(--secondary-inverse) !important;
   cursor: pointer;
 
   &:is([aria-current], :hover, :active) {
-    background-color: transparent;
-    border-color: var(--secondary-hover);
+    background-color: var(--g4);
+    border-color: var(--g4);
     color: var(--secondary-hover) !important;
   }
 
   &:focus {
-    border-color: var(--primary-focus) !important;
-    background-color: var(--primary-focus) !important;
-    color: #{$white} !important;
+    color: var(--hvid) !important;
   }
 }
 
 // Contrast
 :is(button, input[type="submit"], input[type="button"], [role="button"]).contrast {
-  background-color: var(--contrast);
-  border-color: var(--contrast);
-  color: var(--contrast-inverse) !important;
+  background-color: var(--c7);
+  border-color: var(--c7);
+  color: var(--hvid) !important;
 
   &:is([aria-current], :hover, :active) {
-    background-color: var(--contrast-hover);
-    border-color: var(--contrast-hover);
-    color: var(--contrast-inverse) !important;
-  }
-
-  &:focus {
-    border-color: var(--primary-focus) !important;
-    background-color: var(--primary-focus) !important;
-    color: #{$white} !important;
+    background-color: var(--c6);
+    border-color: var(--c6);
   }
 }
 
@@ -115,19 +106,16 @@ input[type="reset"] {
 :is(button, input[type="submit"], input[type="button"], [role="button"]).outline,
 input[type="reset"].outline {
   background-color: transparent;
-  border-color: var(--primary);
+  border-color: var(--dark-steel);
   color: var(--secondary-inverse) !important;
 
   &:is([aria-current], :hover, :active) {
-    background-color: var(--primary-hover);
-    border-color: var(--primary-hover);
-    color: var(--primary-inverse) !important;
+    background-color: var(--dark-steel);
+    color: var(--secondary-inverse) !important;
   }
 
   &:focus {
-    border-color: var(--primary-focus) !important;
-    background-color: var(--primary-focus) !important;
-    color: #{$white} !important;
+    color: var(--hvid) !important;
   }
 }
 

@@ -3,52 +3,55 @@
 :root:not([data-theme="dark"]) {
   // Document
   color-scheme: light;
-  accent-color: #{$primary-600};
-  --background-color: #{$white};
+  accent-color: var(--tyrkis);
+  --background-color: var(--hvid);
+
+  // Borders
+  --border-color: var(--vibrant-steel);
 
   // Texts colors
-  --color: #{$black};
-  --h1-color: #{$black};
-  --h2-color: #{$black};
-  --h3-color: #{$grey-900};
-  --h4-color: #{$grey-900};
-  --h5-color: #{$grey-900};
-  --h6-color: #{$grey-900};
+  --color: var(--sort);
+  --h1-color: var(--sort);
+  --h2-color: var(--sort);
+  --h3-color: var(--65-sort);
+  --h4-color: var(--65-sort);
+  --h5-color: var(--65-sort);
+  --h6-color: var(--65-sort);
 
   // Muted colors
-  --muted-color: #{$grey-500};
-  --muted-border-color: #{$grey-400};
+  --muted-color: var(--dark-steel);
+  --muted-border-color: var(--dark-steel);
 
   // Link colors
-  --link: #{$green-700};
-  --link-hover: #{$green-800};
-  --link-focus: #{$amber-600};
+  --link: var(--tyrkis);
+  --link-hover: var(--c7);
+  --link-focus: var(--highlight);
 
   // Primary colors
-  --primary: #{$green-400};
-  --primary-inverse: #{$white};
-  --primary-hover: #{$green-600};
-  --primary-focus: #{$amber-400};
+  --primary: var(--tyrkis);
+  --primary-inverse: var(--hvid);
+  --primary-hover: var(--c7);
+  --primary-focus: var(--highlight);
 
   // Secondary colors
-  --secondary: #{$primary-50};
-  --secondary-inverse: #{$grey-900};
-  --secondary-hover: #{$green-600};
-  --secondary-focus: #{$amber-400};
+  --secondary: var(--vibrant-steel);
+  --secondary-inverse: var(--65-sort);
+  --secondary-hover: var(--65-sort);
+  --secondary-focus: var(--highlight);
 
   // Contrast colors
-  --contrast: #{$primary-900};
-  --contrast-inverse: #{$white};
-  --contrast-hover: #{$primary-700};
-  --contrast-focus: #{$amber-400};
+  --contrast: var(--mork-tyrkis);
+  --contrast-inverse: var(--hvid);
+  --contrast-hover: var(--c9);
+  --contrast-focus: var(--highlight);
 
   // Highlighted text (<mark>)
-  --mark-background-color: #{mix($amber-100, $amber-50)};
-  --mark-color: #{mix($grey-900, $amber-900, 75%)};
+  --mark-background-color: var(--dark-steel);
+  --mark-color: var(--sort);
 
   // Inserted (<ins>) & Deleted (<ins>)
-  --ins-color: #{$green-700};
-  --del-color: #{$red-800};
+  --ins-color: var(--aktion);
+  --del-color: var(--advarsel);
 
   // Blockquote
   --blockquote-border-color: var(--muted-border-color);
@@ -57,58 +60,58 @@
   // Button
   // To disable box-shadow, remove the var or set to '0 0 0 rgba(0, 0, 0, 0)'
   // Don't use, 'none, 'false, 'null', '0', etc.
-  --button-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-  --button-hover-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  --button-box-shadow: 0 0 0 rgba(0, 0, 0, 0.65);
+  --button-hover-box-shadow: 0 0 0 rgba(0, 0, 0, 0.65);
 
   // Form elements
-  --form-element-background-color: #{$white};
-  --form-element-border-color: #{$grey-400};
+  --form-element-background-color: var(--hvid);
+  --form-element-border-color: var(--vibrant-steel);
   --form-element-color: var(--color);
   --form-element-placeholder-color: var(--muted-color);
-  --form-element-active-background-color: #{$white};
-  --form-element-active-border-color: var(--primary);
-  --form-element-focus-color: #{$amber-400};
-  --form-element-disabled-background-color: #{$grey-100};
-  --form-element-disabled-border-color: #{$grey-300};
+  --form-element-active-background-color: var(--hvid);
+  --form-element-active-border-color: var(--tyrkis);
+  --form-element-focus-color: var(--highlight);
+  --form-element-disabled-background-color: var(--c2);
+  --form-element-disabled-border-color: var(--c3);
   --form-element-disabled-opacity: 0.5;
-  --form-element-invalid-border-color: #{$red-800};
-  --form-element-invalid-active-border-color: #{$red-700};
-  --form-element-invalid-focus-color: #{rgba($red-700, 0.125)};
-  --form-element-valid-border-color: #{$green-700};
-  --form-element-valid-active-border-color: #{$green-600};
-  --form-element-valid-focus-color: #{rgba($green-600, 0.125)};
+  --form-element-invalid-border-color: var(--r4);
+  --form-element-invalid-active-border-color: var(--r5);
+  --form-element-invalid-focus-color: var(--r6);
+  --form-element-valid-border-color: var(--g4);
+  --form-element-valid-active-border-color: var(--g5);
+  --form-element-valid-focus-color: var(--g6);
 
   // Navigation
-  --nav-link-color: #{$black};
-  --nav-tab-border: #{$green-400};
+  --nav-link-color: var(--sort);
+  --nav-tab-border: var(--tyrkis);
   --nav-tab-font-weight: 300;
 
   // Switch (input[type="checkbox"][role="switch"])
-  --switch-background-color: #{$grey-200};
-  --switch-color: var(--primary-inverse);
-  --switch-checked-background-color: var(--primary);
+  --switch-background-color: var(--c2);
+  --switch-color: var(--c8);
+  --switch-checked-background-color: var(--tyrkis);
 
   // Range (input[type="range"])
-  --range-border-color: #{$grey-100};
-  --range-active-border-color: #{$grey-200};
+  --range-border-color: var(--form-element-color);
+  --range-active-border-color: var(--highlight);
   --range-thumb-border-color: var(--background-color);
   --range-thumb-color: var(--secondary);
   --range-thumb-hover-color: var(--secondary-hover);
   --range-thumb-active-color: var(--primary);
 
   // Table
-  --table-border-color: var(--muted-border-color);
-  --table-row-stripped-background-color: #{mix($grey-50, $white)};
+  --table-border-color: var(--vibrant-steel);
+  --table-row-stripped-background-color: var(--c2);
 
   // Code
-  --code-background-color: #{$grey-50};
+  --code-background-color: var(--c2);
   --code-color: var(--muted-color);
   --code-kbd-background-color: var(--contrast);
   --code-kbd-color: var(--contrast-inverse);
-  --code-tag-color: #{hsl(330, 40%, 50%)};
-  --code-property-color: #{hsl(185, 40%, 40%)};
-  --code-value-color: #{hsl(40, 20%, 50%)};
-  --code-comment-color: #{$grey-300};
+  --code-tag-color: var(--o4);
+  --code-property-color: var(--g4);
+  --code-value-color: var(--r4);
+  --code-comment-color: var(--65-sort);
 
   // Accordion (<details>)
   --accordion-border-color: var(--muted-border-color);
@@ -116,22 +119,22 @@
   --accordion-open-summary-color: var(--muted-color);
 
   // Card
-  --card-background-color: #{$white};
-  --card-border-color: #{$primary-50};
+  --card-background-color: var(--hvid);
+  --card-border-color: var(--vibrant-steel);
   
   // Dropdown (<details role="list">)
-  --dropdown-background-color: #{mix($grey-50, $white, 25%)};
-  --dropdown-border-color: #{mix($grey-100, $grey-50)};
+  --dropdown-background-color: var(--lys-steel);
+  --dropdown-border-color: var(--hvid);
   --dropdown-box-shadow: var(--card-box-shadow);
   --dropdown-color: var(--color);
-  --dropdown-hover-background-color: #{$grey-50};
+  --dropdown-hover-background-color: var(--medium-steel);
 
   // Modal (<dialog>)
-  --modal-overlay-background-color: #{rgba($grey-100, 0.8)};
+  --modal-overlay-background-color: var(--65-sort);
 
   // Progress
-  --progress-background-color: #{$grey-100};
-  --progress-color: var(--primary);
+  --progress-background-color: var(--vibrant-steel);
+  --progress-color: var(--tyrkis);
 
   // Loading ([aria-busy=true])
   --loading-spinner-opacity: 0.5;
@@ -141,7 +144,7 @@
   --tooltip-color: var(--contrast-inverse);
 
   // Logos
-  --logo-hover: #{$primary-600};
+  --logo-hover: var(--aktion);
   --logo-filter: brightness(0);
   --logo-filter-hover: none;
   --logo-filter-focus: invert(100%) saturate(70%);
