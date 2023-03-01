@@ -72,11 +72,12 @@ a,
   outline: none;
   background-color: var(--background-color); // 1
   border-bottom: solid 1px transparent;
+  border-color: var(--link-border-color);
   color: var(--link);
   text-decoration: none;
   font-weight: var(--font-weight);
 
-  transition: background-color var(--transition), color var(--transition);
+  transition: background-color var(--transition);
 
   &:is([aria-current], :hover, :active) {
     color: var(--link-hover);
