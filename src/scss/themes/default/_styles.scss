@@ -2,22 +2,8 @@
 
 
 :root {
-  
-  --tyrkis: hsl(186,100%,33%);
-  --mork-tyrkis: hsl(186,100%,12%);
-  --vibrant-steel: hsla(186,40%,82%,0.7);
-  --dark-steel: hsla(186,25%,64%,0.6);
-  --medium-steel: hsl(186,25%,91%);
-  --lys-steel: hsl(186,25%,96%);
-  --sort: #000;
-  --65-sort: hsla(0,0%,0%,0.65);
-  --hvid: #fff;
-  --aktion: hsl(171,70%,55%);
-  --highlight: hsl(26,80%,56%);
-  --advarsel: hsl(0,100%,66%);
 
   // Typography
-
   // Use 'Roboto' font 
   // (refer to /assets/fonts/font.css for font-face implmentation)
   --font-family: 'Roboto', sans-serif;
@@ -79,24 +65,19 @@
 
 
   // Borders
-  --border: solid 0.125rem var(--medium-steel);
+  --border: solid 0.125rem var(--border-color);
   --border-radius: 0.25rem;
   --border-width: 1px;
   --outline-width: 3px;
-  --form-border-width: 1px;
 
   // Spacings for form elements and button
-  --form-element-spacing-vertical: 0.75rem;
-  --form-element-spacing-horizontal: 1.75rem;
+  --form-element-padding: 0.5rem 1rem;
 
   // Spacings for nav component
   --nav-element-spacing-vertical: 1rem;
   --nav-element-spacing-horizontal: 0.5rem;
   --nav-link-spacing-vertical: 0.5rem;
   --nav-link-spacing-horizontal: 0.5rem;
-
-  // Font weight for form labels & fieldsets legend
-  --form-label-font-weight: var(--font-weight);
 
   // Transitions
   --transition: 0.2s ease-in-out;
@@ -112,16 +93,6 @@ a {
     --text-decoration: underline;
   }
 
-}
-
-// Forms elements
-[type="checkbox"],
-[type="radio"] {
-  --border-width: 2px;
-}
-
-[type="checkbox"][role="switch"] {
-  --border-width: 3px;
 }
 
 // Table
