@@ -151,13 +151,8 @@
 
   // Icons
   --icon-filter: brightness(0) invert(100%);
-  --icon-filter-standard: brightness(0);
-  --icon-filter-secondary: brightness(0) invert(100%);
-  --icon-filter-secondary-hover: none;
-  --icon-filter-outline: brightness(0) invert(100%);
-  --icon-filter-outline-hover: brightness(0) invert(100%);
-  --icon-filter-contrast: none;
-  --icon-filter-contrast-hover: brightness(0);
+  --icon-filter-secondary-hover: brightness(0);
+  --icon-filter-outline-hover: brightness(0);
 
   h1,
   .h1 {

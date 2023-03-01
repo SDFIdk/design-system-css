@@ -164,24 +164,17 @@ h3,
   --line-height: 1.15;
 }
 h4,
-.h4 {
+.h4,
+h5,
+h6,
+.h5,
+.h6 {
   --color: var(--h4-color);
   --font-size: 0.875rem;
   --line-height: 1.15;
   --font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-}
-h5,
-h6,
-.h5,
-.h6 {
-  --color: var(--h5-color);
-  --font-size: 0.75rem;
-  --font-weight: 700;
-  --line-height: 1.15;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
 }
 
 // Paragraphs

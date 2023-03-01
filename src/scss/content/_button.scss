@@ -64,8 +64,7 @@ input[type="reset"],
 
   &:focus {
     border-color: var(--highlight) !important;
-    background-color: var(--highlight) !important;
-    color: var(--hvid) !important;
+    box-shadow: inset 0 0 0 2px var(--highlight);
   }
 }
 
@@ -83,10 +82,6 @@ input[type="reset"] {
     background-color: var(--g4);
     //border-color: var(--g4);
     color: var(--c9) !important;
-  }
-
-  &:focus {
-    color: var(--hvid) !important;
   }
 }
 
@@ -113,10 +108,6 @@ input[type="reset"].secondary {
     background-color: var(--c4);
     color: var(--c9) !important;
   }
-
-  &:focus {
-    color: var(--hvid) !important;
-  }
 }
 
 // Button [disabled]
@@ -129,10 +120,14 @@ a[role="button"]:not([href]) {
 }
 
 .ds-button-group {
+  flex: 0 1 auto;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   margin-bottom: var(--spacing);
+  
+  border: solid 0.125rem var(--vibrant-steel);
+  border-radius: 2rem;
 
   & > button,
   & > input,
@@ -181,11 +176,15 @@ input[type="button"],
     }
 
     &::before {
-      filter: var(--icon-filter-standard);
+      filter: brightness(0);
+    }
+
+    &.secondary {
+      border-color: transparent;
     }
 
     &.secondary::before {
-      filter: var(--icon-filter-secondary);
+      filter: none;
     }
 
     &.secondary:hover::before,
@@ -194,7 +193,7 @@ input[type="button"],
     }
   
     &.outline::before {
-      filter: var(--icon-filter-outline);
+      filter: none;
     }
 
     &.outline:hover::before,
@@ -203,16 +202,7 @@ input[type="button"],
     }
   
     &.contrast::before {
-      filter: var(--icon-filter-contrast);
-    }
-
-    &.contrast:hover::before,
-    &.contrast:active::before {
-      filter: var(--icon-filter-contrast-hover);
-    }
-
-    &:focus::before {
-      filter: var(--icon-filter-standard) !important;
+      filter: brightness(0) invert(100%);
     }
   }
 }
