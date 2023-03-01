@@ -120,14 +120,10 @@ a[role="button"]:not([href]) {
 }
 
 .ds-button-group {
-  flex: 0 1 auto;
   display: flex;
   flex-flow: row nowrap;
-  align-items: center;
+  align-items: stretch;
   margin-bottom: var(--spacing);
-  
-  border: solid 0.125rem var(--vibrant-steel);
-  border-radius: 2rem;
 
   & > button,
   & > input,
@@ -166,7 +162,7 @@ input[type="button"],
   
   &[class*="ds-icon-"] {
 
-    padding: 0.5rem 1.5rem 0.5rem 3rem;
+    padding: 0.5rem 1.5rem 0.5rem 2.66rem;
     
     // We assume that a button with `title` attribute only displays the icon
     &[title] {
