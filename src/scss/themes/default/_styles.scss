@@ -69,20 +69,15 @@
   --border-radius: 0.25rem;
   --border-width: 1px;
   --outline-width: 3px;
-  --form-border-width: 1px;
 
   // Spacings for form elements and button
-  --form-element-spacing-vertical: 0.75rem;
-  --form-element-spacing-horizontal: 1.75rem;
+  --form-element-padding: 0.5rem 1rem;
 
   // Spacings for nav component
   --nav-element-spacing-vertical: 1rem;
   --nav-element-spacing-horizontal: 0.5rem;
   --nav-link-spacing-vertical: 0.5rem;
   --nav-link-spacing-horizontal: 0.5rem;
-
-  // Font weight for form labels & fieldsets legend
-  --form-label-font-weight: var(--font-weight);
 
   // Transitions
   --transition: 0.2s ease-in-out;
@@ -98,16 +93,6 @@ a {
     --text-decoration: underline;
   }
 
-}
-
-// Forms elements
-[type="checkbox"],
-[type="radio"] {
-  --border-width: 2px;
-}
-
-[type="checkbox"][role="switch"] {
-  --border-width: 3px;
 }
 
 // Table
