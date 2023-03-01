@@ -71,8 +71,8 @@ input[type="reset"],
 
 // .secondary, .contrast & .outline
 
-// Secondary
-:is(button, input[type="submit"], input[type="button"], [role="button"]).secondary,
+// Outline
+:is(button, input[type="submit"], input[type="button"], [role="button"]).outline,
 input[type="reset"] {
   background-color: transparent;
   border-color: var(--aktion);
@@ -81,8 +81,8 @@ input[type="reset"] {
 
   &:is([aria-current], :hover, :active) {
     background-color: var(--g4);
-    border-color: var(--g4);
-    color: var(--secondary-hover) !important;
+    //border-color: var(--g4);
+    color: var(--c9) !important;
   }
 
   &:focus {
@@ -102,16 +102,16 @@ input[type="reset"] {
   }
 }
 
-// Outline
-:is(button, input[type="submit"], input[type="button"], [role="button"]).outline,
-input[type="reset"].outline {
+// Secondary
+:is(button, input[type="submit"], input[type="button"], [role="button"]).secondary,
+input[type="reset"].secondary {
   background-color: transparent;
   border-color: var(--dark-steel);
   color: var(--secondary-inverse) !important;
 
   &:is([aria-current], :hover, :active) {
-    background-color: var(--dark-steel);
-    color: var(--secondary-inverse) !important;
+    background-color: var(--c4);
+    color: var(--c9) !important;
   }
 
   &:focus {
