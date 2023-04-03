@@ -1,0 +1,39 @@
+/**
+ * Condensed form elements
+ */
+
+.form-mini {
+
+  font-size: 0.875rem;
+  margin: 0;
+
+  label {
+    margin: 0.25rem;
+  }
+
+  input,
+  select, 
+  textarea {
+    padding: 0.25rem 0.5rem;
+    box-shadow: none;
+    border: solid 1px var(--vibrant-steel);
+    margin: 0 0 0.5rem;
+    width: auto;
+    font-size: 0.9rem;
+  }
+
+  select {
+    padding-right: 1.75rem;
+    background-position: center right .25rem;
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    margin: 0;
+  }
+
+  input[type="checkbox"] ~ label, input[type="radio"] ~ label {
+    margin: 0 0.75rem 0 0.125rem;
+  }
+
+}

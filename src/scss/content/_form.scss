@@ -162,11 +162,16 @@ textarea {
   font-weight: var(--font-weight);
   transition: background-color var(--transition), border-color var(--transition), color var(--transition), box-shadow var(--transition);
   padding: var(--form-element-padding);
+  margin-bottom: var(--spacing);
+
+  &::placeholder {
+    color: var(--c7);
+  }
 }
 
 // Textarea
 textarea {
-  border-radius: 1rem;
+  border-radius: 0.5rem;
 }
 
 // Active & Focus
@@ -255,13 +260,6 @@ select:invalid {
   opacity: 0.6;
 }
 
-// Margin bottom (Not Checkboxes and Radios)
-input:not([type="checkbox"]):not([type="radio"]),
-select,
-textarea {
-  margin-bottom: var(--spacing);
-}
-
 // Select
 select {
 
@@ -275,6 +273,7 @@ select {
   background-size: 1.5rem auto;
   background-position: center right 0.75rem;
   background-repeat: no-repeat;
+  padding-right: 2.25rem;
 }
 
 // Helper
