@@ -33,7 +33,7 @@
   },
   "homepage": "https://github.com/SDFIdk/design-system-css#readme",
   "devDependencies": {
-    "@dataforsyningen/icons": "^0.1.31",
+    "@dataforsyningen/icons": "^0.5.0",
     "esbuild": "^0.15.10",
     "sass": "^1.53.0"
   }
