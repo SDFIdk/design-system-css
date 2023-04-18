@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en" data-theme="light"> <!-- Remember correct lang attribute -->    
+  <head>
+
+    <!-- You always need this -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,user-scalable=yes">
+    <title>Design system example</title>
+
+    <!-- Icon and design system CSS -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Highlight.js CSS -->
+    <link rel="stylesheet" href="css/highlight.min.css">
+
+    <link rel="icon" href="img/logo-simple-micro.svg">
+
+    <style>
+      /* Custom CSS for this page*/
+      
+    </style>
+
+  </head>
+  <body>
+
+    <header>
+      <div class="ds-margin">
+        <h1>Layout-demo: Smal/bred spalter</h1>
+        <p class="blockquote">
+          Spalter er sat med <code>class="ds-grid-1-2"</code>
+        </p>
+        <p><a href="index.html#grid">Tilbage til layouts</a></p>
+      </div>
+    </header>
+
+    <main id="ex-layout" style="flex-grow: 1; display: flex; flex-flow: column nowrap;">
+
+      <section class="ds-grid-1-2 ds-margin">
+
+        <article class="ds-padding">
+          <h2>Smal spalte</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </article>
+
+        <article class="ds-padding">
+          <h2>Bred spalte</h2>
+          <p>Primær Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </article>
+
+      </section>
+
+    </main>
+
+    <aside>
+      <code-example class="ds-margin" data-snip="ex-layout"></code-example>
+    </aside>
+    
+    <footer class="ds-footer">
+      <div class="ds-container-fluid ds-margin">
+        <h2 class="ds-logo-responsive ds-logo-pull-left">
+          <strong>Insæt navn her</strong>
+          <span>Styrelsen for Dataforsyning og Infrastruktur</span>
+        </h2>
+        <hr>
+        <p>© 2023 Styrelsen for Dataforsyning og Infrastruktur</p>
+      </div>
+    </footer>
+
+    <script src="js/code-example-component.js"></script>
+    <script src="js/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll()
+    </script>
+
+  </body>
+</html>

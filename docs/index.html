@@ -99,6 +99,67 @@
 
     <div class="ds-container-fluid ds-grid ds-margin">
 
+      <div>
+
+        <h2 >Indholdsfortegnelse</h2>
+
+        <div style="position: sticky; top: 1.5rem; overflow-y: auto;">
+
+          <fieldset class="theme-switch">
+            <span class="ds-icon-sider-icon-lab"></span>
+            <p>
+              <input id="theme-auto" type="radio" name="theme" value="" checked>
+              <label for="theme-auto">Auto</label>
+            </p>
+            <p>
+              <input id="theme-light" type="radio" name="theme" value="light">
+              <label for="theme-light">Lys</label>
+            </p>
+            <p>
+              <input id="theme-dark" type="radio" name="theme" value="dark">
+              <label for="theme-dark">Mørk</label>
+            </p>
+          </fieldset>
+
+          <hr>
+
+          <h3>Basis</h3>
+          <nav class="ds-nav-vertical">
+            <ul>
+              <li><a href="#typografi">Typografi</a></li>
+              <li><a href="#farver">Farver</a></li>
+              <li><a href="#knapper">Knapper</a></li>
+              <li><a href="#formular">Formularer og inputfelter</a></li>
+              <li><a href="#icons">Ikoner</a></li>
+              <li><a href="#logos">Logo</a></li>
+              <li><a href="#tabeller">Tabeller</a></li>
+              <li><a href="#lists">Lister</a></li>
+            </ul>
+          </nav>
+
+          <h3>Layout</h3>
+          <nav class="ds-nav-vertical">
+            <ul>
+              <li><a href="#grid">Grid</a></li>
+              <li><a href="#footer-layout">Footer</a></li>
+              <li><a href="#navs">Navigation</a></li>
+            </ul>
+          </nav>
+
+          <h3>UI-komponenter</h3>
+          <nav class="ds-nav-vertical">
+            <ul>
+              <li><a href="#cards">Cards</a></li>
+              <li><a href="#tabs">Tabs</a></li>
+              <li><a href="#dialog">Dialogboks</a></li>
+              <li><a href="#togglepanel">Skjult panel</a></li>
+              <li><a href="#spinner">Loading spinner</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+
       <!-- Content goes here -->
       <main class="ds-grid-item-large">
 
@@ -519,7 +580,11 @@
 
   <h2>Layout</h2>
 
-  <p>Vi har lavet nogle eksempler, hvor du kan se forskellige layout-teknikker i praksis.<br> <a href="layout0.html">Se eksempelside.</a></p>
+  <p>Vi har lavet nogle eksempler, hvor du kan se forskellige layout-teknikker i praksis.</p>
+  <ul>
+    <li><a href="layout0.html">Se simpelt layout-eksempel</a></li>
+    <li><a href="layout6.html">Se avanceret layout-eksempel (med ikoner, etc.)</a></li>
+  </ul>
   <p>Herunder kan du finde flere detaljer om, hvordan du nemt laver layouts i SDFI-stil.</p>
 
   <h3>Kolonner og grids</h3>
@@ -646,6 +711,27 @@
   <p>Her kan du også bruge CSS custom properties <code>--optical-padding</code> og <code>--optical-margin</code> til mere specialiserede layouts.</p>
 
 </section>
+<article id="footer-layout">
+  <h2>Footer layout</h2>
+
+  <p>Her er en standard footer, som kan placeres i bunden af en webside.</p>
+
+  <div id="ex-footer-1">
+    <footer class="ds-footer">
+      <div class="ds-container-fluid ds-margin">
+        <h2 class="ds-logo-responsive ds-logo-pull-left">
+          <strong>Insæt navn her</strong>
+          <span>Styrelsen for Dataforsyning og Infrastruktur</span>
+        </h2>
+        <hr>
+        <p>© 2023 Styrelsen for Dataforsyning og Infrastruktur</p>
+      </div>
+    </footer>
+  </div>
+
+  <code-example data-snip="ex-footer-1"></code-example>
+
+</article>
 <section id="navs">
   
   <h2>Navigationselementer</h2>
@@ -1127,57 +1213,16 @@
 </section>
       </main>
 
-      <div>
-        <h2 >Indholdsfortegnelse</h2>
-
-        <div style="position: sticky; top: 1.5rem;">
-
-          <fieldset class="theme-switch">
-            <span class="ds-icon-sider-icon-lab"></span>
-            <p>
-              <input id="theme-auto" type="radio" name="theme" value="" checked>
-              <label for="theme-auto">Auto</label>
-            </p>
-            <p>
-              <input id="theme-light" type="radio" name="theme" value="light">
-              <label for="theme-light">Lys</label>
-            </p>
-            <p>
-              <input id="theme-dark" type="radio" name="theme" value="dark">
-              <label for="theme-dark">Mørk</label>
-            </p>
-          </fieldset>
-
-          <hr>
-
-          <nav class="ds-nav-vertical">
-            <ul>
-              <li><a href="#typografi">Typografi</a></li>
-              <li><a href="#farver">Farver</a></li>
-              <li><a href="#knapper">Knapper</a></li>
-              <li><a href="#formular">Formularer og inputfelter</a></li>
-              <li><a href="#grid">Layout</a></li>
-              <li><a href="#navs">Navigation</a></li>
-              <li><a href="#tabs">Tabs</a></li>
-              <li><a href="#icons">Ikoner</a></li>
-              <li><a href="#logos">Logo</a></li>
-              <li><a href="#cards">Cards</a></li>
-              <li><a href="#tabeller">Tabeller</a></li>
-              <li><a href="#lists">Lister</a></li>
-              <li><a href="#dialog">Dialogboks</a></li>
-              <li><a href="#togglepanel">Skjult panel</a></li>
-              <li><a href="#spinner">Loading spinner</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-
     </div>
     
-    <footer style="background-color: var(--medium-steel);" data-theme="light">
+    <footer class="ds-footer">
       <div class="ds-container-fluid ds-margin">
-        <p>© 2022 Styrelsen for Dataforsyning og Infrastruktur</p>
-        <p style="margin-left: -1rem;"><span class="ds-icon-icon-github"></span> <a href="https://github.com/SDFIdk/design-system-css">Find os på Github</a></p>
+        <h2 class="ds-logo-responsive ds-logo-pull-left">
+          <strong>Designsystem</strong>
+          <span>Styrelsen for Dataforsyning og Infrastruktur</span>
+        </h2>
+        <hr>
+        <p>© 2023 Styrelsen for Dataforsyning og Infrastruktur - <a href="https://github.com/SDFIdk/design-system-css">Find os på Github</a> <span class="ds-icon-icon-github"></span></p>
       </div>
     </footer>
 
