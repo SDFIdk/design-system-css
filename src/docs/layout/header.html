@@ -73,12 +73,27 @@
       .theme-switch label {
         margin-right: 0.5rem;
       }
+
+      @media screen and (max-width: 65rem) {
+
+      }
+
+      @media screen and (min-width: 65rem) {
+
+        .index-wrapper {
+          position: sticky; 
+          top: 1.5rem; 
+          overflow-y: auto; 
+          height: calc(100vh - 1.5rem); 
+          padding-bottom: 2rem;
+        }
+      }
     </style>
 
   </head>
   <body>
 
-    <header data-theme="dark" id="header" style="margin-bottom: var(--typography-spacing-vertical); border-bottom: solid 1px var(--tyrkis);">
+    <header data-theme="dark" id="header" class="ds-header">
 
       <div class="ds-container-fluid ds-margin">
 
@@ -87,23 +102,20 @@
           <span>Styrelsen for Dataforsyning og Infrastruktur</span>
         </p>  
       
-
-        <div style="padding: 3rem 0 0;">
-          <h1>Designguide eksempler</h1>
-          <p class="blockquote" style="margin: 0;">Reference-implementationer af SDFIs designguide med HTML/CSS</p>
-        </div>
+        <h1>Designguide eksempler</h1>
+        <p class="blockquote">Reference-implementationer af SDFIs designguide med HTML/CSS</p>
 
       </div>
 
     </header>
 
+    <hr style="margin: 0;">
+
     <div class="ds-container-fluid ds-grid ds-margin">
 
-      <div>
+      <div class="index-wrapper">
 
-        <h2 >Indholdsfortegnelse</h2>
-
-        <div style="position: sticky; top: 1.5rem; overflow-y: auto;">
+        <h2>Indholdsfortegnelse</h2>
 
           <fieldset class="theme-switch">
             <span class="ds-icon-sider-icon-lab"></span>
@@ -141,6 +153,7 @@
           <nav class="ds-nav-vertical">
             <ul>
               <li><a href="#grid">Grid</a></li>
+              <li><a href="#header-layout">Header</a></li>
               <li><a href="#footer-layout">Footer</a></li>
               <li><a href="#navs">Navigation</a></li>
             </ul>
@@ -156,7 +169,7 @@
               <li><a href="#spinner">Loading spinner</a></li>
             </ul>
           </nav>
-        </div>
+        
       </div>
 
 

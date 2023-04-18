@@ -73,12 +73,27 @@
       .theme-switch label {
         margin-right: 0.5rem;
       }
+
+      @media screen and (max-width: 65rem) {
+
+      }
+
+      @media screen and (min-width: 65rem) {
+
+        .index-wrapper {
+          position: sticky; 
+          top: 1.5rem; 
+          overflow-y: auto; 
+          height: calc(100vh - 1.5rem); 
+          padding-bottom: 2rem;
+        }
+      }
     </style>
 
   </head>
   <body>
 
-    <header data-theme="dark" id="header" style="margin-bottom: var(--typography-spacing-vertical); border-bottom: solid 1px var(--tyrkis);">
+    <header data-theme="dark" id="header" class="ds-header">
 
       <div class="ds-container-fluid ds-margin">
 
@@ -87,23 +102,20 @@
           <span>Styrelsen for Dataforsyning og Infrastruktur</span>
         </p>  
       
-
-        <div style="padding: 3rem 0 0;">
-          <h1>Designguide eksempler</h1>
-          <p class="blockquote" style="margin: 0;">Reference-implementationer af SDFIs designguide med HTML/CSS</p>
-        </div>
+        <h1>Designguide eksempler</h1>
+        <p class="blockquote">Reference-implementationer af SDFIs designguide med HTML/CSS</p>
 
       </div>
 
     </header>
 
+    <hr style="margin: 0;">
+
     <div class="ds-container-fluid ds-grid ds-margin">
 
-      <div>
+      <div class="index-wrapper">
 
-        <h2 >Indholdsfortegnelse</h2>
-
-        <div style="position: sticky; top: 1.5rem; overflow-y: auto;">
+        <h2>Indholdsfortegnelse</h2>
 
           <fieldset class="theme-switch">
             <span class="ds-icon-sider-icon-lab"></span>
@@ -141,6 +153,7 @@
           <nav class="ds-nav-vertical">
             <ul>
               <li><a href="#grid">Grid</a></li>
+              <li><a href="#header-layout">Header</a></li>
               <li><a href="#footer-layout">Footer</a></li>
               <li><a href="#navs">Navigation</a></li>
             </ul>
@@ -156,7 +169,7 @@
               <li><a href="#spinner">Loading spinner</a></li>
             </ul>
           </nav>
-        </div>
+        
       </div>
 
 
@@ -580,12 +593,12 @@
 
   <h2>Layout</h2>
 
+  <p>Herunder kan du finde flere detaljer om, hvordan du nemt laver layouts i SDFI-stil.</p>
   <p>Vi har lavet nogle eksempler, hvor du kan se forskellige layout-teknikker i praksis.</p>
   <ul>
     <li><a href="layout0.html">Se simpelt layout-eksempel</a></li>
     <li><a href="layout6.html">Se avanceret layout-eksempel (med ikoner, etc.)</a></li>
   </ul>
-  <p>Herunder kan du finde flere detaljer om, hvordan du nemt laver layouts i SDFI-stil.</p>
 
   <h3>Kolonner og grids</h3>
 
@@ -710,6 +723,20 @@
 
   <p>Her kan du også bruge CSS custom properties <code>--optical-padding</code> og <code>--optical-margin</code> til mere specialiserede layouts.</p>
 
+  <h3>Simpel rækkevisning</h3>
+  <p>Brug class <code>ds-flex-row</code>, hvis du blot vil vise to elementer ved siden af hinanden og være centreret i højden.</p>
+  <p class="ds-flex-row">
+    <button>En knap</button>
+    <span>Et tekstelement</span>
+  </p>
+  <pre><code>
+    &lt;p class="ds-flex-row">
+      &lt;button>En knap&lt;/button>
+      &lt;span>Et tekstelement&lt;/span>
+    &lt;/p>
+  </code></pre>
+  
+
 </section>
 <article id="footer-layout">
   <h2>Footer layout</h2>
@@ -732,7 +759,31 @@
   <code-example data-snip="ex-footer-1"></code-example>
 
 </article>
-<section id="navs">
+<article id="header-layout">
+  <style>
+    #ex-header-1 {
+      border-top: solid 1px var(--vibrant-steel);
+      border-bottom: solid 1px var(--vibrant-steel);
+    }
+  </style>
+  <h2>Header layout</h2>
+  <p>Her er en standard header, som kan placeres i toppen af en webside.</p>
+  <div id="ex-header-1">
+    <header class="ds-header">
+      <div class="ds-container-fluid ds-margin">
+        <p class="ds-logo-responsive ds-logo-pull-left">
+          <strong>Dataforsyningen</strong>
+          <span>Styrelsen for Dataforsyning og Infrastruktur</span>
+        </p>  
+        <h1>Designguide eksempler</h1>
+        <p class="blockquote">Reference-implementationer af SDFIs designguide med HTML/CSS</p>
+      </div>
+    </header>
+  </div>
+
+  <code-example data-snip="ex-header-1"></code-example>
+
+</article><section id="navs">
   
   <h2>Navigationselementer</h2>
 

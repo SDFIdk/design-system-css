@@ -13,12 +13,12 @@
 
   <h2>Layout</h2>
 
+  <p>Herunder kan du finde flere detaljer om, hvordan du nemt laver layouts i SDFI-stil.</p>
   <p>Vi har lavet nogle eksempler, hvor du kan se forskellige layout-teknikker i praksis.</p>
   <ul>
     <li><a href="layout0.html">Se simpelt layout-eksempel</a></li>
     <li><a href="layout6.html">Se avanceret layout-eksempel (med ikoner, etc.)</a></li>
   </ul>
-  <p>Herunder kan du finde flere detaljer om, hvordan du nemt laver layouts i SDFI-stil.</p>
 
   <h3>Kolonner og grids</h3>
 
@@ -142,5 +142,19 @@
   </code></pre>
 
   <p>Her kan du også bruge CSS custom properties <code>--optical-padding</code> og <code>--optical-margin</code> til mere specialiserede layouts.</p>
+
+  <h3>Simpel rækkevisning</h3>
+  <p>Brug class <code>ds-flex-row</code>, hvis du blot vil vise to elementer ved siden af hinanden, og de skal være centreret i højden.<br> F.eks.:</p>
+  <p class="ds-flex-row">
+    <button>En knap</button>
+    <span>Et tekstelement</span>
+  </p>
+  <pre><code>
+    &lt;p class="ds-flex-row">
+      &lt;button>En knap&lt;/button>
+      &lt;span>Et tekstelement&lt;/span>
+    &lt;/p>
+  </code></pre>
+  
 
 </section>
