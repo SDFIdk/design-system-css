@@ -120,7 +120,7 @@
   --accordion-open-summary-color: var(--muted-color);
 
   // Card
-  --card-background-color: var(--hvid);
+  --card-background-color: var(--c9);
   --card-border-color: var(--vibrant-steel);
   
   // Dropdown (<details role="list">)
@@ -165,4 +165,7 @@
   label {
     font-weight: 400;
   }
+
+  // Footer
+  --footer-background: var(--c8);
 }
