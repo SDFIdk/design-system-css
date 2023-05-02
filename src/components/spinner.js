@@ -5,14 +5,16 @@ export class Spinner extends HTMLElement {
   // Properties
   style = `
     :host {
-      display: block;
       width: 100%;
       height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     svg {
       width: 100%;
       height: auto;
-      max-width: 10rem;
+      max-width: 12rem;
     }
     
   `
