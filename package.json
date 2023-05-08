@@ -1,6 +1,6 @@
 {
   "name": "@dataforsyningen/css",
-  "version": "1.7.2",
+  "version": "1.8.0",
   "description": "Cascading style sheets (CSS) implementation of SDFI designguide.",
   "main": "index.scss",
   "scripts": {
