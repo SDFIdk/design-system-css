@@ -31,6 +31,21 @@ td {
   text-align: start;
 }
 
+th {
+  font-weight: 600;
+}
+
+// Header
+table caption {
+  @extend .blockquote;
+  display: table-caption;
+  text-align: left;
+  border-top: 3px solid var(--table-border-color);
+  border-bottom: var(--border-width) solid var(--table-border-color);
+  padding: 0.5rem 1rem;
+  margin: 0;
+}
+
 // Footer
 tfoot {
   th,

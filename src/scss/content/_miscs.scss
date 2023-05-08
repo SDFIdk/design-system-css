@@ -22,3 +22,18 @@ hr {
 template {
   display: none;
 }
+
+// Some reasonable defaults for images and figures
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+figure {
+  max-width: 100%;
+  margin: 0 0 var(--spacing);
+}
+
+figcaption {
+  font-size: smaller;
+}
