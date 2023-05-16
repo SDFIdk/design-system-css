@@ -2,7 +2,7 @@ dialog[open] {
   @include dark;
   border-radius: var(--space-sm);
   border-width: 0;
-  box-shadow: 0 var(--space-sm) var(--space-md) $grey-900;
+  box-shadow: 0 var(--space-sm) var(--space-md) hsla(0,0%,0%,0.33);
   margin: auto;
   padding: var(--space-md);
   background-color: var(--mork-tyrkis);
