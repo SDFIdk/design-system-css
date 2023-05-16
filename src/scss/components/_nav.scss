@@ -38,12 +38,12 @@ nav {
       padding: var(--space-sm) var(--space-md);
       margin: 0;
       border-radius: var(--space-lg);
-      border: none;
 
       &:hover,
       &:active {
         background-color: var(--primary);
         color: var(--primary-inverse);
+        text-decoration: none;
       }
 
       &:focus {
@@ -89,6 +89,7 @@ nav {
       border-color: var(--nav-tab-border) !important;
       background-color: transparent;
       color: var(--link-hover);
+      text-decoration: none;
     }
 
     &:focus {
@@ -110,6 +111,7 @@ nav {
   &:active {
     color: var(--link-hover);
     border-color: var(--nav-tab-border) !important;
+    text-decoration: none;
   }
 
   &:focus {
@@ -163,6 +165,7 @@ aside.ds-nav-tools {
     &:active {
       background-color: var(--aktion);
       color: var(--sort) !important;
+      text-decoration: none;
     }
 
     &::before {
