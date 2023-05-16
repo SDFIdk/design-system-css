@@ -39,7 +39,7 @@ kbd {
 code,
 kbd {
   display: inline-block;
-  padding: 0.375rem 0.5rem;
+  padding: var(--space-xs) var(--space-sm);
 }
 
 pre {
@@ -50,7 +50,7 @@ pre {
     display: block;
     padding: var(--space-md);
     background: none;
-    font-size: 14px;
+    font-size: calc(var(--font-size) * 0.875);
     line-height: var(--line-height);
   }
 }

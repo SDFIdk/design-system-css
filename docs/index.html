@@ -18,20 +18,22 @@
     <style>
       /* Custom CSS for this page*/
       code-example {
-        margin-bottom: var(--space);
+        margin: 0 0 var(--space-lg);
+        display: block;
       }
       .colorswatch {
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
-        gap: 1rem;
+        gap: var(--space);
+        margin: 0;
       }
       .colorswatch span:first-child {
-        width: 3rem;
-        height: 3rem;
+        width: var(--space-xl);
+        height: var(--space-xl);
         border-radius: 50%;
         display: inline-block;
-        flex: 0 0 3rem;
+        flex: 0 0 var(--space-xl);
       }
       .icon-list li {
         list-style: none;
@@ -44,8 +46,8 @@
         word-wrap: break-word;
       }
       .icon-list li > span:first-child {
-        flex: 0 0 3rem;
-        width: 3rem;
+        flex: 0 0 var(--space-xl);
+        width: var(--space-xl);
       }
       .icon-list code {
         overflow: auto;
@@ -53,7 +55,7 @@
       .bordered {
         padding: var(--padding);
         border: solid 1px var(--vibrant-steel);
-        border-radius: 0.125rem;
+        border-radius: var(--space-xxs);
       }
       .theme-switch {
         display: flex;
@@ -64,10 +66,10 @@
         margin: 0;
       }
       .theme-switch input {
-        margin-right: 0.125rem;
+        margin-right: var(--space-xxs);
       }
       .theme-switch label {
-        margin-right: 0.5rem;
+        margin-right: var(--space-xs);
       }
 
       @media screen and (max-width: 65rem) {
@@ -78,10 +80,10 @@
 
         .index-wrapper {
           position: sticky; 
-          top: 1.5rem; 
+          top: var(--space-lg); 
           overflow-y: auto; 
-          height: calc(100vh - 1.5rem); 
-          padding-bottom: 2rem;
+          height: calc(100vh - var(--space-lg)); 
+          padding-bottom: var(--space-xl);
         }
       }
     </style>
@@ -209,8 +211,6 @@
 </section><section id="farver">
 
   <h2>Farver</h2>
-  
-  <hr>
 
   <div class="ds-grid">
     <p class="colorswatch">
@@ -316,7 +316,9 @@
     </p>
   </div>
 
-  <div id="ex-color-3">
+  <hr>
+
+  <div id="ex-color-3" class="ds-mt">
     <article class="ds-padding" data-theme="light" style="background-color: var(--lys-steel);">
       <h3>Indhold med baggrundsfarve</h3>
       <p>
@@ -328,7 +330,7 @@
 
   <code-example data-snip="ex-color-3"></code-example>
 
-  <div id="ex-color-2">
+  <div id="ex-color-2" class="ds-mt">
     <article class="ds-padding" data-theme="light" style="background-color: var(--medium-steel);">
       <h3>Indhold med baggrundsfarve</h3>
       <p>
@@ -340,7 +342,7 @@
 
   <code-example data-snip="ex-color-2"></code-example>
 
-  <div id="ex-color-1">
+  <div id="ex-color-1" class="ds-mt">
     <article class="ds-padding" data-theme="dark">
       <h3>Indhold med mørk baggrundsfarve</h3>
       <p>Her har vi blot sat <code>data-theme="dark"</code> på elementet.</p>
@@ -786,7 +788,7 @@
 
   <p>Navigationselementer laves med <code>&lt;nav></code> elementet.</p>
 
-  <div class="ds-padding light-wrapper">
+  <div>
     
     <h3>Basic navigation</h3>
     <div id="ex-nav-5" class="bordered">

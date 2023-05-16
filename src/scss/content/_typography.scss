@@ -7,10 +7,6 @@
 // - sanitize.css v13.0.0 | CC0 1.0 Universal | github.com/csstools/sanitize.css
 // ––––––––––––––––––––
 
-p {
-  max-width: 44rem;
-}
-
 // Add the correct font weight in Chrome, Edge, and Safari
 b,
 strong {
@@ -58,7 +54,7 @@ code,
 kbd,
 samp {
   font-family: var(--font-family);
-  font-size: 0.875rem;
+  font-size: calc(var(--font-size) * 0.875);
   font-weight: 400;
   line-height: 1.3;
 }
@@ -113,6 +109,21 @@ a,
       --background-color: var(--contrast-focus);
     }
   }
+}
+
+// Paragraphs
+p {
+  max-width: 44rem;
+  margin-top: var(--space);
+  margin-bottom: var(--space);
+}
+
+p:first-child {
+  margin-top: 0;
+}
+
+p:last-child {
+  margin-bottom: 0;
 }
 
 // Headings
@@ -224,7 +235,7 @@ dl dd {
 
 // Highlighted text
 mark {
-  padding: 0.125rem 0.25rem;
+  padding: var(--space-xxs) var(--space-xs);
   background-color: var(--mark-background-color);
   color: var(--mark-color);
   vertical-align: baseline;

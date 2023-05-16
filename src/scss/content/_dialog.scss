@@ -1,10 +1,10 @@
 dialog[open] {
   @include dark;
-  border-radius: 0.5rem;
+  border-radius: var(--space-sm);
   border-width: 0;
-  box-shadow: 0 0.5rem 1.5rem $grey-900;
+  box-shadow: 0 var(--space-sm) var(--space-md) $grey-900;
   margin: auto;
-  padding: 1.5rem;
+  padding: var(--space-md);
   background-color: var(--mork-tyrkis);
   margin: var(--margin);
   width: auto;

@@ -40,7 +40,7 @@
 .ds-flexgrid {
   
   & > * {
-    margin: 1rem 0;
+    margin: var(--space-md) 0;
     width: 100%;
   }
 
@@ -48,19 +48,18 @@
     @media (min-width: map-get($breakpoints, "sm")) {
       display: flex; 
       flex-flow: row wrap; 
-      gap: 2rem;
+      gap: var(--space-lg);
 
       & > * {
         flex: 1 0 15rem;
         margin: 0;
-        //min-width: 15rem;
       }
     }
   }
 
   @if map-get($breakpoints, "md") {
     @media (min-width: map-get($breakpoints, "md")) { 
-      gap: 3.5rem;
+      gap: var(--space-xl);
     }
   }
 }

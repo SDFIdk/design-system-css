@@ -29,14 +29,14 @@
 }
 
 .ds-logo {
-  padding: 2rem 0 0 6rem;
-  min-height: 5rem;
+  padding: var(--space-lg) 0 0 var(--space-xxl);
+  min-height: var(--space-xxl);
   
   &::before {
-    height: 5rem;
-    width: 5rem;
+    height: var(--space-xxl);
+    width: var(--space-xxl);
     background-image: var(--ds-logo-big);
-    background-size: 5rem auto;
+    background-size: var(--space-xxl) auto;
     filter: var(--logo-filter);
   }
 
@@ -46,20 +46,20 @@
   }
 
   &.ds-logo-pull-left {
-    margin-left: -2.5rem;
+    margin-left: -(var(--space-xxl));
   }
 }
 
 .ds-logo-micro {
-  padding: 0.5rem 0 0 2.25rem;
-  min-height: 1.5rem;
+  padding: var(--space-sm) 0 0 var(--space-lg);
+  min-height: var(--space-md);
 
   &::before {
     background-image: var(--ds-logo-micro);
-    background-size: 1.5rem auto;
+    background-size: var(--space-md) auto;
     filter: var(--logo-filter);
-    height: 1.5rem;
-    width: 1.5rem;
+    height: var(--space-md);
+    width: var(--space-md);
   }
 
   & > *:first-child {
@@ -67,7 +67,7 @@
     --color: var(--black);
   }
   & > *:last-child {
-    font-size: 0.875rem;
+    font-size: calc(var(--font-size) * 0.875);
   }
 
   &.ds-logo-pull-left {

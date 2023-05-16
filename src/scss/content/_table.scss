@@ -42,7 +42,7 @@ table caption {
   text-align: left;
   border-top: 3px solid var(--table-border-color);
   border-bottom: var(--border-width) solid var(--table-border-color);
-  padding: 0.5rem 1rem;
+  padding: var(--space-sm) var(--space-md);
   margin: 0;
 }
 
