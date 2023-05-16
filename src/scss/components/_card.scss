@@ -3,10 +3,10 @@
  */
 
 .ds-card {
-  border-radius: 2rem;
+  border-radius: var(--space-lg);
   background: var(--card-background-color);
   box-shadow: var(--card-box-shadow);
-  border: solid .25rem var(--card-border-color);
+  border: solid var(--space-xs) var(--card-border-color);
   overflow: hidden;
   display: flex;
   flex-flow: column nowrap;

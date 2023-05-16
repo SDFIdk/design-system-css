@@ -6,9 +6,8 @@
 .grid,
 .ds-grid {
   display: grid;
-  gap: var(--grid-spacing);
+  gap: var(--space-md);
   grid-template-columns: minmax(15rem, 1fr);
-  margin-bottom: var(--grid-spacing);
 
 
   @if map-get($breakpoints, "sm") {
@@ -41,7 +40,7 @@
 .ds-flexgrid {
   
   & > * {
-    margin: 1rem 0;
+    margin: var(--space-md) 0;
     width: 100%;
   }
 
@@ -49,20 +48,18 @@
     @media (min-width: map-get($breakpoints, "sm")) {
       display: flex; 
       flex-flow: row wrap; 
-      gap: 2rem;
-      margin-bottom: var(--grid-spacing-horizontal);
+      gap: var(--space-lg);
 
       & > * {
         flex: 1 0 15rem;
         margin: 0;
-        //min-width: 15rem;
       }
     }
   }
 
   @if map-get($breakpoints, "md") {
     @media (min-width: map-get($breakpoints, "md")) { 
-      gap: 3.5rem;
+      gap: var(--space-xl);
     }
   }
 }
@@ -73,14 +70,14 @@
   @if map-get($breakpoints, "lg") {
     @media (max-width: map-get($breakpoints, "lg")) {
       & > * {
-        margin-bottom: var(--grid-spacing);
+        margin-bottom: var(--space-md);
       }
     }
 
     @media (min-width: map-get($breakpoints, "lg")) {
       display: grid;
-      gap: var(--grid-spacing);
-      margin-bottom: var(--grid-spacing);
+      gap: var(--space-md);
+      margin-bottom: var(--space-md);
     }
   }
 }
@@ -100,7 +97,7 @@
     @media (min-width: map-get($breakpoints, "lg")) {
       display: grid;
       grid-template-columns: 1fr 2fr;
-      gap: var(--grid-spacing);
+      gap: var(--space-md);
     }
   }
 }
@@ -110,7 +107,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  gap: 0.5rem;
+  gap: var(--space-sm);
 
   & > * {
     margin: 0;

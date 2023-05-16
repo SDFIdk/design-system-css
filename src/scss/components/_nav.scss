@@ -35,9 +35,9 @@ nav {
       @extend .h4;
       display: inline-block;
       color: var(--nav-link-color);
-      padding: 0.5em 1.5em;
+      padding: var(--space-sm) var(--space-md);
       margin: 0;
-      border-radius: 2.5rem;
+      border-radius: var(--space-lg);
       border: none;
 
       &:hover,
@@ -57,7 +57,7 @@ nav {
 // Main nav
 .ds-nav-main {
   li > * {
-    padding: 1.5rem 2rem;
+    padding: var(--space-md) var(--space-lg);
   }
 }
 
@@ -72,8 +72,8 @@ nav {
 
   li > * {
     margin: 0 0 -1px;
-    padding: 1rem 1.5rem;
-    border-bottom: solid 0.25rem transparent !important;
+    padding: var(--space) var(--space-md);
+    border-bottom: solid var(--space-xs) transparent !important;
   }
 
   a, 
@@ -102,9 +102,9 @@ nav {
 .ds-nav-tabs > a,
 .ds-nav-tabs > [role="link"] {
   @extend .h4;
-  padding: 1rem 1.5rem;
+  padding: var(--space) var(--space-md);
   margin: 0;
-  border-bottom: solid 0.25rem transparent !important;
+  border-bottom: solid var(--space-xs) transparent !important;
 
   &:hover,
   &:active {
@@ -132,8 +132,10 @@ aside,
     
     a {
       display: block;
-      margin-bottom: var(--spacing);
     }
+  }
+  li + li {
+    margin-top: var(--space-sm);
   }
 }
 
@@ -142,8 +144,8 @@ nav.ds-nav-tools,
 aside.ds-nav-tools {
   
   .ds-button-group {
-    border-radius: 2.5rem;  
-    border: solid .25rem var(--card-border-color);
+    border-radius: var(--space-lg);  
+    border: solid var(--space-xs) var(--card-border-color);
     justify-content: flex-start;
     align-items: center;
     background-color: var(--hvid);
@@ -154,18 +156,13 @@ aside.ds-nav-tools {
     background-color: transparent;
     border-color: transparent;
     color: var(--primary) !important;
-    min-height: 3rem;
-    min-width: 3rem;
+    min-height: var(--space-xl);
+    min-width: var(--space-xl);
 
     &:hover,
     &:active {
       background-color: var(--aktion);
       color: var(--sort) !important;
-    }
-
-    &:focus {
-      //background-color: $amber-400;
-      //color: var(--primary-inverse);
     }
 
     &::before {
@@ -183,11 +180,13 @@ aside.ds-nav-tools {
     border: none;
     background-color: var(--card-border-color);
     width: 1px;
-    height: 3rem;
-    margin: 0 0.25rem;
+    height: var(--space-xl);
+    margin: 0;
   }
 
   &.vertical {
+
+    --btn-pos: calc(var(--space) * 0.4);
 
     .ds-button-group {
       flex-flow: column nowrap;
@@ -196,9 +195,9 @@ aside.ds-nav-tools {
         display: block;
         border: none;
         background-color: var(--card-border-color);
-        width: 3rem;
+        width: var(--space-xl);
         height: 1px;
-        margin: 0.25rem 0;
+        margin: 0;
       }
 
       & > button,
@@ -206,20 +205,20 @@ aside.ds-nav-tools {
       & > a {
 
         &:first-child {
-          min-height: 3.25rem;
-          border-radius: 2.5rem 2.5rem 0 0;
+          min-height: var(--space-xl);
+          border-radius: var(--space-lg) var(--space-lg) 0 0;
           &::before {
-            top: .5rem;
-            left: .35rem;
+            top: var(--btn-pos);
+            left: var(--btn-pos);
           }
         }
 
         &:last-child {
-          min-height: 3.25rem;
-          border-radius: 0 0 2.5rem 2.5rem;
+          min-height: var(--space-xl);
+          border-radius: 0 0 var(--space-lg) var(--space-lg);
           &::before {
-            top: .25rem;
-            left: .35rem;
+            top: var(--btn-pos);
+            left: var(--btn-pos);
           }
         }
       }

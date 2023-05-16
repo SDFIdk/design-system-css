@@ -14,7 +14,7 @@ optgroup,
 select,
 textarea {
   margin: 0; // 2
-  font-size: 1rem; // 1
+  font-size: var(--font-zize); // 1
   line-height: var(--line-height); // 1
   font-family: inherit; // 1
   letter-spacing: inherit; // 2
@@ -107,17 +107,24 @@ textarea {
 
 // Fieldset
 fieldset {
-  margin: 0;
-  margin-bottom: var(--spacing);
+  margin: var(--space-md) 0;
   padding: 0;
   border: 0;
+}
+
+fieldset:first-child {
+  margin-top: 0;
+}
+
+fieldset:last-child {
+  margin-bottom: 0;
 }
 
 // Label & legend
 label,
 fieldset legend {
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--space-sm);
   font-weight: var(--font-weight);
 }
 
@@ -154,15 +161,14 @@ select,
 textarea {
   appearance: none;
   border: solid 1px var(--vibrant-steel);
-  border-radius: 2rem;
+  border-radius: var(--space-lg);
   outline: none;
   background-color: var(--c1);
   box-shadow: 0 0 0 3px var(--vibrant-steel);
   color: var(--c9);
   font-weight: var(--font-weight);
   transition: background-color var(--transition), border-color var(--transition), color var(--transition), box-shadow var(--transition);
-  padding: var(--form-element-padding);
-  margin-bottom: var(--spacing);
+  padding: var(--space-sm) var(--space);
 
   &::placeholder {
     color: var(--c7);
@@ -171,7 +177,7 @@ textarea {
 
 // Textarea
 textarea {
-  border-radius: 0.5rem;
+  border-radius: var(--space-sm);
 }
 
 // Active & Focus
@@ -214,12 +220,12 @@ textarea[disabled],
 :where(input, select, textarea) {
   &:not([type="checkbox"]):not([type="radio"]) {
     &[aria-invalid] {
-      padding-right: calc(var(--form-element-spacing-horizontal) + 1.5rem);
+      padding-right: calc(var(--form-element-spacing-horizontal) + var(--space-md));
       padding-left: var(--form-element-spacing-horizontal);
       padding-inline-start: var(--form-element-spacing-horizontal);
-      padding-inline-end: calc(var(--form-element-spacing-horizontal) + 1.5rem);
-      background-position: center right 0.75rem;
-      background-size: 1rem auto;
+      padding-inline-end: calc(var(--form-element-spacing-horizontal) + var(--space-md));
+      background-position: center right var(--space-sm);
+      background-size: var(--space) auto;
       background-repeat: no-repeat;
     }
 
@@ -270,10 +276,10 @@ select {
   }
 
   background-image: url("data:image/svg+xml;utf8,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M6%209L12%2015L18%209%22%20stroke%3D%22hsl(171%2C70%25%2C40%25)%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%3C%2Fsvg%3E%0A");
-  background-size: 1.5rem auto;
-  background-position: center right 0.75rem;
+  background-size: var(--space-md) auto;
+  background-position: center right calc(var(--space) * 0.75);
   background-repeat: no-repeat;
-  padding-right: 2.25rem;
+  padding-right: var(--space-lg);
 }
 
 // Helper
@@ -281,15 +287,7 @@ select {
   + small {
     display: block;
     width: 100%;
-    margin-top: calc(var(--spacing) * -0.75);
-    margin-bottom: var(--spacing);
+    margin-top: var(--space-xs);
     color: var(--muted-color);
-  }
-}
-
-// Styles for Input inside a label
-label {
-  > :where(input, select, textarea) {
-    margin-top: calc(var(--spacing) * 0.25);
   }
 }

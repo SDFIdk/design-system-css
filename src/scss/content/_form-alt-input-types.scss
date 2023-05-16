@@ -46,18 +46,18 @@
   background: none;
 
   @mixin file-selector-button {
-    margin-right: calc(var(--spacing) / 2);
+    margin-right: var(--space-sm);
     margin-left: 0;
     margin-inline-start: 0;
-    margin-inline-end: calc(var(--spacing) / 2);
-    padding: 0.5rem 1rem;
+    margin-inline-end: var(--space-sm);
+    padding: var(--space-sm) var(--space);
     background-color: transparent;
     color: var(--secondary-inverse) !important;
     border: solid 1px var(--dark-steel);
-    border-radius: 2.5rem;
+    border-radius: var(--space-lg);
     outline: none;
     font-weight: var(--font-weight);
-    font-size: 1rem;
+    font-size: var(--font-size);
     line-height: var(--line-height);
     text-align: center;
     cursor: pointer;
@@ -125,8 +125,8 @@
   // Slider Thumb
   @mixin slider-thumb {
     -webkit-appearance: none;
-    width: 1.5rem;
-    height: 1.5rem;
+    width: var(--space-md);
+    height: var(--space-md);
     border: none;
     border-radius: 50%;
     background-color: var(--aktion);
@@ -135,7 +135,7 @@
   }
   &::-webkit-slider-thumb {
     @include slider-thumb;
-    margin-top: -0.66rem;
+    margin-top: (calc(var(--space) * -0.66));
   }
 
   &::-moz-range-thumb {
@@ -173,10 +173,10 @@
 // Search
 input[type="search"] {
 
-  padding-right: 2.5rem;
+  padding-right: var(--space-lg);
   background-image: url('data:image/svg+xml;utf8,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M19.5%2019.5L16.5%2016.5M18%2012C18%2015.3137%2015.3137%2018%2012%2018C8.68629%2018%206%2015.3137%206%2012C6%208.68629%208.68629%206%2012%206C15.3137%206%2018%208.68629%2018%2012Z%22%20stroke%3D%22hsl(186%2C100%25%2C33%25)%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%3C%2Fsvg%3E%0A');
-  background-position: right 0.5rem center;
-  background-size: 2rem auto;
+  background-position: right var(--space-sm) center;
+  background-size: var(--space-lg) auto;
   background-repeat: no-repeat;
 
   &[aria-invalid="false"] {
@@ -194,19 +194,5 @@ input[type="search"] {
   &::-webkit-search-cancel-button {
     -webkit-appearance: none;
     display: none;
-  }
-}
-
-[dir="rtl"] {
-  :where(input) {
-    &:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="file"]) {
-      &[type="search"] {
-        background-position: center right 1.125rem;
-        
-        &[aria-invalid] {
-          background-position: center right 1.125rem, center left 0.75rem;
-        }
-      }
-    }
   }
 }

@@ -2,15 +2,15 @@
 
   .ds-logo,
   .ds-logo-responsive {
-    margin-bottom: 3.5rem;
+    margin-bottom: var(--space-xl);
   }
 
   h1 {
-    margin: 0 0 1rem;
+    margin: 0 0 var(--space-md);
   }
   
   blockquote,
   .blockquote {
-    margin: 1rem 0;
+    margin: var(--space-md) 0;
   }
 }

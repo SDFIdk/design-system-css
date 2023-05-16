@@ -1,6 +1,6 @@
 /**
  * Sectioning
- * Container and responsive spacings for header, main, footer
+ * Container and responsive spacings for header, main, footer, section
  */
 
 // Reboot based on :
@@ -27,44 +27,5 @@ body {
     width: 100%;
     margin-right: auto;
     margin-left: auto;
-
-    // Semantic container
-    @if $enable-semantic-container {
-      padding: var(--block-spacing-vertical) var(--block-spacing-horizontal);
-
-      // Centered viewport
-      @if $enable-viewport {
-        @if map-get($breakpoints, "sm") and $enable-viewport {
-          @media (min-width: map-get($breakpoints, "sm")) {
-            max-width: map-get($viewports, "sm");
-            padding-right: 0;
-            padding-left: 0;
-          }
-        }
-
-        @if map-get($breakpoints, "md") and $enable-viewport {
-          @media (min-width: map-get($breakpoints, "md")) {
-            max-width: map-get($viewports, "md");
-          }
-        }
-
-        @if map-get($breakpoints, "lg") and $enable-viewport {
-          @media (min-width: map-get($breakpoints, "lg")) {
-            max-width: map-get($viewports, "lg");
-          }
-        }
-
-        @if map-get($breakpoints, "xl") and $enable-viewport {
-          @media (min-width: map-get($breakpoints, "xl")) {
-            max-width: map-get($viewports, "xl");
-          }
-        }
-      }
-    }
-
-    // Semantic container
-    @else {
-      padding: var(--block-spacing-vertical) 0;
-    }
   }
 }

@@ -3,6 +3,8 @@
  * Utility classes for margins, paddings, etc.
  */
 
+/* General paddings */
+.ds-p,
 .ds-padding {
   padding: var(--padding);
 
@@ -15,8 +17,69 @@
   padding: var(--optical-padding);
 }
 
+/* General margins */
+.ds-m,
 .ds-margin {
-  padding: var(--margin);
+  padding: var(--space-md);
+}
+
+/* Vertical margins */
+.ds-mt,
+.ds-mt-md {
+  margin-top: var(--space-md);
+}
+
+.ds-mt-xxs {
+  margin-top: var(--space-xxs);
+}
+
+.ds-mt-xs {
+  margin-top: var(--space-xs);
+}
+
+.ds-mt-sm {
+  margin-top: var(--space-sm);
+}
+
+.ds-mt-lg {
+  margin-top: var(--space-lg);
+}
+
+.ds-mt-xl {
+  margin-top: var(--space-xl);
+}
+
+.ds-mt-xxl {
+  margin-top: var(--space-xxl);
+}
+
+.ds-mb, 
+.ds-mb-md {
+  margin-bottom: var(--space-md);
+}
+
+.ds-mb-xxs {
+  margin-bottom: var(--space-xxs);
+}
+
+.ds-mb-xs {
+  margin-bottom: var(--space-xs);
+}
+
+.ds-mb-sm {
+  margin-bottom: var(--space-sm);
+}
+
+.ds-mb-lg {
+  margin-bottom: var(--space-lg);
+}
+
+.ds-mb-xl {
+  margin-bottom: var(--space-xl);
+}
+
+.ds-mb-xxl {
+  margin-bottom: var(--space-xxl);
 }
 
 .ds-optical-margin {

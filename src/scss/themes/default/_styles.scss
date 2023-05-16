@@ -12,48 +12,38 @@
   --font-size: 100%;
   --font-style: normal;
 
-  // Margins, paddings
-  --margin: 1rem;
-  --padding: 1.5rem 1rem 2rem;
-  --optical-padding: 0 0.25rem;
-  --optical-margin: 0 -0.25rem;
-
   // Spacings
-  --spacing: 1rem;
-  --map-element-spacing: 1.5rem 1rem 2rem;
+  --space: 1rem;
+  --space-xxs:  calc(0.125 * var(--space));
+  --space-xs:   calc(0.25 * var(--space));
+  --space-sm:   calc(0.5 * var(--space));
+  --space-md:   calc(1.5 * var(--space));
+  --space-lg:   calc(2 * var(--space));
+  --space-xl:   calc(3.5 * var(--space));
+  --space-xxl:  calc(5 * var(--space));
+
+  // Margins, paddings
+  --margin: var(--space-md);
+  --padding: var(--space-md) var(--space) var(--space-lg);
+
+  --optical-padding: 0 var(--space-xs);
+  --optical-margin: 0 -(var(--space-xs));
+  
+  --map-element-spacing: var(--space-md) var(--space) var(--space-lg);
   --modal-margin: 3.5vw 5vw;
-
-  // Spacings for typography elements
-  --typography-spacing-vertical: 1rem;
-  --typography-spacing-vertical-top: 2rem;
-  --typography-spacing-vertical-bottom: 1rem;
-
-  // Spacing for grids
-  --grid-spacing: 1rem;
-  --grid-spacing-vertical: var(--grid-spacing);
-  --grid-spacing-horizontal: var(--grid-spacing);
 
   // Responsive typography and spacing
   @if map-get($breakpoints, "sm") {
     @media (min-width: map-get($breakpoints, "sm")) {
-      --margin: 2rem 3rem;
-      --margin-vertical: 2rem;
-      --grid-spacing: 2rem;
-      --grid-spacing-vertical: var(--grid-spacing);
-      --grid-spacing-horizontal: var(--grid-spacing);
-      --map-element-spacing: 1.5rem 2rem 2rem;
-      --typography-spacing-vertical: 1.5rem;
+      --margin: var(--space-lg) var(--space-xl);
+      --map-element-spacing: var(--space-md) var(--space-lg) var(--space-lg);
     }
   }
 
   @if map-get($breakpoints, "md") {
     @media (min-width: map-get($breakpoints, "md")) {
-      --margin: 3.5rem 5rem;
-      --margin-vertical: 3.5rem;
-      --grid-spacing: 3.5rem;
-      --grid-spacing-vertical: var(--grid-spacing);
-      --grid-spacing-horizontal: var(--grid-spacing);
-      --map-element-spacing: 1.5rem 3.5rem 2rem;
+      --margin: var(--space-xl) var(--space-xxl);
+      --map-element-spacing: var(--space-md) var(--space-xl) var(--space-lg);
     }
   }
 
@@ -65,19 +55,10 @@
 
 
   // Borders
-  --border: solid 0.125rem var(--border-color);
-  --border-radius: 0.25rem;
+  --border: solid var(--space-xxs) var(--border-color);
+  --border-radius: (--space-xs);
   --border-width: 1px;
   --outline-width: 3px;
-
-  // Spacings for form elements and button
-  --form-element-padding: 0.5rem 1rem;
-
-  // Spacings for nav component
-  --nav-element-spacing-vertical: 1rem;
-  --nav-element-spacing-horizontal: 0.5rem;
-  --nav-link-spacing-vertical: 0.5rem;
-  --nav-link-spacing-horizontal: 0.5rem;
 
   // Transitions
   --transition: 0.2s ease-in-out;

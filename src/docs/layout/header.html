@@ -18,20 +18,26 @@
     <style>
       /* Custom CSS for this page*/
       code-example {
-        margin-bottom: var(--spacing);
+        margin: 0 0 var(--space-lg);
+        display: block;
+      }
+      * + section,
+      * + article {
+        margin-top: var(--space-lg);
       }
       .colorswatch {
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
-        gap: 1rem;
+        gap: var(--space);
+        margin: 0;
       }
       .colorswatch span:first-child {
-        width: 3rem;
-        height: 3rem;
+        width: var(--space-xl);
+        height: var(--space-xl);
         border-radius: 50%;
         display: inline-block;
-        flex: 0 0 3rem;
+        flex: 0 0 var(--space-xl);
       }
       .icon-list li {
         list-style: none;
@@ -40,38 +46,35 @@
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
-        gap: var(--spacing);
+        gap: var(--space);
         word-wrap: break-word;
       }
       .icon-list li > span:first-child {
-        flex: 0 0 3rem;
-        width: 3rem;
+        flex: 0 0 var(--space-xl);
+        width: var(--space-xl);
       }
       .icon-list code {
         overflow: auto;
       }
-      section {
-        margin-bottom: var(--typography-spacing-vertical);
-      }
       .bordered {
         padding: var(--padding);
         border: solid 1px var(--vibrant-steel);
-        border-radius: 0.125rem;
-        margin-bottom: var(--typography-spacing-vertical);
+        border-radius: var(--space-xxs);
       }
       .theme-switch {
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
+        gap: var(--space);
       }
       .theme-switch p {
         margin: 0;
       }
       .theme-switch input {
-        margin-right: 0.125rem;
+        margin-right: var(--space-xxs);
       }
       .theme-switch label {
-        margin-right: 0.5rem;
+        margin-right: var(--space-xs);
       }
 
       @media screen and (max-width: 65rem) {
@@ -82,10 +85,10 @@
 
         .index-wrapper {
           position: sticky; 
-          top: 1.5rem; 
+          top: var(--space-lg); 
           overflow-y: auto; 
-          height: calc(100vh - 1.5rem); 
-          padding-bottom: 2rem;
+          height: calc(100vh - var(--space-lg)); 
+          padding-bottom: var(--space-xl);
         }
       }
     </style>
@@ -117,62 +120,63 @@
 
         <h2>Indholdsfortegnelse</h2>
 
-          <fieldset class="theme-switch">
-            <span class="ds-icon-sider-icon-lab"></span>
-            <p>
-              <input id="theme-auto" type="radio" name="theme" value="" checked>
-              <label for="theme-auto">Auto</label>
-            </p>
-            <p>
-              <input id="theme-light" type="radio" name="theme" value="light">
-              <label for="theme-light">Lys</label>
-            </p>
-            <p>
-              <input id="theme-dark" type="radio" name="theme" value="dark">
-              <label for="theme-dark">Mørk</label>
-            </p>
-          </fieldset>
+        <fieldset class="theme-switch">
+          <span class="ds-icon-sider-icon-lab"></span>
+          <p>
+            <input id="theme-auto" type="radio" name="theme" value="" checked>
+            <label for="theme-auto">Auto</label>
+          </p>
+          <p>
+            <input id="theme-light" type="radio" name="theme" value="light">
+            <label for="theme-light">Lys</label>
+          </p>
+          <p>
+            <input id="theme-dark" type="radio" name="theme" value="dark">
+            <label for="theme-dark">Mørk</label>
+          </p>
+        </fieldset>
 
-          <hr>
+        <hr>
 
-          <h3>Basis</h3>
-          <nav class="ds-nav-vertical">
-            <ul>
-              <li><a href="#typografi">Typografi</a></li>
-              <li><a href="#farver">Farver</a></li>
-              <li><a href="#knapper">Knapper</a></li>
-              <li><a href="#formular">Formularer og inputfelter</a></li>
-              <li><a href="#icons">Ikoner</a></li>
-              <li><a href="#logos">Logo</a></li>
-              <li><a href="#images">Billeder og figurer</a></li>
-              <li><a href="#tabeller">Tabeller</a></li>
-              <li><a href="#lists">Lister</a></li>
-            </ul>
-          </nav>
+        <h3>Basis</h3>
+        <nav class="ds-nav-vertical">
+          <ul>
+            <li><a href="#typografi">Typografi</a></li>
+            <li><a href="#farver">Farver</a></li>
+            <li><a href="#knapper">Knapper</a></li>
+            <li><a href="#formular">Formularer og inputfelter</a></li>
+            <li><a href="#icons">Ikoner</a></li>
+            <li><a href="#logos">Logo</a></li>
+            <li><a href="#images">Billeder og figurer</a></li>
+            <li><a href="#tabeller">Tabeller</a></li>
+            <li><a href="#lists">Lister</a></li>
+          </ul>
+        </nav>
 
-          <h3>Layout</h3>
-          <nav class="ds-nav-vertical">
-            <ul>
-              <li><a href="#grid">Grid</a></li>
-              <li><a href="#header-layout">Header</a></li>
-              <li><a href="#footer-layout">Footer</a></li>
-              <li><a href="#navs">Navigation</a></li>
-            </ul>
-          </nav>
+        <h3>Layout</h3>
+        <nav class="ds-nav-vertical">
+          <ul>
+            <li><a href="#grid">Grid</a></li>
+            <li><a href="#header-layout">Header</a></li>
+            <li><a href="#footer-layout">Footer</a></li>
+            <li><a href="#navs">Navigation</a></li>
+          </ul>
+        </nav>
 
-          <h3>UI-komponenter</h3>
-          <nav class="ds-nav-vertical">
-            <ul>
-              <li><a href="#cards">Cards</a></li>
-              <li><a href="#tabs">Tabs</a></li>
-              <li><a href="#dialog">Dialogboks</a></li>
-              <li><a href="#togglepanel">Skjult panel</a></li>
-              <li><a href="#spinner">Loading spinner</a></li>
-            </ul>
-          </nav>
+        <h3>UI-komponenter</h3>
+        <nav class="ds-nav-vertical">
+          <ul>
+            <li><a href="#cards">Cards</a></li>
+            <li><a href="#tabs">Tabs</a></li>
+            <li><a href="#dialog">Dialogboks</a></li>
+            <li><a href="#togglepanel">Skjult panel</a></li>
+            <li><a href="#spinner">Loading spinner</a></li>
+          </ul>
+        </nav>
         
-      </div>
+        <hr>
 
+      </div>
 
       <!-- Content goes here -->
       <main class="ds-grid-item-large">

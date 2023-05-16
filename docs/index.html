@@ -18,20 +18,26 @@
     <style>
       /* Custom CSS for this page*/
       code-example {
-        margin-bottom: var(--spacing);
+        margin: 0 0 var(--space-lg);
+        display: block;
+      }
+      * + section,
+      * + article {
+        margin-top: var(--space-lg);
       }
       .colorswatch {
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
-        gap: 1rem;
+        gap: var(--space);
+        margin: 0;
       }
       .colorswatch span:first-child {
-        width: 3rem;
-        height: 3rem;
+        width: var(--space-xl);
+        height: var(--space-xl);
         border-radius: 50%;
         display: inline-block;
-        flex: 0 0 3rem;
+        flex: 0 0 var(--space-xl);
       }
       .icon-list li {
         list-style: none;
@@ -40,38 +46,35 @@
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
-        gap: var(--spacing);
+        gap: var(--space);
         word-wrap: break-word;
       }
       .icon-list li > span:first-child {
-        flex: 0 0 3rem;
-        width: 3rem;
+        flex: 0 0 var(--space-xl);
+        width: var(--space-xl);
       }
       .icon-list code {
         overflow: auto;
       }
-      section {
-        margin-bottom: var(--typography-spacing-vertical);
-      }
       .bordered {
         padding: var(--padding);
         border: solid 1px var(--vibrant-steel);
-        border-radius: 0.125rem;
-        margin-bottom: var(--typography-spacing-vertical);
+        border-radius: var(--space-xxs);
       }
       .theme-switch {
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
+        gap: var(--space);
       }
       .theme-switch p {
         margin: 0;
       }
       .theme-switch input {
-        margin-right: 0.125rem;
+        margin-right: var(--space-xxs);
       }
       .theme-switch label {
-        margin-right: 0.5rem;
+        margin-right: var(--space-xs);
       }
 
       @media screen and (max-width: 65rem) {
@@ -82,10 +85,10 @@
 
         .index-wrapper {
           position: sticky; 
-          top: 1.5rem; 
+          top: var(--space-lg); 
           overflow-y: auto; 
-          height: calc(100vh - 1.5rem); 
-          padding-bottom: 2rem;
+          height: calc(100vh - var(--space-lg)); 
+          padding-bottom: var(--space-xl);
         }
       }
     </style>
@@ -117,62 +120,63 @@
 
         <h2>Indholdsfortegnelse</h2>
 
-          <fieldset class="theme-switch">
-            <span class="ds-icon-sider-icon-lab"></span>
-            <p>
-              <input id="theme-auto" type="radio" name="theme" value="" checked>
-              <label for="theme-auto">Auto</label>
-            </p>
-            <p>
-              <input id="theme-light" type="radio" name="theme" value="light">
-              <label for="theme-light">Lys</label>
-            </p>
-            <p>
-              <input id="theme-dark" type="radio" name="theme" value="dark">
-              <label for="theme-dark">Mørk</label>
-            </p>
-          </fieldset>
+        <fieldset class="theme-switch">
+          <span class="ds-icon-sider-icon-lab"></span>
+          <p>
+            <input id="theme-auto" type="radio" name="theme" value="" checked>
+            <label for="theme-auto">Auto</label>
+          </p>
+          <p>
+            <input id="theme-light" type="radio" name="theme" value="light">
+            <label for="theme-light">Lys</label>
+          </p>
+          <p>
+            <input id="theme-dark" type="radio" name="theme" value="dark">
+            <label for="theme-dark">Mørk</label>
+          </p>
+        </fieldset>
 
-          <hr>
+        <hr>
 
-          <h3>Basis</h3>
-          <nav class="ds-nav-vertical">
-            <ul>
-              <li><a href="#typografi">Typografi</a></li>
-              <li><a href="#farver">Farver</a></li>
-              <li><a href="#knapper">Knapper</a></li>
-              <li><a href="#formular">Formularer og inputfelter</a></li>
-              <li><a href="#icons">Ikoner</a></li>
-              <li><a href="#logos">Logo</a></li>
-              <li><a href="#images">Billeder og figurer</a></li>
-              <li><a href="#tabeller">Tabeller</a></li>
-              <li><a href="#lists">Lister</a></li>
-            </ul>
-          </nav>
+        <h3>Basis</h3>
+        <nav class="ds-nav-vertical">
+          <ul>
+            <li><a href="#typografi">Typografi</a></li>
+            <li><a href="#farver">Farver</a></li>
+            <li><a href="#knapper">Knapper</a></li>
+            <li><a href="#formular">Formularer og inputfelter</a></li>
+            <li><a href="#icons">Ikoner</a></li>
+            <li><a href="#logos">Logo</a></li>
+            <li><a href="#images">Billeder og figurer</a></li>
+            <li><a href="#tabeller">Tabeller</a></li>
+            <li><a href="#lists">Lister</a></li>
+          </ul>
+        </nav>
 
-          <h3>Layout</h3>
-          <nav class="ds-nav-vertical">
-            <ul>
-              <li><a href="#grid">Grid</a></li>
-              <li><a href="#header-layout">Header</a></li>
-              <li><a href="#footer-layout">Footer</a></li>
-              <li><a href="#navs">Navigation</a></li>
-            </ul>
-          </nav>
+        <h3>Layout</h3>
+        <nav class="ds-nav-vertical">
+          <ul>
+            <li><a href="#grid">Grid</a></li>
+            <li><a href="#header-layout">Header</a></li>
+            <li><a href="#footer-layout">Footer</a></li>
+            <li><a href="#navs">Navigation</a></li>
+          </ul>
+        </nav>
 
-          <h3>UI-komponenter</h3>
-          <nav class="ds-nav-vertical">
-            <ul>
-              <li><a href="#cards">Cards</a></li>
-              <li><a href="#tabs">Tabs</a></li>
-              <li><a href="#dialog">Dialogboks</a></li>
-              <li><a href="#togglepanel">Skjult panel</a></li>
-              <li><a href="#spinner">Loading spinner</a></li>
-            </ul>
-          </nav>
+        <h3>UI-komponenter</h3>
+        <nav class="ds-nav-vertical">
+          <ul>
+            <li><a href="#cards">Cards</a></li>
+            <li><a href="#tabs">Tabs</a></li>
+            <li><a href="#dialog">Dialogboks</a></li>
+            <li><a href="#togglepanel">Skjult panel</a></li>
+            <li><a href="#spinner">Loading spinner</a></li>
+          </ul>
+        </nav>
         
-      </div>
+        <hr>
 
+      </div>
 
       <!-- Content goes here -->
       <main class="ds-grid-item-large">
@@ -188,7 +192,7 @@
 
   <h2>Typografi</h2>
 
-  <article style="margin-bottom: var(--typography-spacing-vertical);" id="ex-typo-1">
+  <article id="ex-typo-1">
     <h1>Overskrift niveau 1</h1>
     <h2>Overskrift niveau 2</h2>
     <h3>Overskrift niveau 3</h3>
@@ -213,8 +217,6 @@
 </section><section id="farver">
 
   <h2>Farver</h2>
-  
-  <hr>
 
   <div class="ds-grid">
     <p class="colorswatch">
@@ -320,7 +322,9 @@
     </p>
   </div>
 
-  <div id="ex-color-3">
+  <hr>
+
+  <div id="ex-color-3" class="ds-mt">
     <article class="ds-padding" data-theme="light" style="background-color: var(--lys-steel);">
       <h3>Indhold med baggrundsfarve</h3>
       <p>
@@ -332,7 +336,7 @@
 
   <code-example data-snip="ex-color-3"></code-example>
 
-  <div id="ex-color-2">
+  <div id="ex-color-2" class="ds-mt">
     <article class="ds-padding" data-theme="light" style="background-color: var(--medium-steel);">
       <h3>Indhold med baggrundsfarve</h3>
       <p>
@@ -344,7 +348,7 @@
 
   <code-example data-snip="ex-color-2"></code-example>
 
-  <div id="ex-color-1">
+  <div id="ex-color-1" class="ds-mt">
     <article class="ds-padding" data-theme="dark">
       <h3>Indhold med mørk baggrundsfarve</h3>
       <p>Her har vi blot sat <code>data-theme="dark"</code> på elementet.</p>
@@ -356,7 +360,7 @@
 </section>
 <section id="knapper">
 
-  <article class="light-wrapper" style="margin-bottom: var(--typography-spacing-vertical);">
+  <article class="light-wrapper">
 
     <h2>Knapper</h2>
   
@@ -411,8 +415,6 @@
     <p class="ds-button-group">
       <button>Standard</button>
       <button class="secondary">Sekundær</button>
-      <button class="secondary">Sekundær</button>
-      <button class="outline">Outline</button>
       <button disabled>Disabled</button>
     </p>
     
@@ -492,16 +494,22 @@
       <fieldset>
         <legend>Some choices</legend> <!-- A title for the contents of a fieldset -->
 
-        <input type="radio" name="myradio" id="myradio1">
-        <label for="myradio1">This option</label>
-        <br>
-        <input type="radio" name="myradio" id="myradio2">
-        <label for="myradio2">The other option</label>
+        <p>
+          <input type="radio" name="myradio" id="myradio1">
+          <label for="myradio1">This option</label>
+        </p>
+        <p>
+          <input type="radio" name="myradio" id="myradio2">
+          <label for="myradio2">The other option</label>
+        </p>
+        
       </fieldset>
 
       <fieldset>
         <input type="checkbox" id="mycheckbox">
         <label for="mycheckbox">Check this box</label>
+        <input type="checkbox" id="mycheckbox2">
+        <label for="mycheckbox2">Check that box</label>
       </fieldset>
 
       <fieldset>
@@ -790,7 +798,7 @@
 
   <p>Navigationselementer laves med <code>&lt;nav></code> elementet.</p>
 
-  <div class="ds-padding light-wrapper" style="margin-bottom: var(--typography-spacing-vertical);">
+  <div>
     
     <h3>Basic navigation</h3>
     <div id="ex-nav-5" class="bordered">
@@ -885,7 +893,7 @@
     <h3>Værktøjslinie</h3>
     <p>Er en simpel <a href="#knapper">knapgruppe</a> med et <code>nav</code> element udenom, der har class <code>ds-nav-tools</code></p>
     <p>Adskillelseslinier kan laves ved at indsætte <code>&lt;hr></code> imellem knapper.</p>
-    <div id="ex-nav-1">
+    <div id="ex-nav-1" style="display: flex; flex-flow: column; align-items: center; gap: var(--space);">
       <nav class="ds-nav-tools">
         <div class="ds-button-group">
           <button class="ds-icon-map-icon-download-listvalg" title="Liste"></button>
@@ -1141,7 +1149,7 @@
       </tbody>
       <tfoot>
         <tr>
-          <td colspan="3"><input type="text" placeholder="Inputfelt i tabel"></td>
+          <td colspan="3"><input type="text" placeholder="Inputfelt i tabel" class="ds-mt-sm"></td>
         </tr>
       </tfoot>
     </table>
@@ -1156,7 +1164,7 @@
   <h3>Definition list</h3>
   Her er et eksempel på en definition list:
 
-  <article style="margin-bottom: var(--typography-spacing-vertical);" id="ex-list-1">
+  <article id="ex-list-1">
     <dl>
       <dt>Definition term</dt>
       <dd>Definition description</dd>
@@ -1239,7 +1247,7 @@
     <ds-toggle-panel id="panel-1" aria-labelledby="btn-1">
 
       <button 
-        class="ds-panel-toggle ds-icon-icon-close"
+        class="ds-panel-toggle ds-icon-icon-close secondary"
         aria-controls="panel-1" 
         id="close-btn-1"
         title="Luk panel"
