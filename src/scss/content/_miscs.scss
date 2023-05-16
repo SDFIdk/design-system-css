@@ -14,7 +14,7 @@ hr {
   border: 0;
   border-top: 1px solid var(--muted-border-color);
   color: inherit; // 1
-  margin: var(--typography-spacing-vertical) 0;
+  margin: var(--space-md) 0;
 }
 
 // Add the correct display in IE 10+
@@ -31,9 +31,14 @@ img {
 
 figure {
   max-width: 100%;
-  margin: 0 0 var(--spacing);
+  margin: 0 0 var(--space);
+  display: block;
+  padding: 0;
+  overflow-x: auto;
 }
 
 figcaption {
   font-size: smaller;
+  padding: var(--space-xs) 0;
+  color: var(--muted-color);
 }

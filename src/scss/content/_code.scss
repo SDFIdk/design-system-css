@@ -44,12 +44,11 @@ kbd {
 
 pre {
   display: block;
-  margin-bottom: var(--spacing);
   overflow-x: auto;
 
   > code {
     display: block;
-    padding: var(--spacing);
+    padding: var(--space-md);
     background: none;
     font-size: 14px;
     line-height: var(--line-height);

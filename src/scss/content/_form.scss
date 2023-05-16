@@ -108,7 +108,6 @@ textarea {
 // Fieldset
 fieldset {
   margin: 0;
-  margin-bottom: var(--spacing);
   padding: 0;
   border: 0;
 }
@@ -162,7 +161,6 @@ textarea {
   font-weight: var(--font-weight);
   transition: background-color var(--transition), border-color var(--transition), color var(--transition), box-shadow var(--transition);
   padding: var(--form-element-padding);
-  margin-bottom: var(--spacing);
 
   &::placeholder {
     color: var(--c7);
@@ -281,15 +279,7 @@ select {
   + small {
     display: block;
     width: 100%;
-    margin-top: calc(var(--spacing) * -0.75);
-    margin-bottom: var(--spacing);
+    margin-top: var(--space-xs);
     color: var(--muted-color);
-  }
-}
-
-// Styles for Input inside a label
-label {
-  > :where(input, select, textarea) {
-    margin-top: calc(var(--spacing) * 0.25);
   }
 }

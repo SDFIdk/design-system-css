@@ -45,8 +45,7 @@ p,
 pre,
 table,
 ul {
-  margin-top: 0;
-  margin-bottom: var(--typography-spacing-vertical);
+  margin: 0;
   color: var(--color);
   font-style: var(--font-style);
   font-weight: var(--font-weight);
@@ -129,8 +128,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  margin-top: var(--typography-spacing-vertical-top);
-  margin-bottom: var(--typography-spacing-vertical-bottom);
+  margin: var(--space-md) 0;
   font-family: var(--font-family);
   font-weight: var(--font-weight);
   line-height: var(--line-height);
@@ -178,11 +176,6 @@ h6,
   letter-spacing: 0.04em;
 }
 
-// Paragraphs
-p {
-  margin-bottom: var(--typography-spacing-vertical);
-}
-
 // Small
 .small,
 small {
@@ -195,12 +188,12 @@ small {
 // Lists
 :where(ol, ul) {
   padding-right: 0;
-  padding-left: var(--spacing);
-  padding-inline-start: var(--spacing);
+  padding-left: var(--space);
+  padding-inline-start: var(--space);
   padding-inline-end: 0;
 
   li {
-    margin-bottom: calc(var(--typography-spacing-vertical) * 0.25);
+    margin-top: var(--space-xxs);
   }
 }
 
@@ -209,7 +202,7 @@ small {
 :where(ol, ul) {
   :is(ol, ul) {
     margin: 0; // 1
-    margin-top: calc(var(--typography-spacing-vertical) * 0.25);
+    margin-top: var(--space-xxs);
   }
 }
 
@@ -217,13 +210,9 @@ ul li {
   list-style: square;
 }
 
-dl {
-  margin: var(--typography-spacing-vertical) 0;
-}
-
 dl dt {
   @extend .h5;
-  margin: var(--typography-spacing-vertical) 0 calc(var(--typography-spacing-vertical) * 0.125);
+  margin: var(--space-md) 0 var(--space-xxs);
   padding: 0;
   opacity: 0.75;
 }
@@ -245,13 +234,11 @@ mark {
 .blockquote,
 blockquote {
   display: block;
-  margin: var(--typography-spacing-vertical) 0;
   --font-weight: 300;
   --font-size: 1.15rem;
   --line-height: 1.3;
 
   footer {
-    margin-top: calc(var(--typography-spacing-vertical) * 0.5);
     color: var(--blockquote-footer-color);
   }
 }

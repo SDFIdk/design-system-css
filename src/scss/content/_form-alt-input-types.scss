@@ -46,10 +46,10 @@
   background: none;
 
   @mixin file-selector-button {
-    margin-right: calc(var(--spacing) / 2);
+    margin-right: var(--space-sm);
     margin-left: 0;
     margin-inline-start: 0;
-    margin-inline-end: calc(var(--spacing) / 2);
+    margin-inline-end: var(--space-sm);
     padding: 0.5rem 1rem;
     background-color: transparent;
     color: var(--secondary-inverse) !important;

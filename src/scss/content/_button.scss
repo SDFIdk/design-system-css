@@ -28,10 +28,6 @@ button,
 // Pico
 // ––––––––––––––––––––
 
-button {
-  margin-bottom: var(--spacing);
-}
-
 [role="button"] {
   text-decoration: none;
 }
@@ -123,7 +119,6 @@ a[role="button"]:not([href]) {
   display: flex;
   flex-flow: row nowrap;
   align-items: stretch;
-  margin-bottom: var(--spacing);
 
   & > button,
   & > input,

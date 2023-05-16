@@ -22,7 +22,7 @@
 // Cells
 th,
 td {
-  padding: calc(var(--spacing) / 2) var(--spacing);
+  padding: var(--space-xs) var(--space-sm);
   border-bottom: var(--border-width) solid var(--table-border-color);
   color: var(--color);
   font-weight: var(--font-weight);
