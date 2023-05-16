@@ -29,7 +29,7 @@
 }
 
 .ds-logo {
-  padding: var(--space-lg) 0 0 var(--space-xxl);
+  padding: var(--space-lg) 0 0 calc(var(--space) * 6);
   min-height: var(--space-xxl);
   
   &::before {
@@ -46,12 +46,12 @@
   }
 
   &.ds-logo-pull-left {
-    margin-left: -(var(--space-xxl));
+    margin-left: calc(var(--space) * -2.5);
   }
 }
 
 .ds-logo-micro {
-  padding: var(--space-sm) 0 0 var(--space-lg);
+  padding: calc(var(--space) * 0.3) 0 0 var(--space-lg);
   min-height: var(--space-md);
 
   &::before {
@@ -71,7 +71,7 @@
   }
 
   &.ds-logo-pull-left {
-    margin-left: -2.25rem;
+    margin-left: calc(var(--space-lg) * -1);
   }
 }
 

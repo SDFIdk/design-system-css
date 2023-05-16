@@ -44,6 +44,7 @@ dialog > footer {
   justify-content: flex-end;
   gap: var(--space);
   align-items: center;
+  padding-top: var(--space);
 }
 
 dialog > header > button.ds-icon-icon-close {

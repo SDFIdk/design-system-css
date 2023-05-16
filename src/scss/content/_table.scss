@@ -22,7 +22,7 @@
 // Cells
 th,
 td {
-  padding: var(--space-xs) var(--space-sm);
+  padding: var(--space-xs) var(--space);
   border-bottom: var(--border-width) solid var(--table-border-color);
   color: var(--color);
   font-weight: var(--font-weight);
@@ -42,7 +42,7 @@ table caption {
   text-align: left;
   border-top: 3px solid var(--table-border-color);
   border-bottom: var(--border-width) solid var(--table-border-color);
-  padding: var(--space-sm) var(--space-md);
+  padding: var(--space-sm) var(--space);
   margin: 0;
 }
 
