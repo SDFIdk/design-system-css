@@ -1,11 +1,16 @@
 /* Icons */
 
 [class*="ds-icon-"] {
+
+  --icon-size: calc(var(--space) * 2.5);
+  --icon-pos: calc(var(--space) * 0.4);
+
+
   position: relative;
-  width: auto;
   min-width: var(--space-xl);
   height: var(--space-xl);
   display: inline-flex;
+  vertical-align: middle;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
@@ -14,13 +19,13 @@
   &::before {
     content: '';
     position: absolute;
-    top: var(--space-xs);
-    left: var(--space-xs);
+    top: var(--icon-pos);
+    left: var(--icon-pos);
     display: block;
-    height: var(--space-lg);
-    width: var(--space-lg);
+    height: var(--icon-size);
+    width: var(--icon-size);
     background-position: center center;
-    background-size: var(--space-lg) var(--space-lg);
+    background-size: var(--icon-size) var(--icon-size);
     filter: var(--icon-filter);
   }
 }

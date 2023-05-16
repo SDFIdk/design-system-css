@@ -50,6 +50,7 @@ input[type="reset"],
   line-height: var(--line-height);
   text-align: center;
   cursor: pointer;
+  word-wrap: normal;
 
   transition: background-color var(--transition), border-color var(--transition), color var(--transition);
 

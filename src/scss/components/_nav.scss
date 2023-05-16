@@ -134,6 +134,9 @@ aside,
       display: block;
     }
   }
+  li + li {
+    margin-top: var(--space-sm);
+  }
 }
 
 // Tool bar nav
@@ -178,10 +181,12 @@ aside.ds-nav-tools {
     background-color: var(--card-border-color);
     width: 1px;
     height: var(--space-xl);
-    margin: 0 var(--space-xs);
+    margin: 0;
   }
 
   &.vertical {
+
+    --btn-pos: calc(var(--space) * 0.4);
 
     .ds-button-group {
       flex-flow: column nowrap;
@@ -192,7 +197,7 @@ aside.ds-nav-tools {
         background-color: var(--card-border-color);
         width: var(--space-xl);
         height: 1px;
-        margin: var(--space-xs) 0;
+        margin: 0;
       }
 
       & > button,
@@ -203,8 +208,8 @@ aside.ds-nav-tools {
           min-height: var(--space-xl);
           border-radius: var(--space-lg) var(--space-lg) 0 0;
           &::before {
-            top: var(--space-sm);
-            left: var(--space-sm);
+            top: var(--btn-pos);
+            left: var(--btn-pos);
           }
         }
 
@@ -212,8 +217,8 @@ aside.ds-nav-tools {
           min-height: var(--space-xl);
           border-radius: 0 0 var(--space-lg) var(--space-lg);
           &::before {
-            top: var(--space-xs);
-            left: var(--space-sm);
+            top: var(--btn-pos);
+            left: var(--btn-pos);
           }
         }
       }
