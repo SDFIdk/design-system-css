@@ -23,10 +23,9 @@
   --muted-border-color: var(--dark-steel);
 
   // Link colors
-  --link: var(--sort);
-  --link-hover: var(--g6);
+  --link: var(--c6);
+  --link-hover: var(--c7);
   --link-focus: var(--highlight);
-  --link-border-color: var(--g6);
 
   // Primary colors
   --primary: var(--tyrkis);
@@ -83,7 +82,7 @@
   --form-element-valid-focus-color: var(--g6);
 
   // Navigation
-  --nav-link-color: var(--sort);
+  --nav-link-color: var(--c7);
   --nav-tab-border: var(--tyrkis);
   --nav-tab-font-weight: 300;
 

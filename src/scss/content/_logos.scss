@@ -163,7 +163,7 @@ a.ds-logo-responsive {
   }
 
   &:focus {
-    color: $amber-400;
+    color: var(--o5);
 
     &::before {
       filter: var(--logo-filter-focus);
