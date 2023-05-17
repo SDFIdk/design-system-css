@@ -86,64 +86,8 @@
   <p class="ds-container">Hvis du skal vise noget indhold i én kolonne midt i skærmen, så sæt <code>ds-container</code> class på elementet. Indholdet i denne tekst er centreret med class <code>ds-container</code></p>
   <p><a href="layout3.html">Se demo</a></p>
 
-  <h3>Udvendig afstand / margin</h3>
-
-  <p>Du kan sætte den korrekte margin ved at bruge class <code>ds-margin</code> i HTML.</p>
-  <pre><code>&lt;div class="ds-margin"> ... &lt;/div></code></pre>
-
-  <p><a href="layout2.html">Se demo</a></p>
-
-  <p class="ds-margin" style="border: var(--border); display: inline-block;">
-    Indhold med ds-margin omkring sig
-  </p>
-
-  <p>Hvis du skal bruge den officielle margin i CSS, kan du bruge CSS custom property <code>--margin</code>.</p>
-  <pre><code>.my-custom-class {
-    margin: var(--margin);
-  }</code></pre>
-
-  <h3>Indvendig afstand / padding</h3>
-
-  <p>Du kan sætte den korrekte padding ved at bruge class <code>ds-padding</code> i HTML.</p>
-  <pre><code>&lt;div class="ds-padding"> ... &lt;/div></code></pre>
-
-  <p><a href="layout1.html">Se demo</a></p>
-
-  <p class="ds-padding" style="border: var(--border); display: inline-block;">
-    Indhold med ds-padding omkring sig.
-  </p>
-
-  <p>Hvis du skal bruge den officielle padding i CSS, kan du bruge CSS custom property <code>--padding</code>.</p>
-  <pre><code>.my-custom-class {
-    padding: var(--padding);
-  }</code></pre>
-
-  <p>Når tekst og elementer med runde kanter (ikoner, knapper, etc.) står sammen, skal teksten og de runde elementer rykkes lidt i forhold til hinanden. Det er for at modvirke et optisk fænomen, hvor det ser ud som om, at de ikke står på linie.</p>
-  <p>Du kan gøre det ved at give teksten lidt ekstra padding med <code>ds-optical-padding</code> class ELLER give ikoner/knapper en justeringsmargin.</p>
-
-  <div class="bordered">
-    <p class="ds-optical-padding">Her er din tekst med optical padding.</p>
-    <button>En knap</button>
-  </div>
-
-  <pre><code>
-    &lt;p class="ds-optical-padding">Her er din tekst&lt;/p>
-    &lt;button>En knap&lt;/button>
-  </code></pre>
-
-  <div class="bordered">
-    <p>Her er din tekst</p>
-    <button class="ds-optical-margin">En knap med optical margin</button>
-  </div>
-
-  <pre><code>
-    &lt;p>Her er din tekst&lt;/p>
-    &lt;button class="ds-optical-margin">En knap&lt;/button>
-  </code></pre>
-
-  <p>Her kan du også bruge CSS custom properties <code>--optical-padding</code> og <code>--optical-margin</code> til mere specialiserede layouts.</p>
-
   <h3>Simpel rækkevisning</h3>
+
   <p>Brug class <code>ds-flex-row</code>, hvis du blot vil vise to elementer ved siden af hinanden, og de skal være centreret i højden.<br> F.eks.:</p>
   <p class="ds-flex-row">
     <button>En knap</button>

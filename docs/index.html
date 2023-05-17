@@ -157,6 +157,8 @@
         <nav class="ds-nav-vertical">
           <ul>
             <li><a href="#grid">Grid</a></li>
+            <li><a href="#padding">Padding</a></li>
+            <li><a href="#margin">Margin</a></li>
             <li><a href="#header-layout">Header</a></li>
             <li><a href="#footer-layout">Footer</a></li>
             <li><a href="#navs">Navigation</a></li>
@@ -675,23 +677,24 @@
   <p class="ds-container">Hvis du skal vise noget indhold i én kolonne midt i skærmen, så sæt <code>ds-container</code> class på elementet. Indholdet i denne tekst er centreret med class <code>ds-container</code></p>
   <p><a href="layout3.html">Se demo</a></p>
 
-  <h3>Udvendig afstand / margin</h3>
+  <h3>Simpel rækkevisning</h3>
 
-  <p>Du kan sætte den korrekte margin ved at bruge class <code>ds-margin</code> i HTML.</p>
-  <pre><code>&lt;div class="ds-margin"> ... &lt;/div></code></pre>
-
-  <p><a href="layout2.html">Se demo</a></p>
-
-  <p class="ds-margin" style="border: var(--border); display: inline-block;">
-    Indhold med ds-margin omkring sig
+  <p>Brug class <code>ds-flex-row</code>, hvis du blot vil vise to elementer ved siden af hinanden, og de skal være centreret i højden.<br> F.eks.:</p>
+  <p class="ds-flex-row">
+    <button>En knap</button>
+    <span>Et tekstelement</span>
   </p>
+  <pre><code>
+    &lt;p class="ds-flex-row">
+      &lt;button>En knap&lt;/button>
+      &lt;span>Et tekstelement&lt;/span>
+    &lt;/p>
+  </code></pre>
+  
 
-  <p>Hvis du skal bruge den officielle margin i CSS, kan du bruge CSS custom property <code>--margin</code>.</p>
-  <pre><code>.my-custom-class {
-    margin: var(--margin);
-  }</code></pre>
-
-  <h3>Indvendig afstand / padding</h3>
+</section>
+<section id="padding">
+  <h2>Indvendig afstand / padding</h2>
 
   <p>Du kan sætte den korrekte padding ved at bruge class <code>ds-padding</code> i HTML.</p>
   <pre><code>&lt;div class="ds-padding"> ... &lt;/div></code></pre>
@@ -706,6 +709,19 @@
   <pre><code>.my-custom-class {
     padding: var(--padding);
   }</code></pre>
+
+  <h3>Specielle paddings</h3>
+
+  <p>Du kan sætte en <code>class</code> med en specifik padding til særlige indrykninger o.l.</p>
+  <p>Du kan bygge en specifik class ved at kombinere:</p>
+  <ol>
+    <li><code>ds-pt</code>, <code>ds-pb</code>, <code>ds-pl</code>, <code>ds-pr</code> for hhv. padding-top, padding-bottom, padding-left og padding-right</li>
+    <li><code>-xxs</code>, <code>-xs</code>, <code>-sm</code>, <code>-md</code>, <code>-lg</code>, <code>-xl</code>, <code>-xxl</code> for den størrelse padding, du ønsker</li>
+  </ol>
+  <p>En class <code>ds-pb-sm</code> vil således give en <code>padding-bottom: 0.5rem</code></p>
+  <p>Det samme resultat kan opnås ved at bruge CSS custom properties: <code>style="padding-bottom: var(--space-sm);"</code></p>
+
+  <h3>Når elementer skal flugte med hinanden</h3>
 
   <p>Når tekst og elementer med runde kanter (ikoner, knapper, etc.) står sammen, skal teksten og de runde elementer rykkes lidt i forhold til hinanden. Det er for at modvirke et optisk fænomen, hvor det ser ud som om, at de ikke står på linie.</p>
   <p>Du kan gøre det ved at give teksten lidt ekstra padding med <code>ds-optical-padding</code> class ELLER give ikoner/knapper en justeringsmargin.</p>
@@ -732,42 +748,36 @@
 
   <p>Her kan du også bruge CSS custom properties <code>--optical-padding</code> og <code>--optical-margin</code> til mere specialiserede layouts.</p>
 
-  <h3>Simpel rækkevisning</h3>
-  <p>Brug class <code>ds-flex-row</code>, hvis du blot vil vise to elementer ved siden af hinanden, og de skal være centreret i højden.<br> F.eks.:</p>
-  <p class="ds-flex-row">
-    <button>En knap</button>
-    <span>Et tekstelement</span>
+</section>
+<section id="margin">
+  <h2>Udvendig afstand / margin</h2>
+
+  <p>Du kan sætte den korrekte margin ved at bruge class <code>ds-margin</code> i HTML.</p>
+  <pre><code>&lt;div class="ds-margin"> ... &lt;/div></code></pre>
+
+  <p><a href="layout2.html">Se demo</a></p>
+
+  <p class="ds-margin" style="border: var(--border); display: inline-block;">
+    Indhold med ds-margin omkring sig
   </p>
-  <pre><code>
-    &lt;p class="ds-flex-row">
-      &lt;button>En knap&lt;/button>
-      &lt;span>Et tekstelement&lt;/span>
-    &lt;/p>
-  </code></pre>
-  
+
+  <p>Hvis du skal bruge den officielle margin i CSS, kan du bruge CSS custom property <code>--margin</code>.</p>
+  <pre><code>.my-custom-class {
+    margin: var(--margin);
+  }</code></pre>
+
+  <h3>Specielle margins</h3>
+
+  <p>Du kan sætte en <code>class</code> med en specifik margin til særlige indrykninger o.l.</p>
+  <p>Du kan bygge en specifik class ved at kombinere:</p>
+  <ol>
+    <li><code>ds-mt</code>, <code>ds-mb</code>, <code>ds-ml</code>, <code>ds-mr</code> for hhv. margin-top, margin-bottom, margin-left og margin-right</li>
+    <li><code>-xxs</code>, <code>-xs</code>, <code>-sm</code>, <code>-md</code>, <code>-lg</code>, <code>-xl</code>, <code>-xxl</code> for den størrelse margin, du ønsker</li>
+  </ol>
+  <p>En class <code>ds-mr-lg</code> vil således give en <code>margin-right: 2rem</code></p>
+  <p>Det samme resultat kan opnås ved at bruge CSS custom properties: <code>style="margin-right: var(--space-lg);"</code></p>
 
 </section>
-<article id="footer-layout">
-  <h2>Footer layout</h2>
-
-  <p>Her er en standard footer, som kan placeres i bunden af en webside.</p>
-
-  <div id="ex-footer-1">
-    <footer class="ds-footer">
-      <div class="ds-container-fluid ds-margin">
-        <h2 class="ds-logo-responsive ds-logo-pull-left">
-          <strong>Insæt navn her</strong>
-          <span>Styrelsen for Dataforsyning og Infrastruktur</span>
-        </h2>
-        <hr>
-        <p>© 2023 Styrelsen for Dataforsyning og Infrastruktur</p>
-      </div>
-    </footer>
-  </div>
-
-  <code-example data-snip="ex-footer-1"></code-example>
-
-</article>
 <article id="header-layout">
   <style>
     #ex-header-1 {
@@ -792,7 +802,28 @@
 
   <code-example data-snip="ex-header-1"></code-example>
 
-</article><section id="navs">
+</article><article id="footer-layout">
+  <h2>Footer layout</h2>
+
+  <p>Her er en standard footer, som kan placeres i bunden af en webside.</p>
+
+  <div id="ex-footer-1">
+    <footer class="ds-footer">
+      <div class="ds-container-fluid ds-margin">
+        <h2 class="ds-logo-responsive ds-logo-pull-left">
+          <strong>Insæt navn her</strong>
+          <span>Styrelsen for Dataforsyning og Infrastruktur</span>
+        </h2>
+        <hr>
+        <p>© 2023 Styrelsen for Dataforsyning og Infrastruktur</p>
+      </div>
+    </footer>
+  </div>
+
+  <code-example data-snip="ex-footer-1"></code-example>
+
+</article>
+<section id="navs">
   
   <h2>Navigationselementer</h2>
 
