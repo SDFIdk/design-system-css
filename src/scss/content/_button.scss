@@ -185,7 +185,7 @@ input[type="button"],
     }
 
     &.secondary::before {
-      filter: none;
+      filter: var(--icon-filter-secondary);
     }
 
     &.secondary:hover::before,
@@ -194,7 +194,7 @@ input[type="button"],
     }
   
     &.outline::before {
-      filter: none;
+      filter: var(--icon-filter-outline);
     }
 
     &.outline:hover::before,
