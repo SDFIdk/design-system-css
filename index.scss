@@ -69,7 +69,8 @@
 @import "./src/scss/layout/container"; // .container, .container-fluid
 //@import "layout/section"; // section
 @import "./src/scss/layout/grid"; // .grid
-@import "./src/scss/layout/spacing"; // .ds-margin, .ds-padding, .ds-flexgrid
+@import "./src/scss/layout/margin"; // .ds-margin
+@import "./src/scss/layout/padding"; // .ds-padding
 
 // Content
 @import "./src/scss/content/typography"; // a, headings, p, ul, blockquote, ...
