@@ -50,13 +50,6 @@
     }
   }
 
-  @if map-get($breakpoints, "xl") {
-    @media (min-width: map-get($breakpoints, "xl")) {
-      --font-size: 105%;
-    }
-  }
-
-
   // Borders
   --border: solid var(--space-xxs) var(--border-color);
   --border-radius: (--space-xs);

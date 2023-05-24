@@ -68,7 +68,7 @@ input[type="button"],
 [role="button"] {
   
   &[class*="ds-icon-"] {
-
+    border-radius: var(--icon-outer-size);
     padding: var(--space-sm) var(--space-md) var(--space-sm) calc(var(--icon-outer-size) * 0.875);
     
     // We assume that a button with `title` attribute only displays the icon
@@ -79,6 +79,27 @@ input[type="button"],
 
     &:not(.contrast, .secondary, .outline)::before {
       filter: brightness(0);
+    }
+  }
+}
+
+.ds-button-group {
+  
+  button, 
+  input[type="submit"], 
+  input[type="button"],
+  [role="button"] {
+
+    &[class*="ds-icon-"] {
+      border-radius: 0;
+    }
+
+    &[class*="ds-icon-"]:first-child {
+      border-radius: 50% 0 0 50%;
+    }
+
+    &[class*="ds-icon-"]:last-child {
+      border-radius: 0 50% 50% 0;
     }
   }
 }
