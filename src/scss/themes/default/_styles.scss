@@ -32,6 +32,9 @@
   --map-element-spacing: var(--space-md) var(--space) var(--space-lg);
   --modal-margin: 3.5vw 5vw;
 
+  // Icons
+  --icon-size: calc(var(--space) * 2.5);
+
   // Responsive typography and spacing
   @if map-get($breakpoints, "sm") {
     @media (min-width: map-get($breakpoints, "sm")) {

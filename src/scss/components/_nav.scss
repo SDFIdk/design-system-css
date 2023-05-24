@@ -169,12 +169,12 @@ aside.ds-nav-tools {
     }
 
     &::before {
-      filter: none;
+      filter: none !important;
     }
 
     &:hover::before,
     &:active::before {
-      filter: brightness(0);
+      filter: brightness(0) !important;
     }
   }
 
