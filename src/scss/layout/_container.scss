@@ -48,6 +48,8 @@
     .container-fluid,
     .ds-container-fluid {
       max-width: map-get($viewports, "xxl");
+      margin-left: auto !important;
+      margin-right: auto !important;
     }
   }
 }
