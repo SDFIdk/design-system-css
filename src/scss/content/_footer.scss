@@ -3,4 +3,9 @@
 .ds-footer {
   background-color: var(--footer-background);
   font-size: smaller;
+  display: flex;
+}
+
+.ds-footer > * {
+  width: 100%;
 }

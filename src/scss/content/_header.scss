@@ -1,4 +1,9 @@
 .ds-header {
+  display: flex;
+
+  & > * {
+    width: 100%;
+  }
 
   .ds-logo,
   .ds-logo-responsive {
