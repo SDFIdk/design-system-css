@@ -23,7 +23,7 @@
     margin: 0 !important;
   }
 
-  & > *:last-child {
+  & > :not(strong) {
     font-weight: 300; 
   }
 }
