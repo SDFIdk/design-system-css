@@ -93,5 +93,5 @@
 @import "./src/scss/components/nav"; // navigationselementer
 
 // Utilities
-//@import "utilities/accessibility"; // -ms-touch-action, aria-*
+@import "./src/scss/utilities/a11y";
 //@import "utilities/reduce-motion"; // prefers-reduced-motion
