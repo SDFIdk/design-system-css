@@ -1,5 +1,8 @@
 .ds-header {
   display: flex;
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-xl);
+  background-color: var(--header-background);
 
   & > * {
     width: 100%;

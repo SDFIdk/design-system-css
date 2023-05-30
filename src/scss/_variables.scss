@@ -4,34 +4,13 @@
 // Responsive
 // ––––––––––––––––––––
 
-// xs: Extra small (portrait phones)
-// sm: Small(landscape phones)
+// sm: Small(phones)
 // md: Medium(tablets)
 // lg: Large(desktops)
 // xl: Extra large (large desktops)
 
-// NOTE:
-// To provide an easy and fine styling on each breakpoint
-// we didn't use @each, @mixin or @include.
-// That means you need to edit each CSS selector file to add a breakpoint
-
 // Breakpoints
-// 'null' disable the breakpoint
-$breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 82rem
-) !default;
-
-// Viewports
-$viewports: (
-  // 'null' disable the viewport on a breakpoint
-  sm: 510px,
-  md: 700px,
-  lg: 920px,
-  xl: 1130px,
-  xxl: 82rem
-) !default;
+$breakpoint-sm: 36rem;
+$breakpoint-md: 48rem;
+$breakpoint-lg: 60rem;
+$breakpoint-xl: 82rem;

@@ -8,6 +8,7 @@
     "build-css": "sass index.scss assets/designsystem.css --style compressed",
     "build-js": "node_modules/.bin/esbuild src/components/index.js --bundle --outfile=assets/designsystem.js --format=esm",
     "build-docs": "node utils/build-docs.mjs && utils/docs-copy-files.sh",
+    "dev": "node utils/watch-files.mjs",
     "start": "cd docs && python3 -m http.server 7777",
     "test": "echo \"Error: no test specified\" && exit 0"
   },

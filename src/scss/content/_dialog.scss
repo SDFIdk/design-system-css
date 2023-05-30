@@ -9,8 +9,7 @@ dialog[open] {
   margin: var(--margin);
   width: auto;
 
-  @if map-get($breakpoints, "lg") {
-    @media (min-width: map-get($breakpoints, "lg")) {
+    @media (min-width: $breakpoint-md) {
       
       & {
         width: auto;
@@ -22,8 +21,6 @@ dialog[open] {
       
     }
   }
-  
-}
 
 dialog > header {
   display: flex;
