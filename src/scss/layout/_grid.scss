@@ -36,7 +36,7 @@
   @media (min-width: $breakpoint-sm) {
     display: flex; 
     flex-flow: row wrap; 
-    gap: var(--space-lg);
+    gap: var(--space-md);
 
     & > * {
       flex: 1 0 15rem;
@@ -45,7 +45,7 @@
   }
 
   @media (min-width: $breakpoint-md) { 
-    gap: var(--space-xl);
+    gap: var(--space-lg);
   }
 
 }
