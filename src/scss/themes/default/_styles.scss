@@ -35,19 +35,15 @@
   // Icons
   --icon-size: calc(var(--space) * 2.5);
 
-  // Responsive typography and spacing
-  @if map-get($breakpoints, "sm") {
-    @media (min-width: map-get($breakpoints, "sm")) {
-      --margin: var(--space-lg) var(--space-xl);
-      --map-element-spacing: var(--space-md) var(--space-lg) var(--space-lg);
-    }
+  // Responsive typography and spacing  
+  @media (min-width: $breakpoint-sm) {
+    --margin: var(--space-lg) var(--space-xl);
+    --map-element-spacing: var(--space-md) var(--space-lg) var(--space-lg);
   }
 
-  @if map-get($breakpoints, "md") {
-    @media (min-width: map-get($breakpoints, "md")) {
-      --margin: var(--space-xl) var(--space-xxl);
-      --map-element-spacing: var(--space-md) var(--space-xl) var(--space-lg);
-    }
+  @media (min-width: $breakpoint-lg) {
+    --margin: var(--space-xl) var(--space-xxl);
+    --map-element-spacing: var(--space-md) var(--space-xl) var(--space-lg);
   }
 
   // Borders

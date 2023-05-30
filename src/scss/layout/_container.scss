@@ -6,50 +6,24 @@
 .container-fluid,
 .ds-container,
 .ds-container-fluid {
-  max-width: 100%;
+  max-width: calc(100vw - var(--space) * 2);
   margin-right: auto;
   margin-left: auto;
-  padding-right: 0;
-  padding-left: 0;
 }
 
 .container,
 .ds-container {
-  @if map-get($breakpoints, "sm") {
-    @media (min-width: map-get($breakpoints, "sm")) {
-      max-width: map-get($viewports, "sm");
-      padding-right: 0;
-      padding-left: 0;
-    }
+
+  @media (min-width: $breakpoint-sm) {
+    max-width: calc(100vw - var(--space) * 5);
   }
 
-  @if map-get($breakpoints, "md") {
-    @media (min-width: map-get($breakpoints, "md")) {
-      max-width: map-get($viewports, "md");
-    }
+  @media (min-width: $breakpoint-md) {
+    max-width: calc(100vw - var(--space) * 7);
   }
 
-  @if map-get($breakpoints, "lg") {
-    @media (min-width: map-get($breakpoints, "lg")) {
-      max-width: map-get($viewports, "lg");
-    }
+  @media (min-width: $breakpoint-xl) {
+    max-width: 75rem;
   }
 
-  @if map-get($breakpoints, "xl") {
-    @media (min-width: map-get($breakpoints, "xl")) {
-      max-width: map-get($viewports, "xl");
-    }
-  }
-}
-
-// Container-fluid width should max out at about 1900px
-@if map-get($breakpoints, "xxl") {
-  @media (min-width: map-get($breakpoints, "xxl")) {
-    .container-fluid,
-    .ds-container-fluid {
-      max-width: map-get($viewports, "xxl");
-      margin-left: auto !important;
-      margin-right: auto !important;
-    }
-  }
 }

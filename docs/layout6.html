@@ -25,8 +25,8 @@
 
     <div id="ex-layout">
 
-    <header class="ds-header">
-      <div class="ds-container-fluid ds-margin">
+    <header class="ds-header" data-theme="dark">
+      <div class="ds-container">
         <p class="ds-logo-responsive ds-logo-pull-left">
           <strong>Dataforsyningen</strong>
           <span>Styrelsen for Dataforsyning og Infrastruktur</span>
@@ -36,11 +36,9 @@
       </div>
     </header>
 
-    <hr style="margin: 0;">
+    <main class="ds-container ds-pt-lg ds-pb-lg">
 
-    <main class="ds-container-fluid">
-
-      <section class="ds-grid-1-2 ds-margin">
+      <section class="ds-grid-1-2">
 
         <article>
           <h2 class="ds-flex-row">
@@ -98,31 +96,36 @@
             Ipsum dolor sit amet.
           </p>
           
-          <div class="ds-card" style="margin-bottom: 1rem;">
-            <p class="ds-padding">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+          <div class="ds-flexgrid">
+
+            <div class="ds-card" style="margin-bottom: 1rem;">
+              <p class="ds-padding">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+            </div>
+
+            <div class="ds-card">
+              <img src="https://raw.githubusercontent.com/iamfrank/semstrap/master/assets/images/bg-img-1.jpg" alt="">
+              <div class="ds-padding">
+                <h3>Produktkort titel</h3>
+                <p>Dette er et produktkort/card.</p>      
+              </div>
+              <footer>
+                <div class="ds-button-group">
+                  <button>Ja</button>
+                  <button class="secondary">Nej</button>
+                </div>
+              </footer>
+            </div>
+
           </div>
 
-          <div class="ds-card">
-            <img src="https://raw.githubusercontent.com/iamfrank/semstrap/master/assets/images/bg-img-1.jpg" alt="">
-            <div class="ds-padding">
-              <h3>Produktkort titel</h3>
-              <p>Dette er et produktkort/card.</p>      
-            </div>
-            <footer>
-              <div class="ds-button-group">
-                <button>Ja</button>
-                <button class="secondary">Nej</button>
-              </div>
-            </footer>
-          </div>
         </article>
 
       </section>
 
     </main>
     
-    <footer class="ds-footer">
-      <div class="ds-container-fluid ds-margin">
+    <footer class="ds-footer" data-theme="light">
+      <div class="ds-container">
         <h2 class="ds-logo-responsive ds-logo-pull-left">
           <strong>Insæt navn her</strong>
           <span>Styrelsen for Dataforsyning og Infrastruktur</span>
@@ -134,7 +137,7 @@
 
   </div>
 
-  <aside style="background-color: var(--c4); padding-bottom: 1rem;">
+  <aside class="ds-container">
     <code-example data-snip="ex-layout"></code-example>
   </aside>
 

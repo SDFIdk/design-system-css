@@ -20,8 +20,7 @@
     display: block;
   }
 
-  & > *.ds-padding {
-    padding-bottom: 0;
+  & > .ds-padding {
     flex: 1 0 auto;
   }
 
@@ -31,6 +30,7 @@
     align-items: center;
     justify-content: center;
     padding: var(--padding);
+    padding-bottom: var(--space);
     flex: 0 1 auto;
 
     & > * {

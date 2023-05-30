@@ -76,75 +76,73 @@
 }
 
 .ds-logo-responsive {
-  @if map-get($breakpoints, "xs") {
-    @media (min-width: map-get($breakpoints, "xs")) {
-      padding: 0.5rem 0 0 2.25rem;
-      min-height: 1.5rem;
+  
+  @media (max-width: $breakpoint-sm) {
+    padding: 0.5rem 0 0 2.25rem;
+    min-height: 1.5rem;
 
-      &::before {
-        background-image: var(--ds-logo-micro);
-        background-size: 1.5rem auto;
-        filter: var(--logo-filter);
-        height: 1.5rem;
-        width: 1.5rem;
-      }
+    &::before {
+      background-image: var(--ds-logo-micro);
+      background-size: 1.5rem auto;
+      filter: var(--logo-filter);
+      height: 1.5rem;
+      width: 1.5rem;
+    }
 
-      & > *:first-child {
-        color: var(--black);
-        font-size: 0.75rem;
-        line-height: 1.15;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.04em;
-      }
-      & > *:last-child {
-        font-size: 0.875rem;
-      }
+    & > *:first-child {
+      color: var(--black);
+      font-size: 0.75rem;
+      line-height: 1.15;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    & > *:last-child {
+      font-size: 0.875rem;
+    }
 
-      &.ds-logo-pull-left {
-        margin-left: -0.125rem;
-      }
+    &.ds-logo-pull-left {
+      margin-left: -0.125rem;
     }
   }
-  @if map-get($breakpoints, "sm") {
-    @media (min-width: map-get($breakpoints, "sm")) {
-      padding: 1rem 0 0 4rem;
-      min-height: 3rem;
 
-      &::before {
-        height: 3rem;
-        width: 3rem;
-        background-image: var(--ds-logo-big);
-        background-size: 3rem auto;
-        filter: var(--logo-filter);
-      }
+  @media (min-width: $breakpoint-sm) {
+    padding: 1rem 0 0 4rem;
+    min-height: 3rem;
 
-      & > *:first-child {
-        font-size: 0.875rem;
-        letter-spacing: 0.08em;
-      }
+    &::before {
+      height: 3rem;
+      width: 3rem;
+      background-image: var(--ds-logo-big);
+      background-size: 3rem auto;
+      filter: var(--logo-filter);
+    }
 
-      &.ds-logo-pull-left {
-        margin-left: -1.5rem;
-      }
+    & > *:first-child {
+      font-size: 0.875rem;
+      letter-spacing: 0.08em;
+    }
+
+    &.ds-logo-pull-left {
+      margin-left: -1.5rem;
     }
   }
-  @if map-get($breakpoints, "md") {
-    @media (min-width: map-get($breakpoints, "md")) {
-      padding: 2rem 0 0 6rem;
-      min-height: 5rem;
 
-      &::before {
-        height: 5rem;
-        width: 5rem;
-        background-size: 5rem auto;
-      }
+  @media (min-width: $breakpoint-lg) {
+    padding: 2rem 0 0 6rem;
+    min-height: 5rem;
 
-      &.ds-logo-pull-left {
-        margin-left: -2.5rem;
-      }
+    &::before {
+      height: 5rem;
+      width: 5rem;
+      background-size: 5rem auto;
+    }
+
+    &.ds-logo-pull-left {
+      margin-left: -2.5rem;
     }
   }
+
 }
 
 a.ds-logo,

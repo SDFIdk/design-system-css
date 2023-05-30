@@ -21,25 +21,29 @@
       article{
         background-color: var(--lys-steel);
       }
-      @media screen and (min-width: 82rem) {
-        #ex-layout {
-          border-left: var(--border);
-          border-right: var(--border);
-        }
+      main > section,
+      main > article {
+        margin: var(--space-lg) 0;
       }
     </style>
 
   </head>
   <body>
 
-    <div id="ex-layout" class="ds-container-fluid">
+    <div id="ex-layout">
 
-      <header class="ds-margin">
-        <h1>Hovedoverskrift (h1)</h1>
-        <p><em>Denne linie kan max. være 44rem bred.</em> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <header class="ds-header" data-theme="dark">
+        <div class="ds-container">
+          <p class="ds-logo-responsive ds-logo-pull-left">
+            <strong>Dataforsyningen</strong>
+            <span>Styrelsen for Dataforsyning og Infrastruktur</span>
+          </p>  
+          <h1>Hovedoverskrift (h1)</h1>
+          <p class="blockquote"><em>Denne linie kan max. være 44rem bred.</em> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
       </header>
 
-      <main class="ds-margin">
+      <main class="ds-container">
 
         <section class="ds-flexgrid">
           <article class="ds-padding">
@@ -104,13 +108,20 @@
 
       </main>
 
-      <footer class="ds-margin" data-theme="light" style="background-color: var(--lys-steel);">
-        <p>© 2022 Styrelsen for Dataforsyning og Infrastruktur</p>
+      <footer class="ds-footer" data-theme="light">
+        <div class="ds-container">
+          <h2 class="ds-logo-responsive ds-logo-pull-left">
+            <strong>Insæt navn her</strong>
+            <span>Styrelsen for Dataforsyning og Infrastruktur</span>
+          </h2>
+          <hr>
+          <p>© 2023 Styrelsen for Dataforsyning og Infrastruktur</p>
+        </div>
       </footer>
 
     </div>
 
-    <aside class="ds-container-fluid" style="margin-top: 5rem;">
+    <aside class="ds-container" style="margin-top: 5rem;">
       <code-example data-snip="ex-layout"></code-example>
     </aside>
 
