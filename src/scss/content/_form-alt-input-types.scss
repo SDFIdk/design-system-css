@@ -88,7 +88,7 @@
 }
 
 // Range
-[type="range"] {
+input[type="range"] {
   // Config
   $height-track: 0.25rem;
   $border-thumb: 2px;
@@ -125,17 +125,19 @@
   // Slider Thumb
   @mixin slider-thumb {
     -webkit-appearance: none;
-    width: var(--space-md);
-    height: var(--space-md);
+    width: 1.5rem;
+    height: 1.5rem;
     border: none;
     border-radius: 50%;
     background-color: var(--aktion);
     cursor: pointer;
     transition: background-color var(--transition), transform var(--transition);
+    position: relative;
+    bottom: 0.66rem;
   }
-  &::-webkit-slider-thumb {
+  &::-webkit-slider-thumb,
+  &::-webkit-media-slider-thumb {
     @include slider-thumb;
-    margin-top: (calc(var(--space) * -0.66));
   }
 
   &::-moz-range-thumb {
