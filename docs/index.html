@@ -891,44 +891,6 @@
 
     <code-example data-snip="ex-nav-3"></code-example>
     
-    <h3>Tabs</h3>
-    <p>Laves ved at tilføje class <code>ds-nav-tabs</code></p>
-
-    <div id="ex-nav-2">
-      <nav class="ds-nav-tabs">
-        <ul>
-          <li>
-            <h4>Produktnavn</h4>
-          </li>
-          <li>
-            <a href="#navs">Link</a>    
-          </li>
-          <li>
-            <a href="#navs">Link</a>    
-          </li>
-          <li>
-            <a href="#navs">Link</a>    
-          </li>
-        </ul>
-      </nav>
-    </div>
-
-    <code-example data-snip="ex-nav-2"></code-example>
-
-    <p>Herunder er tabs i en mere simpel version.</p>
-    <p><strong>Coming soon:</strong> Link til tab UI-komponent.</p>
-
-    <div id="ex-nav-6">
-      <nav class="ds-nav-tabs">
-        <a href="#navs">Something</a>
-        <a href="#navs">Something else</a>
-        <a href="#navs">Another thing</a>    
-        <a href="#navs">Yet another thing</a>
-      </nav>
-    </div>
-
-    <code-example data-snip="ex-nav-6"></code-example>
-    
     <h3>Værktøjslinie</h3>
     <p>Er en simpel <a href="#knapper">knapgruppe</a> med et <code>nav</code> element udenom, der har class <code>ds-nav-tools</code></p>
     <p>Adskillelseslinier kan laves ved at indsætte <code>&lt;hr></code> imellem knapper.</p>
@@ -964,32 +926,65 @@
 
   <h2>Tabs</h2>
 
-  <div id="ex-tabs-1">
+  <p>Laves ved at tilføje class <code>ds-nav-tabs</code></p>
 
-    <section class="ds-tabs">
-      <nav class="ds-nav-tabs">
-        <a href="#content1">Something</a>
-        <a href="#content2">Something else</a>
-        <a href="#content3">Another thing</a>
-      </nav>
-      <article class="ds-tab-panel ds-padding" id="#content1">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-      </article>
-      <article class="ds-tab-panel ds-padding" id="#content2">
-        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </article>
-      <article class="ds-tab-panel ds-padding" id="#content3">
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      </article>
-    </section>
+  <div id="ex-nav-2">
+    <nav class="ds-nav-tabs">
+      <ul>
+        <li>
+          <h4>Produktnavn</h4>
+        </li>
+        <li>
+          <a href="#tabs">Link</a>    
+        </li>
+        <li>
+          <a href="#tabs">Link</a>    
+        </li>
+        <li>
+          <a href="#tabs">Link</a>    
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <code-example data-snip="ex-nav-2"></code-example>
+
+  <p>Herunder er tabs i en mere simpel version.</p>
+
+  <div id="ex-nav-6">
+    <nav class="ds-nav-tabs">
+      <a href="#tabs" class="active">Something</a>
+      <a href="#tabs">Something else</a>
+      <a href="#tabs">Another thing</a>    
+      <a href="#tabs">Yet another thing</a>
+    </nav>
+  </div>
+
+  <code-example data-snip="ex-nav-6"></code-example>
+
+  <h3>Tab-komponent</h3>
+
+  <p>Tab-komponenten laver automatisk en række indholdselementer om til tabbed elementer, når du omslutter dem med <code>&lt;ds-tabs>&lt;/ds-tabs></code></code></p>
+
+  <div id="ex-tabs-1">
 
     <script type="module">
 
       import { Tabs } from './js/designsystem.js'
-      
-      const tabs = new Tabs(document.querySelector('.ds-tabs'))
 
     </script>
+
+    <ds-tabs data-selected="2">
+      <article title="Something">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      </article>
+      <article title="Something else">
+        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </article>
+      <article title="Another thing">
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </article>
+    </ds-tabs>
 
   </div>
 
