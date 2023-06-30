@@ -61,65 +61,6 @@ nav {
   }
 }
 
-// Tabs
-.ds-nav-tabs {
-  border-bottom: solid 1px var(--nav-tab-border);
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: flex-end;
-  overflow-y: auto;
-  justify-content: flex-start;
-
-  li > * {
-    margin: 0 0 -1px;
-    padding: var(--space) var(--space-md);
-    border-bottom: solid var(--space-xs) transparent !important;
-  }
-
-  a, 
-  [role="link"],
-  button,
-  [role="button"] {
-    background-color: transparent;
-    --font-weight: var(--nav-tab-font-weight);
-    border-radius: 0;
-
-    &:hover,
-    &:active {
-      border-color: var(--nav-tab-border) !important;
-      background-color: transparent;
-      color: var(--link-hover);
-      text-decoration: none;
-    }
-
-    &:focus {
-      border-color: var(--link-focus) !important;
-      background-color: transparent;
-      color:  var(--link-focus);
-    }
-  }
-}
-
-.ds-nav-tabs > a,
-.ds-nav-tabs > [role="link"] {
-  @extend .h4;
-  padding: var(--space) var(--space-md);
-  margin: 0;
-  border-bottom: solid var(--space-xs) transparent !important;
-
-  &:hover,
-  &:active {
-    color: var(--link-hover);
-    border-color: var(--nav-tab-border) !important;
-    text-decoration: none;
-  }
-
-  &:focus {
-    color:  var(--link-focus);
-    border-color: var(--link-focus) !important;
-  }
-} 
-
 // Vertical Nav
 aside,
 .ds-nav-vertical {

@@ -1,35 +1,3 @@
-// src/components/tab.js
-var Tabs = class {
-  tabs;
-  tab_buttons;
-  tab_panels;
-  constructor(target) {
-    this.tabs = target;
-    this.tab_buttons = this.tabs.querySelectorAll(".ds-nav-tabs a");
-    this.tab_panels = this.tabs.querySelectorAll(".ds-tab-panel");
-    this.render(this.tab_panels[0].id);
-    this.tabs.querySelector(".ds-nav-tabs").addEventListener("click", (event) => {
-      this.render(event.target.getAttribute("href"));
-    });
-  }
-  render(id) {
-    this.tab_panels.forEach(function(panel) {
-      if (panel.id === id) {
-        panel.hidden = false;
-      } else {
-        panel.hidden = true;
-      }
-    });
-    this.tab_buttons.forEach((btn) => {
-      if (btn.href.includes(id)) {
-        btn.classList.add("active");
-      } else {
-        btn.classList.remove("active");
-      }
-    });
-  }
-};
-
 // src/components/toggle.js
 var ToggleBtn = class {
   constructor(element) {
@@ -155,6 +123,87 @@ var Spinner = class extends HTMLElement {
     this.createDOM();
   }
 };
+
+// src/components/tabs.js
+var Tabs = class extends HTMLElement {
+  constructor() {
+    super();
+    this.tabTitles = [];
+    this.tabContents = [];
+    this.activeIndex = 0;
+    this.componentId = Math.floor(Math.random() * 1e3);
+  }
+  connectedCallback() {
+    const idx = Number(this.getAttribute("data-selected"));
+    if (idx >= 0 && idx < this.childElementCount) {
+      this.activeIndex = idx;
+    }
+    this.setupTabs();
+    this.render();
+  }
+  setupTabs() {
+    const tabs = Array.from(this.children);
+    tabs.forEach((tab, index) => {
+      const title = tab.getAttribute("title");
+      const tabTitleButton = document.createElement("button");
+      tabTitleButton.textContent = title;
+      tabTitleButton.setAttribute("role", "tab");
+      tabTitleButton.setAttribute("aria-selected", index === this.activeIndex);
+      tabTitleButton.setAttribute(
+        "aria-controls",
+        `tabpanel-${this.componentId}-${index}`
+      );
+      tabTitleButton.addEventListener(
+        "click",
+        () => this.switchTab(index)
+      );
+      this.tabTitles.push(tabTitleButton);
+      const tabContent = document.createElement("div");
+      tabContent.className = "tab-content";
+      tabContent.id = `tabpanel-${this.componentId}-${index}`;
+      tabContent.setAttribute("role", "tabpanel");
+      tabContent.setAttribute("aria-labelledby", `tab-${this.componentId}-${index}`);
+      tabContent.style.display = index === this.activeIndex ? "block" : "none";
+      tabContent.appendChild(tab);
+      this.tabContents.push(tabContent);
+    });
+  }
+  switchTab(index) {
+    this.tabTitles[this.activeIndex].setAttribute("aria-selected", false);
+    this.tabTitles[index].setAttribute("aria-selected", true);
+    this.tabContents[this.activeIndex].style.display = "none";
+    this.tabContents[index].style.display = "block";
+    this.activeIndex = index;
+    const tabChangeEvent = new CustomEvent("tabchange", {
+      detail: {
+        index,
+        title: this.tabTitles[index].textContent
+      },
+      bubbles: true
+    });
+    this.dispatchEvent(tabChangeEvent);
+  }
+  render() {
+    const styleContainer = document.createElement("style");
+    styleContainer.textContent = this.styles;
+    this.appendChild(styleContainer);
+    const tabsContainer = document.createElement("div");
+    tabsContainer.className = "ds-tabs-header";
+    this.tabTitles.forEach((tabTitle, index) => {
+      tabTitle.id = `tab-${this.componentId}-${index}`;
+      tabsContainer.appendChild(tabTitle);
+    });
+    this.appendChild(tabsContainer);
+    const tabContentContainer = document.createElement("div");
+    tabContentContainer.className = "ds-tabs-body";
+    this.tabContents.forEach((tabContent) => {
+      tabContent.className = "tabpanel";
+      tabContentContainer.appendChild(tabContent);
+    });
+    this.appendChild(tabContentContainer);
+  }
+};
+customElements.define("ds-tabs", Tabs);
 export {
   Spinner,
   Tabs,
