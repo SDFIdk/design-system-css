@@ -748,10 +748,22 @@ function popoverPolyfill() {
     console.log("not polyfilling popover");
   }
 }
+
+// src/components/toast.js
+function showToast({ message, target = "body", duration = 5e3 }) {
+  const newToast = document.createElement("div");
+  newToast.className = "ds-toast-item";
+  newToast.innerText = message;
+  document.querySelector(target).append(newToast);
+  setTimeout(function() {
+    newToast.remove();
+  }, duration);
+}
 export {
   Spinner,
   Tabs,
   ToggleBtn,
   TogglePanel,
-  popoverPolyfill
+  popoverPolyfill,
+  showToast
 };

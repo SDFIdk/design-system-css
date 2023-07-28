@@ -2,7 +2,7 @@
   display: none;
   background-color: var(--background-color);
   color: var(--color);
-  padding: var(--space-sm);
+  padding: var(--space-sm) var(--space);
   border: solid 1px var(--vibrant-steel);
   border-radius: var(--space-sm);
 }
@@ -15,6 +15,8 @@
 /* For polyfilled browsers (Firefox, Safari, etc.) */
 .popover-open[popover] {
   display: block;
-  position: absolute;
+  position: fixed;
   z-index: 100000;
+  top: 45%;
+  left: 45%;
 }
