@@ -173,6 +173,8 @@
             <li><a href="#dialog">Dialogboks</a></li>
             <li><a href="#togglepanel">Skjult panel</a></li>
             <li><a href="#spinner">Loading spinner</a></li>
+            <li><a href="#popover">Popover</a></li>
+            <li><a href="#toast">Toast</a></li>
           </ul>
         </nav>
         
@@ -1330,6 +1332,53 @@
   <code-example data-snip="ex-spinner-1"></code-example>
 
 </section>
+<section id="popover">
+
+  <h2>Popover</h2>
+
+  <div id="ex-popover-1">
+    
+    <button popovertarget="mypopover">Toggle the popover</button>
+    <div id="mypopover" popover>Popover content</div>
+
+    <script type="module">
+      // Polyfill native popover API for Firefox and Safari
+      import { popoverPolyfill } from './js/designsystem.js'
+      popoverPolyfill()
+    </script>
+
+  </div>
+
+  <code-example data-snip="ex-popover-1"></code-example>
+
+</section>
+<section id="toast">
+
+  <h2>Toast</h2>
+
+  <div id="ex-toast-1">
+
+    <button id="toastbutton">Display a toast!</button>
+    
+    <div id="toast-container" class="ds-toast-container"></div>
+
+    <script type="module">
+      import { showToast } from './js/designsystem.js'
+
+      document.getElementById('toastbutton').addEventListener('click', function(ev) {
+        showToast({
+          message: 'This is a toast', 
+          target: '#toast-container',
+          duration: 3000
+        })
+      })
+    </script>
+    
+  </div>
+
+  <code-example data-snip="ex-toast-1"></code-example>
+
+</section>
       </main>
 
     </div>
@@ -1352,9 +1401,9 @@
     </script>
 
     <script>
-      const switer_el = document.querySelector('.theme-switch')
+      const switcher_el = document.querySelector('.theme-switch')
       const html_el = document.children[0]
-      switer_el.addEventListener('change', function(event) {
+      switcher_el.addEventListener('change', function(event) {
         html_el.dataset.theme = event.target.value
       })
     </script>
