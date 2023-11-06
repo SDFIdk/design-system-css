@@ -762,10 +762,17 @@ function showToast({ message, target = "body", duration = 5e3 }) {
 
 // src/components/apicheck.js
 function apiCheck(endpoint, message) {
-  fetch(endpoint).then(function(response) {
+  return fetch(endpoint).then(function(response) {
     if (!response.ok) {
-      alert(message);
+      if (message) {
+        alert(message);
+      }
+      throw new Error();
+    } else {
+      return true;
     }
+  }).catch(function(error) {
+    throw new Error(error);
   });
 }
 export {

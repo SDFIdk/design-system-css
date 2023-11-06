@@ -6,8 +6,10 @@ export function apiCheck(endpoint, message) {
   return fetch(endpoint)
   .then(function(response) {
     if (!response.ok) {
-      alert(message)
-      return false
+      if (message) {
+        alert(message)
+      }
+      throw new Error()
     } else {
       return true
     }
