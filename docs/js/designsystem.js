@@ -759,11 +759,21 @@ function showToast({ message, target = "body", duration = 5e3 }) {
     newToast.remove();
   }, duration);
 }
+
+// src/components/apicheck.js
+function apiCheck(endpoint, message) {
+  fetch(endpoint).then(function(response) {
+    if (!response.ok) {
+      alert(message);
+    }
+  });
+}
 export {
   Spinner,
   Tabs,
   ToggleBtn,
   TogglePanel,
+  apiCheck,
   popoverPolyfill,
   showToast
 };
