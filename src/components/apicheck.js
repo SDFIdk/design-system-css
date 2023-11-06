@@ -12,4 +12,7 @@ export function apiCheck(endpoint, message) {
       return true
     }
   })
+  .catch(function(error) {
+    throw new Error(error)
+  })
 }
